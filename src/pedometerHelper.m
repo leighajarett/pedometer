@@ -2,26 +2,26 @@
 
 #import <CoreMotion/CoreMotion.h>
 
-// Function that creates a handler to translate the results into Dart integers (or streams?), forwards the results to the dart port and calls that method.
-// Should forward a stream to dart port
 
 // Dart_Port dartPort
 
-// Function that accepts a CMPedometerHandler and a dart port and starts the pedometer.
+// Function that accepts a dart port, starts the pedometer and forwards the resulting data.
 void startPedometer() 
 {
+
   // Create a pedometer
   CMPedometer *pedometer = [[CMPedometer alloc] init];
+  NSLog(@"Created pedometer");
 
-  // Handler to translate the results into Dart integers (or streams?)
-  //   CMPedometerHandler handler =
+  NSDate *yesterday = [NSDate dateWithTimeIntervalSinceNow:-86400];
 
   // Start the pedometer
-  [pedometer startPedometerUpdatesFromDate:nil withHandler:^(CMPedometerData *pedometerData, NSError *error) {
+  [pedometer startPedometerUpdatesFromDate:yesterday withHandler:^(CMPedometerData *pedometerData, NSError *error) {
 
-    NSLog(@"Steps = %@", pedometerData.numberOfSteps);
+    NSLog(@"data:%@, error:%@", pedometerData, error);
 
     // Forward the results to the dart port
     // Dart_PostCObject_DL(dartPort, dartPedometerData);
   }];
 }
+
