@@ -4,6 +4,8 @@ import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 import 'package:pedometer/pedometer_bindings_generated.dart' as pd;
+import 'dart:typed_data';
+
 
 const _dylibPath = '/System/Library/Frameworks/CoreMotion.framework/CoreMotion';
 
@@ -38,9 +40,9 @@ class _MyAppState extends State<MyApp> {
     if (pd.CMPedometer.isStepCountingAvailable(lib)) {
       print('Step counting is available.');
       responsePort.listen((d) {
-        final steps = Pointer<ncb.ObjCObject>.fromAddress(d as int);
-        lib2.startPedometer(responsePort);
-        print('This is from dart ', steps)
+        final steps = Pointer<pd.ObjCObject>.fromAddress(d as int);
+        lib2.startPedometer(responsePort as int);
+        print('This is from dart $steps');
       })
     } else {
       print('Step counting is not available.');

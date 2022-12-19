@@ -22689,13 +22689,19 @@ class PedometerBindings {
 
   late final _sel_stopPedometerEventUpdates1 =
       _registerName1("stopPedometerEventUpdates");
-  void startPedometer() {
-    return _startPedometer();
+  void startPedometer(
+    int sendPort,
+  ) {
+    return _startPedometer(
+      sendPort,
+    );
   }
 
   late final _startPedometerPtr =
-      _lookup<ffi.NativeFunction<ffi.Void Function()>>('startPedometer');
-  late final _startPedometer = _startPedometerPtr.asFunction<void Function()>();
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64)>>(
+          'startPedometer');
+  late final _startPedometer =
+      _startPedometerPtr.asFunction<void Function(int)>();
 }
 
 class _ObjCWrapper implements ffi.Finalizable {
