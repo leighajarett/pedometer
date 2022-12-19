@@ -6,7 +6,6 @@ import 'dart:isolate';
 import 'package:pedometer/pedometer_bindings_generated.dart' as pd;
 import 'dart:typed_data';
 
-
 const _dylibPath = '/System/Library/Frameworks/CoreMotion.framework/CoreMotion';
 
 void main() {
@@ -43,7 +42,7 @@ class _MyAppState extends State<MyApp> {
         final steps = Pointer<pd.ObjCObject>.fromAddress(d as int);
         lib2.startPedometer(responsePort as int);
         print('This is from dart $steps');
-      })
+      });
     } else {
       print('Step counting is not available.');
     }
