@@ -34,15 +34,16 @@ class _MyAppState extends State<MyApp> {
     final lib = pd.PedometerBindings(DynamicLibrary.open(_dylibPath));
     final lib2 = pd.PedometerBindings(DynamicLibrary.process());
     final pedometer = pd.CMPedometer.castFrom(pd.CMPedometer.alloc(lib).init());
-    final responsePort = ReceivePort();
 
     if (pd.CMPedometer.isStepCountingAvailable(lib)) {
       print('Step counting is available.');
+      final responsePort = ReceivePort();
       responsePort.listen((d) {
         final steps = Pointer<pd.ObjCObject>.fromAddress(d as int);
-        lib2.startPedometer(responsePort as int);
         print('This is from dart $steps');
+        responsePort.close();
       });
+      lib2.startPedometer(responsePort.sendPort.nativePort);
     } else {
       print('Step counting is not available.');
     }

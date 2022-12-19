@@ -28,6 +28,7 @@ void startPedometer(Dart_Port sendPort){
     if(error == nil){
       NSLog(@"data:%@", pedometerData.numberOfSteps);
       Dart_CObject steps = NSObjectToCObject(pedometerData.numberOfSteps);
+//      NSLog(@"Value:%@",  steps.value.as_int64);
       const bool success = Dart_PostCObject_DL(sendPort, &steps);
 //      NSAssert(success, @"Dart_PostCObject_DL failed.");
     }
