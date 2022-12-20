@@ -39,8 +39,7 @@ class _MyAppState extends State<MyApp> {
       print('Step counting is available.');
       final responsePort = ReceivePort();
       responsePort.listen((d) {
-        final steps = Pointer<pd.ObjCObject>.fromAddress(d as int);
-        print('This is from dart $steps');
+        print('This is from dart $d');
         responsePort.close();
       });
       lib2.startPedometer(responsePort.sendPort.nativePort);

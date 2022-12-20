@@ -10,7 +10,7 @@
 static Dart_CObject NSObjectToCObject(NSNumber* n) {
   Dart_CObject cobj;
   cobj.type = Dart_CObject_kInt64;
-  cobj.value.as_int64 = (int64_t) n;
+  cobj.value.as_int64 = (int64_t)[n longValue];
   return cobj;
 }
 
