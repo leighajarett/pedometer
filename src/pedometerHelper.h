@@ -2,4 +2,11 @@
 
 #include "dart-sdk/include/dart_api_dl.h"
 
-void startPedometer(Dart_Port sendPort, CMPedometer* pedometer, NSDate* start, NSDate* end);
+@interface PedometerHelper : NSObject
+
++ (void) startPedometerWithPort: (Dart_Port) sendPort
+                      pedometer: (CMPedometer*) pedometer
+                          start: (NSDate*) start
+                            end: (NSDate*) end;
+
+@end

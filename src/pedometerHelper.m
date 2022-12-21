@@ -14,8 +14,13 @@ static Dart_CObject NSObjectToCObject(CMPedometerData* n) {
   return cobj;
 }
 
+@implementation PedometerHelper
+
 // Function that accepts a start date string, dart port, and starts the pedometer and forwards the resulting data.
-void startPedometer(Dart_Port sendPort, CMPedometer* pedometer, NSDate* start, NSDate* end){
++ (void) startPedometerWithPort: (Dart_Port) sendPort
+                      pedometer: (CMPedometer*) pedometer
+                          start: (NSDate*) start
+                            end: (NSDate*) end {
   // Create a pedometer
 //  static CMPedometer *pedometer;
 //  pedometer = [[CMPedometer alloc] init];
@@ -59,3 +64,4 @@ void startPedometer(Dart_Port sendPort, CMPedometer* pedometer, NSDate* start, N
   }];
 }
 
+@end

@@ -88,6 +88,7 @@ class _HomeState extends State<Home> {
   static final receivePort = ReceivePort()..listen(handler);
   static final nativePort = receivePort.sendPort.nativePort;
   late pd.CMPedometer client;
+
   var totalSteps = 0;
   // late DateTime lastUpdated;
 
@@ -109,7 +110,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    client = pd.CMPedometer.castFrom(pd.CMPedometer.alloc(lib).init());
+    client = pd.CMPedometer.new1(lib);
     // Create a list of all the start and end calls
     // update();
     super.initState();
@@ -118,10 +119,14 @@ class _HomeState extends State<Home> {
   // Next try feeding in the pedometer too
   void runPedometer() async {
     print("Running pedometer");
-    final start = DateTime.now().subtract(Duration(hours: 24));
-    final end = DateTime.now();
-    lib2.startPedometer(nativePort, client, pd.NSString(lib, start.toString()),
-        pd.NSString(lib, end.toString()));
+//    final start = DateTime.now().subtract(Duration(hours: 24));
+//    final end = DateTime.now();
+    pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
+        lib2,
+        nativePort,
+        client,
+        pd.NSDate.getNow(lib), // Use a real start date
+        pd.NSDate.getNow(lib));
   }
 
 // Update the timestamps and refresh the pedometer
