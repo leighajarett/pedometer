@@ -84,25 +84,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // Open up a port to receive data from native side
-  static final receivePort = ReceivePort()..listen(handler);
-  static final nativePort = receivePort.sendPort.nativePort;
   late pd.CMPedometer client;
-
   var totalSteps = 0;
+
   // late DateTime lastUpdated;
 
   // Handles the data received from native side
+  // Open up a port to receive data from native side
+  static final receivePort = ReceivePort()..listen(handler);
+  static final nativePort = receivePort.sendPort.nativePort;
   static void handler(data) {
     print("receiving data $data");
-
     final result = ffi.Pointer<pd.ObjCObject>.fromAddress(data as int);
-    // // final pedometerData = pd.castFromPointer(lib2, steps, release: true);
     final pedometerData = pd.CMPedometerData.castFromPointer(lib, result);
     // setState(() {
     //   totalSteps = pedometerData.numberOfSteps;
     // });
-
     final stepCount = pedometerData.numberOfSteps;
     // print("This is the pointer $stepCount.");
     receivePort.close();
@@ -113,20 +110,31 @@ class _HomeState extends State<Home> {
     client = pd.CMPedometer.new1(lib);
     // Create a list of all the start and end calls
     // update();
+
+    // Setting the formatter
+    final formatter =
+        pd.NSDateFormatter.castFrom(pd.NSDateFormatter.alloc(lib).init());
+    formatter.dateFormat = pd.NSString(lib, "yyyy-MM-dd HH:mm:ss zzz");
+    formatter.locale = pd.NSLocale.alloc(lib)
+        .initWithLocaleIdentifier_(pd.NSString(lib, "en_US"));
     super.initState();
+  }
+
+  pd.NSDate dateConverter(DateTime dartDate) {
+    final nString = pd.NSString(lib, dartDate.toString());
+    return formatter.dateFromString_(nString);
   }
 
   // Next try feeding in the pedometer too
   void runPedometer() async {
     print("Running pedometer");
+    final start = dateConverter(DateTime.now().subtract(Duration(hours: 24)));
+    final end = dateConverter(DateTime.now());
+
 //    final start = DateTime.now().subtract(Duration(hours: 24));
 //    final end = DateTime.now();
     pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
-        lib2,
-        nativePort,
-        client,
-        pd.NSDate.getNow(lib), // Use a real start date
-        pd.NSDate.getNow(lib));
+        lib2, nativePort, client, start, end);
   }
 
 // Update the timestamps and refresh the pedometer
