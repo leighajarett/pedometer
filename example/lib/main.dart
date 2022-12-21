@@ -1,61 +1,191 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'dart:ffi';
+import 'dart:ffi' as ffi;
 import 'dart:io';
 import 'dart:isolate';
 import 'package:pedometer/pedometer_bindings_generated.dart' as pd;
 import 'dart:typed_data';
 
 const _dylibPath = '/System/Library/Frameworks/CoreMotion.framework/CoreMotion';
+// Bindings for the CMPedometer class
+final lib = pd.PedometerBindings(ffi.DynamicLibrary.open(_dylibPath));
+// Bindings for the helper function
+final lib2 = pd.PedometerBindings(ffi.DynamicLibrary.process());
 
 void main() {
+  // Contains the Dart API helper functions
+  final dylib = ffi.DynamicLibrary.open("pedometer.framework/pedometer");
+
+  // Initialize the Dart API
+  final initializeApi = dylib.lookupFunction<
+      ffi.IntPtr Function(ffi.Pointer<ffi.Void>),
+      int Function(ffi.Pointer<ffi.Void>)>('Dart_InitializeApiDL');
+  assert(initializeApi(ffi.NativeApi.initializeApiDLData) == 0);
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  _MyAppState createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const Home(),
+    );
+  }
 }
 
-class _MyAppState extends State<MyApp> {
-  late int steps;
-
+class RoundClipper extends CustomClipper<Path> {
   @override
-  void initState() {
-    print('initState');
-    super.initState();
-    steps = 0;
+  Path getClip(Size size) {
+    final diameter = size.shortestSide * 1.5;
+    final x = -(diameter - size.width) / 2;
+    final y = size.height - diameter;
+    final rect = Offset(x, y) & Size(diameter, diameter);
+    return Path()..addOval(rect);
   }
 
   @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return true;
+  }
+}
+
+// Class to hold the information needed to make an API call to the pedometer
+class PedometerCall {
+  // String name;
+  pd.NSString start;
+  pd.NSString end;
+
+  PedometerCall(this.start, this.end);
+}
+
+// Class to hold the information needed for the chart
+class PedometerResults {
+  int startHour;
+  int steps;
+
+  // Add total method
+
+  PedometerResults(this.startHour, this.steps);
+}
+
+class Home extends StatefulWidget {
+  const Home({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  // Open up a port to receive data from native side
+  static final receivePort = ReceivePort()..listen(handler);
+  static final nativePort = receivePort.sendPort.nativePort;
+  late pd.CMPedometer client;
+  var totalSteps = 0;
+  // late DateTime lastUpdated;
+
+  // Handles the data received from native side
+  static void handler(data) {
+    print("receiving data $data");
+
+    final result = ffi.Pointer<pd.ObjCObject>.fromAddress(data as int);
+    // // final pedometerData = pd.castFromPointer(lib2, steps, release: true);
+    final pedometerData = pd.CMPedometerData.castFromPointer(lib, result);
+    // setState(() {
+    //   totalSteps = pedometerData.numberOfSteps;
+    // });
+
+    final stepCount = pedometerData.numberOfSteps;
+    // print("This is the pointer $stepCount.");
+    receivePort.close();
+  }
+
+  @override
+  void initState() {
+    client = pd.CMPedometer.castFrom(pd.CMPedometer.alloc(lib).init());
+    // Create a list of all the start and end calls
+    // update();
+    super.initState();
+  }
+
+  // Next try feeding in the pedometer too
+  void runPedometer() async {
+    print("Running pedometer");
+    final start = DateTime.now().subtract(Duration(hours: 24));
+    final end = DateTime.now();
+    lib2.startPedometer(nativePort, client, pd.NSString(lib, start.toString()),
+        pd.NSString(lib, end.toString()));
+  }
+
+// Update the timestamps and refresh the pedometer
+  // void update() {
+  //   var local_calls = [];
+  //   final start = new DateTime.now().subtract(new Duration(hours: 24));
+  //   final end = new DateTime.now();
+  // Generate 24 calls, each with a start date 1 hour apart
+  // for (var i = 0; i < 24; i++) {
+  //   final _start = start.subtract(new Duration(hours: 24 - i));
+  //   final _end = start.subtract(new Duration(hours: 23 - i));
+  //   local_calls.add(PedometerCall(
+  //       _start.hour.toString(),
+  //       pd.NSString(lib, _start.toString()),
+  //       pd.NSString(lib, _end.toString())));
+  // }}
+  //  }
+
+  @override
   Widget build(BuildContext context) {
-    final lib = pd.PedometerBindings(DynamicLibrary.open(_dylibPath));
-    final lib2 = pd.PedometerBindings(DynamicLibrary.process());
-    final pedometer = pd.CMPedometer.castFrom(pd.CMPedometer.alloc(lib).init());
-
-    if (pd.CMPedometer.isStepCountingAvailable(lib)) {
-      print('Step counting is available.');
-      final responsePort = ReceivePort();
-      responsePort.listen((d) {
-        print('This is from dart $d');
-        responsePort.close();
-      });
-      lib2.startPedometer(responsePort.sendPort.nativePort);
-    } else {
-      print('Step counting is not available.');
-    }
-
-    return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Native Packages',
-          style: TextStyle(),
-        ),
+    final textTheme = Theme.of(context).textTheme;
+    return Scaffold(
+      body: Stack(
+        children: [
+          ClipPath(
+            clipper: RoundClipper(),
+            child: FractionallySizedBox(
+              heightFactor: 0.5,
+              widthFactor: 1,
+              child: Container(
+                color: Colors.blue[300],
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        totalSteps.toString(),
+                        style: textTheme.displayMedium!
+                            .copyWith(color: Colors.white),
+                      ),
+                      Text(
+                        'steps',
+                        style:
+                            textTheme.titleSmall!.copyWith(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ElevatedButton(
+                  onPressed: () => runPedometer(),
+                  child: const Text('Refresh using Native Ports!'),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
-      body: Center(child: Text('You walked this many steps: $steps')),
-    ));
+    );
   }
 }
