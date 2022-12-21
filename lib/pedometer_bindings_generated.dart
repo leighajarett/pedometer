@@ -15075,688 +15075,663 @@ class PedometerBindings {
   late final _sel_endEditing1 = _registerName1("endEditing");
   late final _sel_appendLocalizedFormat_1 =
       _registerName1("appendLocalizedFormat:");
-  late final _class_NSScanner1 = _getClass1("NSScanner");
-  late final _sel_scanLocation1 = _registerName1("scanLocation");
-  late final _sel_setScanLocation_1 = _registerName1("setScanLocation:");
-  late final _sel_charactersToBeSkipped1 =
-      _registerName1("charactersToBeSkipped");
-  late final _sel_setCharactersToBeSkipped_1 =
-      _registerName1("setCharactersToBeSkipped:");
-  void _objc_msgSend_539(
+  late final _class_NSDateFormatter1 = _getClass1("NSDateFormatter");
+  late final _class_NSFormatter1 = _getClass1("NSFormatter");
+  late final _sel_stringForObjectValue_1 =
+      _registerName1("stringForObjectValue:");
+  late final _sel_attributedStringForObjectValue_withDefaultAttributes_1 =
+      _registerName1("attributedStringForObjectValue:withDefaultAttributes:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_539(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> value,
+    ffi.Pointer<ObjCObject> obj1,
+    ffi.Pointer<ObjCObject> attrs,
   ) {
     return __objc_msgSend_539(
+      obj,
+      sel,
+      obj1,
+      attrs,
+    );
+  }
+
+  late final __objc_msgSend_539Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_539 = __objc_msgSend_539Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_editingStringForObjectValue_1 =
+      _registerName1("editingStringForObjectValue:");
+  late final _sel_getObjectValue_forString_errorDescription_1 =
+      _registerName1("getObjectValue:forString:errorDescription:");
+  bool _objc_msgSend_540(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> obj1,
+    ffi.Pointer<ObjCObject> string,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
+  ) {
+    return __objc_msgSend_540(
+      obj,
+      sel,
+      obj1,
+      string,
+      error,
+    );
+  }
+
+  late final __objc_msgSend_540Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+  late final __objc_msgSend_540 = __objc_msgSend_540Ptr.asFunction<
+      bool Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+
+  late final _sel_isPartialStringValid_newEditingString_errorDescription_1 =
+      _registerName1("isPartialStringValid:newEditingString:errorDescription:");
+  bool _objc_msgSend_541(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> partialString,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> newString,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
+  ) {
+    return __objc_msgSend_541(
+      obj,
+      sel,
+      partialString,
+      newString,
+      error,
+    );
+  }
+
+  late final __objc_msgSend_541Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+  late final __objc_msgSend_541 = __objc_msgSend_541Ptr.asFunction<
+      bool Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+
+  late final _sel_isPartialStringValid_proposedSelectedRange_originalString_originalSelectedRange_errorDescription_1 =
+      _registerName1(
+          "isPartialStringValid:proposedSelectedRange:originalString:originalSelectedRange:errorDescription:");
+  bool _objc_msgSend_542(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> partialStringPtr,
+    ffi.Pointer<_NSRange> proposedSelRangePtr,
+    ffi.Pointer<ObjCObject> origString,
+    _NSRange origSelRange,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
+  ) {
+    return __objc_msgSend_542(
+      obj,
+      sel,
+      partialStringPtr,
+      proposedSelRangePtr,
+      origString,
+      origSelRange,
+      error,
+    );
+  }
+
+  late final __objc_msgSend_542Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<_NSRange>,
+              ffi.Pointer<ObjCObject>,
+              _NSRange,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+  late final __objc_msgSend_542 = __objc_msgSend_542Ptr.asFunction<
+      bool Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<_NSRange>,
+          ffi.Pointer<ObjCObject>,
+          _NSRange,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+
+  late final _sel_formattingContext1 = _registerName1("formattingContext");
+  int _objc_msgSend_543(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_543(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_543Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int32 Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_543 = __objc_msgSend_543Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _sel_setFormattingContext_1 =
+      _registerName1("setFormattingContext:");
+  void _objc_msgSend_544(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int value,
+  ) {
+    return __objc_msgSend_544(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_539Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_539 = __objc_msgSend_539Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_caseSensitive1 = _registerName1("caseSensitive");
-  late final _sel_setCaseSensitive_1 = _registerName1("setCaseSensitive:");
-  late final _sel_locale1 = _registerName1("locale");
-  late final _sel_setLocale_1 = _registerName1("setLocale:");
-  late final _sel_scanInt_1 = _registerName1("scanInt:");
-  bool _objc_msgSend_540(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ffi.Int> result,
-  ) {
-    return __objc_msgSend_540(
-      obj,
-      sel,
-      result,
-    );
-  }
-
-  late final __objc_msgSend_540Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ffi.Int>)>>('objc_msgSend');
-  late final __objc_msgSend_540 = __objc_msgSend_540Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ffi.Int>)>();
-
-  late final _sel_scanInteger_1 = _registerName1("scanInteger:");
-  bool _objc_msgSend_541(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ffi.Long> result,
-  ) {
-    return __objc_msgSend_541(
-      obj,
-      sel,
-      result,
-    );
-  }
-
-  late final __objc_msgSend_541Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ffi.Long>)>>('objc_msgSend');
-  late final __objc_msgSend_541 = __objc_msgSend_541Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ffi.Long>)>();
-
-  late final _sel_scanLongLong_1 = _registerName1("scanLongLong:");
-  bool _objc_msgSend_542(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ffi.LongLong> result,
-  ) {
-    return __objc_msgSend_542(
-      obj,
-      sel,
-      result,
-    );
-  }
-
-  late final __objc_msgSend_542Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ffi.LongLong>)>>('objc_msgSend');
-  late final __objc_msgSend_542 = __objc_msgSend_542Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ffi.LongLong>)>();
-
-  late final _sel_scanUnsignedLongLong_1 =
-      _registerName1("scanUnsignedLongLong:");
-  bool _objc_msgSend_543(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ffi.UnsignedLongLong> result,
-  ) {
-    return __objc_msgSend_543(
-      obj,
-      sel,
-      result,
-    );
-  }
-
-  late final __objc_msgSend_543Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ffi.UnsignedLongLong>)>>('objc_msgSend');
-  late final __objc_msgSend_543 = __objc_msgSend_543Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ffi.UnsignedLongLong>)>();
-
-  late final _sel_scanFloat_1 = _registerName1("scanFloat:");
-  bool _objc_msgSend_544(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ffi.Float> result,
-  ) {
-    return __objc_msgSend_544(
-      obj,
-      sel,
-      result,
-    );
-  }
-
   late final __objc_msgSend_544Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ffi.Float>)>>('objc_msgSend');
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Int32)>>('objc_msgSend');
   late final __objc_msgSend_544 = __objc_msgSend_544Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ffi.Float>)>();
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
-  late final _sel_scanDouble_1 = _registerName1("scanDouble:");
+  late final _sel_getObjectValue_forString_range_error_1 =
+      _registerName1("getObjectValue:forString:range:error:");
   bool _objc_msgSend_545(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ffi.Double> result,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> obj1,
+    ffi.Pointer<ObjCObject> string,
+    ffi.Pointer<_NSRange> rangep,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
     return __objc_msgSend_545(
       obj,
       sel,
-      result,
+      obj1,
+      string,
+      rangep,
+      error,
     );
   }
 
   late final __objc_msgSend_545Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ffi.Double>)>>('objc_msgSend');
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<_NSRange>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
   late final __objc_msgSend_545 = __objc_msgSend_545Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ffi.Double>)>();
+      bool Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<_NSRange>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
-  late final _sel_scanHexInt_1 = _registerName1("scanHexInt:");
-  bool _objc_msgSend_546(
+  late final _sel_stringFromDate_1 = _registerName1("stringFromDate:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_546(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ffi.UnsignedInt> result,
+    ffi.Pointer<ObjCObject> date,
   ) {
     return __objc_msgSend_546(
       obj,
       sel,
-      result,
+      date,
     );
   }
 
   late final __objc_msgSend_546Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ffi.UnsignedInt>)>>('objc_msgSend');
+          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
   late final __objc_msgSend_546 = __objc_msgSend_546Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ffi.UnsignedInt>)>();
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
-  late final _sel_scanHexLongLong_1 = _registerName1("scanHexLongLong:");
-  late final _sel_scanHexFloat_1 = _registerName1("scanHexFloat:");
-  late final _sel_scanHexDouble_1 = _registerName1("scanHexDouble:");
-  late final _sel_scanString_intoString_1 =
-      _registerName1("scanString:intoString:");
-  bool _objc_msgSend_547(
+  late final _sel_dateFromString_1 = _registerName1("dateFromString:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_547(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> string,
-    ffi.Pointer<ffi.Pointer<ObjCObject>> result,
   ) {
     return __objc_msgSend_547(
       obj,
       sel,
       string,
-      result,
     );
   }
 
   late final __objc_msgSend_547Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Bool Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
   late final __objc_msgSend_547 = __objc_msgSend_547Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
-  late final _sel_scanCharactersFromSet_intoString_1 =
-      _registerName1("scanCharactersFromSet:intoString:");
-  bool _objc_msgSend_548(
+  late final _sel_localizedStringFromDate_dateStyle_timeStyle_1 =
+      _registerName1("localizedStringFromDate:dateStyle:timeStyle:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_548(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> set1,
-    ffi.Pointer<ffi.Pointer<ObjCObject>> result,
+    ffi.Pointer<ObjCObject> date,
+    int dstyle,
+    int tstyle,
   ) {
     return __objc_msgSend_548(
       obj,
       sel,
-      set1,
-      result,
+      date,
+      dstyle,
+      tstyle,
     );
   }
 
   late final __objc_msgSend_548Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Bool Function(
+          ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+              ffi.Int32,
+              ffi.Int32)>>('objc_msgSend');
   late final __objc_msgSend_548 = __objc_msgSend_548Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int, int)>();
 
-  late final _sel_scanUpToString_intoString_1 =
-      _registerName1("scanUpToString:intoString:");
-  late final _sel_scanUpToCharactersFromSet_intoString_1 =
-      _registerName1("scanUpToCharactersFromSet:intoString:");
-  late final _sel_isAtEnd1 = _registerName1("isAtEnd");
-  late final _sel_scannerWithString_1 = _registerName1("scannerWithString:");
-  late final _sel_localizedScannerWithString_1 =
-      _registerName1("localizedScannerWithString:");
-  late final _sel_scanDecimal_1 = _registerName1("scanDecimal:");
-  bool _objc_msgSend_549(
+  late final _sel_dateFormatFromTemplate_options_locale_1 =
+      _registerName1("dateFormatFromTemplate:options:locale:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_549(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<NSDecimal> dcm,
+    ffi.Pointer<ObjCObject> tmplate,
+    int opts,
+    ffi.Pointer<ObjCObject> locale,
   ) {
     return __objc_msgSend_549(
       obj,
       sel,
-      dcm,
+      tmplate,
+      opts,
+      locale,
     );
   }
 
   late final __objc_msgSend_549Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<NSDecimal>)>>('objc_msgSend');
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.UnsignedLong,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
   late final __objc_msgSend_549 = __objc_msgSend_549Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<NSDecimal>)>();
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          int,
+          ffi.Pointer<ObjCObject>)>();
 
-  late final _class_NSException1 = _getClass1("NSException");
-  late final _sel_exceptionWithName_reason_userInfo_1 =
-      _registerName1("exceptionWithName:reason:userInfo:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_550(
+  late final _sel_defaultFormatterBehavior1 =
+      _registerName1("defaultFormatterBehavior");
+  int _objc_msgSend_550(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> name,
-    ffi.Pointer<ObjCObject> reason,
-    ffi.Pointer<ObjCObject> userInfo,
   ) {
     return __objc_msgSend_550(
       obj,
       sel,
-      name,
-      reason,
-      userInfo,
     );
   }
 
   late final __objc_msgSend_550Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+          ffi.Int32 Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
   late final __objc_msgSend_550 = __objc_msgSend_550Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>)>();
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
-  late final _sel_initWithName_reason_userInfo_1 =
-      _registerName1("initWithName:reason:userInfo:");
-  instancetype _objc_msgSend_551(
+  late final _sel_setDefaultFormatterBehavior_1 =
+      _registerName1("setDefaultFormatterBehavior:");
+  void _objc_msgSend_551(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> aName,
-    ffi.Pointer<ObjCObject> aReason,
-    ffi.Pointer<ObjCObject> aUserInfo,
+    int value,
   ) {
     return __objc_msgSend_551(
       obj,
       sel,
-      aName,
-      aReason,
-      aUserInfo,
+      value,
     );
   }
 
   late final __objc_msgSend_551Ptr = _lookup<
       ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Int32)>>('objc_msgSend');
   late final __objc_msgSend_551 = __objc_msgSend_551Ptr.asFunction<
-      instancetype Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>)>();
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
-  late final _sel_reason1 = _registerName1("reason");
-  late final _sel_raise1 = _registerName1("raise");
-  late final _sel_raise_format_1 = _registerName1("raise:format:");
-  void _objc_msgSend_552(
+  late final _sel_setLocalizedDateFormatFromTemplate_1 =
+      _registerName1("setLocalizedDateFormatFromTemplate:");
+  late final _sel_dateFormat1 = _registerName1("dateFormat");
+  late final _sel_setDateFormat_1 = _registerName1("setDateFormat:");
+  late final _sel_dateStyle1 = _registerName1("dateStyle");
+  int _objc_msgSend_552(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> name,
-    ffi.Pointer<ObjCObject> format,
   ) {
     return __objc_msgSend_552(
       obj,
       sel,
-      name,
-      format,
     );
   }
 
   late final __objc_msgSend_552Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+          ffi.Int32 Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
   late final __objc_msgSend_552 = __objc_msgSend_552Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
-  late final _sel_raise_format_arguments_1 =
-      _registerName1("raise:format:arguments:");
+  late final _sel_setDateStyle_1 = _registerName1("setDateStyle:");
   void _objc_msgSend_553(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> name,
-    ffi.Pointer<ObjCObject> format,
-    ffi.Pointer<__va_list_tag> argList,
+    int value,
   ) {
     return __objc_msgSend_553(
       obj,
       sel,
-      name,
-      format,
-      argList,
+      value,
     );
   }
 
   late final __objc_msgSend_553Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<__va_list_tag>)>>('objc_msgSend');
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Int32)>>('objc_msgSend');
   late final __objc_msgSend_553 = __objc_msgSend_553Ptr.asFunction<
-      void Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<__va_list_tag>)>();
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
-  late final _class_NSRunLoop1 = _getClass1("NSRunLoop");
-  late final _sel_currentRunLoop1 = _registerName1("currentRunLoop");
-  ffi.Pointer<ObjCObject> _objc_msgSend_554(
+  late final _sel_timeStyle1 = _registerName1("timeStyle");
+  late final _sel_setTimeStyle_1 = _registerName1("setTimeStyle:");
+  late final _sel_locale1 = _registerName1("locale");
+  late final _sel_setLocale_1 = _registerName1("setLocale:");
+  void _objc_msgSend_554(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> value,
   ) {
     return __objc_msgSend_554(
       obj,
       sel,
+      value,
     );
   }
 
   late final __objc_msgSend_554Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
   late final __objc_msgSend_554 = __objc_msgSend_554Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
 
-  late final _sel_mainRunLoop1 = _registerName1("mainRunLoop");
-  late final _sel_currentMode1 = _registerName1("currentMode");
-  late final _sel_getCFRunLoop1 = _registerName1("getCFRunLoop");
-  ffi.Pointer<__CFRunLoop> _objc_msgSend_555(
+  late final _sel_generatesCalendarDates1 =
+      _registerName1("generatesCalendarDates");
+  late final _sel_setGeneratesCalendarDates_1 =
+      _registerName1("setGeneratesCalendarDates:");
+  late final _sel_formatterBehavior1 = _registerName1("formatterBehavior");
+  late final _sel_setFormatterBehavior_1 =
+      _registerName1("setFormatterBehavior:");
+  late final _class_NSTimeZone1 = _getClass1("NSTimeZone");
+  late final _sel_secondsFromGMTForDate_1 =
+      _registerName1("secondsFromGMTForDate:");
+  int _objc_msgSend_555(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> aDate,
   ) {
     return __objc_msgSend_555(
       obj,
       sel,
+      aDate,
     );
   }
 
   late final __objc_msgSend_555Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Pointer<__CFRunLoop> Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+          ffi.Long Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
   late final __objc_msgSend_555 = __objc_msgSend_555Ptr.asFunction<
-      ffi.Pointer<__CFRunLoop> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
 
-  late final _class_NSTimer1 = _getClass1("NSTimer");
-  late final _sel_timerWithTimeInterval_invocation_repeats_1 =
-      _registerName1("timerWithTimeInterval:invocation:repeats:");
+  late final _sel_abbreviationForDate_1 =
+      _registerName1("abbreviationForDate:");
+  late final _sel_isDaylightSavingTimeForDate_1 =
+      _registerName1("isDaylightSavingTimeForDate:");
+  late final _sel_daylightSavingTimeOffsetForDate_1 =
+      _registerName1("daylightSavingTimeOffsetForDate:");
+  late final _sel_nextDaylightSavingTimeTransitionAfterDate_1 =
+      _registerName1("nextDaylightSavingTimeTransitionAfterDate:");
+  late final _sel_systemTimeZone1 = _registerName1("systemTimeZone");
   ffi.Pointer<ObjCObject> _objc_msgSend_556(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    double ti,
-    ffi.Pointer<ObjCObject> invocation,
-    bool yesOrNo,
   ) {
     return __objc_msgSend_556(
       obj,
       sel,
-      ti,
-      invocation,
-      yesOrNo,
     );
   }
 
   late final __objc_msgSend_556Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Double,
-              ffi.Pointer<ObjCObject>,
-              ffi.Bool)>>('objc_msgSend');
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
   late final __objc_msgSend_556 = __objc_msgSend_556Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, double, ffi.Pointer<ObjCObject>, bool)>();
-
-  late final _sel_scheduledTimerWithTimeInterval_invocation_repeats_1 =
-      _registerName1("scheduledTimerWithTimeInterval:invocation:repeats:");
-  late final _sel_timerWithTimeInterval_target_selector_userInfo_repeats_1 =
-      _registerName1("timerWithTimeInterval:target:selector:userInfo:repeats:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_557(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    double ti,
-    ffi.Pointer<ObjCObject> aTarget,
-    ffi.Pointer<ObjCSel> aSelector,
-    ffi.Pointer<ObjCObject> userInfo,
-    bool yesOrNo,
-  ) {
-    return __objc_msgSend_557(
-      obj,
-      sel,
-      ti,
-      aTarget,
-      aSelector,
-      userInfo,
-      yesOrNo,
-    );
-  }
-
-  late final __objc_msgSend_557Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Double,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Bool)>>('objc_msgSend');
-  late final __objc_msgSend_557 = __objc_msgSend_557Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          double,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          bool)>();
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
-  late final _sel_scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_1 =
-      _registerName1(
-          "scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:");
-  late final _sel_timerWithTimeInterval_repeats_block_1 =
-      _registerName1("timerWithTimeInterval:repeats:block:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_558(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    double interval,
-    bool repeats,
-    ffi.Pointer<_ObjCBlock> block,
-  ) {
-    return __objc_msgSend_558(
-      obj,
-      sel,
-      interval,
-      repeats,
-      block,
-    );
-  }
-
-  late final __objc_msgSend_558Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Double,
-              ffi.Bool,
-              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_558 = __objc_msgSend_558Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, double, bool, ffi.Pointer<_ObjCBlock>)>();
-
-  late final _sel_scheduledTimerWithTimeInterval_repeats_block_1 =
-      _registerName1("scheduledTimerWithTimeInterval:repeats:block:");
-  late final _sel_initWithFireDate_interval_repeats_block_1 =
-      _registerName1("initWithFireDate:interval:repeats:block:");
-  instancetype _objc_msgSend_559(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> date,
-    double interval,
-    bool repeats,
-    ffi.Pointer<_ObjCBlock> block,
-  ) {
-    return __objc_msgSend_559(
-      obj,
-      sel,
-      date,
-      interval,
-      repeats,
-      block,
-    );
-  }
-
-  late final __objc_msgSend_559Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Double,
-              ffi.Bool,
-              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_559 = __objc_msgSend_559Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, double, bool, ffi.Pointer<_ObjCBlock>)>();
-
-  late final _sel_initWithFireDate_interval_target_selector_userInfo_repeats_1 =
-      _registerName1(
-          "initWithFireDate:interval:target:selector:userInfo:repeats:");
-  instancetype _objc_msgSend_560(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> date,
-    double ti,
-    ffi.Pointer<ObjCObject> t,
-    ffi.Pointer<ObjCSel> s,
-    ffi.Pointer<ObjCObject> ui,
-    bool rep,
-  ) {
-    return __objc_msgSend_560(
-      obj,
-      sel,
-      date,
-      ti,
-      t,
-      s,
-      ui,
-      rep,
-    );
-  }
-
-  late final __objc_msgSend_560Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Double,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Bool)>>('objc_msgSend');
-  late final __objc_msgSend_560 = __objc_msgSend_560Ptr.asFunction<
-      instancetype Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          double,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          bool)>();
-
-  late final _sel_fire1 = _registerName1("fire");
-  late final _sel_fireDate1 = _registerName1("fireDate");
-  late final _sel_setFireDate_1 = _registerName1("setFireDate:");
-  void _objc_msgSend_561(
+  late final _sel_resetSystemTimeZone1 = _registerName1("resetSystemTimeZone");
+  late final _sel_defaultTimeZone1 = _registerName1("defaultTimeZone");
+  late final _sel_setDefaultTimeZone_1 = _registerName1("setDefaultTimeZone:");
+  void _objc_msgSend_557(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
   ) {
-    return __objc_msgSend_561(
+    return __objc_msgSend_557(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_561Ptr = _lookup<
+  late final __objc_msgSend_557Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_561 = __objc_msgSend_561Ptr.asFunction<
+  late final __objc_msgSend_557 = __objc_msgSend_557Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
-  late final _sel_timeInterval1 = _registerName1("timeInterval");
-  late final _sel_tolerance1 = _registerName1("tolerance");
-  late final _sel_setTolerance_1 = _registerName1("setTolerance:");
-  late final _sel_invalidate1 = _registerName1("invalidate");
-  late final _sel_isValid1 = _registerName1("isValid");
-  late final _sel_addTimer_forMode_1 = _registerName1("addTimer:forMode:");
-  void _objc_msgSend_562(
+  late final _sel_localTimeZone1 = _registerName1("localTimeZone");
+  late final _sel_knownTimeZoneNames1 = _registerName1("knownTimeZoneNames");
+  late final _sel_abbreviationDictionary1 =
+      _registerName1("abbreviationDictionary");
+  late final _sel_setAbbreviationDictionary_1 =
+      _registerName1("setAbbreviationDictionary:");
+  void _objc_msgSend_558(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> timer,
-    ffi.Pointer<ObjCObject> mode,
+    ffi.Pointer<ObjCObject> value,
+  ) {
+    return __objc_msgSend_558(
+      obj,
+      sel,
+      value,
+    );
+  }
+
+  late final __objc_msgSend_558Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_558 = __objc_msgSend_558Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_timeZoneDataVersion1 = _registerName1("timeZoneDataVersion");
+  late final _sel_secondsFromGMT1 = _registerName1("secondsFromGMT");
+  late final _sel_abbreviation1 = _registerName1("abbreviation");
+  late final _sel_isDaylightSavingTime1 =
+      _registerName1("isDaylightSavingTime");
+  late final _sel_daylightSavingTimeOffset1 =
+      _registerName1("daylightSavingTimeOffset");
+  late final _sel_nextDaylightSavingTimeTransition1 =
+      _registerName1("nextDaylightSavingTimeTransition");
+  late final _sel_isEqualToTimeZone_1 = _registerName1("isEqualToTimeZone:");
+  bool _objc_msgSend_559(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> aTimeZone,
+  ) {
+    return __objc_msgSend_559(
+      obj,
+      sel,
+      aTimeZone,
+    );
+  }
+
+  late final __objc_msgSend_559Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_559 = __objc_msgSend_559Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_localizedName_locale_1 =
+      _registerName1("localizedName:locale:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_560(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int style,
+    ffi.Pointer<ObjCObject> locale,
+  ) {
+    return __objc_msgSend_560(
+      obj,
+      sel,
+      style,
+      locale,
+    );
+  }
+
+  late final __objc_msgSend_560Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Int32,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_560 = __objc_msgSend_560Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, int, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_timeZoneWithName_1 = _registerName1("timeZoneWithName:");
+  late final _sel_timeZoneWithName_data_1 =
+      _registerName1("timeZoneWithName:data:");
+  instancetype _objc_msgSend_561(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> tzName,
+    ffi.Pointer<ObjCObject> aData,
+  ) {
+    return __objc_msgSend_561(
+      obj,
+      sel,
+      tzName,
+      aData,
+    );
+  }
+
+  late final __objc_msgSend_561Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_561 = __objc_msgSend_561Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_initWithName_1 = _registerName1("initWithName:");
+  late final _sel_initWithName_data_1 = _registerName1("initWithName:data:");
+  late final _sel_timeZoneForSecondsFromGMT_1 =
+      _registerName1("timeZoneForSecondsFromGMT:");
+  instancetype _objc_msgSend_562(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int seconds,
   ) {
     return __objc_msgSend_562(
       obj,
       sel,
-      timer,
-      mode,
+      seconds,
     );
   }
 
   late final __objc_msgSend_562Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+          instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Long)>>('objc_msgSend');
   late final __objc_msgSend_562 = __objc_msgSend_562Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+      instancetype Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
-  late final _class_NSPort1 = _getClass1("NSPort");
+  late final _sel_timeZoneWithAbbreviation_1 =
+      _registerName1("timeZoneWithAbbreviation:");
+  late final _sel_timeZone1 = _registerName1("timeZone");
+  late final _sel_setTimeZone_1 = _registerName1("setTimeZone:");
+  late final _class_NSCalendar1 = _getClass1("NSCalendar");
+  late final _sel_currentCalendar1 = _registerName1("currentCalendar");
   ffi.Pointer<ObjCObject> _objc_msgSend_563(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
@@ -15775,15 +15750,1808 @@ class PedometerBindings {
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
+  late final _sel_autoupdatingCurrentCalendar1 =
+      _registerName1("autoupdatingCurrentCalendar");
+  late final _sel_calendarWithIdentifier_1 =
+      _registerName1("calendarWithIdentifier:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_564(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> calendarIdentifierConstant,
+  ) {
+    return __objc_msgSend_564(
+      obj,
+      sel,
+      calendarIdentifierConstant,
+    );
+  }
+
+  late final __objc_msgSend_564Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_564 = __objc_msgSend_564Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_initWithCalendarIdentifier_1 =
+      _registerName1("initWithCalendarIdentifier:");
+  late final _sel_firstWeekday1 = _registerName1("firstWeekday");
+  late final _sel_setFirstWeekday_1 = _registerName1("setFirstWeekday:");
+  late final _sel_minimumDaysInFirstWeek1 =
+      _registerName1("minimumDaysInFirstWeek");
+  late final _sel_setMinimumDaysInFirstWeek_1 =
+      _registerName1("setMinimumDaysInFirstWeek:");
+  late final _sel_eraSymbols1 = _registerName1("eraSymbols");
+  late final _sel_longEraSymbols1 = _registerName1("longEraSymbols");
+  late final _sel_monthSymbols1 = _registerName1("monthSymbols");
+  late final _sel_shortMonthSymbols1 = _registerName1("shortMonthSymbols");
+  late final _sel_veryShortMonthSymbols1 =
+      _registerName1("veryShortMonthSymbols");
+  late final _sel_standaloneMonthSymbols1 =
+      _registerName1("standaloneMonthSymbols");
+  late final _sel_shortStandaloneMonthSymbols1 =
+      _registerName1("shortStandaloneMonthSymbols");
+  late final _sel_veryShortStandaloneMonthSymbols1 =
+      _registerName1("veryShortStandaloneMonthSymbols");
+  late final _sel_weekdaySymbols1 = _registerName1("weekdaySymbols");
+  late final _sel_shortWeekdaySymbols1 = _registerName1("shortWeekdaySymbols");
+  late final _sel_veryShortWeekdaySymbols1 =
+      _registerName1("veryShortWeekdaySymbols");
+  late final _sel_standaloneWeekdaySymbols1 =
+      _registerName1("standaloneWeekdaySymbols");
+  late final _sel_shortStandaloneWeekdaySymbols1 =
+      _registerName1("shortStandaloneWeekdaySymbols");
+  late final _sel_veryShortStandaloneWeekdaySymbols1 =
+      _registerName1("veryShortStandaloneWeekdaySymbols");
+  late final _sel_quarterSymbols1 = _registerName1("quarterSymbols");
+  late final _sel_shortQuarterSymbols1 = _registerName1("shortQuarterSymbols");
+  late final _sel_standaloneQuarterSymbols1 =
+      _registerName1("standaloneQuarterSymbols");
+  late final _sel_shortStandaloneQuarterSymbols1 =
+      _registerName1("shortStandaloneQuarterSymbols");
+  late final _sel_AMSymbol1 = _registerName1("AMSymbol");
+  late final _sel_PMSymbol1 = _registerName1("PMSymbol");
+  late final _sel_minimumRangeOfUnit_1 = _registerName1("minimumRangeOfUnit:");
+  _NSRange _objc_msgSend_565(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unit,
+  ) {
+    return __objc_msgSend_565(
+      obj,
+      sel,
+      unit,
+    );
+  }
+
+  late final __objc_msgSend_565Ptr = _lookup<
+      ffi.NativeFunction<
+          _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_565 = __objc_msgSend_565Ptr.asFunction<
+      _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
+
+  late final _sel_maximumRangeOfUnit_1 = _registerName1("maximumRangeOfUnit:");
+  late final _sel_rangeOfUnit_inUnit_forDate_1 =
+      _registerName1("rangeOfUnit:inUnit:forDate:");
+  _NSRange _objc_msgSend_566(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int smaller,
+    int larger,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_566(
+      obj,
+      sel,
+      smaller,
+      larger,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_566Ptr = _lookup<
+      ffi.NativeFunction<
+          _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Int32, ffi.Int32, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_566 = __objc_msgSend_566Ptr.asFunction<
+      _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int, int,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_ordinalityOfUnit_inUnit_forDate_1 =
+      _registerName1("ordinalityOfUnit:inUnit:forDate:");
+  int _objc_msgSend_567(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int smaller,
+    int larger,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_567(
+      obj,
+      sel,
+      smaller,
+      larger,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_567Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.UnsignedLong Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Int32,
+              ffi.Int32,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_567 = __objc_msgSend_567Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int, int,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_rangeOfUnit_startDate_interval_forDate_1 =
+      _registerName1("rangeOfUnit:startDate:interval:forDate:");
+  bool _objc_msgSend_568(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unit,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> datep,
+    ffi.Pointer<ffi.Double> tip,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_568(
+      obj,
+      sel,
+      unit,
+      datep,
+      tip,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_568Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Int32,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<ffi.Double>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_568 = __objc_msgSend_568Ptr.asFunction<
+      bool Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          int,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<ffi.Double>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _class_NSDateComponents1 = _getClass1("NSDateComponents");
+  late final _sel_calendar1 = _registerName1("calendar");
+  late final _sel_setCalendar_1 = _registerName1("setCalendar:");
+  void _objc_msgSend_569(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> value,
+  ) {
+    return __objc_msgSend_569(
+      obj,
+      sel,
+      value,
+    );
+  }
+
+  late final __objc_msgSend_569Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_569 = __objc_msgSend_569Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_era1 = _registerName1("era");
+  late final _sel_setEra_1 = _registerName1("setEra:");
+  void _objc_msgSend_570(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int value,
+  ) {
+    return __objc_msgSend_570(
+      obj,
+      sel,
+      value,
+    );
+  }
+
+  late final __objc_msgSend_570Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Long)>>('objc_msgSend');
+  late final __objc_msgSend_570 = __objc_msgSend_570Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
+
+  late final _sel_year1 = _registerName1("year");
+  late final _sel_setYear_1 = _registerName1("setYear:");
+  late final _sel_month1 = _registerName1("month");
+  late final _sel_setMonth_1 = _registerName1("setMonth:");
+  late final _sel_day1 = _registerName1("day");
+  late final _sel_setDay_1 = _registerName1("setDay:");
+  late final _sel_hour1 = _registerName1("hour");
+  late final _sel_setHour_1 = _registerName1("setHour:");
+  late final _sel_minute1 = _registerName1("minute");
+  late final _sel_setMinute_1 = _registerName1("setMinute:");
+  late final _sel_second1 = _registerName1("second");
+  late final _sel_setSecond_1 = _registerName1("setSecond:");
+  late final _sel_nanosecond1 = _registerName1("nanosecond");
+  late final _sel_setNanosecond_1 = _registerName1("setNanosecond:");
+  late final _sel_weekday1 = _registerName1("weekday");
+  late final _sel_setWeekday_1 = _registerName1("setWeekday:");
+  late final _sel_weekdayOrdinal1 = _registerName1("weekdayOrdinal");
+  late final _sel_setWeekdayOrdinal_1 = _registerName1("setWeekdayOrdinal:");
+  late final _sel_quarter1 = _registerName1("quarter");
+  late final _sel_setQuarter_1 = _registerName1("setQuarter:");
+  late final _sel_weekOfMonth1 = _registerName1("weekOfMonth");
+  late final _sel_setWeekOfMonth_1 = _registerName1("setWeekOfMonth:");
+  late final _sel_weekOfYear1 = _registerName1("weekOfYear");
+  late final _sel_setWeekOfYear_1 = _registerName1("setWeekOfYear:");
+  late final _sel_yearForWeekOfYear1 = _registerName1("yearForWeekOfYear");
+  late final _sel_setYearForWeekOfYear_1 =
+      _registerName1("setYearForWeekOfYear:");
+  late final _sel_isLeapMonth1 = _registerName1("isLeapMonth");
+  late final _sel_setLeapMonth_1 = _registerName1("setLeapMonth:");
+  late final _sel_week1 = _registerName1("week");
+  late final _sel_setWeek_1 = _registerName1("setWeek:");
+  late final _sel_setValue_forComponent_1 =
+      _registerName1("setValue:forComponent:");
+  void _objc_msgSend_571(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int value,
+    int unit,
+  ) {
+    return __objc_msgSend_571(
+      obj,
+      sel,
+      value,
+      unit,
+    );
+  }
+
+  late final __objc_msgSend_571Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Long, ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_571 = __objc_msgSend_571Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int, int)>();
+
+  late final _sel_valueForComponent_1 = _registerName1("valueForComponent:");
+  int _objc_msgSend_572(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unit,
+  ) {
+    return __objc_msgSend_572(
+      obj,
+      sel,
+      unit,
+    );
+  }
+
+  late final __objc_msgSend_572Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Long Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_572 = __objc_msgSend_572Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
+
+  late final _sel_isValidDate1 = _registerName1("isValidDate");
+  late final _sel_isValidDateInCalendar_1 =
+      _registerName1("isValidDateInCalendar:");
+  bool _objc_msgSend_573(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> calendar,
+  ) {
+    return __objc_msgSend_573(
+      obj,
+      sel,
+      calendar,
+    );
+  }
+
+  late final __objc_msgSend_573Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_573 = __objc_msgSend_573Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_dateFromComponents_1 = _registerName1("dateFromComponents:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_574(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> comps,
+  ) {
+    return __objc_msgSend_574(
+      obj,
+      sel,
+      comps,
+    );
+  }
+
+  late final __objc_msgSend_574Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_574 = __objc_msgSend_574Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_components_fromDate_1 =
+      _registerName1("components:fromDate:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_575(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unitFlags,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_575(
+      obj,
+      sel,
+      unitFlags,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_575Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Int32,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_575 = __objc_msgSend_575Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, int, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_dateByAddingComponents_toDate_options_1 =
+      _registerName1("dateByAddingComponents:toDate:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_576(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> comps,
+    ffi.Pointer<ObjCObject> date,
+    int opts,
+  ) {
+    return __objc_msgSend_576(
+      obj,
+      sel,
+      comps,
+      date,
+      opts,
+    );
+  }
+
+  late final __objc_msgSend_576Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_576 = __objc_msgSend_576Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int)>();
+
+  late final _sel_components_fromDate_toDate_options_1 =
+      _registerName1("components:fromDate:toDate:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_577(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unitFlags,
+    ffi.Pointer<ObjCObject> startingDate,
+    ffi.Pointer<ObjCObject> resultDate,
+    int opts,
+  ) {
+    return __objc_msgSend_577(
+      obj,
+      sel,
+      unitFlags,
+      startingDate,
+      resultDate,
+      opts,
+    );
+  }
+
+  late final __objc_msgSend_577Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Int32,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_577 = __objc_msgSend_577Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          int,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int)>();
+
+  late final _sel_getEra_year_month_day_fromDate_1 =
+      _registerName1("getEra:year:month:day:fromDate:");
+  void _objc_msgSend_578(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Long> eraValuePointer,
+    ffi.Pointer<ffi.Long> yearValuePointer,
+    ffi.Pointer<ffi.Long> monthValuePointer,
+    ffi.Pointer<ffi.Long> dayValuePointer,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_578(
+      obj,
+      sel,
+      eraValuePointer,
+      yearValuePointer,
+      monthValuePointer,
+      dayValuePointer,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_578Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Long>,
+              ffi.Pointer<ffi.Long>,
+              ffi.Pointer<ffi.Long>,
+              ffi.Pointer<ffi.Long>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_578 = __objc_msgSend_578Ptr.asFunction<
+      void Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Long>,
+          ffi.Pointer<ffi.Long>,
+          ffi.Pointer<ffi.Long>,
+          ffi.Pointer<ffi.Long>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_getEra_yearForWeekOfYear_weekOfYear_weekday_fromDate_1 =
+      _registerName1("getEra:yearForWeekOfYear:weekOfYear:weekday:fromDate:");
+  late final _sel_getHour_minute_second_nanosecond_fromDate_1 =
+      _registerName1("getHour:minute:second:nanosecond:fromDate:");
+  late final _sel_component_fromDate_1 = _registerName1("component:fromDate:");
+  int _objc_msgSend_579(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unit,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_579(
+      obj,
+      sel,
+      unit,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_579Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Long Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Int32, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_579 = __objc_msgSend_579Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_dateWithEra_year_month_day_hour_minute_second_nanosecond_1 =
+      _registerName1(
+          "dateWithEra:year:month:day:hour:minute:second:nanosecond:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_580(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int eraValue,
+    int yearValue,
+    int monthValue,
+    int dayValue,
+    int hourValue,
+    int minuteValue,
+    int secondValue,
+    int nanosecondValue,
+  ) {
+    return __objc_msgSend_580(
+      obj,
+      sel,
+      eraValue,
+      yearValue,
+      monthValue,
+      dayValue,
+      hourValue,
+      minuteValue,
+      secondValue,
+      nanosecondValue,
+    );
+  }
+
+  late final __objc_msgSend_580Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long)>>('objc_msgSend');
+  late final __objc_msgSend_580 = __objc_msgSend_580Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, int, int, int, int, int, int, int, int)>();
+
+  late final _sel_dateWithEra_yearForWeekOfYear_weekOfYear_weekday_hour_minute_second_nanosecond_1 =
+      _registerName1(
+          "dateWithEra:yearForWeekOfYear:weekOfYear:weekday:hour:minute:second:nanosecond:");
+  late final _sel_startOfDayForDate_1 = _registerName1("startOfDayForDate:");
+  late final _sel_componentsInTimeZone_fromDate_1 =
+      _registerName1("componentsInTimeZone:fromDate:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_581(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> timezone,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_581(
+      obj,
+      sel,
+      timezone,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_581Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_581 = __objc_msgSend_581Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_compareDate_toDate_toUnitGranularity_1 =
+      _registerName1("compareDate:toDate:toUnitGranularity:");
+  int _objc_msgSend_582(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date1,
+    ffi.Pointer<ObjCObject> date2,
+    int unit,
+  ) {
+    return __objc_msgSend_582(
+      obj,
+      sel,
+      date1,
+      date2,
+      unit,
+    );
+  }
+
+  late final __objc_msgSend_582Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int32 Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_582 = __objc_msgSend_582Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>, int)>();
+
+  late final _sel_isDate_equalToDate_toUnitGranularity_1 =
+      _registerName1("isDate:equalToDate:toUnitGranularity:");
+  bool _objc_msgSend_583(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date1,
+    ffi.Pointer<ObjCObject> date2,
+    int unit,
+  ) {
+    return __objc_msgSend_583(
+      obj,
+      sel,
+      date1,
+      date2,
+      unit,
+    );
+  }
+
+  late final __objc_msgSend_583Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_583 = __objc_msgSend_583Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>, int)>();
+
+  late final _sel_isDate_inSameDayAsDate_1 =
+      _registerName1("isDate:inSameDayAsDate:");
+  bool _objc_msgSend_584(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date1,
+    ffi.Pointer<ObjCObject> date2,
+  ) {
+    return __objc_msgSend_584(
+      obj,
+      sel,
+      date1,
+      date2,
+    );
+  }
+
+  late final __objc_msgSend_584Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_584 = __objc_msgSend_584Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_isDateInToday_1 = _registerName1("isDateInToday:");
+  late final _sel_isDateInYesterday_1 = _registerName1("isDateInYesterday:");
+  late final _sel_isDateInTomorrow_1 = _registerName1("isDateInTomorrow:");
+  late final _sel_isDateInWeekend_1 = _registerName1("isDateInWeekend:");
+  late final _sel_rangeOfWeekendStartDate_interval_containingDate_1 =
+      _registerName1("rangeOfWeekendStartDate:interval:containingDate:");
+  bool _objc_msgSend_585(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> datep,
+    ffi.Pointer<ffi.Double> tip,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_585(
+      obj,
+      sel,
+      datep,
+      tip,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_585Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<ffi.Double>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_585 = __objc_msgSend_585Ptr.asFunction<
+      bool Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<ffi.Double>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_nextWeekendStartDate_interval_options_afterDate_1 =
+      _registerName1("nextWeekendStartDate:interval:options:afterDate:");
+  bool _objc_msgSend_586(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> datep,
+    ffi.Pointer<ffi.Double> tip,
+    int options,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_586(
+      obj,
+      sel,
+      datep,
+      tip,
+      options,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_586Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<ffi.Double>,
+              ffi.Int32,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_586 = __objc_msgSend_586Ptr.asFunction<
+      bool Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<ffi.Double>,
+          int,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_components_fromDateComponents_toDateComponents_options_1 =
+      _registerName1("components:fromDateComponents:toDateComponents:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_587(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unitFlags,
+    ffi.Pointer<ObjCObject> startingDateComp,
+    ffi.Pointer<ObjCObject> resultDateComp,
+    int options,
+  ) {
+    return __objc_msgSend_587(
+      obj,
+      sel,
+      unitFlags,
+      startingDateComp,
+      resultDateComp,
+      options,
+    );
+  }
+
+  late final __objc_msgSend_587Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Int32,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_587 = __objc_msgSend_587Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          int,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int)>();
+
+  late final _sel_dateByAddingUnit_value_toDate_options_1 =
+      _registerName1("dateByAddingUnit:value:toDate:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_588(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int unit,
+    int value,
+    ffi.Pointer<ObjCObject> date,
+    int options,
+  ) {
+    return __objc_msgSend_588(
+      obj,
+      sel,
+      unit,
+      value,
+      date,
+      options,
+    );
+  }
+
+  late final __objc_msgSend_588Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Int32,
+              ffi.Long,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_588 = __objc_msgSend_588Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, int, int, ffi.Pointer<ObjCObject>, int)>();
+
+  late final _sel_enumerateDatesStartingAfterDate_matchingComponents_options_usingBlock_1 =
+      _registerName1(
+          "enumerateDatesStartingAfterDate:matchingComponents:options:usingBlock:");
+  void _objc_msgSend_589(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> start,
+    ffi.Pointer<ObjCObject> comps,
+    int opts,
+    ffi.Pointer<_ObjCBlock> block,
+  ) {
+    return __objc_msgSend_589(
+      obj,
+      sel,
+      start,
+      comps,
+      opts,
+      block,
+    );
+  }
+
+  late final __objc_msgSend_589Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
+  late final __objc_msgSend_589 = __objc_msgSend_589Ptr.asFunction<
+      void Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int,
+          ffi.Pointer<_ObjCBlock>)>();
+
+  late final _sel_nextDateAfterDate_matchingComponents_options_1 =
+      _registerName1("nextDateAfterDate:matchingComponents:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_590(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date,
+    ffi.Pointer<ObjCObject> comps,
+    int options,
+  ) {
+    return __objc_msgSend_590(
+      obj,
+      sel,
+      date,
+      comps,
+      options,
+    );
+  }
+
+  late final __objc_msgSend_590Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_590 = __objc_msgSend_590Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int)>();
+
+  late final _sel_nextDateAfterDate_matchingUnit_value_options_1 =
+      _registerName1("nextDateAfterDate:matchingUnit:value:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_591(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date,
+    int unit,
+    int value,
+    int options,
+  ) {
+    return __objc_msgSend_591(
+      obj,
+      sel,
+      date,
+      unit,
+      value,
+      options,
+    );
+  }
+
+  late final __objc_msgSend_591Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              ffi.Long,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_591 = __objc_msgSend_591Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int, int, int)>();
+
+  late final _sel_nextDateAfterDate_matchingHour_minute_second_options_1 =
+      _registerName1("nextDateAfterDate:matchingHour:minute:second:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_592(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date,
+    int hourValue,
+    int minuteValue,
+    int secondValue,
+    int options,
+  ) {
+    return __objc_msgSend_592(
+      obj,
+      sel,
+      date,
+      hourValue,
+      minuteValue,
+      secondValue,
+      options,
+    );
+  }
+
+  late final __objc_msgSend_592Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_592 = __objc_msgSend_592Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int, int, int, int)>();
+
+  late final _sel_dateBySettingUnit_value_ofDate_options_1 =
+      _registerName1("dateBySettingUnit:value:ofDate:options:");
+  late final _sel_dateBySettingHour_minute_second_ofDate_options_1 =
+      _registerName1("dateBySettingHour:minute:second:ofDate:options:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_593(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int h,
+    int m,
+    int s,
+    ffi.Pointer<ObjCObject> date,
+    int opts,
+  ) {
+    return __objc_msgSend_593(
+      obj,
+      sel,
+      h,
+      m,
+      s,
+      date,
+      opts,
+    );
+  }
+
+  late final __objc_msgSend_593Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Long,
+              ffi.Long,
+              ffi.Long,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_593 = __objc_msgSend_593Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, int, int, int, ffi.Pointer<ObjCObject>, int)>();
+
+  late final _sel_date_matchesComponents_1 =
+      _registerName1("date:matchesComponents:");
+  bool _objc_msgSend_594(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date,
+    ffi.Pointer<ObjCObject> components,
+  ) {
+    return __objc_msgSend_594(
+      obj,
+      sel,
+      date,
+      components,
+    );
+  }
+
+  late final __objc_msgSend_594Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_594 = __objc_msgSend_594Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_isLenient1 = _registerName1("isLenient");
+  late final _sel_setLenient_1 = _registerName1("setLenient:");
+  late final _sel_twoDigitStartDate1 = _registerName1("twoDigitStartDate");
+  late final _sel_setTwoDigitStartDate_1 =
+      _registerName1("setTwoDigitStartDate:");
+  void _objc_msgSend_595(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> value,
+  ) {
+    return __objc_msgSend_595(
+      obj,
+      sel,
+      value,
+    );
+  }
+
+  late final __objc_msgSend_595Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_595 = __objc_msgSend_595Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_defaultDate1 = _registerName1("defaultDate");
+  late final _sel_setDefaultDate_1 = _registerName1("setDefaultDate:");
+  late final _sel_setEraSymbols_1 = _registerName1("setEraSymbols:");
+  void _objc_msgSend_596(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> value,
+  ) {
+    return __objc_msgSend_596(
+      obj,
+      sel,
+      value,
+    );
+  }
+
+  late final __objc_msgSend_596Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_596 = __objc_msgSend_596Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_setMonthSymbols_1 = _registerName1("setMonthSymbols:");
+  late final _sel_setShortMonthSymbols_1 =
+      _registerName1("setShortMonthSymbols:");
+  late final _sel_setWeekdaySymbols_1 = _registerName1("setWeekdaySymbols:");
+  late final _sel_setShortWeekdaySymbols_1 =
+      _registerName1("setShortWeekdaySymbols:");
+  late final _sel_setAMSymbol_1 = _registerName1("setAMSymbol:");
+  late final _sel_setPMSymbol_1 = _registerName1("setPMSymbol:");
+  late final _sel_setLongEraSymbols_1 = _registerName1("setLongEraSymbols:");
+  late final _sel_setVeryShortMonthSymbols_1 =
+      _registerName1("setVeryShortMonthSymbols:");
+  late final _sel_setStandaloneMonthSymbols_1 =
+      _registerName1("setStandaloneMonthSymbols:");
+  late final _sel_setShortStandaloneMonthSymbols_1 =
+      _registerName1("setShortStandaloneMonthSymbols:");
+  late final _sel_setVeryShortStandaloneMonthSymbols_1 =
+      _registerName1("setVeryShortStandaloneMonthSymbols:");
+  late final _sel_setVeryShortWeekdaySymbols_1 =
+      _registerName1("setVeryShortWeekdaySymbols:");
+  late final _sel_setStandaloneWeekdaySymbols_1 =
+      _registerName1("setStandaloneWeekdaySymbols:");
+  late final _sel_setShortStandaloneWeekdaySymbols_1 =
+      _registerName1("setShortStandaloneWeekdaySymbols:");
+  late final _sel_setVeryShortStandaloneWeekdaySymbols_1 =
+      _registerName1("setVeryShortStandaloneWeekdaySymbols:");
+  late final _sel_setQuarterSymbols_1 = _registerName1("setQuarterSymbols:");
+  late final _sel_setShortQuarterSymbols_1 =
+      _registerName1("setShortQuarterSymbols:");
+  late final _sel_setStandaloneQuarterSymbols_1 =
+      _registerName1("setStandaloneQuarterSymbols:");
+  late final _sel_setShortStandaloneQuarterSymbols_1 =
+      _registerName1("setShortStandaloneQuarterSymbols:");
+  late final _sel_gregorianStartDate1 = _registerName1("gregorianStartDate");
+  late final _sel_setGregorianStartDate_1 =
+      _registerName1("setGregorianStartDate:");
+  late final _sel_doesRelativeDateFormatting1 =
+      _registerName1("doesRelativeDateFormatting");
+  late final _sel_setDoesRelativeDateFormatting_1 =
+      _registerName1("setDoesRelativeDateFormatting:");
+  late final _class_NSScanner1 = _getClass1("NSScanner");
+  late final _sel_scanLocation1 = _registerName1("scanLocation");
+  late final _sel_setScanLocation_1 = _registerName1("setScanLocation:");
+  late final _sel_charactersToBeSkipped1 =
+      _registerName1("charactersToBeSkipped");
+  late final _sel_setCharactersToBeSkipped_1 =
+      _registerName1("setCharactersToBeSkipped:");
+  void _objc_msgSend_597(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> value,
+  ) {
+    return __objc_msgSend_597(
+      obj,
+      sel,
+      value,
+    );
+  }
+
+  late final __objc_msgSend_597Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_597 = __objc_msgSend_597Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_caseSensitive1 = _registerName1("caseSensitive");
+  late final _sel_setCaseSensitive_1 = _registerName1("setCaseSensitive:");
+  late final _sel_scanInt_1 = _registerName1("scanInt:");
+  bool _objc_msgSend_598(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Int> result,
+  ) {
+    return __objc_msgSend_598(
+      obj,
+      sel,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_598Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Int>)>>('objc_msgSend');
+  late final __objc_msgSend_598 = __objc_msgSend_598Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Int>)>();
+
+  late final _sel_scanInteger_1 = _registerName1("scanInteger:");
+  bool _objc_msgSend_599(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Long> result,
+  ) {
+    return __objc_msgSend_599(
+      obj,
+      sel,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_599Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Long>)>>('objc_msgSend');
+  late final __objc_msgSend_599 = __objc_msgSend_599Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Long>)>();
+
+  late final _sel_scanLongLong_1 = _registerName1("scanLongLong:");
+  bool _objc_msgSend_600(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.LongLong> result,
+  ) {
+    return __objc_msgSend_600(
+      obj,
+      sel,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_600Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.LongLong>)>>('objc_msgSend');
+  late final __objc_msgSend_600 = __objc_msgSend_600Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.LongLong>)>();
+
+  late final _sel_scanUnsignedLongLong_1 =
+      _registerName1("scanUnsignedLongLong:");
+  bool _objc_msgSend_601(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.UnsignedLongLong> result,
+  ) {
+    return __objc_msgSend_601(
+      obj,
+      sel,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_601Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.UnsignedLongLong>)>>('objc_msgSend');
+  late final __objc_msgSend_601 = __objc_msgSend_601Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.UnsignedLongLong>)>();
+
+  late final _sel_scanFloat_1 = _registerName1("scanFloat:");
+  bool _objc_msgSend_602(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Float> result,
+  ) {
+    return __objc_msgSend_602(
+      obj,
+      sel,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_602Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Float>)>>('objc_msgSend');
+  late final __objc_msgSend_602 = __objc_msgSend_602Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Float>)>();
+
+  late final _sel_scanDouble_1 = _registerName1("scanDouble:");
+  bool _objc_msgSend_603(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.Double> result,
+  ) {
+    return __objc_msgSend_603(
+      obj,
+      sel,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_603Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.Double>)>>('objc_msgSend');
+  late final __objc_msgSend_603 = __objc_msgSend_603Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.Double>)>();
+
+  late final _sel_scanHexInt_1 = _registerName1("scanHexInt:");
+  bool _objc_msgSend_604(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ffi.UnsignedInt> result,
+  ) {
+    return __objc_msgSend_604(
+      obj,
+      sel,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_604Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ffi.UnsignedInt>)>>('objc_msgSend');
+  late final __objc_msgSend_604 = __objc_msgSend_604Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ffi.UnsignedInt>)>();
+
+  late final _sel_scanHexLongLong_1 = _registerName1("scanHexLongLong:");
+  late final _sel_scanHexFloat_1 = _registerName1("scanHexFloat:");
+  late final _sel_scanHexDouble_1 = _registerName1("scanHexDouble:");
+  late final _sel_scanString_intoString_1 =
+      _registerName1("scanString:intoString:");
+  bool _objc_msgSend_605(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> string,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> result,
+  ) {
+    return __objc_msgSend_605(
+      obj,
+      sel,
+      string,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_605Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+  late final __objc_msgSend_605 = __objc_msgSend_605Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+
+  late final _sel_scanCharactersFromSet_intoString_1 =
+      _registerName1("scanCharactersFromSet:intoString:");
+  bool _objc_msgSend_606(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> set1,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> result,
+  ) {
+    return __objc_msgSend_606(
+      obj,
+      sel,
+      set1,
+      result,
+    );
+  }
+
+  late final __objc_msgSend_606Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+  late final __objc_msgSend_606 = __objc_msgSend_606Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+
+  late final _sel_scanUpToString_intoString_1 =
+      _registerName1("scanUpToString:intoString:");
+  late final _sel_scanUpToCharactersFromSet_intoString_1 =
+      _registerName1("scanUpToCharactersFromSet:intoString:");
+  late final _sel_isAtEnd1 = _registerName1("isAtEnd");
+  late final _sel_scannerWithString_1 = _registerName1("scannerWithString:");
+  late final _sel_localizedScannerWithString_1 =
+      _registerName1("localizedScannerWithString:");
+  late final _sel_scanDecimal_1 = _registerName1("scanDecimal:");
+  bool _objc_msgSend_607(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<NSDecimal> dcm,
+  ) {
+    return __objc_msgSend_607(
+      obj,
+      sel,
+      dcm,
+    );
+  }
+
+  late final __objc_msgSend_607Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<NSDecimal>)>>('objc_msgSend');
+  late final __objc_msgSend_607 = __objc_msgSend_607Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<NSDecimal>)>();
+
+  late final _class_NSException1 = _getClass1("NSException");
+  late final _sel_exceptionWithName_reason_userInfo_1 =
+      _registerName1("exceptionWithName:reason:userInfo:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_608(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> name,
+    ffi.Pointer<ObjCObject> reason,
+    ffi.Pointer<ObjCObject> userInfo,
+  ) {
+    return __objc_msgSend_608(
+      obj,
+      sel,
+      name,
+      reason,
+      userInfo,
+    );
+  }
+
+  late final __objc_msgSend_608Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_608 = __objc_msgSend_608Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_initWithName_reason_userInfo_1 =
+      _registerName1("initWithName:reason:userInfo:");
+  instancetype _objc_msgSend_609(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> aName,
+    ffi.Pointer<ObjCObject> aReason,
+    ffi.Pointer<ObjCObject> aUserInfo,
+  ) {
+    return __objc_msgSend_609(
+      obj,
+      sel,
+      aName,
+      aReason,
+      aUserInfo,
+    );
+  }
+
+  late final __objc_msgSend_609Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_609 = __objc_msgSend_609Ptr.asFunction<
+      instancetype Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_reason1 = _registerName1("reason");
+  late final _sel_raise1 = _registerName1("raise");
+  late final _sel_raise_format_1 = _registerName1("raise:format:");
+  void _objc_msgSend_610(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> name,
+    ffi.Pointer<ObjCObject> format,
+  ) {
+    return __objc_msgSend_610(
+      obj,
+      sel,
+      name,
+      format,
+    );
+  }
+
+  late final __objc_msgSend_610Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_610 = __objc_msgSend_610Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_raise_format_arguments_1 =
+      _registerName1("raise:format:arguments:");
+  void _objc_msgSend_611(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> name,
+    ffi.Pointer<ObjCObject> format,
+    ffi.Pointer<__va_list_tag> argList,
+  ) {
+    return __objc_msgSend_611(
+      obj,
+      sel,
+      name,
+      format,
+      argList,
+    );
+  }
+
+  late final __objc_msgSend_611Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<__va_list_tag>)>>('objc_msgSend');
+  late final __objc_msgSend_611 = __objc_msgSend_611Ptr.asFunction<
+      void Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<__va_list_tag>)>();
+
+  late final _class_NSRunLoop1 = _getClass1("NSRunLoop");
+  late final _sel_currentRunLoop1 = _registerName1("currentRunLoop");
+  ffi.Pointer<ObjCObject> _objc_msgSend_612(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_612(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_612Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_612 = __objc_msgSend_612Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _sel_mainRunLoop1 = _registerName1("mainRunLoop");
+  late final _sel_currentMode1 = _registerName1("currentMode");
+  late final _sel_getCFRunLoop1 = _registerName1("getCFRunLoop");
+  ffi.Pointer<__CFRunLoop> _objc_msgSend_613(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_613(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_613Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<__CFRunLoop> Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_613 = __objc_msgSend_613Ptr.asFunction<
+      ffi.Pointer<__CFRunLoop> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _class_NSTimer1 = _getClass1("NSTimer");
+  late final _sel_timerWithTimeInterval_invocation_repeats_1 =
+      _registerName1("timerWithTimeInterval:invocation:repeats:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_614(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    double ti,
+    ffi.Pointer<ObjCObject> invocation,
+    bool yesOrNo,
+  ) {
+    return __objc_msgSend_614(
+      obj,
+      sel,
+      ti,
+      invocation,
+      yesOrNo,
+    );
+  }
+
+  late final __objc_msgSend_614Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Double,
+              ffi.Pointer<ObjCObject>,
+              ffi.Bool)>>('objc_msgSend');
+  late final __objc_msgSend_614 = __objc_msgSend_614Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, double, ffi.Pointer<ObjCObject>, bool)>();
+
+  late final _sel_scheduledTimerWithTimeInterval_invocation_repeats_1 =
+      _registerName1("scheduledTimerWithTimeInterval:invocation:repeats:");
+  late final _sel_timerWithTimeInterval_target_selector_userInfo_repeats_1 =
+      _registerName1("timerWithTimeInterval:target:selector:userInfo:repeats:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_615(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    double ti,
+    ffi.Pointer<ObjCObject> aTarget,
+    ffi.Pointer<ObjCSel> aSelector,
+    ffi.Pointer<ObjCObject> userInfo,
+    bool yesOrNo,
+  ) {
+    return __objc_msgSend_615(
+      obj,
+      sel,
+      ti,
+      aTarget,
+      aSelector,
+      userInfo,
+      yesOrNo,
+    );
+  }
+
+  late final __objc_msgSend_615Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Double,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Bool)>>('objc_msgSend');
+  late final __objc_msgSend_615 = __objc_msgSend_615Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          double,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          bool)>();
+
+  late final _sel_scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_1 =
+      _registerName1(
+          "scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:");
+  late final _sel_timerWithTimeInterval_repeats_block_1 =
+      _registerName1("timerWithTimeInterval:repeats:block:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_616(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    double interval,
+    bool repeats,
+    ffi.Pointer<_ObjCBlock> block,
+  ) {
+    return __objc_msgSend_616(
+      obj,
+      sel,
+      interval,
+      repeats,
+      block,
+    );
+  }
+
+  late final __objc_msgSend_616Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Double,
+              ffi.Bool,
+              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
+  late final __objc_msgSend_616 = __objc_msgSend_616Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, double, bool, ffi.Pointer<_ObjCBlock>)>();
+
+  late final _sel_scheduledTimerWithTimeInterval_repeats_block_1 =
+      _registerName1("scheduledTimerWithTimeInterval:repeats:block:");
+  late final _sel_initWithFireDate_interval_repeats_block_1 =
+      _registerName1("initWithFireDate:interval:repeats:block:");
+  instancetype _objc_msgSend_617(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date,
+    double interval,
+    bool repeats,
+    ffi.Pointer<_ObjCBlock> block,
+  ) {
+    return __objc_msgSend_617(
+      obj,
+      sel,
+      date,
+      interval,
+      repeats,
+      block,
+    );
+  }
+
+  late final __objc_msgSend_617Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Double,
+              ffi.Bool,
+              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
+  late final __objc_msgSend_617 = __objc_msgSend_617Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, double, bool, ffi.Pointer<_ObjCBlock>)>();
+
+  late final _sel_initWithFireDate_interval_target_selector_userInfo_repeats_1 =
+      _registerName1(
+          "initWithFireDate:interval:target:selector:userInfo:repeats:");
+  instancetype _objc_msgSend_618(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> date,
+    double ti,
+    ffi.Pointer<ObjCObject> t,
+    ffi.Pointer<ObjCSel> s,
+    ffi.Pointer<ObjCObject> ui,
+    bool rep,
+  ) {
+    return __objc_msgSend_618(
+      obj,
+      sel,
+      date,
+      ti,
+      t,
+      s,
+      ui,
+      rep,
+    );
+  }
+
+  late final __objc_msgSend_618Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Double,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Bool)>>('objc_msgSend');
+  late final __objc_msgSend_618 = __objc_msgSend_618Ptr.asFunction<
+      instancetype Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          double,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          bool)>();
+
+  late final _sel_fire1 = _registerName1("fire");
+  late final _sel_fireDate1 = _registerName1("fireDate");
+  late final _sel_setFireDate_1 = _registerName1("setFireDate:");
+  late final _sel_timeInterval1 = _registerName1("timeInterval");
+  late final _sel_tolerance1 = _registerName1("tolerance");
+  late final _sel_setTolerance_1 = _registerName1("setTolerance:");
+  late final _sel_invalidate1 = _registerName1("invalidate");
+  late final _sel_isValid1 = _registerName1("isValid");
+  late final _sel_addTimer_forMode_1 = _registerName1("addTimer:forMode:");
+  void _objc_msgSend_619(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> timer,
+    ffi.Pointer<ObjCObject> mode,
+  ) {
+    return __objc_msgSend_619(
+      obj,
+      sel,
+      timer,
+      mode,
+    );
+  }
+
+  late final __objc_msgSend_619Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_619 = __objc_msgSend_619Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _class_NSPort1 = _getClass1("NSPort");
+  ffi.Pointer<ObjCObject> _objc_msgSend_620(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_620(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_620Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_620 = __objc_msgSend_620Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
   late final _sel_scheduleInRunLoop_forMode_1 =
       _registerName1("scheduleInRunLoop:forMode:");
-  void _objc_msgSend_564(
+  void _objc_msgSend_621(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> runLoop,
     ffi.Pointer<ObjCObject> mode,
   ) {
-    return __objc_msgSend_564(
+    return __objc_msgSend_621(
       obj,
       sel,
       runLoop,
@@ -15791,14 +17559,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_564Ptr = _lookup<
+  late final __objc_msgSend_621Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_564 = __objc_msgSend_564Ptr.asFunction<
+  late final __objc_msgSend_621 = __objc_msgSend_621Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
@@ -15807,7 +17575,7 @@ class PedometerBindings {
   late final _sel_reservedSpaceLength1 = _registerName1("reservedSpaceLength");
   late final _sel_sendBeforeDate_components_from_reserved_1 =
       _registerName1("sendBeforeDate:components:from:reserved:");
-  bool _objc_msgSend_565(
+  bool _objc_msgSend_622(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> limitDate,
@@ -15815,7 +17583,7 @@ class PedometerBindings {
     ffi.Pointer<ObjCObject> receivePort,
     int headerSpaceReserved,
   ) {
-    return __objc_msgSend_565(
+    return __objc_msgSend_622(
       obj,
       sel,
       limitDate,
@@ -15825,7 +17593,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_565Ptr = _lookup<
+  late final __objc_msgSend_622Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
@@ -15834,7 +17602,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.UnsignedLong)>>('objc_msgSend');
-  late final __objc_msgSend_565 = __objc_msgSend_565Ptr.asFunction<
+  late final __objc_msgSend_622 = __objc_msgSend_622Ptr.asFunction<
       bool Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -15845,7 +17613,7 @@ class PedometerBindings {
 
   late final _sel_sendBeforeDate_msgid_components_from_reserved_1 =
       _registerName1("sendBeforeDate:msgid:components:from:reserved:");
-  bool _objc_msgSend_566(
+  bool _objc_msgSend_623(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> limitDate,
@@ -15854,7 +17622,7 @@ class PedometerBindings {
     ffi.Pointer<ObjCObject> receivePort,
     int headerSpaceReserved,
   ) {
-    return __objc_msgSend_566(
+    return __objc_msgSend_623(
       obj,
       sel,
       limitDate,
@@ -15865,7 +17633,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_566Ptr = _lookup<
+  late final __objc_msgSend_623Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
@@ -15875,7 +17643,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.UnsignedLong)>>('objc_msgSend');
-  late final __objc_msgSend_566 = __objc_msgSend_566Ptr.asFunction<
+  late final __objc_msgSend_623 = __objc_msgSend_623Ptr.asFunction<
       bool Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -15886,13 +17654,13 @@ class PedometerBindings {
           int)>();
 
   late final _sel_addPort_forMode_1 = _registerName1("addPort:forMode:");
-  void _objc_msgSend_567(
+  void _objc_msgSend_624(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> aPort,
     ffi.Pointer<ObjCObject> mode,
   ) {
-    return __objc_msgSend_567(
+    return __objc_msgSend_624(
       obj,
       sel,
       aPort,
@@ -15900,48 +17668,28 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_567Ptr = _lookup<
+  late final __objc_msgSend_624Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_567 = __objc_msgSend_567Ptr.asFunction<
+  late final __objc_msgSend_624 = __objc_msgSend_624Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_removePort_forMode_1 = _registerName1("removePort:forMode:");
   late final _sel_limitDateForMode_1 = _registerName1("limitDateForMode:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_568(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> mode,
-  ) {
-    return __objc_msgSend_568(
-      obj,
-      sel,
-      mode,
-    );
-  }
-
-  late final __objc_msgSend_568Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_568 = __objc_msgSend_568Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
-
   late final _sel_acceptInputForMode_beforeDate_1 =
       _registerName1("acceptInputForMode:beforeDate:");
-  void _objc_msgSend_569(
+  void _objc_msgSend_625(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> mode,
     ffi.Pointer<ObjCObject> limitDate,
   ) {
-    return __objc_msgSend_569(
+    return __objc_msgSend_625(
       obj,
       sel,
       mode,
@@ -15949,27 +17697,27 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_569Ptr = _lookup<
+  late final __objc_msgSend_625Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_569 = __objc_msgSend_569Ptr.asFunction<
+  late final __objc_msgSend_625 = __objc_msgSend_625Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_run1 = _registerName1("run");
   late final _sel_runUntilDate_1 = _registerName1("runUntilDate:");
   late final _sel_runMode_beforeDate_1 = _registerName1("runMode:beforeDate:");
-  bool _objc_msgSend_570(
+  bool _objc_msgSend_626(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> mode,
     ffi.Pointer<ObjCObject> limitDate,
   ) {
-    return __objc_msgSend_570(
+    return __objc_msgSend_626(
       obj,
       sel,
       mode,
@@ -15977,26 +17725,26 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_570Ptr = _lookup<
+  late final __objc_msgSend_626Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_570 = __objc_msgSend_570Ptr.asFunction<
+  late final __objc_msgSend_626 = __objc_msgSend_626Ptr.asFunction<
       bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_performInModes_block_1 =
       _registerName1("performInModes:block:");
-  void _objc_msgSend_571(
+  void _objc_msgSend_627(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> modes,
     ffi.Pointer<_ObjCBlock> block,
   ) {
-    return __objc_msgSend_571(
+    return __objc_msgSend_627(
       obj,
       sel,
       modes,
@@ -16004,21 +17752,21 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_571Ptr = _lookup<
+  late final __objc_msgSend_627Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_571 = __objc_msgSend_571Ptr.asFunction<
+  late final __objc_msgSend_627 = __objc_msgSend_627Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_performBlock_1 = _registerName1("performBlock:");
   late final _sel_performSelector_target_argument_order_modes_1 =
       _registerName1("performSelector:target:argument:order:modes:");
-  void _objc_msgSend_572(
+  void _objc_msgSend_628(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCSel> aSelector,
@@ -16027,7 +17775,7 @@ class PedometerBindings {
     int order,
     ffi.Pointer<ObjCObject> modes,
   ) {
-    return __objc_msgSend_572(
+    return __objc_msgSend_628(
       obj,
       sel,
       aSelector,
@@ -16038,7 +17786,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_572Ptr = _lookup<
+  late final __objc_msgSend_628Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -16048,7 +17796,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.UnsignedLong,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_572 = __objc_msgSend_572Ptr.asFunction<
+  late final __objc_msgSend_628 = __objc_msgSend_628Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -16066,13 +17814,13 @@ class PedometerBindings {
   late final _sel_availableData1 = _registerName1("availableData");
   late final _sel_initWithFileDescriptor_closeOnDealloc_1 =
       _registerName1("initWithFileDescriptor:closeOnDealloc:");
-  instancetype _objc_msgSend_573(
+  instancetype _objc_msgSend_629(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int fd,
     bool closeopt,
   ) {
-    return __objc_msgSend_573(
+    return __objc_msgSend_629(
       obj,
       sel,
       fd,
@@ -16080,47 +17828,47 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_573Ptr = _lookup<
+  late final __objc_msgSend_629Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int, ffi.Bool)>>('objc_msgSend');
-  late final __objc_msgSend_573 = __objc_msgSend_573Ptr.asFunction<
+  late final __objc_msgSend_629 = __objc_msgSend_629Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int, bool)>();
 
   late final _sel_readDataToEndOfFileAndReturnError_1 =
       _registerName1("readDataToEndOfFileAndReturnError:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_574(
+  ffi.Pointer<ObjCObject> _objc_msgSend_630(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
-    return __objc_msgSend_574(
+    return __objc_msgSend_630(
       obj,
       sel,
       error,
     );
   }
 
-  late final __objc_msgSend_574Ptr = _lookup<
+  late final __objc_msgSend_630Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_574 = __objc_msgSend_574Ptr.asFunction<
+  late final __objc_msgSend_630 = __objc_msgSend_630Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
   late final _sel_readDataUpToLength_error_1 =
       _registerName1("readDataUpToLength:error:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_575(
+  ffi.Pointer<ObjCObject> _objc_msgSend_631(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int length,
     ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
-    return __objc_msgSend_575(
+    return __objc_msgSend_631(
       obj,
       sel,
       length,
@@ -16128,25 +17876,25 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_575Ptr = _lookup<
+  late final __objc_msgSend_631Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.UnsignedLong,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_575 = __objc_msgSend_575Ptr.asFunction<
+  late final __objc_msgSend_631 = __objc_msgSend_631Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, int, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
   late final _sel_writeData_error_1 = _registerName1("writeData:error:");
-  bool _objc_msgSend_576(
+  bool _objc_msgSend_632(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> data,
     ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
-    return __objc_msgSend_576(
+    return __objc_msgSend_632(
       obj,
       sel,
       data,
@@ -16154,25 +17902,25 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_576Ptr = _lookup<
+  late final __objc_msgSend_632Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_576 = __objc_msgSend_576Ptr.asFunction<
+  late final __objc_msgSend_632 = __objc_msgSend_632Ptr.asFunction<
       bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
   late final _sel_getOffset_error_1 = _registerName1("getOffset:error:");
-  bool _objc_msgSend_577(
+  bool _objc_msgSend_633(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.UnsignedLongLong> offsetInFile,
     ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
-    return __objc_msgSend_577(
+    return __objc_msgSend_633(
       obj,
       sel,
       offsetInFile,
@@ -16180,14 +17928,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_577Ptr = _lookup<
+  late final __objc_msgSend_633Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.UnsignedLongLong>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_577 = __objc_msgSend_577Ptr.asFunction<
+  late final __objc_msgSend_633 = __objc_msgSend_633Ptr.asFunction<
       bool Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -16197,13 +17945,13 @@ class PedometerBindings {
   late final _sel_seekToEndReturningOffset_error_1 =
       _registerName1("seekToEndReturningOffset:error:");
   late final _sel_seekToOffset_error_1 = _registerName1("seekToOffset:error:");
-  bool _objc_msgSend_578(
+  bool _objc_msgSend_634(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int offset,
     ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
-    return __objc_msgSend_578(
+    return __objc_msgSend_634(
       obj,
       sel,
       offset,
@@ -16211,14 +17959,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_578Ptr = _lookup<
+  late final __objc_msgSend_634Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.UnsignedLongLong,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_578 = __objc_msgSend_578Ptr.asFunction<
+  late final __objc_msgSend_634 = __objc_msgSend_634Ptr.asFunction<
       bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
           ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
@@ -16230,21 +17978,21 @@ class PedometerBindings {
       _registerName1("closeAndReturnError:");
   late final _sel_fileHandleWithStandardInput1 =
       _registerName1("fileHandleWithStandardInput");
-  ffi.Pointer<ObjCObject> _objc_msgSend_579(
+  ffi.Pointer<ObjCObject> _objc_msgSend_635(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_579(
+    return __objc_msgSend_635(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_579Ptr = _lookup<
+  late final __objc_msgSend_635Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_579 = __objc_msgSend_579Ptr.asFunction<
+  late final __objc_msgSend_635 = __objc_msgSend_635Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -16262,13 +18010,13 @@ class PedometerBindings {
       _registerName1("fileHandleForUpdatingAtPath:");
   late final _sel_fileHandleForReadingFromURL_error_1 =
       _registerName1("fileHandleForReadingFromURL:error:");
-  instancetype _objc_msgSend_580(
+  instancetype _objc_msgSend_636(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
     ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
-    return __objc_msgSend_580(
+    return __objc_msgSend_636(
       obj,
       sel,
       url,
@@ -16276,14 +18024,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_580Ptr = _lookup<
+  late final __objc_msgSend_636Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_580 = __objc_msgSend_580Ptr.asFunction<
+  late final __objc_msgSend_636 = __objc_msgSend_636Ptr.asFunction<
       instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
@@ -16308,43 +18056,43 @@ class PedometerBindings {
   late final _sel_waitForDataInBackgroundAndNotify1 =
       _registerName1("waitForDataInBackgroundAndNotify");
   late final _sel_readabilityHandler1 = _registerName1("readabilityHandler");
-  ffi.Pointer<_ObjCBlock> _objc_msgSend_581(
+  ffi.Pointer<_ObjCBlock> _objc_msgSend_637(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_581(
+    return __objc_msgSend_637(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_581Ptr = _lookup<
+  late final __objc_msgSend_637Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<_ObjCBlock> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_581 = __objc_msgSend_581Ptr.asFunction<
+  late final __objc_msgSend_637 = __objc_msgSend_637Ptr.asFunction<
       ffi.Pointer<_ObjCBlock> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setReadabilityHandler_1 =
       _registerName1("setReadabilityHandler:");
-  void _objc_msgSend_582(
+  void _objc_msgSend_638(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<_ObjCBlock> value,
   ) {
-    return __objc_msgSend_582(
+    return __objc_msgSend_638(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_582Ptr = _lookup<
+  late final __objc_msgSend_638Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_582 = __objc_msgSend_582Ptr.asFunction<
+  late final __objc_msgSend_638 = __objc_msgSend_638Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<_ObjCBlock>)>();
 
@@ -16353,23 +18101,23 @@ class PedometerBindings {
       _registerName1("setWriteabilityHandler:");
   late final _sel_initWithFileDescriptor_1 =
       _registerName1("initWithFileDescriptor:");
-  instancetype _objc_msgSend_583(
+  instancetype _objc_msgSend_639(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int fd,
   ) {
-    return __objc_msgSend_583(
+    return __objc_msgSend_639(
       obj,
       sel,
       fd,
     );
   }
 
-  late final __objc_msgSend_583Ptr = _lookup<
+  late final __objc_msgSend_639Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int)>>('objc_msgSend');
-  late final __objc_msgSend_583 = __objc_msgSend_583Ptr.asFunction<
+  late final __objc_msgSend_639 = __objc_msgSend_639Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
@@ -16380,23 +18128,23 @@ class PedometerBindings {
   late final _sel_offsetInFile1 = _registerName1("offsetInFile");
   late final _sel_seekToEndOfFile1 = _registerName1("seekToEndOfFile");
   late final _sel_seekToFileOffset_1 = _registerName1("seekToFileOffset:");
-  void _objc_msgSend_584(
+  void _objc_msgSend_640(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int offset,
   ) {
-    return __objc_msgSend_584(
+    return __objc_msgSend_640(
       obj,
       sel,
       offset,
     );
   }
 
-  late final __objc_msgSend_584Ptr = _lookup<
+  late final __objc_msgSend_640Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.UnsignedLongLong)>>('objc_msgSend');
-  late final __objc_msgSend_584 = __objc_msgSend_584Ptr.asFunction<
+  late final __objc_msgSend_640 = __objc_msgSend_640Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_truncateFileAtOffset_1 =
@@ -16406,43 +18154,43 @@ class PedometerBindings {
   late final _class_NSHTTPCookieStorage1 = _getClass1("NSHTTPCookieStorage");
   late final _sel_sharedHTTPCookieStorage1 =
       _registerName1("sharedHTTPCookieStorage");
-  ffi.Pointer<ObjCObject> _objc_msgSend_585(
+  ffi.Pointer<ObjCObject> _objc_msgSend_641(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_585(
+    return __objc_msgSend_641(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_585Ptr = _lookup<
+  late final __objc_msgSend_641Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_585 = __objc_msgSend_585Ptr.asFunction<
+  late final __objc_msgSend_641 = __objc_msgSend_641Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_sharedCookieStorageForGroupContainerIdentifier_1 =
       _registerName1("sharedCookieStorageForGroupContainerIdentifier:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_586(
+  ffi.Pointer<ObjCObject> _objc_msgSend_642(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> identifier,
   ) {
-    return __objc_msgSend_586(
+    return __objc_msgSend_642(
       obj,
       sel,
       identifier,
     );
   }
 
-  late final __objc_msgSend_586Ptr = _lookup<
+  late final __objc_msgSend_642Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_586 = __objc_msgSend_586Ptr.asFunction<
+  late final __objc_msgSend_642 = __objc_msgSend_642Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -16451,23 +18199,23 @@ class PedometerBindings {
   late final _sel_initWithProperties_1 = _registerName1("initWithProperties:");
   late final _sel_cookieWithProperties_1 =
       _registerName1("cookieWithProperties:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_587(
+  ffi.Pointer<ObjCObject> _objc_msgSend_643(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> properties,
   ) {
-    return __objc_msgSend_587(
+    return __objc_msgSend_643(
       obj,
       sel,
       properties,
     );
   }
 
-  late final __objc_msgSend_587Ptr = _lookup<
+  late final __objc_msgSend_643Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_587 = __objc_msgSend_587Ptr.asFunction<
+  late final __objc_msgSend_643 = __objc_msgSend_643Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -16475,13 +18223,13 @@ class PedometerBindings {
       _registerName1("requestHeaderFieldsWithCookies:");
   late final _sel_cookiesWithResponseHeaderFields_forURL_1 =
       _registerName1("cookiesWithResponseHeaderFields:forURL:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_588(
+  ffi.Pointer<ObjCObject> _objc_msgSend_644(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> headerFields,
     ffi.Pointer<ObjCObject> URL,
   ) {
-    return __objc_msgSend_588(
+    return __objc_msgSend_644(
       obj,
       sel,
       headerFields,
@@ -16489,14 +18237,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_588Ptr = _lookup<
+  late final __objc_msgSend_644Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_588 = __objc_msgSend_588Ptr.asFunction<
+  late final __objc_msgSend_644 = __objc_msgSend_644Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -16514,23 +18262,23 @@ class PedometerBindings {
   late final _sel_portList1 = _registerName1("portList");
   late final _sel_sameSitePolicy1 = _registerName1("sameSitePolicy");
   late final _sel_setCookie_1 = _registerName1("setCookie:");
-  void _objc_msgSend_589(
+  void _objc_msgSend_645(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> cookie,
   ) {
-    return __objc_msgSend_589(
+    return __objc_msgSend_645(
       obj,
       sel,
       cookie,
     );
   }
 
-  late final __objc_msgSend_589Ptr = _lookup<
+  late final __objc_msgSend_645Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_589 = __objc_msgSend_589Ptr.asFunction<
+  late final __objc_msgSend_645 = __objc_msgSend_645Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
@@ -16540,14 +18288,14 @@ class PedometerBindings {
   late final _sel_cookiesForURL_1 = _registerName1("cookiesForURL:");
   late final _sel_setCookies_forURL_mainDocumentURL_1 =
       _registerName1("setCookies:forURL:mainDocumentURL:");
-  void _objc_msgSend_590(
+  void _objc_msgSend_646(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> cookies,
     ffi.Pointer<ObjCObject> URL,
     ffi.Pointer<ObjCObject> mainDocumentURL,
   ) {
-    return __objc_msgSend_590(
+    return __objc_msgSend_646(
       obj,
       sel,
       cookies,
@@ -16556,7 +18304,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_590Ptr = _lookup<
+  late final __objc_msgSend_646Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -16564,7 +18312,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_590 = __objc_msgSend_590Ptr.asFunction<
+  late final __objc_msgSend_646 = __objc_msgSend_646Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -16573,42 +18321,42 @@ class PedometerBindings {
           ffi.Pointer<ObjCObject>)>();
 
   late final _sel_cookieAcceptPolicy1 = _registerName1("cookieAcceptPolicy");
-  int _objc_msgSend_591(
+  int _objc_msgSend_647(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_591(
+    return __objc_msgSend_647(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_591Ptr = _lookup<
+  late final __objc_msgSend_647Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_591 = __objc_msgSend_591Ptr.asFunction<
+  late final __objc_msgSend_647 = __objc_msgSend_647Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setCookieAcceptPolicy_1 =
       _registerName1("setCookieAcceptPolicy:");
-  void _objc_msgSend_592(
+  void _objc_msgSend_648(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_592(
+    return __objc_msgSend_648(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_592Ptr = _lookup<
+  late final __objc_msgSend_648Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_592 = __objc_msgSend_592Ptr.asFunction<
+  late final __objc_msgSend_648 = __objc_msgSend_648Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_sortedCookiesUsingDescriptors_1 =
@@ -16621,14 +18369,14 @@ class PedometerBindings {
       _registerName1("supportsSecureCoding");
   late final _sel_requestWithURL_cachePolicy_timeoutInterval_1 =
       _registerName1("requestWithURL:cachePolicy:timeoutInterval:");
-  instancetype _objc_msgSend_593(
+  instancetype _objc_msgSend_649(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> URL,
     int cachePolicy,
     double timeoutInterval,
   ) {
-    return __objc_msgSend_593(
+    return __objc_msgSend_649(
       obj,
       sel,
       URL,
@@ -16637,11 +18385,11 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_593Ptr = _lookup<
+  late final __objc_msgSend_649Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>, ffi.Int32, ffi.Double)>>('objc_msgSend');
-  late final __objc_msgSend_593 = __objc_msgSend_593Ptr.asFunction<
+  late final __objc_msgSend_649 = __objc_msgSend_649Ptr.asFunction<
       instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, int, double)>();
 
@@ -16649,41 +18397,41 @@ class PedometerBindings {
       _registerName1("initWithURL:cachePolicy:timeoutInterval:");
   late final _sel_URL1 = _registerName1("URL");
   late final _sel_cachePolicy1 = _registerName1("cachePolicy");
-  int _objc_msgSend_594(
+  int _objc_msgSend_650(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_594(
+    return __objc_msgSend_650(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_594Ptr = _lookup<
+  late final __objc_msgSend_650Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_594 = __objc_msgSend_594Ptr.asFunction<
+  late final __objc_msgSend_650 = __objc_msgSend_650Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_timeoutInterval1 = _registerName1("timeoutInterval");
   late final _sel_mainDocumentURL1 = _registerName1("mainDocumentURL");
   late final _sel_networkServiceType1 = _registerName1("networkServiceType");
-  int _objc_msgSend_595(
+  int _objc_msgSend_651(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_595(
+    return __objc_msgSend_651(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_595Ptr = _lookup<
+  late final __objc_msgSend_651Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_595 = __objc_msgSend_595Ptr.asFunction<
+  late final __objc_msgSend_651 = __objc_msgSend_651Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_allowsCellularAccess1 =
@@ -16694,21 +18442,21 @@ class PedometerBindings {
       _registerName1("allowsConstrainedNetworkAccess");
   late final _sel_assumesHTTP3Capable1 = _registerName1("assumesHTTP3Capable");
   late final _sel_attribution1 = _registerName1("attribution");
-  int _objc_msgSend_596(
+  int _objc_msgSend_652(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_596(
+    return __objc_msgSend_652(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_596Ptr = _lookup<
+  late final __objc_msgSend_652Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_596 = __objc_msgSend_596Ptr.asFunction<
+  late final __objc_msgSend_652 = __objc_msgSend_652Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_HTTPMethod1 = _registerName1("HTTPMethod");
@@ -16723,33 +18471,33 @@ class PedometerBindings {
   late final _sel_propertyForKey_1 = _registerName1("propertyForKey:");
   late final _sel_setProperty_forKey_1 = _registerName1("setProperty:forKey:");
   late final _sel_streamStatus1 = _registerName1("streamStatus");
-  int _objc_msgSend_597(
+  int _objc_msgSend_653(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_597(
+    return __objc_msgSend_653(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_597Ptr = _lookup<
+  late final __objc_msgSend_653Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_597 = __objc_msgSend_597Ptr.asFunction<
+  late final __objc_msgSend_653 = __objc_msgSend_653Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_streamError1 = _registerName1("streamError");
   late final _class_NSOutputStream1 = _getClass1("NSOutputStream");
   late final _sel_write_maxLength_1 = _registerName1("write:maxLength:");
-  int _objc_msgSend_598(
+  int _objc_msgSend_654(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.Uint8> buffer,
     int len,
   ) {
-    return __objc_msgSend_598(
+    return __objc_msgSend_654(
       obj,
       sel,
       buffer,
@@ -16757,11 +18505,11 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_598Ptr = _lookup<
+  late final __objc_msgSend_654Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Long Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.Uint8>, ffi.UnsignedLong)>>('objc_msgSend');
-  late final __objc_msgSend_598 = __objc_msgSend_598Ptr.asFunction<
+  late final __objc_msgSend_654 = __objc_msgSend_654Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ffi.Uint8>, int)>();
 
@@ -16769,13 +18517,13 @@ class PedometerBindings {
   late final _sel_initToMemory1 = _registerName1("initToMemory");
   late final _sel_initToBuffer_capacity_1 =
       _registerName1("initToBuffer:capacity:");
-  instancetype _objc_msgSend_599(
+  instancetype _objc_msgSend_655(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.Uint8> buffer,
     int capacity,
   ) {
-    return __objc_msgSend_599(
+    return __objc_msgSend_655(
       obj,
       sel,
       buffer,
@@ -16783,22 +18531,22 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_599Ptr = _lookup<
+  late final __objc_msgSend_655Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.Uint8>, ffi.UnsignedLong)>>('objc_msgSend');
-  late final __objc_msgSend_599 = __objc_msgSend_599Ptr.asFunction<
+  late final __objc_msgSend_655 = __objc_msgSend_655Ptr.asFunction<
       instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ffi.Uint8>, int)>();
 
   late final _sel_initWithURL_append_1 = _registerName1("initWithURL:append:");
-  instancetype _objc_msgSend_600(
+  instancetype _objc_msgSend_656(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
     bool shouldAppend,
   ) {
-    return __objc_msgSend_600(
+    return __objc_msgSend_656(
       obj,
       sel,
       url,
@@ -16806,11 +18554,11 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_600Ptr = _lookup<
+  late final __objc_msgSend_656Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>, ffi.Bool)>>('objc_msgSend');
-  late final __objc_msgSend_600 = __objc_msgSend_600Ptr.asFunction<
+  late final __objc_msgSend_656 = __objc_msgSend_656Ptr.asFunction<
       instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, bool)>();
 
@@ -16826,7 +18574,7 @@ class PedometerBindings {
       _registerName1("outputStreamWithURL:append:");
   late final _sel_getStreamsToHostWithName_port_inputStream_outputStream_1 =
       _registerName1("getStreamsToHostWithName:port:inputStream:outputStream:");
-  void _objc_msgSend_601(
+  void _objc_msgSend_657(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> hostname,
@@ -16834,7 +18582,7 @@ class PedometerBindings {
     ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
     ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream,
   ) {
-    return __objc_msgSend_601(
+    return __objc_msgSend_657(
       obj,
       sel,
       hostname,
@@ -16844,7 +18592,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_601Ptr = _lookup<
+  late final __objc_msgSend_657Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -16853,7 +18601,7 @@ class PedometerBindings {
               ffi.Long,
               ffi.Pointer<ffi.Pointer<ObjCObject>>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_601 = __objc_msgSend_601Ptr.asFunction<
+  late final __objc_msgSend_657 = __objc_msgSend_657Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -16864,14 +18612,14 @@ class PedometerBindings {
 
   late final _sel_getBoundStreamsWithBufferSize_inputStream_outputStream_1 =
       _registerName1("getBoundStreamsWithBufferSize:inputStream:outputStream:");
-  void _objc_msgSend_602(
+  void _objc_msgSend_658(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int bufferSize,
     ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
     ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream,
   ) {
-    return __objc_msgSend_602(
+    return __objc_msgSend_658(
       obj,
       sel,
       bufferSize,
@@ -16880,7 +18628,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_602Ptr = _lookup<
+  late final __objc_msgSend_658Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -16888,7 +18636,7 @@ class PedometerBindings {
               ffi.UnsignedLong,
               ffi.Pointer<ffi.Pointer<ObjCObject>>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_602 = __objc_msgSend_602Ptr.asFunction<
+  late final __objc_msgSend_658 = __objc_msgSend_658Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -16898,13 +18646,13 @@ class PedometerBindings {
 
   late final _sel_read_maxLength_1 = _registerName1("read:maxLength:");
   late final _sel_getBuffer_length_1 = _registerName1("getBuffer:length:");
-  bool _objc_msgSend_603(
+  bool _objc_msgSend_659(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.Pointer<ffi.Uint8>> buffer,
     ffi.Pointer<ffi.UnsignedLong> len,
   ) {
-    return __objc_msgSend_603(
+    return __objc_msgSend_659(
       obj,
       sel,
       buffer,
@@ -16912,14 +18660,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_603Ptr = _lookup<
+  late final __objc_msgSend_659Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.Pointer<ffi.Uint8>>,
               ffi.Pointer<ffi.UnsignedLong>)>>('objc_msgSend');
-  late final __objc_msgSend_603 = __objc_msgSend_603Ptr.asFunction<
+  late final __objc_msgSend_659 = __objc_msgSend_659Ptr.asFunction<
       bool Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -16934,21 +18682,21 @@ class PedometerBindings {
       _registerName1("inputStreamWithFileAtPath:");
   late final _sel_inputStreamWithURL_1 = _registerName1("inputStreamWithURL:");
   late final _sel_HTTPBodyStream1 = _registerName1("HTTPBodyStream");
-  ffi.Pointer<ObjCObject> _objc_msgSend_604(
+  ffi.Pointer<ObjCObject> _objc_msgSend_660(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_604(
+    return __objc_msgSend_660(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_604Ptr = _lookup<
+  late final __objc_msgSend_660Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_604 = __objc_msgSend_604Ptr.asFunction<
+  late final __objc_msgSend_660 = __objc_msgSend_660Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -16957,21 +18705,21 @@ class PedometerBindings {
   late final _sel_HTTPShouldUsePipelining1 =
       _registerName1("HTTPShouldUsePipelining");
   late final _sel_originalRequest1 = _registerName1("originalRequest");
-  ffi.Pointer<ObjCObject> _objc_msgSend_605(
+  ffi.Pointer<ObjCObject> _objc_msgSend_661(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_605(
+    return __objc_msgSend_661(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_605Ptr = _lookup<
+  late final __objc_msgSend_661Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_605 = __objc_msgSend_605Ptr.asFunction<
+  late final __objc_msgSend_661 = __objc_msgSend_661Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -16980,7 +18728,7 @@ class PedometerBindings {
   late final _sel_initWithURL_MIMEType_expectedContentLength_textEncodingName_1 =
       _registerName1(
           "initWithURL:MIMEType:expectedContentLength:textEncodingName:");
-  instancetype _objc_msgSend_606(
+  instancetype _objc_msgSend_662(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> URL,
@@ -16988,7 +18736,7 @@ class PedometerBindings {
     int length,
     ffi.Pointer<ObjCObject> name,
   ) {
-    return __objc_msgSend_606(
+    return __objc_msgSend_662(
       obj,
       sel,
       URL,
@@ -16998,7 +18746,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_606Ptr = _lookup<
+  late final __objc_msgSend_662Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(
               ffi.Pointer<ObjCObject>,
@@ -17007,7 +18755,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Long,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_606 = __objc_msgSend_606Ptr.asFunction<
+  late final __objc_msgSend_662 = __objc_msgSend_662Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -17022,21 +18770,21 @@ class PedometerBindings {
   late final _sel_textEncodingName1 = _registerName1("textEncodingName");
   late final _sel_suggestedFilename1 = _registerName1("suggestedFilename");
   late final _sel_response1 = _registerName1("response");
-  ffi.Pointer<ObjCObject> _objc_msgSend_607(
+  ffi.Pointer<ObjCObject> _objc_msgSend_663(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_607(
+    return __objc_msgSend_663(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_607Ptr = _lookup<
+  late final __objc_msgSend_663Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_607 = __objc_msgSend_607Ptr.asFunction<
+  late final __objc_msgSend_663 = __objc_msgSend_663Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -17062,43 +18810,43 @@ class PedometerBindings {
   late final _sel_taskDescription1 = _registerName1("taskDescription");
   late final _sel_setTaskDescription_1 = _registerName1("setTaskDescription:");
   late final _sel_state1 = _registerName1("state");
-  int _objc_msgSend_608(
+  int _objc_msgSend_664(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_608(
+    return __objc_msgSend_664(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_608Ptr = _lookup<
+  late final __objc_msgSend_664Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_608 = __objc_msgSend_608Ptr.asFunction<
+  late final __objc_msgSend_664 = __objc_msgSend_664Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_suspend1 = _registerName1("suspend");
   late final _sel_priority1 = _registerName1("priority");
   late final _sel_setPriority_1 = _registerName1("setPriority:");
-  void _objc_msgSend_609(
+  void _objc_msgSend_665(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     double value,
   ) {
-    return __objc_msgSend_609(
+    return __objc_msgSend_665(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_609Ptr = _lookup<
+  late final __objc_msgSend_665Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Float)>>('objc_msgSend');
-  late final __objc_msgSend_609 = __objc_msgSend_609Ptr.asFunction<
+  late final __objc_msgSend_665 = __objc_msgSend_665Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, double)>();
 
   late final _sel_prefersIncrementalDelivery1 =
@@ -17107,13 +18855,13 @@ class PedometerBindings {
       _registerName1("setPrefersIncrementalDelivery:");
   late final _sel_storeCookies_forTask_1 =
       _registerName1("storeCookies:forTask:");
-  void _objc_msgSend_610(
+  void _objc_msgSend_666(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> cookies,
     ffi.Pointer<ObjCObject> task,
   ) {
-    return __objc_msgSend_610(
+    return __objc_msgSend_666(
       obj,
       sel,
       cookies,
@@ -17121,26 +18869,26 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_610Ptr = _lookup<
+  late final __objc_msgSend_666Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_610 = __objc_msgSend_610Ptr.asFunction<
+  late final __objc_msgSend_666 = __objc_msgSend_666Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_getCookiesForTask_completionHandler_1 =
       _registerName1("getCookiesForTask:completionHandler:");
-  void _objc_msgSend_611(
+  void _objc_msgSend_667(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> task,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_611(
+    return __objc_msgSend_667(
       obj,
       sel,
       task,
@@ -17148,14 +18896,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_611Ptr = _lookup<
+  late final __objc_msgSend_667Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_611 = __objc_msgSend_611Ptr.asFunction<
+  late final __objc_msgSend_667 = __objc_msgSend_667Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
 
@@ -17163,13 +18911,13 @@ class PedometerBindings {
   late final _sel_indexPathWithIndex_1 = _registerName1("indexPathWithIndex:");
   late final _sel_indexPathWithIndexes_length_1 =
       _registerName1("indexPathWithIndexes:length:");
-  instancetype _objc_msgSend_612(
+  instancetype _objc_msgSend_668(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.UnsignedLong> indexes,
     int length,
   ) {
-    return __objc_msgSend_612(
+    return __objc_msgSend_668(
       obj,
       sel,
       indexes,
@@ -17177,14 +18925,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_612Ptr = _lookup<
+  late final __objc_msgSend_668Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.UnsignedLong>,
               ffi.UnsignedLong)>>('objc_msgSend');
-  late final __objc_msgSend_612 = __objc_msgSend_612Ptr.asFunction<
+  late final __objc_msgSend_668 = __objc_msgSend_668Ptr.asFunction<
       instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ffi.UnsignedLong>, int)>();
 
@@ -17192,55 +18940,55 @@ class PedometerBindings {
       _registerName1("initWithIndexes:length:");
   late final _sel_indexPathByAddingIndex_1 =
       _registerName1("indexPathByAddingIndex:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_613(
+  ffi.Pointer<ObjCObject> _objc_msgSend_669(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int index,
   ) {
-    return __objc_msgSend_613(
+    return __objc_msgSend_669(
       obj,
       sel,
       index,
     );
   }
 
-  late final __objc_msgSend_613Ptr = _lookup<
+  late final __objc_msgSend_669Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.UnsignedLong)>>('objc_msgSend');
-  late final __objc_msgSend_613 = __objc_msgSend_613Ptr.asFunction<
+  late final __objc_msgSend_669 = __objc_msgSend_669Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_indexPathByRemovingLastIndex1 =
       _registerName1("indexPathByRemovingLastIndex");
-  ffi.Pointer<ObjCObject> _objc_msgSend_614(
+  ffi.Pointer<ObjCObject> _objc_msgSend_670(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_614(
+    return __objc_msgSend_670(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_614Ptr = _lookup<
+  late final __objc_msgSend_670Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_614 = __objc_msgSend_614Ptr.asFunction<
+  late final __objc_msgSend_670 = __objc_msgSend_670Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_indexAtPosition_1 = _registerName1("indexAtPosition:");
   late final _sel_getIndexes_range_1 = _registerName1("getIndexes:range:");
-  void _objc_msgSend_615(
+  void _objc_msgSend_671(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.UnsignedLong> indexes,
     _NSRange positionRange,
   ) {
-    return __objc_msgSend_615(
+    return __objc_msgSend_671(
       obj,
       sel,
       indexes,
@@ -17248,72 +18996,72 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_615Ptr = _lookup<
+  late final __objc_msgSend_671Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.UnsignedLong>, _NSRange)>>('objc_msgSend');
-  late final __objc_msgSend_615 = __objc_msgSend_615Ptr.asFunction<
+  late final __objc_msgSend_671 = __objc_msgSend_671Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ffi.UnsignedLong>, _NSRange)>();
 
-  int _objc_msgSend_616(
+  int _objc_msgSend_672(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> otherObject,
   ) {
-    return __objc_msgSend_616(
+    return __objc_msgSend_672(
       obj,
       sel,
       otherObject,
     );
   }
 
-  late final __objc_msgSend_616Ptr = _lookup<
+  late final __objc_msgSend_672Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_616 = __objc_msgSend_616Ptr.asFunction<
+  late final __objc_msgSend_672 = __objc_msgSend_672Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
   late final _sel_getIndexes_1 = _registerName1("getIndexes:");
-  void _objc_msgSend_617(
+  void _objc_msgSend_673(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.UnsignedLong> indexes,
   ) {
-    return __objc_msgSend_617(
+    return __objc_msgSend_673(
       obj,
       sel,
       indexes,
     );
   }
 
-  late final __objc_msgSend_617Ptr = _lookup<
+  late final __objc_msgSend_673Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.UnsignedLong>)>>('objc_msgSend');
-  late final __objc_msgSend_617 = __objc_msgSend_617Ptr.asFunction<
+  late final __objc_msgSend_673 = __objc_msgSend_673Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ffi.UnsignedLong>)>();
 
   late final _class_NSInflectionRule1 = _getClass1("NSInflectionRule");
   late final _sel_automaticRule1 = _registerName1("automaticRule");
-  ffi.Pointer<ObjCObject> _objc_msgSend_618(
+  ffi.Pointer<ObjCObject> _objc_msgSend_674(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_618(
+    return __objc_msgSend_674(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_618Ptr = _lookup<
+  late final __objc_msgSend_674Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_618 = __objc_msgSend_618Ptr.asFunction<
+  late final __objc_msgSend_674 = __objc_msgSend_674Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -17322,118 +19070,118 @@ class PedometerBindings {
       _registerName1("canInflectPreferredLocalization");
   late final _class_NSMorphology1 = _getClass1("NSMorphology");
   late final _sel_grammaticalGender1 = _registerName1("grammaticalGender");
-  int _objc_msgSend_619(
+  int _objc_msgSend_675(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_619(
+    return __objc_msgSend_675(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_619Ptr = _lookup<
+  late final __objc_msgSend_675Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_619 = __objc_msgSend_619Ptr.asFunction<
+  late final __objc_msgSend_675 = __objc_msgSend_675Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setGrammaticalGender_1 =
       _registerName1("setGrammaticalGender:");
-  void _objc_msgSend_620(
+  void _objc_msgSend_676(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_620(
+    return __objc_msgSend_676(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_620Ptr = _lookup<
+  late final __objc_msgSend_676Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_620 = __objc_msgSend_620Ptr.asFunction<
+  late final __objc_msgSend_676 = __objc_msgSend_676Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_partOfSpeech1 = _registerName1("partOfSpeech");
-  int _objc_msgSend_621(
+  int _objc_msgSend_677(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_621(
+    return __objc_msgSend_677(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_621Ptr = _lookup<
+  late final __objc_msgSend_677Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_621 = __objc_msgSend_621Ptr.asFunction<
+  late final __objc_msgSend_677 = __objc_msgSend_677Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setPartOfSpeech_1 = _registerName1("setPartOfSpeech:");
-  void _objc_msgSend_622(
+  void _objc_msgSend_678(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_622(
+    return __objc_msgSend_678(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_622Ptr = _lookup<
+  late final __objc_msgSend_678Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_622 = __objc_msgSend_622Ptr.asFunction<
+  late final __objc_msgSend_678 = __objc_msgSend_678Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_number1 = _registerName1("number");
-  int _objc_msgSend_623(
+  int _objc_msgSend_679(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_623(
+    return __objc_msgSend_679(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_623Ptr = _lookup<
+  late final __objc_msgSend_679Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_623 = __objc_msgSend_623Ptr.asFunction<
+  late final __objc_msgSend_679 = __objc_msgSend_679Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setNumber_1 = _registerName1("setNumber:");
-  void _objc_msgSend_624(
+  void _objc_msgSend_680(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_624(
+    return __objc_msgSend_680(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_624Ptr = _lookup<
+  late final __objc_msgSend_680Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_624 = __objc_msgSend_624Ptr.asFunction<
+  late final __objc_msgSend_680 = __objc_msgSend_680Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _class_NSMorphologyCustomPronoun1 =
@@ -17456,36 +19204,36 @@ class PedometerBindings {
   late final _sel_setReflexiveForm_1 = _registerName1("setReflexiveForm:");
   late final _sel_customPronounForLanguage_1 =
       _registerName1("customPronounForLanguage:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_625(
+  ffi.Pointer<ObjCObject> _objc_msgSend_681(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> language,
   ) {
-    return __objc_msgSend_625(
+    return __objc_msgSend_681(
       obj,
       sel,
       language,
     );
   }
 
-  late final __objc_msgSend_625Ptr = _lookup<
+  late final __objc_msgSend_681Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_625 = __objc_msgSend_625Ptr.asFunction<
+  late final __objc_msgSend_681 = __objc_msgSend_681Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_setCustomPronoun_forLanguage_error_1 =
       _registerName1("setCustomPronoun:forLanguage:error:");
-  bool _objc_msgSend_626(
+  bool _objc_msgSend_682(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> features,
     ffi.Pointer<ObjCObject> language,
     ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
-    return __objc_msgSend_626(
+    return __objc_msgSend_682(
       obj,
       sel,
       features,
@@ -17494,7 +19242,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_626Ptr = _lookup<
+  late final __objc_msgSend_682Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
@@ -17502,7 +19250,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_626 = __objc_msgSend_626Ptr.asFunction<
+  late final __objc_msgSend_682 = __objc_msgSend_682Ptr.asFunction<
       bool Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -17512,21 +19260,21 @@ class PedometerBindings {
 
   late final _sel_isUnspecified1 = _registerName1("isUnspecified");
   late final _sel_userMorphology1 = _registerName1("userMorphology");
-  ffi.Pointer<ObjCObject> _objc_msgSend_627(
+  ffi.Pointer<ObjCObject> _objc_msgSend_683(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_627(
+    return __objc_msgSend_683(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_627Ptr = _lookup<
+  late final __objc_msgSend_683Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_627 = __objc_msgSend_627Ptr.asFunction<
+  late final __objc_msgSend_683 = __objc_msgSend_683Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -17536,64 +19284,64 @@ class PedometerBindings {
   late final _sel_isAsynchronous1 = _registerName1("isAsynchronous");
   late final _sel_isReady1 = _registerName1("isReady");
   late final _sel_addDependency_1 = _registerName1("addDependency:");
-  void _objc_msgSend_628(
+  void _objc_msgSend_684(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> op,
   ) {
-    return __objc_msgSend_628(
+    return __objc_msgSend_684(
       obj,
       sel,
       op,
     );
   }
 
-  late final __objc_msgSend_628Ptr = _lookup<
+  late final __objc_msgSend_684Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_628 = __objc_msgSend_628Ptr.asFunction<
+  late final __objc_msgSend_684 = __objc_msgSend_684Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
   late final _sel_removeDependency_1 = _registerName1("removeDependency:");
   late final _sel_dependencies1 = _registerName1("dependencies");
   late final _sel_queuePriority1 = _registerName1("queuePriority");
-  int _objc_msgSend_629(
+  int _objc_msgSend_685(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_629(
+    return __objc_msgSend_685(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_629Ptr = _lookup<
+  late final __objc_msgSend_685Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_629 = __objc_msgSend_629Ptr.asFunction<
+  late final __objc_msgSend_685 = __objc_msgSend_685Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setQueuePriority_1 = _registerName1("setQueuePriority:");
-  void _objc_msgSend_630(
+  void _objc_msgSend_686(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_630(
+    return __objc_msgSend_686(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_630Ptr = _lookup<
+  late final __objc_msgSend_686Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_630 = __objc_msgSend_630Ptr.asFunction<
+  late final __objc_msgSend_686 = __objc_msgSend_686Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_completionBlock1 = _registerName1("completionBlock");
@@ -17602,13 +19350,13 @@ class PedometerBindings {
   late final _sel_addOperation_1 = _registerName1("addOperation:");
   late final _sel_addOperations_waitUntilFinished_1 =
       _registerName1("addOperations:waitUntilFinished:");
-  void _objc_msgSend_631(
+  void _objc_msgSend_687(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> ops,
     bool wait,
   ) {
-    return __objc_msgSend_631(
+    return __objc_msgSend_687(
       obj,
       sel,
       ops,
@@ -17616,11 +19364,11 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_631Ptr = _lookup<
+  late final __objc_msgSend_687Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>, ffi.Bool)>>('objc_msgSend');
-  late final __objc_msgSend_631 = __objc_msgSend_631Ptr.asFunction<
+  late final __objc_msgSend_687 = __objc_msgSend_687Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, bool)>();
 
@@ -17631,64 +19379,45 @@ class PedometerBindings {
       _registerName1("maxConcurrentOperationCount");
   late final _sel_setMaxConcurrentOperationCount_1 =
       _registerName1("setMaxConcurrentOperationCount:");
-  void _objc_msgSend_632(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    int value,
-  ) {
-    return __objc_msgSend_632(
-      obj,
-      sel,
-      value,
-    );
-  }
-
-  late final __objc_msgSend_632Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Long)>>('objc_msgSend');
-  late final __objc_msgSend_632 = __objc_msgSend_632Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
-
   late final _sel_isSuspended1 = _registerName1("isSuspended");
   late final _sel_setSuspended_1 = _registerName1("setSuspended:");
   late final _sel_underlyingQueue1 = _registerName1("underlyingQueue");
-  ffi.Pointer<ObjCObject> _objc_msgSend_633(
+  ffi.Pointer<ObjCObject> _objc_msgSend_688(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_633(
+    return __objc_msgSend_688(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_633Ptr = _lookup<
+  late final __objc_msgSend_688Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_633 = __objc_msgSend_633Ptr.asFunction<
+  late final __objc_msgSend_688 = __objc_msgSend_688Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setUnderlyingQueue_1 = _registerName1("setUnderlyingQueue:");
-  void _objc_msgSend_634(
+  void _objc_msgSend_689(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
   ) {
-    return __objc_msgSend_634(
+    return __objc_msgSend_689(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_634Ptr = _lookup<
+  late final __objc_msgSend_689Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_634 = __objc_msgSend_634Ptr.asFunction<
+  late final __objc_msgSend_689 = __objc_msgSend_689Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
@@ -17696,21 +19425,21 @@ class PedometerBindings {
   late final _sel_waitUntilAllOperationsAreFinished1 =
       _registerName1("waitUntilAllOperationsAreFinished");
   late final _sel_currentQueue1 = _registerName1("currentQueue");
-  ffi.Pointer<ObjCObject> _objc_msgSend_635(
+  ffi.Pointer<ObjCObject> _objc_msgSend_690(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_635(
+    return __objc_msgSend_690(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_635Ptr = _lookup<
+  late final __objc_msgSend_690Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_635 = __objc_msgSend_635Ptr.asFunction<
+  late final __objc_msgSend_690 = __objc_msgSend_690Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -17719,46 +19448,46 @@ class PedometerBindings {
   late final _sel_operationCount1 = _registerName1("operationCount");
   late final _class_NSPointerArray1 = _getClass1("NSPointerArray");
   late final _sel_initWithOptions_1 = _registerName1("initWithOptions:");
-  instancetype _objc_msgSend_636(
+  instancetype _objc_msgSend_691(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int options,
   ) {
-    return __objc_msgSend_636(
+    return __objc_msgSend_691(
       obj,
       sel,
       options,
     );
   }
 
-  late final __objc_msgSend_636Ptr = _lookup<
+  late final __objc_msgSend_691Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_636 = __objc_msgSend_636Ptr.asFunction<
+  late final __objc_msgSend_691 = __objc_msgSend_691Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _class_NSPointerFunctions1 = _getClass1("NSPointerFunctions");
   late final _sel_pointerFunctionsWithOptions_1 =
       _registerName1("pointerFunctionsWithOptions:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_637(
+  ffi.Pointer<ObjCObject> _objc_msgSend_692(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int options,
   ) {
-    return __objc_msgSend_637(
+    return __objc_msgSend_692(
       obj,
       sel,
       options,
     );
   }
 
-  late final __objc_msgSend_637Ptr = _lookup<
+  late final __objc_msgSend_692Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_637 = __objc_msgSend_637Ptr.asFunction<
+  late final __objc_msgSend_692 = __objc_msgSend_692Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
@@ -17770,17 +19499,17 @@ class PedometerBindings {
                   ffi.Pointer<
                       ffi.NativeFunction<
                           ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>)>>
-      _objc_msgSend_638(
+      _objc_msgSend_693(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_638(
+    return __objc_msgSend_693(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_638Ptr = _lookup<
+  late final __objc_msgSend_693Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Pointer<
                       ffi.NativeFunction<
@@ -17792,7 +19521,7 @@ class PedometerBindings {
                                           ffi.Pointer<ffi.Void>)>>)>>
                   Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_638 = __objc_msgSend_638Ptr.asFunction<
+  late final __objc_msgSend_693 = __objc_msgSend_693Ptr.asFunction<
       ffi.Pointer<
               ffi.NativeFunction<
                   ffi.UnsignedLong Function(
@@ -17804,7 +19533,7 @@ class PedometerBindings {
           Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setHashFunction_1 = _registerName1("setHashFunction:");
-  void _objc_msgSend_639(
+  void _objc_msgSend_694(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<
@@ -17817,14 +19546,14 @@ class PedometerBindings {
                                 ffi.Pointer<ffi.Void>)>>)>>
         value,
   ) {
-    return __objc_msgSend_639(
+    return __objc_msgSend_694(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_639Ptr = _lookup<
+  late final __objc_msgSend_694Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Void Function(
                   ffi.Pointer<ObjCObject>,
@@ -17838,7 +19567,7 @@ class PedometerBindings {
                                       ffi.UnsignedLong Function(
                                           ffi.Pointer<ffi.Void>)>>)>>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_639 = __objc_msgSend_639Ptr.asFunction<
+  late final __objc_msgSend_694 = __objc_msgSend_694Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -17860,17 +19589,17 @@ class PedometerBindings {
                   ffi.Pointer<
                       ffi.NativeFunction<
                           ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>)>>
-      _objc_msgSend_640(
+      _objc_msgSend_695(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_640(
+    return __objc_msgSend_695(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_640Ptr = _lookup<
+  late final __objc_msgSend_695Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Pointer<
                       ffi.NativeFunction<
@@ -17883,7 +19612,7 @@ class PedometerBindings {
                                           ffi.Pointer<ffi.Void>)>>)>>
                   Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_640 = __objc_msgSend_640Ptr.asFunction<
+  late final __objc_msgSend_695 = __objc_msgSend_695Ptr.asFunction<
       ffi.Pointer<
               ffi.NativeFunction<
                   ffi.Bool Function(
@@ -17896,7 +19625,7 @@ class PedometerBindings {
           Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setIsEqualFunction_1 = _registerName1("setIsEqualFunction:");
-  void _objc_msgSend_641(
+  void _objc_msgSend_696(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<
@@ -17910,14 +19639,14 @@ class PedometerBindings {
                                 ffi.Pointer<ffi.Void>)>>)>>
         value,
   ) {
-    return __objc_msgSend_641(
+    return __objc_msgSend_696(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_641Ptr = _lookup<
+  late final __objc_msgSend_696Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Void Function(
                   ffi.Pointer<ObjCObject>,
@@ -17932,7 +19661,7 @@ class PedometerBindings {
                                       ffi.UnsignedLong Function(
                                           ffi.Pointer<ffi.Void>)>>)>>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_641 = __objc_msgSend_641Ptr.asFunction<
+  late final __objc_msgSend_696 = __objc_msgSend_696Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -17949,31 +19678,31 @@ class PedometerBindings {
   late final _sel_sizeFunction1 = _registerName1("sizeFunction");
   ffi.Pointer<
           ffi.NativeFunction<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>
-      _objc_msgSend_642(
+      _objc_msgSend_697(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_642(
+    return __objc_msgSend_697(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_642Ptr = _lookup<
+  late final __objc_msgSend_697Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Pointer<
                       ffi.NativeFunction<
                           ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>
                   Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_642 = __objc_msgSend_642Ptr.asFunction<
+  late final __objc_msgSend_697 = __objc_msgSend_697Ptr.asFunction<
       ffi.Pointer<
               ffi.NativeFunction<
                   ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>
           Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setSizeFunction_1 = _registerName1("setSizeFunction:");
-  void _objc_msgSend_643(
+  void _objc_msgSend_698(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<
@@ -17981,14 +19710,14 @@ class PedometerBindings {
                 ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>
         value,
   ) {
-    return __objc_msgSend_643(
+    return __objc_msgSend_698(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_643Ptr = _lookup<
+  late final __objc_msgSend_698Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -17997,7 +19726,7 @@ class PedometerBindings {
                   ffi.NativeFunction<
                       ffi.UnsignedLong Function(
                           ffi.Pointer<ffi.Void>)>>)>>('objc_msgSend');
-  late final __objc_msgSend_643 = __objc_msgSend_643Ptr.asFunction<
+  late final __objc_msgSend_698 = __objc_msgSend_698Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -18009,17 +19738,17 @@ class PedometerBindings {
   ffi.Pointer<
           ffi.NativeFunction<
               ffi.Pointer<ObjCObject> Function(ffi.Pointer<ffi.Void>)>>
-      _objc_msgSend_644(
+      _objc_msgSend_699(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_644(
+    return __objc_msgSend_699(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_644Ptr =
+  late final __objc_msgSend_699Ptr =
       _lookup<
               ffi.NativeFunction<
                   ffi.Pointer<
@@ -18028,7 +19757,7 @@ class PedometerBindings {
                                   ffi.Pointer<ffi.Void>)>>
                       Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>(
           'objc_msgSend');
-  late final __objc_msgSend_644 = __objc_msgSend_644Ptr.asFunction<
+  late final __objc_msgSend_699 = __objc_msgSend_699Ptr.asFunction<
       ffi.Pointer<
               ffi.NativeFunction<
                   ffi.Pointer<ObjCObject> Function(ffi.Pointer<ffi.Void>)>>
@@ -18036,7 +19765,7 @@ class PedometerBindings {
 
   late final _sel_setDescriptionFunction_1 =
       _registerName1("setDescriptionFunction:");
-  void _objc_msgSend_645(
+  void _objc_msgSend_700(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<
@@ -18044,14 +19773,14 @@ class PedometerBindings {
                 ffi.Pointer<ObjCObject> Function(ffi.Pointer<ffi.Void>)>>
         value,
   ) {
-    return __objc_msgSend_645(
+    return __objc_msgSend_700(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_645Ptr = _lookup<
+  late final __objc_msgSend_700Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -18060,7 +19789,7 @@ class PedometerBindings {
                   ffi.NativeFunction<
                       ffi.Pointer<ObjCObject> Function(
                           ffi.Pointer<ffi.Void>)>>)>>('objc_msgSend');
-  late final __objc_msgSend_645 = __objc_msgSend_645Ptr.asFunction<
+  late final __objc_msgSend_700 = __objc_msgSend_700Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -18076,17 +19805,17 @@ class PedometerBindings {
                   ffi.Pointer<
                       ffi.NativeFunction<
                           ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>)>>
-      _objc_msgSend_646(
+      _objc_msgSend_701(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_646(
+    return __objc_msgSend_701(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_646Ptr = _lookup<
+  late final __objc_msgSend_701Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Pointer<
                       ffi.NativeFunction<
@@ -18098,7 +19827,7 @@ class PedometerBindings {
                                           ffi.Pointer<ffi.Void>)>>)>>
                   Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_646 = __objc_msgSend_646Ptr.asFunction<
+  late final __objc_msgSend_701 = __objc_msgSend_701Ptr.asFunction<
       ffi.Pointer<
               ffi.NativeFunction<
                   ffi.Void Function(
@@ -18111,7 +19840,7 @@ class PedometerBindings {
 
   late final _sel_setRelinquishFunction_1 =
       _registerName1("setRelinquishFunction:");
-  void _objc_msgSend_647(
+  void _objc_msgSend_702(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<
@@ -18124,14 +19853,14 @@ class PedometerBindings {
                                 ffi.Pointer<ffi.Void>)>>)>>
         value,
   ) {
-    return __objc_msgSend_647(
+    return __objc_msgSend_702(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_647Ptr = _lookup<
+  late final __objc_msgSend_702Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Void Function(
                   ffi.Pointer<ObjCObject>,
@@ -18145,7 +19874,7 @@ class PedometerBindings {
                                       ffi.UnsignedLong Function(
                                           ffi.Pointer<ffi.Void>)>>)>>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_647 = __objc_msgSend_647Ptr.asFunction<
+  late final __objc_msgSend_702 = __objc_msgSend_702Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -18166,17 +19895,17 @@ class PedometerBindings {
               ffi.Pointer<
                   ffi.NativeFunction<
                       ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>,
-              ffi.Bool)>> _objc_msgSend_648(
+              ffi.Bool)>> _objc_msgSend_703(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_648(
+    return __objc_msgSend_703(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_648Ptr = _lookup<
+  late final __objc_msgSend_703Ptr = _lookup<
           ffi.NativeFunction<
               ffi.Pointer<
                       ffi.NativeFunction<
@@ -18189,7 +19918,7 @@ class PedometerBindings {
                               ffi.Bool)>>
                   Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>(
       'objc_msgSend');
-  late final __objc_msgSend_648 = __objc_msgSend_648Ptr.asFunction<
+  late final __objc_msgSend_703 = __objc_msgSend_703Ptr.asFunction<
       ffi.Pointer<
               ffi.NativeFunction<
                   ffi.Pointer<ffi.Void> Function(
@@ -18202,7 +19931,7 @@ class PedometerBindings {
           Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setAcquireFunction_1 = _registerName1("setAcquireFunction:");
-  void _objc_msgSend_649(
+  void _objc_msgSend_704(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<
@@ -18215,14 +19944,14 @@ class PedometerBindings {
                     ffi.Bool)>>
         value,
   ) {
-    return __objc_msgSend_649(
+    return __objc_msgSend_704(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_649Ptr = _lookup<
+  late final __objc_msgSend_704Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -18236,7 +19965,7 @@ class PedometerBindings {
                                   ffi.UnsignedLong Function(
                                       ffi.Pointer<ffi.Void>)>>,
                           ffi.Bool)>>)>>('objc_msgSend');
-  late final __objc_msgSend_649 = __objc_msgSend_649Ptr.asFunction<
+  late final __objc_msgSend_704 = __objc_msgSend_704Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -18260,107 +19989,107 @@ class PedometerBindings {
       _registerName1("setUsesWeakReadAndWriteBarriers:");
   late final _sel_initWithPointerFunctions_1 =
       _registerName1("initWithPointerFunctions:");
-  instancetype _objc_msgSend_650(
+  instancetype _objc_msgSend_705(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> functions,
   ) {
-    return __objc_msgSend_650(
+    return __objc_msgSend_705(
       obj,
       sel,
       functions,
     );
   }
 
-  late final __objc_msgSend_650Ptr = _lookup<
+  late final __objc_msgSend_705Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_650 = __objc_msgSend_650Ptr.asFunction<
+  late final __objc_msgSend_705 = __objc_msgSend_705Ptr.asFunction<
       instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
   late final _sel_pointerArrayWithOptions_1 =
       _registerName1("pointerArrayWithOptions:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_651(
+  ffi.Pointer<ObjCObject> _objc_msgSend_706(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int options,
   ) {
-    return __objc_msgSend_651(
+    return __objc_msgSend_706(
       obj,
       sel,
       options,
     );
   }
 
-  late final __objc_msgSend_651Ptr = _lookup<
+  late final __objc_msgSend_706Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_651 = __objc_msgSend_651Ptr.asFunction<
+  late final __objc_msgSend_706 = __objc_msgSend_706Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_pointerArrayWithPointerFunctions_1 =
       _registerName1("pointerArrayWithPointerFunctions:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_652(
+  ffi.Pointer<ObjCObject> _objc_msgSend_707(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> functions,
   ) {
-    return __objc_msgSend_652(
+    return __objc_msgSend_707(
       obj,
       sel,
       functions,
     );
   }
 
-  late final __objc_msgSend_652Ptr = _lookup<
+  late final __objc_msgSend_707Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_652 = __objc_msgSend_652Ptr.asFunction<
+  late final __objc_msgSend_707 = __objc_msgSend_707Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_pointerFunctions1 = _registerName1("pointerFunctions");
-  ffi.Pointer<ObjCObject> _objc_msgSend_653(
+  ffi.Pointer<ObjCObject> _objc_msgSend_708(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_653(
+    return __objc_msgSend_708(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_653Ptr = _lookup<
+  late final __objc_msgSend_708Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_653 = __objc_msgSend_653Ptr.asFunction<
+  late final __objc_msgSend_708 = __objc_msgSend_708Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_pointerAtIndex_1 = _registerName1("pointerAtIndex:");
-  ffi.Pointer<ffi.Void> _objc_msgSend_654(
+  ffi.Pointer<ffi.Void> _objc_msgSend_709(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int index,
   ) {
-    return __objc_msgSend_654(
+    return __objc_msgSend_709(
       obj,
       sel,
       index,
     );
   }
 
-  late final __objc_msgSend_654Ptr = _lookup<
+  late final __objc_msgSend_709Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ffi.Void> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.UnsignedLong)>>('objc_msgSend');
-  late final __objc_msgSend_654 = __objc_msgSend_654Ptr.asFunction<
+  late final __objc_msgSend_709 = __objc_msgSend_709Ptr.asFunction<
       ffi.Pointer<ffi.Void> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
@@ -18371,13 +20100,13 @@ class PedometerBindings {
       _registerName1("insertPointer:atIndex:");
   late final _sel_replacePointerAtIndex_withPointer_1 =
       _registerName1("replacePointerAtIndex:withPointer:");
-  void _objc_msgSend_655(
+  void _objc_msgSend_710(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int index,
     ffi.Pointer<ffi.Void> item,
   ) {
-    return __objc_msgSend_655(
+    return __objc_msgSend_710(
       obj,
       sel,
       index,
@@ -18385,11 +20114,11 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_655Ptr = _lookup<
+  late final __objc_msgSend_710Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.UnsignedLong, ffi.Pointer<ffi.Void>)>>('objc_msgSend');
-  late final __objc_msgSend_655 = __objc_msgSend_655Ptr.asFunction<
+  late final __objc_msgSend_710 = __objc_msgSend_710Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
           ffi.Pointer<ffi.Void>)>();
 
@@ -18397,21 +20126,21 @@ class PedometerBindings {
   late final _sel_setCount_1 = _registerName1("setCount:");
   late final _sel_strongObjectsPointerArray1 =
       _registerName1("strongObjectsPointerArray");
-  ffi.Pointer<ObjCObject> _objc_msgSend_656(
+  ffi.Pointer<ObjCObject> _objc_msgSend_711(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_656(
+    return __objc_msgSend_711(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_656Ptr = _lookup<
+  late final __objc_msgSend_711Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_656 = __objc_msgSend_656Ptr.asFunction<
+  late final __objc_msgSend_711 = __objc_msgSend_711Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -18419,21 +20148,21 @@ class PedometerBindings {
       _registerName1("weakObjectsPointerArray");
   late final _class_NSProcessInfo1 = _getClass1("NSProcessInfo");
   late final _sel_processInfo1 = _registerName1("processInfo");
-  ffi.Pointer<ObjCObject> _objc_msgSend_657(
+  ffi.Pointer<ObjCObject> _objc_msgSend_712(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_657(
+    return __objc_msgSend_712(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_657Ptr = _lookup<
+  late final __objc_msgSend_712Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_657 = __objc_msgSend_657Ptr.asFunction<
+  late final __objc_msgSend_712 = __objc_msgSend_712Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -18451,21 +20180,21 @@ class PedometerBindings {
       _registerName1("operatingSystemVersionString");
   late final _sel_operatingSystemVersion1 =
       _registerName1("operatingSystemVersion");
-  NSOperatingSystemVersion _objc_msgSend_658(
+  NSOperatingSystemVersion _objc_msgSend_713(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_658(
+    return __objc_msgSend_713(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_658Ptr = _lookup<
+  late final __objc_msgSend_713Ptr = _lookup<
       ffi.NativeFunction<
           NSOperatingSystemVersion Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_658 = __objc_msgSend_658Ptr.asFunction<
+  late final __objc_msgSend_713 = __objc_msgSend_713Ptr.asFunction<
       NSOperatingSystemVersion Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -18475,23 +20204,23 @@ class PedometerBindings {
   late final _sel_physicalMemory1 = _registerName1("physicalMemory");
   late final _sel_isOperatingSystemAtLeastVersion_1 =
       _registerName1("isOperatingSystemAtLeastVersion:");
-  bool _objc_msgSend_659(
+  bool _objc_msgSend_714(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     NSOperatingSystemVersion version,
   ) {
-    return __objc_msgSend_659(
+    return __objc_msgSend_714(
       obj,
       sel,
       version,
     );
   }
 
-  late final __objc_msgSend_659Ptr = _lookup<
+  late final __objc_msgSend_714Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               NSOperatingSystemVersion)>>('objc_msgSend');
-  late final __objc_msgSend_659 = __objc_msgSend_659Ptr.asFunction<
+  late final __objc_msgSend_714 = __objc_msgSend_714Ptr.asFunction<
       bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           NSOperatingSystemVersion)>();
 
@@ -18510,13 +20239,13 @@ class PedometerBindings {
       _registerName1("setAutomaticTerminationSupportEnabled:");
   late final _sel_beginActivityWithOptions_reason_1 =
       _registerName1("beginActivityWithOptions:reason:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_660(
+  ffi.Pointer<ObjCObject> _objc_msgSend_715(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int options,
     ffi.Pointer<ObjCObject> reason,
   ) {
-    return __objc_msgSend_660(
+    return __objc_msgSend_715(
       obj,
       sel,
       options,
@@ -18524,1599 +20253,61 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_660Ptr = _lookup<
+  late final __objc_msgSend_715Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Int32,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_660 = __objc_msgSend_660Ptr.asFunction<
+  late final __objc_msgSend_715 = __objc_msgSend_715Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, int, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_endActivity_1 = _registerName1("endActivity:");
   late final _sel_performActivityWithOptions_reason_usingBlock_1 =
       _registerName1("performActivityWithOptions:reason:usingBlock:");
-  void _objc_msgSend_661(
+  void _objc_msgSend_716(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int options,
     ffi.Pointer<ObjCObject> reason,
     ffi.Pointer<_ObjCBlock> block,
-  ) {
-    return __objc_msgSend_661(
-      obj,
-      sel,
-      options,
-      reason,
-      block,
-    );
-  }
-
-  late final __objc_msgSend_661Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Int32,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_661 = __objc_msgSend_661Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
-
-  late final _sel_performExpiringActivityWithReason_usingBlock_1 =
-      _registerName1("performExpiringActivityWithReason:usingBlock:");
-  void _objc_msgSend_662(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> reason,
-    ffi.Pointer<_ObjCBlock> block,
-  ) {
-    return __objc_msgSend_662(
-      obj,
-      sel,
-      reason,
-      block,
-    );
-  }
-
-  late final __objc_msgSend_662Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_662 = __objc_msgSend_662Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
-
-  late final _sel_userName1 = _registerName1("userName");
-  late final _sel_fullUserName1 = _registerName1("fullUserName");
-  late final _sel_thermalState1 = _registerName1("thermalState");
-  int _objc_msgSend_663(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_663(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_663Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int32 Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_663 = __objc_msgSend_663Ptr.asFunction<
-      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_isLowPowerModeEnabled1 =
-      _registerName1("isLowPowerModeEnabled");
-  late final _sel_isMacCatalystApp1 = _registerName1("isMacCatalystApp");
-  late final _sel_isiOSAppOnMac1 = _registerName1("isiOSAppOnMac");
-  late final _class_NSTextCheckingResult1 = _getClass1("NSTextCheckingResult");
-  late final _sel_resultType1 = _registerName1("resultType");
-  int _objc_msgSend_664(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_664(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_664Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int32 Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_664 = __objc_msgSend_664Ptr.asFunction<
-      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_range1 = _registerName1("range");
-  late final _sel_orthography1 = _registerName1("orthography");
-  ffi.Pointer<ObjCObject> _objc_msgSend_665(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_665(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_665Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_665 = __objc_msgSend_665Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_grammarDetails1 = _registerName1("grammarDetails");
-  late final _class_NSTimeZone1 = _getClass1("NSTimeZone");
-  late final _sel_secondsFromGMTForDate_1 =
-      _registerName1("secondsFromGMTForDate:");
-  int _objc_msgSend_666(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> aDate,
-  ) {
-    return __objc_msgSend_666(
-      obj,
-      sel,
-      aDate,
-    );
-  }
-
-  late final __objc_msgSend_666Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Long Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_666 = __objc_msgSend_666Ptr.asFunction<
-      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_abbreviationForDate_1 =
-      _registerName1("abbreviationForDate:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_667(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> aDate,
-  ) {
-    return __objc_msgSend_667(
-      obj,
-      sel,
-      aDate,
-    );
-  }
-
-  late final __objc_msgSend_667Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_667 = __objc_msgSend_667Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_isDaylightSavingTimeForDate_1 =
-      _registerName1("isDaylightSavingTimeForDate:");
-  late final _sel_daylightSavingTimeOffsetForDate_1 =
-      _registerName1("daylightSavingTimeOffsetForDate:");
-  late final _sel_nextDaylightSavingTimeTransitionAfterDate_1 =
-      _registerName1("nextDaylightSavingTimeTransitionAfterDate:");
-  late final _sel_systemTimeZone1 = _registerName1("systemTimeZone");
-  ffi.Pointer<ObjCObject> _objc_msgSend_668(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_668(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_668Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_668 = __objc_msgSend_668Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_resetSystemTimeZone1 = _registerName1("resetSystemTimeZone");
-  late final _sel_defaultTimeZone1 = _registerName1("defaultTimeZone");
-  late final _sel_setDefaultTimeZone_1 = _registerName1("setDefaultTimeZone:");
-  void _objc_msgSend_669(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> value,
-  ) {
-    return __objc_msgSend_669(
-      obj,
-      sel,
-      value,
-    );
-  }
-
-  late final __objc_msgSend_669Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_669 = __objc_msgSend_669Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_localTimeZone1 = _registerName1("localTimeZone");
-  late final _sel_knownTimeZoneNames1 = _registerName1("knownTimeZoneNames");
-  late final _sel_abbreviationDictionary1 =
-      _registerName1("abbreviationDictionary");
-  late final _sel_setAbbreviationDictionary_1 =
-      _registerName1("setAbbreviationDictionary:");
-  void _objc_msgSend_670(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> value,
-  ) {
-    return __objc_msgSend_670(
-      obj,
-      sel,
-      value,
-    );
-  }
-
-  late final __objc_msgSend_670Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_670 = __objc_msgSend_670Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_timeZoneDataVersion1 = _registerName1("timeZoneDataVersion");
-  late final _sel_secondsFromGMT1 = _registerName1("secondsFromGMT");
-  late final _sel_abbreviation1 = _registerName1("abbreviation");
-  late final _sel_isDaylightSavingTime1 =
-      _registerName1("isDaylightSavingTime");
-  late final _sel_daylightSavingTimeOffset1 =
-      _registerName1("daylightSavingTimeOffset");
-  late final _sel_nextDaylightSavingTimeTransition1 =
-      _registerName1("nextDaylightSavingTimeTransition");
-  late final _sel_isEqualToTimeZone_1 = _registerName1("isEqualToTimeZone:");
-  bool _objc_msgSend_671(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> aTimeZone,
-  ) {
-    return __objc_msgSend_671(
-      obj,
-      sel,
-      aTimeZone,
-    );
-  }
-
-  late final __objc_msgSend_671Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_671 = __objc_msgSend_671Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_localizedName_locale_1 =
-      _registerName1("localizedName:locale:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_672(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    int style,
-    ffi.Pointer<ObjCObject> locale,
-  ) {
-    return __objc_msgSend_672(
-      obj,
-      sel,
-      style,
-      locale,
-    );
-  }
-
-  late final __objc_msgSend_672Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Int32,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_672 = __objc_msgSend_672Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, int, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_timeZoneWithName_1 = _registerName1("timeZoneWithName:");
-  late final _sel_timeZoneWithName_data_1 =
-      _registerName1("timeZoneWithName:data:");
-  instancetype _objc_msgSend_673(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> tzName,
-    ffi.Pointer<ObjCObject> aData,
-  ) {
-    return __objc_msgSend_673(
-      obj,
-      sel,
-      tzName,
-      aData,
-    );
-  }
-
-  late final __objc_msgSend_673Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_673 = __objc_msgSend_673Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_initWithName_1 = _registerName1("initWithName:");
-  late final _sel_initWithName_data_1 = _registerName1("initWithName:data:");
-  late final _sel_timeZoneForSecondsFromGMT_1 =
-      _registerName1("timeZoneForSecondsFromGMT:");
-  instancetype _objc_msgSend_674(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    int seconds,
-  ) {
-    return __objc_msgSend_674(
-      obj,
-      sel,
-      seconds,
-    );
-  }
-
-  late final __objc_msgSend_674Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Long)>>('objc_msgSend');
-  late final __objc_msgSend_674 = __objc_msgSend_674Ptr.asFunction<
-      instancetype Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
-
-  late final _sel_timeZoneWithAbbreviation_1 =
-      _registerName1("timeZoneWithAbbreviation:");
-  late final _sel_timeZone1 = _registerName1("timeZone");
-  late final _sel_duration1 = _registerName1("duration");
-  late final _sel_components1 = _registerName1("components");
-  late final _sel_replacementString1 = _registerName1("replacementString");
-  late final _sel_alternativeStrings1 = _registerName1("alternativeStrings");
-  late final _class_NSRegularExpression1 = _getClass1("NSRegularExpression");
-  late final _sel_regularExpressionWithPattern_options_error_1 =
-      _registerName1("regularExpressionWithPattern:options:error:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_675(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> pattern,
-    int options,
-    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
-  ) {
-    return __objc_msgSend_675(
-      obj,
-      sel,
-      pattern,
-      options,
-      error,
-    );
-  }
-
-  late final __objc_msgSend_675Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_675 = __objc_msgSend_675Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          int,
-          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
-
-  late final _sel_initWithPattern_options_error_1 =
-      _registerName1("initWithPattern:options:error:");
-  instancetype _objc_msgSend_676(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> pattern,
-    int options,
-    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
-  ) {
-    return __objc_msgSend_676(
-      obj,
-      sel,
-      pattern,
-      options,
-      error,
-    );
-  }
-
-  late final __objc_msgSend_676Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_676 = __objc_msgSend_676Ptr.asFunction<
-      instancetype Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          int,
-          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
-
-  late final _sel_pattern1 = _registerName1("pattern");
-  late final _sel_options1 = _registerName1("options");
-  int _objc_msgSend_677(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_677(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_677Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int32 Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_677 = __objc_msgSend_677Ptr.asFunction<
-      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_numberOfCaptureGroups1 =
-      _registerName1("numberOfCaptureGroups");
-  late final _sel_escapedPatternForString_1 =
-      _registerName1("escapedPatternForString:");
-  late final _sel_enumerateMatchesInString_options_range_usingBlock_1 =
-      _registerName1("enumerateMatchesInString:options:range:usingBlock:");
-  void _objc_msgSend_678(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> string,
-    int options,
-    _NSRange range,
-    ffi.Pointer<_ObjCBlock> block,
-  ) {
-    return __objc_msgSend_678(
-      obj,
-      sel,
-      string,
-      options,
-      range,
-      block,
-    );
-  }
-
-  late final __objc_msgSend_678Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              _NSRange,
-              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_678 = __objc_msgSend_678Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, int, _NSRange, ffi.Pointer<_ObjCBlock>)>();
-
-  late final _sel_matchesInString_options_range_1 =
-      _registerName1("matchesInString:options:range:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_679(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> string,
-    int options,
-    _NSRange range,
-  ) {
-    return __objc_msgSend_679(
-      obj,
-      sel,
-      string,
-      options,
-      range,
-    );
-  }
-
-  late final __objc_msgSend_679Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              _NSRange)>>('objc_msgSend');
-  late final __objc_msgSend_679 = __objc_msgSend_679Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int, _NSRange)>();
-
-  late final _sel_numberOfMatchesInString_options_range_1 =
-      _registerName1("numberOfMatchesInString:options:range:");
-  int _objc_msgSend_680(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> string,
-    int options,
-    _NSRange range,
-  ) {
-    return __objc_msgSend_680(
-      obj,
-      sel,
-      string,
-      options,
-      range,
-    );
-  }
-
-  late final __objc_msgSend_680Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.UnsignedLong Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              _NSRange)>>('objc_msgSend');
-  late final __objc_msgSend_680 = __objc_msgSend_680Ptr.asFunction<
-      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, int, _NSRange)>();
-
-  late final _sel_firstMatchInString_options_range_1 =
-      _registerName1("firstMatchInString:options:range:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_681(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> string,
-    int options,
-    _NSRange range,
-  ) {
-    return __objc_msgSend_681(
-      obj,
-      sel,
-      string,
-      options,
-      range,
-    );
-  }
-
-  late final __objc_msgSend_681Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              _NSRange)>>('objc_msgSend');
-  late final __objc_msgSend_681 = __objc_msgSend_681Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int, _NSRange)>();
-
-  late final _sel_rangeOfFirstMatchInString_options_range_1 =
-      _registerName1("rangeOfFirstMatchInString:options:range:");
-  _NSRange _objc_msgSend_682(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> string,
-    int options,
-    _NSRange range,
-  ) {
-    return __objc_msgSend_682(
-      obj,
-      sel,
-      string,
-      options,
-      range,
-    );
-  }
-
-  late final __objc_msgSend_682Ptr = _lookup<
-      ffi.NativeFunction<
-          _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>, ffi.Int32, _NSRange)>>('objc_msgSend');
-  late final __objc_msgSend_682 = __objc_msgSend_682Ptr.asFunction<
-      _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, int, _NSRange)>();
-
-  late final _sel_stringByReplacingMatchesInString_options_range_withTemplate_1 =
-      _registerName1(
-          "stringByReplacingMatchesInString:options:range:withTemplate:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_683(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> string,
-    int options,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> templ,
-  ) {
-    return __objc_msgSend_683(
-      obj,
-      sel,
-      string,
-      options,
-      range,
-      templ,
-    );
-  }
-
-  late final __objc_msgSend_683Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_683 = __objc_msgSend_683Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          int,
-          _NSRange,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_replaceMatchesInString_options_range_withTemplate_1 =
-      _registerName1("replaceMatchesInString:options:range:withTemplate:");
-  int _objc_msgSend_684(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> string,
-    int options,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> templ,
-  ) {
-    return __objc_msgSend_684(
-      obj,
-      sel,
-      string,
-      options,
-      range,
-      templ,
-    );
-  }
-
-  late final __objc_msgSend_684Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.UnsignedLong Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_684 = __objc_msgSend_684Ptr.asFunction<
-      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, int, _NSRange, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_replacementStringForResult_inString_offset_template_1 =
-      _registerName1("replacementStringForResult:inString:offset:template:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_685(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> result,
-    ffi.Pointer<ObjCObject> string,
-    int offset,
-    ffi.Pointer<ObjCObject> templ,
-  ) {
-    return __objc_msgSend_685(
-      obj,
-      sel,
-      result,
-      string,
-      offset,
-      templ,
-    );
-  }
-
-  late final __objc_msgSend_685Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Long,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_685 = __objc_msgSend_685Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          int,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_escapedTemplateForString_1 =
-      _registerName1("escapedTemplateForString:");
-  late final _sel_regularExpression1 = _registerName1("regularExpression");
-  ffi.Pointer<ObjCObject> _objc_msgSend_686(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_686(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_686Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_686 = __objc_msgSend_686Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_phoneNumber1 = _registerName1("phoneNumber");
-  late final _sel_numberOfRanges1 = _registerName1("numberOfRanges");
-  late final _sel_rangeAtIndex_1 = _registerName1("rangeAtIndex:");
-  late final _sel_rangeWithName_1 = _registerName1("rangeWithName:");
-  late final _sel_resultByAdjustingRangesWithOffset_1 =
-      _registerName1("resultByAdjustingRangesWithOffset:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_687(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    int offset,
-  ) {
-    return __objc_msgSend_687(
-      obj,
-      sel,
-      offset,
-    );
-  }
-
-  late final __objc_msgSend_687Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>, ffi.Long)>>('objc_msgSend');
-  late final __objc_msgSend_687 = __objc_msgSend_687Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
-
-  late final _sel_addressComponents1 = _registerName1("addressComponents");
-  late final _sel_orthographyCheckingResultWithRange_orthography_1 =
-      _registerName1("orthographyCheckingResultWithRange:orthography:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_688(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> orthography,
-  ) {
-    return __objc_msgSend_688(
-      obj,
-      sel,
-      range,
-      orthography,
-    );
-  }
-
-  late final __objc_msgSend_688Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_688 = __objc_msgSend_688Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_spellCheckingResultWithRange_1 =
-      _registerName1("spellCheckingResultWithRange:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_689(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-  ) {
-    return __objc_msgSend_689(
-      obj,
-      sel,
-      range,
-    );
-  }
-
-  late final __objc_msgSend_689Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>, _NSRange)>>('objc_msgSend');
-  late final __objc_msgSend_689 = __objc_msgSend_689Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, _NSRange)>();
-
-  late final _sel_grammarCheckingResultWithRange_details_1 =
-      _registerName1("grammarCheckingResultWithRange:details:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_690(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> details,
-  ) {
-    return __objc_msgSend_690(
-      obj,
-      sel,
-      range,
-      details,
-    );
-  }
-
-  late final __objc_msgSend_690Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_690 = __objc_msgSend_690Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_dateCheckingResultWithRange_date_1 =
-      _registerName1("dateCheckingResultWithRange:date:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_691(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> date,
-  ) {
-    return __objc_msgSend_691(
-      obj,
-      sel,
-      range,
-      date,
-    );
-  }
-
-  late final __objc_msgSend_691Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_691 = __objc_msgSend_691Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_dateCheckingResultWithRange_date_timeZone_duration_1 =
-      _registerName1("dateCheckingResultWithRange:date:timeZone:duration:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_692(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> date,
-    ffi.Pointer<ObjCObject> timeZone,
-    double duration,
-  ) {
-    return __objc_msgSend_692(
-      obj,
-      sel,
-      range,
-      date,
-      timeZone,
-      duration,
-    );
-  }
-
-  late final __objc_msgSend_692Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Double)>>('objc_msgSend');
-  late final __objc_msgSend_692 = __objc_msgSend_692Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          _NSRange,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          double)>();
-
-  late final _sel_addressCheckingResultWithRange_components_1 =
-      _registerName1("addressCheckingResultWithRange:components:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_693(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> components,
-  ) {
-    return __objc_msgSend_693(
-      obj,
-      sel,
-      range,
-      components,
-    );
-  }
-
-  late final __objc_msgSend_693Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_693 = __objc_msgSend_693Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_linkCheckingResultWithRange_URL_1 =
-      _registerName1("linkCheckingResultWithRange:URL:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_694(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> url,
-  ) {
-    return __objc_msgSend_694(
-      obj,
-      sel,
-      range,
-      url,
-    );
-  }
-
-  late final __objc_msgSend_694Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_694 = __objc_msgSend_694Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_quoteCheckingResultWithRange_replacementString_1 =
-      _registerName1("quoteCheckingResultWithRange:replacementString:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_695(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> replacementString,
-  ) {
-    return __objc_msgSend_695(
-      obj,
-      sel,
-      range,
-      replacementString,
-    );
-  }
-
-  late final __objc_msgSend_695Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_695 = __objc_msgSend_695Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_dashCheckingResultWithRange_replacementString_1 =
-      _registerName1("dashCheckingResultWithRange:replacementString:");
-  late final _sel_replacementCheckingResultWithRange_replacementString_1 =
-      _registerName1("replacementCheckingResultWithRange:replacementString:");
-  late final _sel_correctionCheckingResultWithRange_replacementString_1 =
-      _registerName1("correctionCheckingResultWithRange:replacementString:");
-  late final _sel_correctionCheckingResultWithRange_replacementString_alternativeStrings_1 =
-      _registerName1(
-          "correctionCheckingResultWithRange:replacementString:alternativeStrings:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_696(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    _NSRange range,
-    ffi.Pointer<ObjCObject> replacementString,
-    ffi.Pointer<ObjCObject> alternativeStrings,
-  ) {
-    return __objc_msgSend_696(
-      obj,
-      sel,
-      range,
-      replacementString,
-      alternativeStrings,
-    );
-  }
-
-  late final __objc_msgSend_696Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              _NSRange,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_696 = __objc_msgSend_696Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          _NSRange,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_regularExpressionCheckingResultWithRanges_count_regularExpression_1 =
-      _registerName1(
-          "regularExpressionCheckingResultWithRanges:count:regularExpression:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_697(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<_NSRange> ranges,
-    int count,
-    ffi.Pointer<ObjCObject> regularExpression,
-  ) {
-    return __objc_msgSend_697(
-      obj,
-      sel,
-      ranges,
-      count,
-      regularExpression,
-    );
-  }
-
-  late final __objc_msgSend_697Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<_NSRange>,
-              ffi.UnsignedLong,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_697 = __objc_msgSend_697Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<_NSRange>,
-          int,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_phoneNumberCheckingResultWithRange_phoneNumber_1 =
-      _registerName1("phoneNumberCheckingResultWithRange:phoneNumber:");
-  late final _sel_transitInformationCheckingResultWithRange_components_1 =
-      _registerName1("transitInformationCheckingResultWithRange:components:");
-  late final _class_NSURLCache1 = _getClass1("NSURLCache");
-  late final _sel_sharedURLCache1 = _registerName1("sharedURLCache");
-  ffi.Pointer<ObjCObject> _objc_msgSend_698(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_698(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_698Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_698 = __objc_msgSend_698Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_setSharedURLCache_1 = _registerName1("setSharedURLCache:");
-  void _objc_msgSend_699(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> value,
-  ) {
-    return __objc_msgSend_699(
-      obj,
-      sel,
-      value,
-    );
-  }
-
-  late final __objc_msgSend_699Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_699 = __objc_msgSend_699Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_initWithMemoryCapacity_diskCapacity_diskPath_1 =
-      _registerName1("initWithMemoryCapacity:diskCapacity:diskPath:");
-  instancetype _objc_msgSend_700(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    int memoryCapacity,
-    int diskCapacity,
-    ffi.Pointer<ObjCObject> path,
-  ) {
-    return __objc_msgSend_700(
-      obj,
-      sel,
-      memoryCapacity,
-      diskCapacity,
-      path,
-    );
-  }
-
-  late final __objc_msgSend_700Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.UnsignedLong,
-              ffi.UnsignedLong,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_700 = __objc_msgSend_700Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
-          int, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_initWithMemoryCapacity_diskCapacity_directoryURL_1 =
-      _registerName1("initWithMemoryCapacity:diskCapacity:directoryURL:");
-  instancetype _objc_msgSend_701(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    int memoryCapacity,
-    int diskCapacity,
-    ffi.Pointer<ObjCObject> directoryURL,
-  ) {
-    return __objc_msgSend_701(
-      obj,
-      sel,
-      memoryCapacity,
-      diskCapacity,
-      directoryURL,
-    );
-  }
-
-  late final __objc_msgSend_701Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.UnsignedLong,
-              ffi.UnsignedLong,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_701 = __objc_msgSend_701Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
-          int, ffi.Pointer<ObjCObject>)>();
-
-  late final _class_NSCachedURLResponse1 = _getClass1("NSCachedURLResponse");
-  late final _sel_initWithResponse_data_1 =
-      _registerName1("initWithResponse:data:");
-  instancetype _objc_msgSend_702(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> response,
-    ffi.Pointer<ObjCObject> data,
-  ) {
-    return __objc_msgSend_702(
-      obj,
-      sel,
-      response,
-      data,
-    );
-  }
-
-  late final __objc_msgSend_702Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_702 = __objc_msgSend_702Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_initWithResponse_data_userInfo_storagePolicy_1 =
-      _registerName1("initWithResponse:data:userInfo:storagePolicy:");
-  instancetype _objc_msgSend_703(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> response,
-    ffi.Pointer<ObjCObject> data,
-    ffi.Pointer<ObjCObject> userInfo,
-    int storagePolicy,
-  ) {
-    return __objc_msgSend_703(
-      obj,
-      sel,
-      response,
-      data,
-      userInfo,
-      storagePolicy,
-    );
-  }
-
-  late final __objc_msgSend_703Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_703 = __objc_msgSend_703Ptr.asFunction<
-      instancetype Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          int)>();
-
-  late final _sel_storagePolicy1 = _registerName1("storagePolicy");
-  int _objc_msgSend_704(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-  ) {
-    return __objc_msgSend_704(
-      obj,
-      sel,
-    );
-  }
-
-  late final __objc_msgSend_704Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int32 Function(
-              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_704 = __objc_msgSend_704Ptr.asFunction<
-      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
-
-  late final _sel_cachedResponseForRequest_1 =
-      _registerName1("cachedResponseForRequest:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_705(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-  ) {
-    return __objc_msgSend_705(
-      obj,
-      sel,
-      request,
-    );
-  }
-
-  late final __objc_msgSend_705Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_705 = __objc_msgSend_705Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_storeCachedResponse_forRequest_1 =
-      _registerName1("storeCachedResponse:forRequest:");
-  void _objc_msgSend_706(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> cachedResponse,
-    ffi.Pointer<ObjCObject> request,
-  ) {
-    return __objc_msgSend_706(
-      obj,
-      sel,
-      cachedResponse,
-      request,
-    );
-  }
-
-  late final __objc_msgSend_706Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_706 = __objc_msgSend_706Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_removeCachedResponseForRequest_1 =
-      _registerName1("removeCachedResponseForRequest:");
-  void _objc_msgSend_707(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-  ) {
-    return __objc_msgSend_707(
-      obj,
-      sel,
-      request,
-    );
-  }
-
-  late final __objc_msgSend_707Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_707 = __objc_msgSend_707Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_removeAllCachedResponses1 =
-      _registerName1("removeAllCachedResponses");
-  late final _sel_removeCachedResponsesSinceDate_1 =
-      _registerName1("removeCachedResponsesSinceDate:");
-  late final _sel_memoryCapacity1 = _registerName1("memoryCapacity");
-  late final _sel_setMemoryCapacity_1 = _registerName1("setMemoryCapacity:");
-  late final _sel_diskCapacity1 = _registerName1("diskCapacity");
-  late final _sel_setDiskCapacity_1 = _registerName1("setDiskCapacity:");
-  late final _sel_currentMemoryUsage1 = _registerName1("currentMemoryUsage");
-  late final _sel_currentDiskUsage1 = _registerName1("currentDiskUsage");
-  late final _class_NSURLSessionDataTask1 = _getClass1("NSURLSessionDataTask");
-  late final _sel_storeCachedResponse_forDataTask_1 =
-      _registerName1("storeCachedResponse:forDataTask:");
-  void _objc_msgSend_708(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> cachedResponse,
-    ffi.Pointer<ObjCObject> dataTask,
-  ) {
-    return __objc_msgSend_708(
-      obj,
-      sel,
-      cachedResponse,
-      dataTask,
-    );
-  }
-
-  late final __objc_msgSend_708Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_708 = __objc_msgSend_708Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_getCachedResponseForDataTask_completionHandler_1 =
-      _registerName1("getCachedResponseForDataTask:completionHandler:");
-  void _objc_msgSend_709(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> dataTask,
-    ffi.Pointer<_ObjCBlock> completionHandler,
-  ) {
-    return __objc_msgSend_709(
-      obj,
-      sel,
-      dataTask,
-      completionHandler,
-    );
-  }
-
-  late final __objc_msgSend_709Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_709 = __objc_msgSend_709Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
-
-  late final _sel_removeCachedResponseForDataTask_1 =
-      _registerName1("removeCachedResponseForDataTask:");
-  void _objc_msgSend_710(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> dataTask,
-  ) {
-    return __objc_msgSend_710(
-      obj,
-      sel,
-      dataTask,
-    );
-  }
-
-  late final __objc_msgSend_710Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_710 = __objc_msgSend_710Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _class_NSURLConnection1 = _getClass1("NSURLConnection");
-  late final _sel_initWithRequest_delegate_startImmediately_1 =
-      _registerName1("initWithRequest:delegate:startImmediately:");
-  instancetype _objc_msgSend_711(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-    ffi.Pointer<ObjCObject> delegate,
-    bool startImmediately,
-  ) {
-    return __objc_msgSend_711(
-      obj,
-      sel,
-      request,
-      delegate,
-      startImmediately,
-    );
-  }
-
-  late final __objc_msgSend_711Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Bool)>>('objc_msgSend');
-  late final __objc_msgSend_711 = __objc_msgSend_711Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>, bool)>();
-
-  late final _sel_initWithRequest_delegate_1 =
-      _registerName1("initWithRequest:delegate:");
-  instancetype _objc_msgSend_712(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-    ffi.Pointer<ObjCObject> delegate,
-  ) {
-    return __objc_msgSend_712(
-      obj,
-      sel,
-      request,
-      delegate,
-    );
-  }
-
-  late final __objc_msgSend_712Ptr = _lookup<
-      ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_712 = __objc_msgSend_712Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_connectionWithRequest_delegate_1 =
-      _registerName1("connectionWithRequest:delegate:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_713(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-    ffi.Pointer<ObjCObject> delegate,
-  ) {
-    return __objc_msgSend_713(
-      obj,
-      sel,
-      request,
-      delegate,
-    );
-  }
-
-  late final __objc_msgSend_713Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_713 = __objc_msgSend_713Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_unscheduleFromRunLoop_forMode_1 =
-      _registerName1("unscheduleFromRunLoop:forMode:");
-  late final _sel_setDelegateQueue_1 = _registerName1("setDelegateQueue:");
-  void _objc_msgSend_714(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> queue,
-  ) {
-    return __objc_msgSend_714(
-      obj,
-      sel,
-      queue,
-    );
-  }
-
-  late final __objc_msgSend_714Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_714 = __objc_msgSend_714Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_canHandleRequest_1 = _registerName1("canHandleRequest:");
-  bool _objc_msgSend_715(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-  ) {
-    return __objc_msgSend_715(
-      obj,
-      sel,
-      request,
-    );
-  }
-
-  late final __objc_msgSend_715Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_715 = __objc_msgSend_715Ptr.asFunction<
-      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
-  late final _sel_sendSynchronousRequest_returningResponse_error_1 =
-      _registerName1("sendSynchronousRequest:returningResponse:error:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_716(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-    ffi.Pointer<ffi.Pointer<ObjCObject>> response,
-    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
     return __objc_msgSend_716(
       obj,
       sel,
-      request,
-      response,
-      error,
+      options,
+      reason,
+      block,
     );
   }
 
   late final __objc_msgSend_716Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
+          ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
+              ffi.Int32,
               ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ffi.Pointer<ObjCObject>>,
-              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
   late final __objc_msgSend_716 = __objc_msgSend_716Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ffi.Pointer<ObjCObject>>,
-          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
 
-  late final _sel_sendAsynchronousRequest_queue_completionHandler_1 =
-      _registerName1("sendAsynchronousRequest:queue:completionHandler:");
+  late final _sel_performExpiringActivityWithReason_usingBlock_1 =
+      _registerName1("performExpiringActivityWithReason:usingBlock:");
   void _objc_msgSend_717(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> request,
-    ffi.Pointer<ObjCObject> queue,
-    ffi.Pointer<_ObjCBlock> handler,
+    ffi.Pointer<ObjCObject> reason,
+    ffi.Pointer<_ObjCBlock> block,
   ) {
     return __objc_msgSend_717(
       obj,
       sel,
-      request,
-      queue,
-      handler,
+      reason,
+      block,
     );
   }
 
@@ -20126,18 +20317,14 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
   late final __objc_msgSend_717 = __objc_msgSend_717Ptr.asFunction<
-      void Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<_ObjCBlock>)>();
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
 
-  late final _class_NSURLCredential1 = _getClass1("NSURLCredential");
-  late final _sel_persistence1 = _registerName1("persistence");
+  late final _sel_userName1 = _registerName1("userName");
+  late final _sel_fullUserName1 = _registerName1("fullUserName");
+  late final _sel_thermalState1 = _registerName1("thermalState");
   int _objc_msgSend_718(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
@@ -20155,137 +20342,126 @@ class PedometerBindings {
   late final __objc_msgSend_718 = __objc_msgSend_718Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
-  late final _sel_initWithUser_password_persistence_1 =
-      _registerName1("initWithUser:password:persistence:");
-  instancetype _objc_msgSend_719(
+  late final _sel_isLowPowerModeEnabled1 =
+      _registerName1("isLowPowerModeEnabled");
+  late final _sel_isMacCatalystApp1 = _registerName1("isMacCatalystApp");
+  late final _sel_isiOSAppOnMac1 = _registerName1("isiOSAppOnMac");
+  late final _class_NSTextCheckingResult1 = _getClass1("NSTextCheckingResult");
+  late final _sel_resultType1 = _registerName1("resultType");
+  int _objc_msgSend_719(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> user,
-    ffi.Pointer<ObjCObject> password,
-    int persistence,
   ) {
     return __objc_msgSend_719(
       obj,
       sel,
-      user,
-      password,
-      persistence,
     );
   }
 
   late final __objc_msgSend_719Ptr = _lookup<
       ffi.NativeFunction<
-          instancetype Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32)>>('objc_msgSend');
+          ffi.Int32 Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
   late final __objc_msgSend_719 = __objc_msgSend_719Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>, int)>();
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
-  late final _sel_credentialWithUser_password_persistence_1 =
-      _registerName1("credentialWithUser:password:persistence:");
+  late final _sel_range1 = _registerName1("range");
+  late final _sel_orthography1 = _registerName1("orthography");
   ffi.Pointer<ObjCObject> _objc_msgSend_720(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> user,
-    ffi.Pointer<ObjCObject> password,
-    int persistence,
   ) {
     return __objc_msgSend_720(
       obj,
       sel,
-      user,
-      password,
-      persistence,
     );
   }
 
   late final __objc_msgSend_720Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Pointer<ObjCObject>,
-              ffi.Int32)>>('objc_msgSend');
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
   late final __objc_msgSend_720 = __objc_msgSend_720Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>,
-          ffi.Pointer<ObjCObject>,
-          int)>();
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
-  late final _sel_hasPassword1 = _registerName1("hasPassword");
-  late final _sel_initWithIdentity_certificates_persistence_1 =
-      _registerName1("initWithIdentity:certificates:persistence:");
-  instancetype _objc_msgSend_721(
+  late final _sel_grammarDetails1 = _registerName1("grammarDetails");
+  late final _sel_duration1 = _registerName1("duration");
+  late final _sel_components1 = _registerName1("components");
+  late final _sel_replacementString1 = _registerName1("replacementString");
+  late final _sel_alternativeStrings1 = _registerName1("alternativeStrings");
+  late final _class_NSRegularExpression1 = _getClass1("NSRegularExpression");
+  late final _sel_regularExpressionWithPattern_options_error_1 =
+      _registerName1("regularExpressionWithPattern:options:error:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_721(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<__SecIdentity> identity,
-    ffi.Pointer<ObjCObject> certArray,
-    int persistence,
+    ffi.Pointer<ObjCObject> pattern,
+    int options,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
     return __objc_msgSend_721(
       obj,
       sel,
-      identity,
-      certArray,
-      persistence,
+      pattern,
+      options,
+      error,
     );
   }
 
   late final __objc_msgSend_721Ptr = _lookup<
       ffi.NativeFunction<
-          instancetype Function(
+          ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
-              ffi.Pointer<__SecIdentity>,
               ffi.Pointer<ObjCObject>,
-              ffi.Int32)>>('objc_msgSend');
+              ffi.Int32,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
   late final __objc_msgSend_721 = __objc_msgSend_721Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<__SecIdentity>, ffi.Pointer<ObjCObject>, int)>();
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          int,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
-  late final _sel_credentialWithIdentity_certificates_persistence_1 =
-      _registerName1("credentialWithIdentity:certificates:persistence:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_722(
+  late final _sel_initWithPattern_options_error_1 =
+      _registerName1("initWithPattern:options:error:");
+  instancetype _objc_msgSend_722(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<__SecIdentity> identity,
-    ffi.Pointer<ObjCObject> certArray,
-    int persistence,
+    ffi.Pointer<ObjCObject> pattern,
+    int options,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
   ) {
     return __objc_msgSend_722(
       obj,
       sel,
-      identity,
-      certArray,
-      persistence,
+      pattern,
+      options,
+      error,
     );
   }
 
   late final __objc_msgSend_722Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Pointer<ObjCObject> Function(
+          instancetype Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
-              ffi.Pointer<__SecIdentity>,
               ffi.Pointer<ObjCObject>,
-              ffi.Int32)>>('objc_msgSend');
+              ffi.Int32,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
   late final __objc_msgSend_722 = __objc_msgSend_722Ptr.asFunction<
-      ffi.Pointer<ObjCObject> Function(
+      instancetype Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
-          ffi.Pointer<__SecIdentity>,
           ffi.Pointer<ObjCObject>,
-          int)>();
+          int,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
 
-  late final _sel_identity1 = _registerName1("identity");
-  ffi.Pointer<__SecIdentity> _objc_msgSend_723(
+  late final _sel_pattern1 = _registerName1("pattern");
+  late final _sel_options1 = _registerName1("options");
+  int _objc_msgSend_723(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
@@ -20297,59 +20473,1381 @@ class PedometerBindings {
 
   late final __objc_msgSend_723Ptr = _lookup<
       ffi.NativeFunction<
-          ffi.Pointer<__SecIdentity> Function(
+          ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
   late final __objc_msgSend_723 = __objc_msgSend_723Ptr.asFunction<
-      ffi.Pointer<__SecIdentity> Function(
-          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
-  late final _sel_certificates1 = _registerName1("certificates");
-  late final _sel_initWithTrust_1 = _registerName1("initWithTrust:");
-  instancetype _objc_msgSend_724(
+  late final _sel_numberOfCaptureGroups1 =
+      _registerName1("numberOfCaptureGroups");
+  late final _sel_escapedPatternForString_1 =
+      _registerName1("escapedPatternForString:");
+  late final _sel_enumerateMatchesInString_options_range_usingBlock_1 =
+      _registerName1("enumerateMatchesInString:options:range:usingBlock:");
+  void _objc_msgSend_724(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<__SecTrust> trust,
+    ffi.Pointer<ObjCObject> string,
+    int options,
+    _NSRange range,
+    ffi.Pointer<_ObjCBlock> block,
   ) {
     return __objc_msgSend_724(
       obj,
       sel,
-      trust,
+      string,
+      options,
+      range,
+      block,
     );
   }
 
   late final __objc_msgSend_724Ptr = _lookup<
       ffi.NativeFunction<
-          instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<__SecTrust>)>>('objc_msgSend');
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              _NSRange,
+              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
   late final __objc_msgSend_724 = __objc_msgSend_724Ptr.asFunction<
-      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<__SecTrust>)>();
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, int, _NSRange, ffi.Pointer<_ObjCBlock>)>();
 
-  late final _sel_credentialForTrust_1 = _registerName1("credentialForTrust:");
+  late final _sel_matchesInString_options_range_1 =
+      _registerName1("matchesInString:options:range:");
   ffi.Pointer<ObjCObject> _objc_msgSend_725(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> string,
+    int options,
+    _NSRange range,
+  ) {
+    return __objc_msgSend_725(
+      obj,
+      sel,
+      string,
+      options,
+      range,
+    );
+  }
+
+  late final __objc_msgSend_725Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              _NSRange)>>('objc_msgSend');
+  late final __objc_msgSend_725 = __objc_msgSend_725Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int, _NSRange)>();
+
+  late final _sel_numberOfMatchesInString_options_range_1 =
+      _registerName1("numberOfMatchesInString:options:range:");
+  int _objc_msgSend_726(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> string,
+    int options,
+    _NSRange range,
+  ) {
+    return __objc_msgSend_726(
+      obj,
+      sel,
+      string,
+      options,
+      range,
+    );
+  }
+
+  late final __objc_msgSend_726Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.UnsignedLong Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              _NSRange)>>('objc_msgSend');
+  late final __objc_msgSend_726 = __objc_msgSend_726Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, int, _NSRange)>();
+
+  late final _sel_firstMatchInString_options_range_1 =
+      _registerName1("firstMatchInString:options:range:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_727(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> string,
+    int options,
+    _NSRange range,
+  ) {
+    return __objc_msgSend_727(
+      obj,
+      sel,
+      string,
+      options,
+      range,
+    );
+  }
+
+  late final __objc_msgSend_727Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              _NSRange)>>('objc_msgSend');
+  late final __objc_msgSend_727 = __objc_msgSend_727Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int, _NSRange)>();
+
+  late final _sel_rangeOfFirstMatchInString_options_range_1 =
+      _registerName1("rangeOfFirstMatchInString:options:range:");
+  _NSRange _objc_msgSend_728(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> string,
+    int options,
+    _NSRange range,
+  ) {
+    return __objc_msgSend_728(
+      obj,
+      sel,
+      string,
+      options,
+      range,
+    );
+  }
+
+  late final __objc_msgSend_728Ptr = _lookup<
+      ffi.NativeFunction<
+          _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>, ffi.Int32, _NSRange)>>('objc_msgSend');
+  late final __objc_msgSend_728 = __objc_msgSend_728Ptr.asFunction<
+      _NSRange Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, int, _NSRange)>();
+
+  late final _sel_stringByReplacingMatchesInString_options_range_withTemplate_1 =
+      _registerName1(
+          "stringByReplacingMatchesInString:options:range:withTemplate:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_729(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> string,
+    int options,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> templ,
+  ) {
+    return __objc_msgSend_729(
+      obj,
+      sel,
+      string,
+      options,
+      range,
+      templ,
+    );
+  }
+
+  late final __objc_msgSend_729Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_729 = __objc_msgSend_729Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          int,
+          _NSRange,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_replaceMatchesInString_options_range_withTemplate_1 =
+      _registerName1("replaceMatchesInString:options:range:withTemplate:");
+  int _objc_msgSend_730(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> string,
+    int options,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> templ,
+  ) {
+    return __objc_msgSend_730(
+      obj,
+      sel,
+      string,
+      options,
+      range,
+      templ,
+    );
+  }
+
+  late final __objc_msgSend_730Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.UnsignedLong Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_730 = __objc_msgSend_730Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, int, _NSRange, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_replacementStringForResult_inString_offset_template_1 =
+      _registerName1("replacementStringForResult:inString:offset:template:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_731(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> result,
+    ffi.Pointer<ObjCObject> string,
+    int offset,
+    ffi.Pointer<ObjCObject> templ,
+  ) {
+    return __objc_msgSend_731(
+      obj,
+      sel,
+      result,
+      string,
+      offset,
+      templ,
+    );
+  }
+
+  late final __objc_msgSend_731Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Long,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_731 = __objc_msgSend_731Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_escapedTemplateForString_1 =
+      _registerName1("escapedTemplateForString:");
+  late final _sel_regularExpression1 = _registerName1("regularExpression");
+  ffi.Pointer<ObjCObject> _objc_msgSend_732(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_732(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_732Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_732 = __objc_msgSend_732Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _sel_phoneNumber1 = _registerName1("phoneNumber");
+  late final _sel_numberOfRanges1 = _registerName1("numberOfRanges");
+  late final _sel_rangeAtIndex_1 = _registerName1("rangeAtIndex:");
+  late final _sel_rangeWithName_1 = _registerName1("rangeWithName:");
+  late final _sel_resultByAdjustingRangesWithOffset_1 =
+      _registerName1("resultByAdjustingRangesWithOffset:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_733(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int offset,
+  ) {
+    return __objc_msgSend_733(
+      obj,
+      sel,
+      offset,
+    );
+  }
+
+  late final __objc_msgSend_733Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>, ffi.Long)>>('objc_msgSend');
+  late final __objc_msgSend_733 = __objc_msgSend_733Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
+
+  late final _sel_addressComponents1 = _registerName1("addressComponents");
+  late final _sel_orthographyCheckingResultWithRange_orthography_1 =
+      _registerName1("orthographyCheckingResultWithRange:orthography:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_734(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> orthography,
+  ) {
+    return __objc_msgSend_734(
+      obj,
+      sel,
+      range,
+      orthography,
+    );
+  }
+
+  late final __objc_msgSend_734Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_734 = __objc_msgSend_734Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_spellCheckingResultWithRange_1 =
+      _registerName1("spellCheckingResultWithRange:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_735(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+  ) {
+    return __objc_msgSend_735(
+      obj,
+      sel,
+      range,
+    );
+  }
+
+  late final __objc_msgSend_735Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>, _NSRange)>>('objc_msgSend');
+  late final __objc_msgSend_735 = __objc_msgSend_735Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, _NSRange)>();
+
+  late final _sel_grammarCheckingResultWithRange_details_1 =
+      _registerName1("grammarCheckingResultWithRange:details:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_736(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> details,
+  ) {
+    return __objc_msgSend_736(
+      obj,
+      sel,
+      range,
+      details,
+    );
+  }
+
+  late final __objc_msgSend_736Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_736 = __objc_msgSend_736Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_dateCheckingResultWithRange_date_1 =
+      _registerName1("dateCheckingResultWithRange:date:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_737(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> date,
+  ) {
+    return __objc_msgSend_737(
+      obj,
+      sel,
+      range,
+      date,
+    );
+  }
+
+  late final __objc_msgSend_737Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_737 = __objc_msgSend_737Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_dateCheckingResultWithRange_date_timeZone_duration_1 =
+      _registerName1("dateCheckingResultWithRange:date:timeZone:duration:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_738(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> date,
+    ffi.Pointer<ObjCObject> timeZone,
+    double duration,
+  ) {
+    return __objc_msgSend_738(
+      obj,
+      sel,
+      range,
+      date,
+      timeZone,
+      duration,
+    );
+  }
+
+  late final __objc_msgSend_738Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Double)>>('objc_msgSend');
+  late final __objc_msgSend_738 = __objc_msgSend_738Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          _NSRange,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          double)>();
+
+  late final _sel_addressCheckingResultWithRange_components_1 =
+      _registerName1("addressCheckingResultWithRange:components:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_739(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> components,
+  ) {
+    return __objc_msgSend_739(
+      obj,
+      sel,
+      range,
+      components,
+    );
+  }
+
+  late final __objc_msgSend_739Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_739 = __objc_msgSend_739Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_linkCheckingResultWithRange_URL_1 =
+      _registerName1("linkCheckingResultWithRange:URL:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_740(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> url,
+  ) {
+    return __objc_msgSend_740(
+      obj,
+      sel,
+      range,
+      url,
+    );
+  }
+
+  late final __objc_msgSend_740Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_740 = __objc_msgSend_740Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_quoteCheckingResultWithRange_replacementString_1 =
+      _registerName1("quoteCheckingResultWithRange:replacementString:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_741(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> replacementString,
+  ) {
+    return __objc_msgSend_741(
+      obj,
+      sel,
+      range,
+      replacementString,
+    );
+  }
+
+  late final __objc_msgSend_741Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_741 = __objc_msgSend_741Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, _NSRange, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_dashCheckingResultWithRange_replacementString_1 =
+      _registerName1("dashCheckingResultWithRange:replacementString:");
+  late final _sel_replacementCheckingResultWithRange_replacementString_1 =
+      _registerName1("replacementCheckingResultWithRange:replacementString:");
+  late final _sel_correctionCheckingResultWithRange_replacementString_1 =
+      _registerName1("correctionCheckingResultWithRange:replacementString:");
+  late final _sel_correctionCheckingResultWithRange_replacementString_alternativeStrings_1 =
+      _registerName1(
+          "correctionCheckingResultWithRange:replacementString:alternativeStrings:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_742(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    _NSRange range,
+    ffi.Pointer<ObjCObject> replacementString,
+    ffi.Pointer<ObjCObject> alternativeStrings,
+  ) {
+    return __objc_msgSend_742(
+      obj,
+      sel,
+      range,
+      replacementString,
+      alternativeStrings,
+    );
+  }
+
+  late final __objc_msgSend_742Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              _NSRange,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_742 = __objc_msgSend_742Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          _NSRange,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_regularExpressionCheckingResultWithRanges_count_regularExpression_1 =
+      _registerName1(
+          "regularExpressionCheckingResultWithRanges:count:regularExpression:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_743(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<_NSRange> ranges,
+    int count,
+    ffi.Pointer<ObjCObject> regularExpression,
+  ) {
+    return __objc_msgSend_743(
+      obj,
+      sel,
+      ranges,
+      count,
+      regularExpression,
+    );
+  }
+
+  late final __objc_msgSend_743Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<_NSRange>,
+              ffi.UnsignedLong,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_743 = __objc_msgSend_743Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<_NSRange>,
+          int,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_phoneNumberCheckingResultWithRange_phoneNumber_1 =
+      _registerName1("phoneNumberCheckingResultWithRange:phoneNumber:");
+  late final _sel_transitInformationCheckingResultWithRange_components_1 =
+      _registerName1("transitInformationCheckingResultWithRange:components:");
+  late final _class_NSURLCache1 = _getClass1("NSURLCache");
+  late final _sel_sharedURLCache1 = _registerName1("sharedURLCache");
+  ffi.Pointer<ObjCObject> _objc_msgSend_744(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_744(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_744Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_744 = __objc_msgSend_744Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _sel_setSharedURLCache_1 = _registerName1("setSharedURLCache:");
+  void _objc_msgSend_745(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> value,
+  ) {
+    return __objc_msgSend_745(
+      obj,
+      sel,
+      value,
+    );
+  }
+
+  late final __objc_msgSend_745Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_745 = __objc_msgSend_745Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_initWithMemoryCapacity_diskCapacity_diskPath_1 =
+      _registerName1("initWithMemoryCapacity:diskCapacity:diskPath:");
+  instancetype _objc_msgSend_746(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int memoryCapacity,
+    int diskCapacity,
+    ffi.Pointer<ObjCObject> path,
+  ) {
+    return __objc_msgSend_746(
+      obj,
+      sel,
+      memoryCapacity,
+      diskCapacity,
+      path,
+    );
+  }
+
+  late final __objc_msgSend_746Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.UnsignedLong,
+              ffi.UnsignedLong,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_746 = __objc_msgSend_746Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
+          int, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_initWithMemoryCapacity_diskCapacity_directoryURL_1 =
+      _registerName1("initWithMemoryCapacity:diskCapacity:directoryURL:");
+  instancetype _objc_msgSend_747(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    int memoryCapacity,
+    int diskCapacity,
+    ffi.Pointer<ObjCObject> directoryURL,
+  ) {
+    return __objc_msgSend_747(
+      obj,
+      sel,
+      memoryCapacity,
+      diskCapacity,
+      directoryURL,
+    );
+  }
+
+  late final __objc_msgSend_747Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.UnsignedLong,
+              ffi.UnsignedLong,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_747 = __objc_msgSend_747Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
+          int, ffi.Pointer<ObjCObject>)>();
+
+  late final _class_NSCachedURLResponse1 = _getClass1("NSCachedURLResponse");
+  late final _sel_initWithResponse_data_1 =
+      _registerName1("initWithResponse:data:");
+  instancetype _objc_msgSend_748(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> response,
+    ffi.Pointer<ObjCObject> data,
+  ) {
+    return __objc_msgSend_748(
+      obj,
+      sel,
+      response,
+      data,
+    );
+  }
+
+  late final __objc_msgSend_748Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_748 = __objc_msgSend_748Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_initWithResponse_data_userInfo_storagePolicy_1 =
+      _registerName1("initWithResponse:data:userInfo:storagePolicy:");
+  instancetype _objc_msgSend_749(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> response,
+    ffi.Pointer<ObjCObject> data,
+    ffi.Pointer<ObjCObject> userInfo,
+    int storagePolicy,
+  ) {
+    return __objc_msgSend_749(
+      obj,
+      sel,
+      response,
+      data,
+      userInfo,
+      storagePolicy,
+    );
+  }
+
+  late final __objc_msgSend_749Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_749 = __objc_msgSend_749Ptr.asFunction<
+      instancetype Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int)>();
+
+  late final _sel_storagePolicy1 = _registerName1("storagePolicy");
+  int _objc_msgSend_750(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_750(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_750Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int32 Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_750 = __objc_msgSend_750Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _sel_cachedResponseForRequest_1 =
+      _registerName1("cachedResponseForRequest:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_751(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+  ) {
+    return __objc_msgSend_751(
+      obj,
+      sel,
+      request,
+    );
+  }
+
+  late final __objc_msgSend_751Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_751 = __objc_msgSend_751Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_storeCachedResponse_forRequest_1 =
+      _registerName1("storeCachedResponse:forRequest:");
+  void _objc_msgSend_752(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> cachedResponse,
+    ffi.Pointer<ObjCObject> request,
+  ) {
+    return __objc_msgSend_752(
+      obj,
+      sel,
+      cachedResponse,
+      request,
+    );
+  }
+
+  late final __objc_msgSend_752Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_752 = __objc_msgSend_752Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_removeCachedResponseForRequest_1 =
+      _registerName1("removeCachedResponseForRequest:");
+  void _objc_msgSend_753(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+  ) {
+    return __objc_msgSend_753(
+      obj,
+      sel,
+      request,
+    );
+  }
+
+  late final __objc_msgSend_753Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_753 = __objc_msgSend_753Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_removeAllCachedResponses1 =
+      _registerName1("removeAllCachedResponses");
+  late final _sel_removeCachedResponsesSinceDate_1 =
+      _registerName1("removeCachedResponsesSinceDate:");
+  late final _sel_memoryCapacity1 = _registerName1("memoryCapacity");
+  late final _sel_setMemoryCapacity_1 = _registerName1("setMemoryCapacity:");
+  late final _sel_diskCapacity1 = _registerName1("diskCapacity");
+  late final _sel_setDiskCapacity_1 = _registerName1("setDiskCapacity:");
+  late final _sel_currentMemoryUsage1 = _registerName1("currentMemoryUsage");
+  late final _sel_currentDiskUsage1 = _registerName1("currentDiskUsage");
+  late final _class_NSURLSessionDataTask1 = _getClass1("NSURLSessionDataTask");
+  late final _sel_storeCachedResponse_forDataTask_1 =
+      _registerName1("storeCachedResponse:forDataTask:");
+  void _objc_msgSend_754(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> cachedResponse,
+    ffi.Pointer<ObjCObject> dataTask,
+  ) {
+    return __objc_msgSend_754(
+      obj,
+      sel,
+      cachedResponse,
+      dataTask,
+    );
+  }
+
+  late final __objc_msgSend_754Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_754 = __objc_msgSend_754Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_getCachedResponseForDataTask_completionHandler_1 =
+      _registerName1("getCachedResponseForDataTask:completionHandler:");
+  void _objc_msgSend_755(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> dataTask,
+    ffi.Pointer<_ObjCBlock> completionHandler,
+  ) {
+    return __objc_msgSend_755(
+      obj,
+      sel,
+      dataTask,
+      completionHandler,
+    );
+  }
+
+  late final __objc_msgSend_755Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
+  late final __objc_msgSend_755 = __objc_msgSend_755Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
+
+  late final _sel_removeCachedResponseForDataTask_1 =
+      _registerName1("removeCachedResponseForDataTask:");
+  void _objc_msgSend_756(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> dataTask,
+  ) {
+    return __objc_msgSend_756(
+      obj,
+      sel,
+      dataTask,
+    );
+  }
+
+  late final __objc_msgSend_756Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_756 = __objc_msgSend_756Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _class_NSURLConnection1 = _getClass1("NSURLConnection");
+  late final _sel_initWithRequest_delegate_startImmediately_1 =
+      _registerName1("initWithRequest:delegate:startImmediately:");
+  instancetype _objc_msgSend_757(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+    ffi.Pointer<ObjCObject> delegate,
+    bool startImmediately,
+  ) {
+    return __objc_msgSend_757(
+      obj,
+      sel,
+      request,
+      delegate,
+      startImmediately,
+    );
+  }
+
+  late final __objc_msgSend_757Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Bool)>>('objc_msgSend');
+  late final __objc_msgSend_757 = __objc_msgSend_757Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>, bool)>();
+
+  late final _sel_initWithRequest_delegate_1 =
+      _registerName1("initWithRequest:delegate:");
+  instancetype _objc_msgSend_758(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+    ffi.Pointer<ObjCObject> delegate,
+  ) {
+    return __objc_msgSend_758(
+      obj,
+      sel,
+      request,
+      delegate,
+    );
+  }
+
+  late final __objc_msgSend_758Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_758 = __objc_msgSend_758Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_connectionWithRequest_delegate_1 =
+      _registerName1("connectionWithRequest:delegate:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_759(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+    ffi.Pointer<ObjCObject> delegate,
+  ) {
+    return __objc_msgSend_759(
+      obj,
+      sel,
+      request,
+      delegate,
+    );
+  }
+
+  late final __objc_msgSend_759Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_759 = __objc_msgSend_759Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_unscheduleFromRunLoop_forMode_1 =
+      _registerName1("unscheduleFromRunLoop:forMode:");
+  late final _sel_setDelegateQueue_1 = _registerName1("setDelegateQueue:");
+  void _objc_msgSend_760(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> queue,
+  ) {
+    return __objc_msgSend_760(
+      obj,
+      sel,
+      queue,
+    );
+  }
+
+  late final __objc_msgSend_760Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_760 = __objc_msgSend_760Ptr.asFunction<
+      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_canHandleRequest_1 = _registerName1("canHandleRequest:");
+  bool _objc_msgSend_761(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+  ) {
+    return __objc_msgSend_761(
+      obj,
+      sel,
+      request,
+    );
+  }
+
+  late final __objc_msgSend_761Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
+  late final __objc_msgSend_761 = __objc_msgSend_761Ptr.asFunction<
+      bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>)>();
+
+  late final _sel_sendSynchronousRequest_returningResponse_error_1 =
+      _registerName1("sendSynchronousRequest:returningResponse:error:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_762(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> response,
+    ffi.Pointer<ffi.Pointer<ObjCObject>> error,
+  ) {
+    return __objc_msgSend_762(
+      obj,
+      sel,
+      request,
+      response,
+      error,
+    );
+  }
+
+  late final __objc_msgSend_762Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>,
+              ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
+  late final __objc_msgSend_762 = __objc_msgSend_762Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>,
+          ffi.Pointer<ffi.Pointer<ObjCObject>>)>();
+
+  late final _sel_sendAsynchronousRequest_queue_completionHandler_1 =
+      _registerName1("sendAsynchronousRequest:queue:completionHandler:");
+  void _objc_msgSend_763(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> request,
+    ffi.Pointer<ObjCObject> queue,
+    ffi.Pointer<_ObjCBlock> handler,
+  ) {
+    return __objc_msgSend_763(
+      obj,
+      sel,
+      request,
+      queue,
+      handler,
+    );
+  }
+
+  late final __objc_msgSend_763Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
+  late final __objc_msgSend_763 = __objc_msgSend_763Ptr.asFunction<
+      void Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<_ObjCBlock>)>();
+
+  late final _class_NSURLCredential1 = _getClass1("NSURLCredential");
+  late final _sel_persistence1 = _registerName1("persistence");
+  int _objc_msgSend_764(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_764(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_764Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int32 Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_764 = __objc_msgSend_764Ptr.asFunction<
+      int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _sel_initWithUser_password_persistence_1 =
+      _registerName1("initWithUser:password:persistence:");
+  instancetype _objc_msgSend_765(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> user,
+    ffi.Pointer<ObjCObject> password,
+    int persistence,
+  ) {
+    return __objc_msgSend_765(
+      obj,
+      sel,
+      user,
+      password,
+      persistence,
+    );
+  }
+
+  late final __objc_msgSend_765Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_765 = __objc_msgSend_765Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>, int)>();
+
+  late final _sel_credentialWithUser_password_persistence_1 =
+      _registerName1("credentialWithUser:password:persistence:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_766(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<ObjCObject> user,
+    ffi.Pointer<ObjCObject> password,
+    int persistence,
+  ) {
+    return __objc_msgSend_766(
+      obj,
+      sel,
+      user,
+      password,
+      persistence,
+    );
+  }
+
+  late final __objc_msgSend_766Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_766 = __objc_msgSend_766Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCObject>,
+          int)>();
+
+  late final _sel_hasPassword1 = _registerName1("hasPassword");
+  late final _sel_initWithIdentity_certificates_persistence_1 =
+      _registerName1("initWithIdentity:certificates:persistence:");
+  instancetype _objc_msgSend_767(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<__SecIdentity> identity,
+    ffi.Pointer<ObjCObject> certArray,
+    int persistence,
+  ) {
+    return __objc_msgSend_767(
+      obj,
+      sel,
+      identity,
+      certArray,
+      persistence,
+    );
+  }
+
+  late final __objc_msgSend_767Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<__SecIdentity>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_767 = __objc_msgSend_767Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<__SecIdentity>, ffi.Pointer<ObjCObject>, int)>();
+
+  late final _sel_credentialWithIdentity_certificates_persistence_1 =
+      _registerName1("credentialWithIdentity:certificates:persistence:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_768(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<__SecIdentity> identity,
+    ffi.Pointer<ObjCObject> certArray,
+    int persistence,
+  ) {
+    return __objc_msgSend_768(
+      obj,
+      sel,
+      identity,
+      certArray,
+      persistence,
+    );
+  }
+
+  late final __objc_msgSend_768Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ObjCObject> Function(
+              ffi.Pointer<ObjCObject>,
+              ffi.Pointer<ObjCSel>,
+              ffi.Pointer<__SecIdentity>,
+              ffi.Pointer<ObjCObject>,
+              ffi.Int32)>>('objc_msgSend');
+  late final __objc_msgSend_768 = __objc_msgSend_768Ptr.asFunction<
+      ffi.Pointer<ObjCObject> Function(
+          ffi.Pointer<ObjCObject>,
+          ffi.Pointer<ObjCSel>,
+          ffi.Pointer<__SecIdentity>,
+          ffi.Pointer<ObjCObject>,
+          int)>();
+
+  late final _sel_identity1 = _registerName1("identity");
+  ffi.Pointer<__SecIdentity> _objc_msgSend_769(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+  ) {
+    return __objc_msgSend_769(
+      obj,
+      sel,
+    );
+  }
+
+  late final __objc_msgSend_769Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<__SecIdentity> Function(
+              ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
+  late final __objc_msgSend_769 = __objc_msgSend_769Ptr.asFunction<
+      ffi.Pointer<__SecIdentity> Function(
+          ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
+
+  late final _sel_certificates1 = _registerName1("certificates");
+  late final _sel_initWithTrust_1 = _registerName1("initWithTrust:");
+  instancetype _objc_msgSend_770(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<__SecTrust> trust,
   ) {
-    return __objc_msgSend_725(
+    return __objc_msgSend_770(
       obj,
       sel,
       trust,
     );
   }
 
-  late final __objc_msgSend_725Ptr = _lookup<
+  late final __objc_msgSend_770Ptr = _lookup<
+      ffi.NativeFunction<
+          instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+              ffi.Pointer<__SecTrust>)>>('objc_msgSend');
+  late final __objc_msgSend_770 = __objc_msgSend_770Ptr.asFunction<
+      instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
+          ffi.Pointer<__SecTrust>)>();
+
+  late final _sel_credentialForTrust_1 = _registerName1("credentialForTrust:");
+  ffi.Pointer<ObjCObject> _objc_msgSend_771(
+    ffi.Pointer<ObjCObject> obj,
+    ffi.Pointer<ObjCSel> sel,
+    ffi.Pointer<__SecTrust> trust,
+  ) {
+    return __objc_msgSend_771(
+      obj,
+      sel,
+      trust,
+    );
+  }
+
+  late final __objc_msgSend_771Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<__SecTrust>)>>('objc_msgSend');
-  late final __objc_msgSend_725 = __objc_msgSend_725Ptr.asFunction<
+  late final __objc_msgSend_771 = __objc_msgSend_771Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<__SecTrust>)>();
 
   late final _class_NSURLProtectionSpace1 = _getClass1("NSURLProtectionSpace");
   late final _sel_initWithHost_port_protocol_realm_authenticationMethod_1 =
       _registerName1("initWithHost:port:protocol:realm:authenticationMethod:");
-  instancetype _objc_msgSend_726(
+  instancetype _objc_msgSend_772(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> host,
@@ -20358,7 +21856,7 @@ class PedometerBindings {
     ffi.Pointer<ObjCObject> realm,
     ffi.Pointer<ObjCObject> authenticationMethod,
   ) {
-    return __objc_msgSend_726(
+    return __objc_msgSend_772(
       obj,
       sel,
       host,
@@ -20369,7 +21867,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_726Ptr = _lookup<
+  late final __objc_msgSend_772Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(
               ffi.Pointer<ObjCObject>,
@@ -20379,7 +21877,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_726 = __objc_msgSend_726Ptr.asFunction<
+  late final __objc_msgSend_772 = __objc_msgSend_772Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20401,21 +21899,21 @@ class PedometerBindings {
       _registerName1("authenticationMethod");
   late final _sel_distinguishedNames1 = _registerName1("distinguishedNames");
   late final _sel_serverTrust1 = _registerName1("serverTrust");
-  ffi.Pointer<__SecTrust> _objc_msgSend_727(
+  ffi.Pointer<__SecTrust> _objc_msgSend_773(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_727(
+    return __objc_msgSend_773(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_727Ptr = _lookup<
+  late final __objc_msgSend_773Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<__SecTrust> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_727 = __objc_msgSend_727Ptr.asFunction<
+  late final __objc_msgSend_773 = __objc_msgSend_773Ptr.asFunction<
       ffi.Pointer<__SecTrust> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -20423,56 +21921,56 @@ class PedometerBindings {
       _getClass1("NSURLCredentialStorage");
   late final _sel_sharedCredentialStorage1 =
       _registerName1("sharedCredentialStorage");
-  ffi.Pointer<ObjCObject> _objc_msgSend_728(
+  ffi.Pointer<ObjCObject> _objc_msgSend_774(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_728(
+    return __objc_msgSend_774(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_728Ptr = _lookup<
+  late final __objc_msgSend_774Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_728 = __objc_msgSend_728Ptr.asFunction<
+  late final __objc_msgSend_774 = __objc_msgSend_774Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_credentialsForProtectionSpace_1 =
       _registerName1("credentialsForProtectionSpace:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_729(
+  ffi.Pointer<ObjCObject> _objc_msgSend_775(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> space,
   ) {
-    return __objc_msgSend_729(
+    return __objc_msgSend_775(
       obj,
       sel,
       space,
     );
   }
 
-  late final __objc_msgSend_729Ptr = _lookup<
+  late final __objc_msgSend_775Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_729 = __objc_msgSend_729Ptr.asFunction<
+  late final __objc_msgSend_775 = __objc_msgSend_775Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_allCredentials1 = _registerName1("allCredentials");
   late final _sel_setCredential_forProtectionSpace_1 =
       _registerName1("setCredential:forProtectionSpace:");
-  void _objc_msgSend_730(
+  void _objc_msgSend_776(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> credential,
     ffi.Pointer<ObjCObject> space,
   ) {
-    return __objc_msgSend_730(
+    return __objc_msgSend_776(
       obj,
       sel,
       credential,
@@ -20480,14 +21978,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_730Ptr = _lookup<
+  late final __objc_msgSend_776Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_730 = __objc_msgSend_730Ptr.asFunction<
+  late final __objc_msgSend_776 = __objc_msgSend_776Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
@@ -20495,14 +21993,14 @@ class PedometerBindings {
       _registerName1("removeCredential:forProtectionSpace:");
   late final _sel_removeCredential_forProtectionSpace_options_1 =
       _registerName1("removeCredential:forProtectionSpace:options:");
-  void _objc_msgSend_731(
+  void _objc_msgSend_777(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> credential,
     ffi.Pointer<ObjCObject> space,
     ffi.Pointer<ObjCObject> options,
   ) {
-    return __objc_msgSend_731(
+    return __objc_msgSend_777(
       obj,
       sel,
       credential,
@@ -20511,7 +22009,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_731Ptr = _lookup<
+  late final __objc_msgSend_777Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -20519,7 +22017,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_731 = __objc_msgSend_731Ptr.asFunction<
+  late final __objc_msgSend_777 = __objc_msgSend_777Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20529,23 +22027,23 @@ class PedometerBindings {
 
   late final _sel_defaultCredentialForProtectionSpace_1 =
       _registerName1("defaultCredentialForProtectionSpace:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_732(
+  ffi.Pointer<ObjCObject> _objc_msgSend_778(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> space,
   ) {
-    return __objc_msgSend_732(
+    return __objc_msgSend_778(
       obj,
       sel,
       space,
     );
   }
 
-  late final __objc_msgSend_732Ptr = _lookup<
+  late final __objc_msgSend_778Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_732 = __objc_msgSend_732Ptr.asFunction<
+  late final __objc_msgSend_778 = __objc_msgSend_778Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -20554,14 +22052,14 @@ class PedometerBindings {
   late final _sel_getCredentialsForProtectionSpace_task_completionHandler_1 =
       _registerName1(
           "getCredentialsForProtectionSpace:task:completionHandler:");
-  void _objc_msgSend_733(
+  void _objc_msgSend_779(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> protectionSpace,
     ffi.Pointer<ObjCObject> task,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_733(
+    return __objc_msgSend_779(
       obj,
       sel,
       protectionSpace,
@@ -20570,7 +22068,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_733Ptr = _lookup<
+  late final __objc_msgSend_779Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -20578,7 +22076,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_733 = __objc_msgSend_733Ptr.asFunction<
+  late final __objc_msgSend_779 = __objc_msgSend_779Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20588,14 +22086,14 @@ class PedometerBindings {
 
   late final _sel_setCredential_forProtectionSpace_task_1 =
       _registerName1("setCredential:forProtectionSpace:task:");
-  void _objc_msgSend_734(
+  void _objc_msgSend_780(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> credential,
     ffi.Pointer<ObjCObject> protectionSpace,
     ffi.Pointer<ObjCObject> task,
   ) {
-    return __objc_msgSend_734(
+    return __objc_msgSend_780(
       obj,
       sel,
       credential,
@@ -20604,7 +22102,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_734Ptr = _lookup<
+  late final __objc_msgSend_780Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -20612,7 +22110,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_734 = __objc_msgSend_734Ptr.asFunction<
+  late final __objc_msgSend_780 = __objc_msgSend_780Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20622,7 +22120,7 @@ class PedometerBindings {
 
   late final _sel_removeCredential_forProtectionSpace_options_task_1 =
       _registerName1("removeCredential:forProtectionSpace:options:task:");
-  void _objc_msgSend_735(
+  void _objc_msgSend_781(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> credential,
@@ -20630,7 +22128,7 @@ class PedometerBindings {
     ffi.Pointer<ObjCObject> options,
     ffi.Pointer<ObjCObject> task,
   ) {
-    return __objc_msgSend_735(
+    return __objc_msgSend_781(
       obj,
       sel,
       credential,
@@ -20640,7 +22138,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_735Ptr = _lookup<
+  late final __objc_msgSend_781Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -20649,7 +22147,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_735 = __objc_msgSend_735Ptr.asFunction<
+  late final __objc_msgSend_781 = __objc_msgSend_781Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20661,14 +22159,14 @@ class PedometerBindings {
   late final _sel_getDefaultCredentialForProtectionSpace_task_completionHandler_1 =
       _registerName1(
           "getDefaultCredentialForProtectionSpace:task:completionHandler:");
-  void _objc_msgSend_736(
+  void _objc_msgSend_782(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> space,
     ffi.Pointer<ObjCObject> task,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_736(
+    return __objc_msgSend_782(
       obj,
       sel,
       space,
@@ -20677,7 +22175,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_736Ptr = _lookup<
+  late final __objc_msgSend_782Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -20685,7 +22183,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_736 = __objc_msgSend_736Ptr.asFunction<
+  late final __objc_msgSend_782 = __objc_msgSend_782Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20698,14 +22196,14 @@ class PedometerBindings {
   late final _class_NSURLProtocol1 = _getClass1("NSURLProtocol");
   late final _sel_initWithRequest_cachedResponse_client_1 =
       _registerName1("initWithRequest:cachedResponse:client:");
-  instancetype _objc_msgSend_737(
+  instancetype _objc_msgSend_783(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
     ffi.Pointer<ObjCObject> cachedResponse,
     ffi.Pointer<ObjCObject> client,
   ) {
-    return __objc_msgSend_737(
+    return __objc_msgSend_783(
       obj,
       sel,
       request,
@@ -20714,7 +22212,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_737Ptr = _lookup<
+  late final __objc_msgSend_783Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(
               ffi.Pointer<ObjCObject>,
@@ -20722,7 +22220,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_737 = __objc_msgSend_737Ptr.asFunction<
+  late final __objc_msgSend_783 = __objc_msgSend_783Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20733,56 +22231,56 @@ class PedometerBindings {
   late final _sel_client1 = _registerName1("client");
   late final _sel_request1 = _registerName1("request");
   late final _sel_cachedResponse1 = _registerName1("cachedResponse");
-  ffi.Pointer<ObjCObject> _objc_msgSend_738(
+  ffi.Pointer<ObjCObject> _objc_msgSend_784(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_738(
+    return __objc_msgSend_784(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_738Ptr = _lookup<
+  late final __objc_msgSend_784Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_738 = __objc_msgSend_738Ptr.asFunction<
+  late final __objc_msgSend_784 = __objc_msgSend_784Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_canInitWithRequest_1 = _registerName1("canInitWithRequest:");
   late final _sel_canonicalRequestForRequest_1 =
       _registerName1("canonicalRequestForRequest:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_739(
+  ffi.Pointer<ObjCObject> _objc_msgSend_785(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_739(
+    return __objc_msgSend_785(
       obj,
       sel,
       request,
     );
   }
 
-  late final __objc_msgSend_739Ptr = _lookup<
+  late final __objc_msgSend_785Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_739 = __objc_msgSend_739Ptr.asFunction<
+  late final __objc_msgSend_785 = __objc_msgSend_785Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_requestIsCacheEquivalent_toRequest_1 =
       _registerName1("requestIsCacheEquivalent:toRequest:");
-  bool _objc_msgSend_740(
+  bool _objc_msgSend_786(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> a,
     ffi.Pointer<ObjCObject> b,
   ) {
-    return __objc_msgSend_740(
+    return __objc_msgSend_786(
       obj,
       sel,
       a,
@@ -20790,14 +22288,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_740Ptr = _lookup<
+  late final __objc_msgSend_786Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_740 = __objc_msgSend_740Ptr.asFunction<
+  late final __objc_msgSend_786 = __objc_msgSend_786Ptr.asFunction<
       bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
@@ -20805,13 +22303,13 @@ class PedometerBindings {
   late final _sel_stopLoading1 = _registerName1("stopLoading");
   late final _sel_propertyForKey_inRequest_1 =
       _registerName1("propertyForKey:inRequest:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_741(
+  ffi.Pointer<ObjCObject> _objc_msgSend_787(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> key,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_741(
+    return __objc_msgSend_787(
       obj,
       sel,
       key,
@@ -20819,14 +22317,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_741Ptr = _lookup<
+  late final __objc_msgSend_787Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_741 = __objc_msgSend_741Ptr.asFunction<
+  late final __objc_msgSend_787 = __objc_msgSend_787Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20836,46 +22334,46 @@ class PedometerBindings {
   late final _class_NSMutableURLRequest1 = _getClass1("NSMutableURLRequest");
   late final _sel_setURL_1 = _registerName1("setURL:");
   late final _sel_setCachePolicy_1 = _registerName1("setCachePolicy:");
-  void _objc_msgSend_742(
+  void _objc_msgSend_788(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_742(
+    return __objc_msgSend_788(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_742Ptr = _lookup<
+  late final __objc_msgSend_788Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_742 = __objc_msgSend_742Ptr.asFunction<
+  late final __objc_msgSend_788 = __objc_msgSend_788Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_setTimeoutInterval_1 = _registerName1("setTimeoutInterval:");
   late final _sel_setMainDocumentURL_1 = _registerName1("setMainDocumentURL:");
   late final _sel_setNetworkServiceType_1 =
       _registerName1("setNetworkServiceType:");
-  void _objc_msgSend_743(
+  void _objc_msgSend_789(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_743(
+    return __objc_msgSend_789(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_743Ptr = _lookup<
+  late final __objc_msgSend_789Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_743 = __objc_msgSend_743Ptr.asFunction<
+  late final __objc_msgSend_789 = __objc_msgSend_789Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_setAllowsCellularAccess_1 =
@@ -20887,23 +22385,23 @@ class PedometerBindings {
   late final _sel_setAssumesHTTP3Capable_1 =
       _registerName1("setAssumesHTTP3Capable:");
   late final _sel_setAttribution_1 = _registerName1("setAttribution:");
-  void _objc_msgSend_744(
+  void _objc_msgSend_790(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_744(
+    return __objc_msgSend_790(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_744Ptr = _lookup<
+  late final __objc_msgSend_790Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_744 = __objc_msgSend_744Ptr.asFunction<
+  late final __objc_msgSend_790 = __objc_msgSend_790Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_setHTTPMethod_1 = _registerName1("setHTTPMethod:");
@@ -20914,44 +22412,44 @@ class PedometerBindings {
   late final _sel_addValue_forHTTPHeaderField_1 =
       _registerName1("addValue:forHTTPHeaderField:");
   late final _sel_setHTTPBody_1 = _registerName1("setHTTPBody:");
-  void _objc_msgSend_745(
+  void _objc_msgSend_791(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
   ) {
-    return __objc_msgSend_745(
+    return __objc_msgSend_791(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_745Ptr = _lookup<
+  late final __objc_msgSend_791Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_745 = __objc_msgSend_745Ptr.asFunction<
+  late final __objc_msgSend_791 = __objc_msgSend_791Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
   late final _sel_setHTTPBodyStream_1 = _registerName1("setHTTPBodyStream:");
-  void _objc_msgSend_746(
+  void _objc_msgSend_792(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
   ) {
-    return __objc_msgSend_746(
+    return __objc_msgSend_792(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_746Ptr = _lookup<
+  late final __objc_msgSend_792Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_746 = __objc_msgSend_746Ptr.asFunction<
+  late final __objc_msgSend_792 = __objc_msgSend_792Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
@@ -20961,14 +22459,14 @@ class PedometerBindings {
       _registerName1("setHTTPShouldUsePipelining:");
   late final _sel_setProperty_forKey_inRequest_1 =
       _registerName1("setProperty:forKey:inRequest:");
-  void _objc_msgSend_747(
+  void _objc_msgSend_793(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
     ffi.Pointer<ObjCObject> key,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_747(
+    return __objc_msgSend_793(
       obj,
       sel,
       value,
@@ -20977,7 +22475,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_747Ptr = _lookup<
+  late final __objc_msgSend_793Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -20985,7 +22483,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_747 = __objc_msgSend_747Ptr.asFunction<
+  late final __objc_msgSend_793 = __objc_msgSend_793Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -20995,13 +22493,13 @@ class PedometerBindings {
 
   late final _sel_removePropertyForKey_inRequest_1 =
       _registerName1("removePropertyForKey:inRequest:");
-  void _objc_msgSend_748(
+  void _objc_msgSend_794(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> key,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_748(
+    return __objc_msgSend_794(
       obj,
       sel,
       key,
@@ -21009,50 +22507,50 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_748Ptr = _lookup<
+  late final __objc_msgSend_794Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_748 = __objc_msgSend_748Ptr.asFunction<
+  late final __objc_msgSend_794 = __objc_msgSend_794Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_registerClass_1 = _registerName1("registerClass:");
   late final _sel_unregisterClass_1 = _registerName1("unregisterClass:");
   late final _sel_canInitWithTask_1 = _registerName1("canInitWithTask:");
-  bool _objc_msgSend_749(
+  bool _objc_msgSend_795(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> task,
   ) {
-    return __objc_msgSend_749(
+    return __objc_msgSend_795(
       obj,
       sel,
       task,
     );
   }
 
-  late final __objc_msgSend_749Ptr = _lookup<
+  late final __objc_msgSend_795Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_749 = __objc_msgSend_749Ptr.asFunction<
+  late final __objc_msgSend_795 = __objc_msgSend_795Ptr.asFunction<
       bool Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
   late final _sel_initWithTask_cachedResponse_client_1 =
       _registerName1("initWithTask:cachedResponse:client:");
-  instancetype _objc_msgSend_750(
+  instancetype _objc_msgSend_796(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> task,
     ffi.Pointer<ObjCObject> cachedResponse,
     ffi.Pointer<ObjCObject> client,
   ) {
-    return __objc_msgSend_750(
+    return __objc_msgSend_796(
       obj,
       sel,
       task,
@@ -21061,7 +22559,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_750Ptr = _lookup<
+  late final __objc_msgSend_796Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(
               ffi.Pointer<ObjCObject>,
@@ -21069,7 +22567,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_750 = __objc_msgSend_750Ptr.asFunction<
+  late final __objc_msgSend_796 = __objc_msgSend_796Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -21078,43 +22576,43 @@ class PedometerBindings {
           ffi.Pointer<ObjCObject>)>();
 
   late final _sel_task1 = _registerName1("task");
-  ffi.Pointer<ObjCObject> _objc_msgSend_751(
+  ffi.Pointer<ObjCObject> _objc_msgSend_797(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_751(
+    return __objc_msgSend_797(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_751Ptr = _lookup<
+  late final __objc_msgSend_797Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_751 = __objc_msgSend_751Ptr.asFunction<
+  late final __objc_msgSend_797 = __objc_msgSend_797Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _class_NSXMLParser1 = _getClass1("NSXMLParser");
   late final _sel_initWithStream_1 = _registerName1("initWithStream:");
-  instancetype _objc_msgSend_752(
+  instancetype _objc_msgSend_798(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> stream,
   ) {
-    return __objc_msgSend_752(
+    return __objc_msgSend_798(
       obj,
       sel,
       stream,
     );
   }
 
-  late final __objc_msgSend_752Ptr = _lookup<
+  late final __objc_msgSend_798Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_752 = __objc_msgSend_752Ptr.asFunction<
+  late final __objc_msgSend_798 = __objc_msgSend_798Ptr.asFunction<
       instancetype Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
@@ -21128,65 +22626,65 @@ class PedometerBindings {
       _registerName1("setShouldReportNamespacePrefixes:");
   late final _sel_externalEntityResolvingPolicy1 =
       _registerName1("externalEntityResolvingPolicy");
-  int _objc_msgSend_753(
+  int _objc_msgSend_799(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_753(
+    return __objc_msgSend_799(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_753Ptr = _lookup<
+  late final __objc_msgSend_799Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_753 = __objc_msgSend_753Ptr.asFunction<
+  late final __objc_msgSend_799 = __objc_msgSend_799Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setExternalEntityResolvingPolicy_1 =
       _registerName1("setExternalEntityResolvingPolicy:");
-  void _objc_msgSend_754(
+  void _objc_msgSend_800(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_754(
+    return __objc_msgSend_800(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_754Ptr = _lookup<
+  late final __objc_msgSend_800Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_754 = __objc_msgSend_754Ptr.asFunction<
+  late final __objc_msgSend_800 = __objc_msgSend_800Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_allowedExternalEntityURLs1 =
       _registerName1("allowedExternalEntityURLs");
   late final _sel_setAllowedExternalEntityURLs_1 =
       _registerName1("setAllowedExternalEntityURLs:");
-  void _objc_msgSend_755(
+  void _objc_msgSend_801(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
   ) {
-    return __objc_msgSend_755(
+    return __objc_msgSend_801(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_755Ptr = _lookup<
+  late final __objc_msgSend_801Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_755 = __objc_msgSend_755Ptr.asFunction<
+  late final __objc_msgSend_801 = __objc_msgSend_801Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
@@ -21203,21 +22701,21 @@ class PedometerBindings {
   late final _sel_columnNumber1 = _registerName1("columnNumber");
   late final _class_NSURLSession1 = _getClass1("NSURLSession");
   late final _sel_sharedSession1 = _registerName1("sharedSession");
-  ffi.Pointer<ObjCObject> _objc_msgSend_756(
+  ffi.Pointer<ObjCObject> _objc_msgSend_802(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_756(
+    return __objc_msgSend_802(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_756Ptr = _lookup<
+  late final __objc_msgSend_802Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_756 = __objc_msgSend_756Ptr.asFunction<
+  late final __objc_msgSend_802 = __objc_msgSend_802Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -21225,21 +22723,21 @@ class PedometerBindings {
       _getClass1("NSURLSessionConfiguration");
   late final _sel_defaultSessionConfiguration1 =
       _registerName1("defaultSessionConfiguration");
-  ffi.Pointer<ObjCObject> _objc_msgSend_757(
+  ffi.Pointer<ObjCObject> _objc_msgSend_803(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_757(
+    return __objc_msgSend_803(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_757Ptr = _lookup<
+  late final __objc_msgSend_803Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_757 = __objc_msgSend_757Ptr.asFunction<
+  late final __objc_msgSend_803 = __objc_msgSend_803Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
@@ -21247,23 +22745,23 @@ class PedometerBindings {
       _registerName1("ephemeralSessionConfiguration");
   late final _sel_backgroundSessionConfigurationWithIdentifier_1 =
       _registerName1("backgroundSessionConfigurationWithIdentifier:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_758(
+  ffi.Pointer<ObjCObject> _objc_msgSend_804(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> identifier,
   ) {
-    return __objc_msgSend_758(
+    return __objc_msgSend_804(
       obj,
       sel,
       identifier,
     );
   }
 
-  late final __objc_msgSend_758Ptr = _lookup<
+  late final __objc_msgSend_804Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_758 = __objc_msgSend_758Ptr.asFunction<
+  late final __objc_msgSend_804 = __objc_msgSend_804Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -21299,42 +22797,42 @@ class PedometerBindings {
       _registerName1("setConnectionProxyDictionary:");
   late final _sel_TLSMinimumSupportedProtocol1 =
       _registerName1("TLSMinimumSupportedProtocol");
-  int _objc_msgSend_759(
+  int _objc_msgSend_805(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_759(
+    return __objc_msgSend_805(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_759Ptr = _lookup<
+  late final __objc_msgSend_805Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_759 = __objc_msgSend_759Ptr.asFunction<
+  late final __objc_msgSend_805 = __objc_msgSend_805Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setTLSMinimumSupportedProtocol_1 =
       _registerName1("setTLSMinimumSupportedProtocol:");
-  void _objc_msgSend_760(
+  void _objc_msgSend_806(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_760(
+    return __objc_msgSend_806(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_760Ptr = _lookup<
+  late final __objc_msgSend_806Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_760 = __objc_msgSend_760Ptr.asFunction<
+  late final __objc_msgSend_806 = __objc_msgSend_806Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_TLSMaximumSupportedProtocol1 =
@@ -21343,42 +22841,42 @@ class PedometerBindings {
       _registerName1("setTLSMaximumSupportedProtocol:");
   late final _sel_TLSMinimumSupportedProtocolVersion1 =
       _registerName1("TLSMinimumSupportedProtocolVersion");
-  int _objc_msgSend_761(
+  int _objc_msgSend_807(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_761(
+    return __objc_msgSend_807(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_761Ptr = _lookup<
+  late final __objc_msgSend_807Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_761 = __objc_msgSend_761Ptr.asFunction<
+  late final __objc_msgSend_807 = __objc_msgSend_807Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setTLSMinimumSupportedProtocolVersion_1 =
       _registerName1("setTLSMinimumSupportedProtocolVersion:");
-  void _objc_msgSend_762(
+  void _objc_msgSend_808(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_762(
+    return __objc_msgSend_808(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_762Ptr = _lookup<
+  late final __objc_msgSend_808Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_762 = __objc_msgSend_762Ptr.asFunction<
+  late final __objc_msgSend_808 = __objc_msgSend_808Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_TLSMaximumSupportedProtocolVersion1 =
@@ -21404,23 +22902,23 @@ class PedometerBindings {
   late final _sel_HTTPCookieStorage1 = _registerName1("HTTPCookieStorage");
   late final _sel_setHTTPCookieStorage_1 =
       _registerName1("setHTTPCookieStorage:");
-  void _objc_msgSend_763(
+  void _objc_msgSend_809(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
   ) {
-    return __objc_msgSend_763(
+    return __objc_msgSend_809(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_763Ptr = _lookup<
+  late final __objc_msgSend_809Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_763 = __objc_msgSend_763Ptr.asFunction<
+  late final __objc_msgSend_809 = __objc_msgSend_809Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
@@ -21428,23 +22926,23 @@ class PedometerBindings {
       _registerName1("URLCredentialStorage");
   late final _sel_setURLCredentialStorage_1 =
       _registerName1("setURLCredentialStorage:");
-  void _objc_msgSend_764(
+  void _objc_msgSend_810(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> value,
   ) {
-    return __objc_msgSend_764(
+    return __objc_msgSend_810(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_764Ptr = _lookup<
+  late final __objc_msgSend_810Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_764 = __objc_msgSend_764Ptr.asFunction<
+  late final __objc_msgSend_810 = __objc_msgSend_810Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>)>();
 
@@ -21456,100 +22954,80 @@ class PedometerBindings {
       _registerName1("setShouldUseExtendedBackgroundIdleMode:");
   late final _sel_protocolClasses1 = _registerName1("protocolClasses");
   late final _sel_setProtocolClasses_1 = _registerName1("setProtocolClasses:");
-  void _objc_msgSend_765(
-    ffi.Pointer<ObjCObject> obj,
-    ffi.Pointer<ObjCSel> sel,
-    ffi.Pointer<ObjCObject> value,
-  ) {
-    return __objc_msgSend_765(
-      obj,
-      sel,
-      value,
-    );
-  }
-
-  late final __objc_msgSend_765Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-              ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_765 = __objc_msgSend_765Ptr.asFunction<
-      void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
-          ffi.Pointer<ObjCObject>)>();
-
   late final _sel_multipathServiceType1 =
       _registerName1("multipathServiceType");
-  int _objc_msgSend_766(
+  int _objc_msgSend_811(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_766(
+    return __objc_msgSend_811(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_766Ptr = _lookup<
+  late final __objc_msgSend_811Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_766 = __objc_msgSend_766Ptr.asFunction<
+  late final __objc_msgSend_811 = __objc_msgSend_811Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_setMultipathServiceType_1 =
       _registerName1("setMultipathServiceType:");
-  void _objc_msgSend_767(
+  void _objc_msgSend_812(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int value,
   ) {
-    return __objc_msgSend_767(
+    return __objc_msgSend_812(
       obj,
       sel,
       value,
     );
   }
 
-  late final __objc_msgSend_767Ptr = _lookup<
+  late final __objc_msgSend_812Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_767 = __objc_msgSend_767Ptr.asFunction<
+  late final __objc_msgSend_812 = __objc_msgSend_812Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_backgroundSessionConfiguration_1 =
       _registerName1("backgroundSessionConfiguration:");
   late final _sel_sessionWithConfiguration_1 =
       _registerName1("sessionWithConfiguration:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_768(
+  ffi.Pointer<ObjCObject> _objc_msgSend_813(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> configuration,
   ) {
-    return __objc_msgSend_768(
+    return __objc_msgSend_813(
       obj,
       sel,
       configuration,
     );
   }
 
-  late final __objc_msgSend_768Ptr = _lookup<
+  late final __objc_msgSend_813Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_768 = __objc_msgSend_768Ptr.asFunction<
+  late final __objc_msgSend_813 = __objc_msgSend_813Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_sessionWithConfiguration_delegate_delegateQueue_1 =
       _registerName1("sessionWithConfiguration:delegate:delegateQueue:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_769(
+  ffi.Pointer<ObjCObject> _objc_msgSend_814(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> configuration,
     ffi.Pointer<ObjCObject> delegate,
     ffi.Pointer<ObjCObject> queue,
   ) {
-    return __objc_msgSend_769(
+    return __objc_msgSend_814(
       obj,
       sel,
       configuration,
@@ -21558,7 +23036,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_769Ptr = _lookup<
+  late final __objc_msgSend_814Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
@@ -21566,7 +23044,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_769 = __objc_msgSend_769Ptr.asFunction<
+  late final __objc_msgSend_814 = __objc_msgSend_814Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -21588,88 +23066,88 @@ class PedometerBindings {
       _registerName1("flushWithCompletionHandler:");
   late final _sel_getTasksWithCompletionHandler_1 =
       _registerName1("getTasksWithCompletionHandler:");
-  void _objc_msgSend_770(
+  void _objc_msgSend_815(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_770(
+    return __objc_msgSend_815(
       obj,
       sel,
       completionHandler,
     );
   }
 
-  late final __objc_msgSend_770Ptr = _lookup<
+  late final __objc_msgSend_815Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_770 = __objc_msgSend_770Ptr.asFunction<
+  late final __objc_msgSend_815 = __objc_msgSend_815Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_getAllTasksWithCompletionHandler_1 =
       _registerName1("getAllTasksWithCompletionHandler:");
-  void _objc_msgSend_771(
+  void _objc_msgSend_816(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_771(
+    return __objc_msgSend_816(
       obj,
       sel,
       completionHandler,
     );
   }
 
-  late final __objc_msgSend_771Ptr = _lookup<
+  late final __objc_msgSend_816Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_771 = __objc_msgSend_771Ptr.asFunction<
+  late final __objc_msgSend_816 = __objc_msgSend_816Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_dataTaskWithRequest_1 =
       _registerName1("dataTaskWithRequest:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_772(
+  ffi.Pointer<ObjCObject> _objc_msgSend_817(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_772(
+    return __objc_msgSend_817(
       obj,
       sel,
       request,
     );
   }
 
-  late final __objc_msgSend_772Ptr = _lookup<
+  late final __objc_msgSend_817Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_772 = __objc_msgSend_772Ptr.asFunction<
+  late final __objc_msgSend_817 = __objc_msgSend_817Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_dataTaskWithURL_1 = _registerName1("dataTaskWithURL:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_773(
+  ffi.Pointer<ObjCObject> _objc_msgSend_818(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
   ) {
-    return __objc_msgSend_773(
+    return __objc_msgSend_818(
       obj,
       sel,
       url,
     );
   }
 
-  late final __objc_msgSend_773Ptr = _lookup<
+  late final __objc_msgSend_818Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_773 = __objc_msgSend_773Ptr.asFunction<
+  late final __objc_msgSend_818 = __objc_msgSend_818Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -21677,13 +23155,13 @@ class PedometerBindings {
       _getClass1("NSURLSessionUploadTask");
   late final _sel_uploadTaskWithRequest_fromFile_1 =
       _registerName1("uploadTaskWithRequest:fromFile:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_774(
+  ffi.Pointer<ObjCObject> _objc_msgSend_819(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
     ffi.Pointer<ObjCObject> fileURL,
   ) {
-    return __objc_msgSend_774(
+    return __objc_msgSend_819(
       obj,
       sel,
       request,
@@ -21691,14 +23169,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_774Ptr = _lookup<
+  late final __objc_msgSend_819Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_774 = __objc_msgSend_774Ptr.asFunction<
+  late final __objc_msgSend_819 = __objc_msgSend_819Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -21707,13 +23185,13 @@ class PedometerBindings {
 
   late final _sel_uploadTaskWithRequest_fromData_1 =
       _registerName1("uploadTaskWithRequest:fromData:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_775(
+  ffi.Pointer<ObjCObject> _objc_msgSend_820(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
     ffi.Pointer<ObjCObject> bodyData,
   ) {
-    return __objc_msgSend_775(
+    return __objc_msgSend_820(
       obj,
       sel,
       request,
@@ -21721,14 +23199,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_775Ptr = _lookup<
+  late final __objc_msgSend_820Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_775 = __objc_msgSend_775Ptr.asFunction<
+  late final __objc_msgSend_820 = __objc_msgSend_820Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -21737,23 +23215,23 @@ class PedometerBindings {
 
   late final _sel_uploadTaskWithStreamedRequest_1 =
       _registerName1("uploadTaskWithStreamedRequest:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_776(
+  ffi.Pointer<ObjCObject> _objc_msgSend_821(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_776(
+    return __objc_msgSend_821(
       obj,
       sel,
       request,
     );
   }
 
-  late final __objc_msgSend_776Ptr = _lookup<
+  late final __objc_msgSend_821Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_776 = __objc_msgSend_776Ptr.asFunction<
+  late final __objc_msgSend_821 = __objc_msgSend_821Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -21761,89 +23239,89 @@ class PedometerBindings {
       _getClass1("NSURLSessionDownloadTask");
   late final _sel_cancelByProducingResumeData_1 =
       _registerName1("cancelByProducingResumeData:");
-  void _objc_msgSend_777(
+  void _objc_msgSend_822(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_777(
+    return __objc_msgSend_822(
       obj,
       sel,
       completionHandler,
     );
   }
 
-  late final __objc_msgSend_777Ptr = _lookup<
+  late final __objc_msgSend_822Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_777 = __objc_msgSend_777Ptr.asFunction<
+  late final __objc_msgSend_822 = __objc_msgSend_822Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_downloadTaskWithRequest_1 =
       _registerName1("downloadTaskWithRequest:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_778(
+  ffi.Pointer<ObjCObject> _objc_msgSend_823(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_778(
+    return __objc_msgSend_823(
       obj,
       sel,
       request,
     );
   }
 
-  late final __objc_msgSend_778Ptr = _lookup<
+  late final __objc_msgSend_823Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_778 = __objc_msgSend_778Ptr.asFunction<
+  late final __objc_msgSend_823 = __objc_msgSend_823Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_downloadTaskWithURL_1 =
       _registerName1("downloadTaskWithURL:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_779(
+  ffi.Pointer<ObjCObject> _objc_msgSend_824(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
   ) {
-    return __objc_msgSend_779(
+    return __objc_msgSend_824(
       obj,
       sel,
       url,
     );
   }
 
-  late final __objc_msgSend_779Ptr = _lookup<
+  late final __objc_msgSend_824Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_779 = __objc_msgSend_779Ptr.asFunction<
+  late final __objc_msgSend_824 = __objc_msgSend_824Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_downloadTaskWithResumeData_1 =
       _registerName1("downloadTaskWithResumeData:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_780(
+  ffi.Pointer<ObjCObject> _objc_msgSend_825(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> resumeData,
   ) {
-    return __objc_msgSend_780(
+    return __objc_msgSend_825(
       obj,
       sel,
       resumeData,
     );
   }
 
-  late final __objc_msgSend_780Ptr = _lookup<
+  late final __objc_msgSend_825Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_780 = __objc_msgSend_780Ptr.asFunction<
+  late final __objc_msgSend_825 = __objc_msgSend_825Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -21852,7 +23330,7 @@ class PedometerBindings {
   late final _sel_readDataOfMinLength_maxLength_timeout_completionHandler_1 =
       _registerName1(
           "readDataOfMinLength:maxLength:timeout:completionHandler:");
-  void _objc_msgSend_781(
+  void _objc_msgSend_826(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int minBytes,
@@ -21860,7 +23338,7 @@ class PedometerBindings {
     double timeout,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_781(
+    return __objc_msgSend_826(
       obj,
       sel,
       minBytes,
@@ -21870,7 +23348,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_781Ptr = _lookup<
+  late final __objc_msgSend_826Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -21879,20 +23357,20 @@ class PedometerBindings {
               ffi.UnsignedLong,
               ffi.Double,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_781 = __objc_msgSend_781Ptr.asFunction<
+  late final __objc_msgSend_826 = __objc_msgSend_826Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int, int,
           double, ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_writeData_timeout_completionHandler_1 =
       _registerName1("writeData:timeout:completionHandler:");
-  void _objc_msgSend_782(
+  void _objc_msgSend_827(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> data,
     double timeout,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_782(
+    return __objc_msgSend_827(
       obj,
       sel,
       data,
@@ -21901,7 +23379,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_782Ptr = _lookup<
+  late final __objc_msgSend_827Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -21909,7 +23387,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Double,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_782 = __objc_msgSend_782Ptr.asFunction<
+  late final __objc_msgSend_827 = __objc_msgSend_827Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, double, ffi.Pointer<_ObjCBlock>)>();
 
@@ -21922,13 +23400,13 @@ class PedometerBindings {
       _registerName1("stopSecureConnection");
   late final _sel_streamTaskWithHostName_port_1 =
       _registerName1("streamTaskWithHostName:port:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_783(
+  ffi.Pointer<ObjCObject> _objc_msgSend_828(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> hostname,
     int port,
   ) {
-    return __objc_msgSend_783(
+    return __objc_msgSend_828(
       obj,
       sel,
       hostname,
@@ -21936,21 +23414,21 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_783Ptr = _lookup<
+  late final __objc_msgSend_828Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Long)>>('objc_msgSend');
-  late final __objc_msgSend_783 = __objc_msgSend_783Ptr.asFunction<
+  late final __objc_msgSend_828 = __objc_msgSend_828Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>, int)>();
 
   late final _class_NSNetService1 = _getClass1("NSNetService");
   late final _sel_initWithDomain_type_name_port_1 =
       _registerName1("initWithDomain:type:name:port:");
-  instancetype _objc_msgSend_784(
+  instancetype _objc_msgSend_829(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> domain,
@@ -21958,7 +23436,7 @@ class PedometerBindings {
     ffi.Pointer<ObjCObject> name,
     int port,
   ) {
-    return __objc_msgSend_784(
+    return __objc_msgSend_829(
       obj,
       sel,
       domain,
@@ -21968,7 +23446,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_784Ptr = _lookup<
+  late final __objc_msgSend_829Ptr = _lookup<
       ffi.NativeFunction<
           instancetype Function(
               ffi.Pointer<ObjCObject>,
@@ -21977,7 +23455,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Int)>>('objc_msgSend');
-  late final __objc_msgSend_784 = __objc_msgSend_784Ptr.asFunction<
+  late final __objc_msgSend_829 = __objc_msgSend_829Ptr.asFunction<
       instancetype Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -21994,81 +23472,81 @@ class PedometerBindings {
   late final _sel_type1 = _registerName1("type");
   late final _sel_addresses1 = _registerName1("addresses");
   late final _sel_publishWithOptions_1 = _registerName1("publishWithOptions:");
-  void _objc_msgSend_785(
+  void _objc_msgSend_830(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int options,
   ) {
-    return __objc_msgSend_785(
+    return __objc_msgSend_830(
       obj,
       sel,
       options,
     );
   }
 
-  late final __objc_msgSend_785Ptr = _lookup<
+  late final __objc_msgSend_830Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32)>>('objc_msgSend');
-  late final __objc_msgSend_785 = __objc_msgSend_785Ptr.asFunction<
+  late final __objc_msgSend_830 = __objc_msgSend_830Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int)>();
 
   late final _sel_resolve1 = _registerName1("resolve");
   late final _sel_stop1 = _registerName1("stop");
   late final _sel_dictionaryFromTXTRecordData_1 =
       _registerName1("dictionaryFromTXTRecordData:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_786(
+  ffi.Pointer<ObjCObject> _objc_msgSend_831(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> txtData,
   ) {
-    return __objc_msgSend_786(
+    return __objc_msgSend_831(
       obj,
       sel,
       txtData,
     );
   }
 
-  late final __objc_msgSend_786Ptr = _lookup<
+  late final __objc_msgSend_831Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_786 = __objc_msgSend_786Ptr.asFunction<
+  late final __objc_msgSend_831 = __objc_msgSend_831Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_dataFromTXTRecordDictionary_1 =
       _registerName1("dataFromTXTRecordDictionary:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_787(
+  ffi.Pointer<ObjCObject> _objc_msgSend_832(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> txtDictionary,
   ) {
-    return __objc_msgSend_787(
+    return __objc_msgSend_832(
       obj,
       sel,
       txtDictionary,
     );
   }
 
-  late final __objc_msgSend_787Ptr = _lookup<
+  late final __objc_msgSend_832Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_787 = __objc_msgSend_787Ptr.asFunction<
+  late final __objc_msgSend_832 = __objc_msgSend_832Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_resolveWithTimeout_1 = _registerName1("resolveWithTimeout:");
   late final _sel_getInputStream_outputStream_1 =
       _registerName1("getInputStream:outputStream:");
-  bool _objc_msgSend_788(
+  bool _objc_msgSend_833(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
     ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream,
   ) {
-    return __objc_msgSend_788(
+    return __objc_msgSend_833(
       obj,
       sel,
       inputStream,
@@ -22076,14 +23554,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_788Ptr = _lookup<
+  late final __objc_msgSend_833Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Bool Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>,
               ffi.Pointer<ffi.Pointer<ObjCObject>>)>>('objc_msgSend');
-  late final __objc_msgSend_788 = __objc_msgSend_788Ptr.asFunction<
+  late final __objc_msgSend_833 = __objc_msgSend_833Ptr.asFunction<
       bool Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22096,23 +23574,23 @@ class PedometerBindings {
   late final _sel_stopMonitoring1 = _registerName1("stopMonitoring");
   late final _sel_streamTaskWithNetService_1 =
       _registerName1("streamTaskWithNetService:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_789(
+  ffi.Pointer<ObjCObject> _objc_msgSend_834(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> service,
   ) {
-    return __objc_msgSend_789(
+    return __objc_msgSend_834(
       obj,
       sel,
       service,
     );
   }
 
-  late final __objc_msgSend_789Ptr = _lookup<
+  late final __objc_msgSend_834Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_789 = __objc_msgSend_789Ptr.asFunction<
+  late final __objc_msgSend_834 = __objc_msgSend_834Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
@@ -22120,32 +23598,32 @@ class PedometerBindings {
       _getClass1("NSURLSessionWebSocketTask");
   late final _class_NSURLSessionWebSocketMessage1 =
       _getClass1("NSURLSessionWebSocketMessage");
-  int _objc_msgSend_790(
+  int _objc_msgSend_835(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_790(
+    return __objc_msgSend_835(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_790Ptr = _lookup<
+  late final __objc_msgSend_835Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_790 = __objc_msgSend_790Ptr.asFunction<
+  late final __objc_msgSend_835 = __objc_msgSend_835Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_sendMessage_completionHandler_1 =
       _registerName1("sendMessage:completionHandler:");
-  void _objc_msgSend_791(
+  void _objc_msgSend_836(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> message,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_791(
+    return __objc_msgSend_836(
       obj,
       sel,
       message,
@@ -22153,70 +23631,70 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_791Ptr = _lookup<
+  late final __objc_msgSend_836Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_791 = __objc_msgSend_791Ptr.asFunction<
+  late final __objc_msgSend_836 = __objc_msgSend_836Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_receiveMessageWithCompletionHandler_1 =
       _registerName1("receiveMessageWithCompletionHandler:");
-  void _objc_msgSend_792(
+  void _objc_msgSend_837(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_792(
+    return __objc_msgSend_837(
       obj,
       sel,
       completionHandler,
     );
   }
 
-  late final __objc_msgSend_792Ptr = _lookup<
+  late final __objc_msgSend_837Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_792 = __objc_msgSend_792Ptr.asFunction<
+  late final __objc_msgSend_837 = __objc_msgSend_837Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_sendPingWithPongReceiveHandler_1 =
       _registerName1("sendPingWithPongReceiveHandler:");
-  void _objc_msgSend_793(
+  void _objc_msgSend_838(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<_ObjCBlock> pongReceiveHandler,
   ) {
-    return __objc_msgSend_793(
+    return __objc_msgSend_838(
       obj,
       sel,
       pongReceiveHandler,
     );
   }
 
-  late final __objc_msgSend_793Ptr = _lookup<
+  late final __objc_msgSend_838Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_793 = __objc_msgSend_793Ptr.asFunction<
+  late final __objc_msgSend_838 = __objc_msgSend_838Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_cancelWithCloseCode_reason_1 =
       _registerName1("cancelWithCloseCode:reason:");
-  void _objc_msgSend_794(
+  void _objc_msgSend_839(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     int closeCode,
     ffi.Pointer<ObjCObject> reason,
   ) {
-    return __objc_msgSend_794(
+    return __objc_msgSend_839(
       obj,
       sel,
       closeCode,
@@ -22224,11 +23702,11 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_794Ptr = _lookup<
+  late final __objc_msgSend_839Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Int32, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_794 = __objc_msgSend_794Ptr.asFunction<
+  late final __objc_msgSend_839 = __objc_msgSend_839Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>, int,
           ffi.Pointer<ObjCObject>)>();
 
@@ -22236,55 +23714,55 @@ class PedometerBindings {
   late final _sel_setMaximumMessageSize_1 =
       _registerName1("setMaximumMessageSize:");
   late final _sel_closeCode1 = _registerName1("closeCode");
-  int _objc_msgSend_795(
+  int _objc_msgSend_840(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_795(
+    return __objc_msgSend_840(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_795Ptr = _lookup<
+  late final __objc_msgSend_840Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_795 = __objc_msgSend_795Ptr.asFunction<
+  late final __objc_msgSend_840 = __objc_msgSend_840Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_closeReason1 = _registerName1("closeReason");
   late final _sel_webSocketTaskWithURL_1 =
       _registerName1("webSocketTaskWithURL:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_796(
+  ffi.Pointer<ObjCObject> _objc_msgSend_841(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
   ) {
-    return __objc_msgSend_796(
+    return __objc_msgSend_841(
       obj,
       sel,
       url,
     );
   }
 
-  late final __objc_msgSend_796Ptr = _lookup<
+  late final __objc_msgSend_841Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_796 = __objc_msgSend_796Ptr.asFunction<
+  late final __objc_msgSend_841 = __objc_msgSend_841Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_webSocketTaskWithURL_protocols_1 =
       _registerName1("webSocketTaskWithURL:protocols:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_797(
+  ffi.Pointer<ObjCObject> _objc_msgSend_842(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
     ffi.Pointer<ObjCObject> protocols,
   ) {
-    return __objc_msgSend_797(
+    return __objc_msgSend_842(
       obj,
       sel,
       url,
@@ -22292,14 +23770,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_797Ptr = _lookup<
+  late final __objc_msgSend_842Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_797 = __objc_msgSend_797Ptr.asFunction<
+  late final __objc_msgSend_842 = __objc_msgSend_842Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22308,35 +23786,35 @@ class PedometerBindings {
 
   late final _sel_webSocketTaskWithRequest_1 =
       _registerName1("webSocketTaskWithRequest:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_798(
+  ffi.Pointer<ObjCObject> _objc_msgSend_843(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
   ) {
-    return __objc_msgSend_798(
+    return __objc_msgSend_843(
       obj,
       sel,
       request,
     );
   }
 
-  late final __objc_msgSend_798Ptr = _lookup<
+  late final __objc_msgSend_843Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>>('objc_msgSend');
-  late final __objc_msgSend_798 = __objc_msgSend_798Ptr.asFunction<
+  late final __objc_msgSend_843 = __objc_msgSend_843Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>, ffi.Pointer<ObjCObject>)>();
 
   late final _sel_dataTaskWithRequest_completionHandler_1 =
       _registerName1("dataTaskWithRequest:completionHandler:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_799(
+  ffi.Pointer<ObjCObject> _objc_msgSend_844(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_799(
+    return __objc_msgSend_844(
       obj,
       sel,
       request,
@@ -22344,14 +23822,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_799Ptr = _lookup<
+  late final __objc_msgSend_844Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_799 = __objc_msgSend_799Ptr.asFunction<
+  late final __objc_msgSend_844 = __objc_msgSend_844Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22360,13 +23838,13 @@ class PedometerBindings {
 
   late final _sel_dataTaskWithURL_completionHandler_1 =
       _registerName1("dataTaskWithURL:completionHandler:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_800(
+  ffi.Pointer<ObjCObject> _objc_msgSend_845(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_800(
+    return __objc_msgSend_845(
       obj,
       sel,
       url,
@@ -22374,14 +23852,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_800Ptr = _lookup<
+  late final __objc_msgSend_845Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_800 = __objc_msgSend_800Ptr.asFunction<
+  late final __objc_msgSend_845 = __objc_msgSend_845Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22390,14 +23868,14 @@ class PedometerBindings {
 
   late final _sel_uploadTaskWithRequest_fromFile_completionHandler_1 =
       _registerName1("uploadTaskWithRequest:fromFile:completionHandler:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_801(
+  ffi.Pointer<ObjCObject> _objc_msgSend_846(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
     ffi.Pointer<ObjCObject> fileURL,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_801(
+    return __objc_msgSend_846(
       obj,
       sel,
       request,
@@ -22406,7 +23884,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_801Ptr = _lookup<
+  late final __objc_msgSend_846Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
@@ -22414,7 +23892,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_801 = __objc_msgSend_801Ptr.asFunction<
+  late final __objc_msgSend_846 = __objc_msgSend_846Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22424,14 +23902,14 @@ class PedometerBindings {
 
   late final _sel_uploadTaskWithRequest_fromData_completionHandler_1 =
       _registerName1("uploadTaskWithRequest:fromData:completionHandler:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_802(
+  ffi.Pointer<ObjCObject> _objc_msgSend_847(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
     ffi.Pointer<ObjCObject> bodyData,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_802(
+    return __objc_msgSend_847(
       obj,
       sel,
       request,
@@ -22440,7 +23918,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_802Ptr = _lookup<
+  late final __objc_msgSend_847Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
@@ -22448,7 +23926,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_802 = __objc_msgSend_802Ptr.asFunction<
+  late final __objc_msgSend_847 = __objc_msgSend_847Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22458,13 +23936,13 @@ class PedometerBindings {
 
   late final _sel_downloadTaskWithRequest_completionHandler_1 =
       _registerName1("downloadTaskWithRequest:completionHandler:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_803(
+  ffi.Pointer<ObjCObject> _objc_msgSend_848(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> request,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_803(
+    return __objc_msgSend_848(
       obj,
       sel,
       request,
@@ -22472,14 +23950,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_803Ptr = _lookup<
+  late final __objc_msgSend_848Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_803 = __objc_msgSend_803Ptr.asFunction<
+  late final __objc_msgSend_848 = __objc_msgSend_848Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22488,13 +23966,13 @@ class PedometerBindings {
 
   late final _sel_downloadTaskWithURL_completionHandler_1 =
       _registerName1("downloadTaskWithURL:completionHandler:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_804(
+  ffi.Pointer<ObjCObject> _objc_msgSend_849(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> url,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_804(
+    return __objc_msgSend_849(
       obj,
       sel,
       url,
@@ -22502,14 +23980,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_804Ptr = _lookup<
+  late final __objc_msgSend_849Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_804 = __objc_msgSend_804Ptr.asFunction<
+  late final __objc_msgSend_849 = __objc_msgSend_849Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22518,13 +23996,13 @@ class PedometerBindings {
 
   late final _sel_downloadTaskWithResumeData_completionHandler_1 =
       _registerName1("downloadTaskWithResumeData:completionHandler:");
-  ffi.Pointer<ObjCObject> _objc_msgSend_805(
+  ffi.Pointer<ObjCObject> _objc_msgSend_850(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> resumeData,
     ffi.Pointer<_ObjCBlock> completionHandler,
   ) {
-    return __objc_msgSend_805(
+    return __objc_msgSend_850(
       obj,
       sel,
       resumeData,
@@ -22532,14 +24010,14 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_805Ptr = _lookup<
+  late final __objc_msgSend_850Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Pointer<ObjCObject> Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_805 = __objc_msgSend_805Ptr.asFunction<
+  late final __objc_msgSend_850 = __objc_msgSend_850Ptr.asFunction<
       ffi.Pointer<ObjCObject> Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22557,21 +24035,21 @@ class PedometerBindings {
   late final _sel_isPedometerEventTrackingAvailable1 =
       _registerName1("isPedometerEventTrackingAvailable");
   late final _sel_authorizationStatus1 = _registerName1("authorizationStatus");
-  int _objc_msgSend_806(
+  int _objc_msgSend_851(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_806(
+    return __objc_msgSend_851(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_806Ptr = _lookup<
+  late final __objc_msgSend_851Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_806 = __objc_msgSend_806Ptr.asFunction<
+  late final __objc_msgSend_851 = __objc_msgSend_851Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _class_CMPedometerData1 = _getClass1("CMPedometerData");
@@ -22586,14 +24064,14 @@ class PedometerBindings {
   late final _sel_averageActivePace1 = _registerName1("averageActivePace");
   late final _sel_queryPedometerDataFromDate_toDate_withHandler_1 =
       _registerName1("queryPedometerDataFromDate:toDate:withHandler:");
-  void _objc_msgSend_807(
+  void _objc_msgSend_852(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> start,
     ffi.Pointer<ObjCObject> end,
     ffi.Pointer<_ObjCBlock> handler,
   ) {
-    return __objc_msgSend_807(
+    return __objc_msgSend_852(
       obj,
       sel,
       start,
@@ -22602,7 +24080,7 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_807Ptr = _lookup<
+  late final __objc_msgSend_852Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
@@ -22610,7 +24088,7 @@ class PedometerBindings {
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_807 = __objc_msgSend_807Ptr.asFunction<
+  late final __objc_msgSend_852 = __objc_msgSend_852Ptr.asFunction<
       void Function(
           ffi.Pointer<ObjCObject>,
           ffi.Pointer<ObjCSel>,
@@ -22620,13 +24098,13 @@ class PedometerBindings {
 
   late final _sel_startPedometerUpdatesFromDate_withHandler_1 =
       _registerName1("startPedometerUpdatesFromDate:withHandler:");
-  void _objc_msgSend_808(
+  void _objc_msgSend_853(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<ObjCObject> start,
     ffi.Pointer<_ObjCBlock> handler,
   ) {
-    return __objc_msgSend_808(
+    return __objc_msgSend_853(
       obj,
       sel,
       start,
@@ -22634,56 +24112,56 @@ class PedometerBindings {
     );
   }
 
-  late final __objc_msgSend_808Ptr = _lookup<
+  late final __objc_msgSend_853Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<ObjCSel>,
               ffi.Pointer<ObjCObject>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_808 = __objc_msgSend_808Ptr.asFunction<
+  late final __objc_msgSend_853 = __objc_msgSend_853Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<ObjCObject>, ffi.Pointer<_ObjCBlock>)>();
 
   late final _sel_stopPedometerUpdates1 =
       _registerName1("stopPedometerUpdates");
   late final _class_CMPedometerEvent1 = _getClass1("CMPedometerEvent");
-  int _objc_msgSend_809(
+  int _objc_msgSend_854(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
   ) {
-    return __objc_msgSend_809(
+    return __objc_msgSend_854(
       obj,
       sel,
     );
   }
 
-  late final __objc_msgSend_809Ptr = _lookup<
+  late final __objc_msgSend_854Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Int32 Function(
               ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>>('objc_msgSend');
-  late final __objc_msgSend_809 = __objc_msgSend_809Ptr.asFunction<
+  late final __objc_msgSend_854 = __objc_msgSend_854Ptr.asFunction<
       int Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>)>();
 
   late final _sel_startPedometerEventUpdatesWithHandler_1 =
       _registerName1("startPedometerEventUpdatesWithHandler:");
-  void _objc_msgSend_810(
+  void _objc_msgSend_855(
     ffi.Pointer<ObjCObject> obj,
     ffi.Pointer<ObjCSel> sel,
     ffi.Pointer<_ObjCBlock> handler,
   ) {
-    return __objc_msgSend_810(
+    return __objc_msgSend_855(
       obj,
       sel,
       handler,
     );
   }
 
-  late final __objc_msgSend_810Ptr = _lookup<
+  late final __objc_msgSend_855Ptr = _lookup<
       ffi.NativeFunction<
           ffi.Void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
               ffi.Pointer<_ObjCBlock>)>>('objc_msgSend');
-  late final __objc_msgSend_810 = __objc_msgSend_810Ptr.asFunction<
+  late final __objc_msgSend_855 = __objc_msgSend_855Ptr.asFunction<
       void Function(ffi.Pointer<ObjCObject>, ffi.Pointer<ObjCSel>,
           ffi.Pointer<_ObjCBlock>)>();
 
@@ -39165,6 +40643,2098 @@ class NSMutableAttributedString extends NSAttributedString {
   }
 }
 
+class NSDateFormatter extends NSFormatter {
+  NSDateFormatter._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
+      {bool retain = false, bool release = false})
+      : super._(id, lib, retain: retain, release: release);
+
+  /// Returns a [NSDateFormatter] that points to the same underlying object as [other].
+  static NSDateFormatter castFrom<T extends _ObjCWrapper>(T other) {
+    return NSDateFormatter._(other._id, other._lib,
+        retain: true, release: true);
+  }
+
+  /// Returns a [NSDateFormatter] that wraps the given raw object pointer.
+  static NSDateFormatter castFromPointer(
+      PedometerBindings lib, ffi.Pointer<ObjCObject> other,
+      {bool retain = false, bool release = false}) {
+    return NSDateFormatter._(other, lib, retain: retain, release: release);
+  }
+
+  /// Returns whether [obj] is an instance of [NSDateFormatter].
+  static bool isInstance(_ObjCWrapper obj) {
+    return obj._lib._objc_msgSend_0(obj._id, obj._lib._sel_isKindOfClass_1,
+        obj._lib._class_NSDateFormatter1);
+  }
+
+  int get formattingContext {
+    return _lib._objc_msgSend_543(_id, _lib._sel_formattingContext1);
+  }
+
+  set formattingContext(int value) {
+    _lib._objc_msgSend_544(_id, _lib._sel_setFormattingContext_1, value);
+  }
+
+  bool getObjectValue_forString_range_error_(
+      ffi.Pointer<ffi.Pointer<ObjCObject>> obj,
+      NSString? string,
+      ffi.Pointer<_NSRange> rangep,
+      ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
+    return _lib._objc_msgSend_545(
+        _id,
+        _lib._sel_getObjectValue_forString_range_error_1,
+        obj,
+        string?._id ?? ffi.nullptr,
+        rangep,
+        error);
+  }
+
+  NSString stringFromDate_(NSDate? date) {
+    final _ret = _lib._objc_msgSend_546(
+        _id, _lib._sel_stringFromDate_1, date?._id ?? ffi.nullptr);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate dateFromString_(NSString? string) {
+    final _ret = _lib._objc_msgSend_547(
+        _id, _lib._sel_dateFromString_1, string?._id ?? ffi.nullptr);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSString localizedStringFromDate_dateStyle_timeStyle_(
+      PedometerBindings _lib, NSDate? date, int dstyle, int tstyle) {
+    final _ret = _lib._objc_msgSend_548(
+        _lib._class_NSDateFormatter1,
+        _lib._sel_localizedStringFromDate_dateStyle_timeStyle_1,
+        date?._id ?? ffi.nullptr,
+        dstyle,
+        tstyle);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSString dateFormatFromTemplate_options_locale_(
+      PedometerBindings _lib, NSString? tmplate, int opts, NSLocale? locale) {
+    final _ret = _lib._objc_msgSend_549(
+        _lib._class_NSDateFormatter1,
+        _lib._sel_dateFormatFromTemplate_options_locale_1,
+        tmplate?._id ?? ffi.nullptr,
+        opts,
+        locale?._id ?? ffi.nullptr);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  static int getDefaultFormatterBehavior(PedometerBindings _lib) {
+    return _lib._objc_msgSend_550(
+        _lib._class_NSDateFormatter1, _lib._sel_defaultFormatterBehavior1);
+  }
+
+  static void setDefaultFormatterBehavior(PedometerBindings _lib, int value) {
+    _lib._objc_msgSend_551(_lib._class_NSDateFormatter1,
+        _lib._sel_setDefaultFormatterBehavior_1, value);
+  }
+
+  void setLocalizedDateFormatFromTemplate_(NSString? dateFormatTemplate) {
+    return _lib._objc_msgSend_187(
+        _id,
+        _lib._sel_setLocalizedDateFormatFromTemplate_1,
+        dateFormatTemplate?._id ?? ffi.nullptr);
+  }
+
+  NSString? get dateFormat {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_dateFormat1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  set dateFormat(NSString? value) {
+    _lib._objc_msgSend_457(
+        _id, _lib._sel_setDateFormat_1, value?._id ?? ffi.nullptr);
+  }
+
+  int get dateStyle {
+    return _lib._objc_msgSend_552(_id, _lib._sel_dateStyle1);
+  }
+
+  set dateStyle(int value) {
+    _lib._objc_msgSend_553(_id, _lib._sel_setDateStyle_1, value);
+  }
+
+  int get timeStyle {
+    return _lib._objc_msgSend_552(_id, _lib._sel_timeStyle1);
+  }
+
+  set timeStyle(int value) {
+    _lib._objc_msgSend_553(_id, _lib._sel_setTimeStyle_1, value);
+  }
+
+  NSLocale? get locale {
+    final _ret = _lib._objc_msgSend_268(_id, _lib._sel_locale1);
+    return _ret.address == 0
+        ? null
+        : NSLocale._(_ret, _lib, retain: true, release: true);
+  }
+
+  set locale(NSLocale? value) {
+    _lib._objc_msgSend_554(
+        _id, _lib._sel_setLocale_1, value?._id ?? ffi.nullptr);
+  }
+
+  bool get generatesCalendarDates {
+    return _lib._objc_msgSend_12(_id, _lib._sel_generatesCalendarDates1);
+  }
+
+  set generatesCalendarDates(bool value) {
+    _lib._objc_msgSend_440(_id, _lib._sel_setGeneratesCalendarDates_1, value);
+  }
+
+  int get formatterBehavior {
+    return _lib._objc_msgSend_550(_id, _lib._sel_formatterBehavior1);
+  }
+
+  set formatterBehavior(int value) {
+    _lib._objc_msgSend_551(_id, _lib._sel_setFormatterBehavior_1, value);
+  }
+
+  NSTimeZone? get timeZone {
+    final _ret = _lib._objc_msgSend_556(_id, _lib._sel_timeZone1);
+    return _ret.address == 0
+        ? null
+        : NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  set timeZone(NSTimeZone? value) {
+    _lib._objc_msgSend_557(
+        _id, _lib._sel_setTimeZone_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSCalendar? get calendar {
+    final _ret = _lib._objc_msgSend_563(_id, _lib._sel_calendar1);
+    return _ret.address == 0
+        ? null
+        : NSCalendar._(_ret, _lib, retain: true, release: true);
+  }
+
+  set calendar(NSCalendar? value) {
+    _lib._objc_msgSend_569(
+        _id, _lib._sel_setCalendar_1, value?._id ?? ffi.nullptr);
+  }
+
+  bool get lenient {
+    return _lib._objc_msgSend_12(_id, _lib._sel_isLenient1);
+  }
+
+  set lenient(bool value) {
+    _lib._objc_msgSend_440(_id, _lib._sel_setLenient_1, value);
+  }
+
+  NSDate? get twoDigitStartDate {
+    final _ret = _lib._objc_msgSend_153(_id, _lib._sel_twoDigitStartDate1);
+    return _ret.address == 0
+        ? null
+        : NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  set twoDigitStartDate(NSDate? value) {
+    _lib._objc_msgSend_595(
+        _id, _lib._sel_setTwoDigitStartDate_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSDate? get defaultDate {
+    final _ret = _lib._objc_msgSend_153(_id, _lib._sel_defaultDate1);
+    return _ret.address == 0
+        ? null
+        : NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  set defaultDate(NSDate? value) {
+    _lib._objc_msgSend_595(
+        _id, _lib._sel_setDefaultDate_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get eraSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_eraSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set eraSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setEraSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get monthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_monthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set monthSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setMonthSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get shortMonthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_shortMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set shortMonthSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setShortMonthSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get weekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_weekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set weekdaySymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setWeekdaySymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get shortWeekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_shortWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set shortWeekdaySymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setShortWeekdaySymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSString? get AMSymbol {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_AMSymbol1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  set AMSymbol(NSString? value) {
+    _lib._objc_msgSend_457(
+        _id, _lib._sel_setAMSymbol_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSString? get PMSymbol {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_PMSymbol1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  set PMSymbol(NSString? value) {
+    _lib._objc_msgSend_457(
+        _id, _lib._sel_setPMSymbol_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get longEraSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_longEraSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set longEraSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setLongEraSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get veryShortMonthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_veryShortMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set veryShortMonthSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setVeryShortMonthSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get standaloneMonthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_standaloneMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set standaloneMonthSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setStandaloneMonthSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get shortStandaloneMonthSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_shortStandaloneMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set shortStandaloneMonthSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(_id, _lib._sel_setShortStandaloneMonthSymbols_1,
+        value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get veryShortStandaloneMonthSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_veryShortStandaloneMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set veryShortStandaloneMonthSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(_id, _lib._sel_setVeryShortStandaloneMonthSymbols_1,
+        value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get veryShortWeekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_veryShortWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set veryShortWeekdaySymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setVeryShortWeekdaySymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get standaloneWeekdaySymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_standaloneWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set standaloneWeekdaySymbols(NSArray? value) {
+    _lib._objc_msgSend_596(_id, _lib._sel_setStandaloneWeekdaySymbols_1,
+        value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get shortStandaloneWeekdaySymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_shortStandaloneWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set shortStandaloneWeekdaySymbols(NSArray? value) {
+    _lib._objc_msgSend_596(_id, _lib._sel_setShortStandaloneWeekdaySymbols_1,
+        value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get veryShortStandaloneWeekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(
+        _id, _lib._sel_veryShortStandaloneWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set veryShortStandaloneWeekdaySymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id,
+        _lib._sel_setVeryShortStandaloneWeekdaySymbols_1,
+        value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get quarterSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_quarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set quarterSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setQuarterSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get shortQuarterSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_shortQuarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set shortQuarterSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(
+        _id, _lib._sel_setShortQuarterSymbols_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get standaloneQuarterSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_standaloneQuarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set standaloneQuarterSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(_id, _lib._sel_setStandaloneQuarterSymbols_1,
+        value?._id ?? ffi.nullptr);
+  }
+
+  NSArray? get shortStandaloneQuarterSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_shortStandaloneQuarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  set shortStandaloneQuarterSymbols(NSArray? value) {
+    _lib._objc_msgSend_596(_id, _lib._sel_setShortStandaloneQuarterSymbols_1,
+        value?._id ?? ffi.nullptr);
+  }
+
+  NSDate? get gregorianStartDate {
+    final _ret = _lib._objc_msgSend_153(_id, _lib._sel_gregorianStartDate1);
+    return _ret.address == 0
+        ? null
+        : NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  set gregorianStartDate(NSDate? value) {
+    _lib._objc_msgSend_595(
+        _id, _lib._sel_setGregorianStartDate_1, value?._id ?? ffi.nullptr);
+  }
+
+  bool get doesRelativeDateFormatting {
+    return _lib._objc_msgSend_12(_id, _lib._sel_doesRelativeDateFormatting1);
+  }
+
+  set doesRelativeDateFormatting(bool value) {
+    _lib._objc_msgSend_440(
+        _id, _lib._sel_setDoesRelativeDateFormatting_1, value);
+  }
+
+  static NSDateFormatter new1(PedometerBindings _lib) {
+    final _ret =
+        _lib._objc_msgSend_2(_lib._class_NSDateFormatter1, _lib._sel_new1);
+    return NSDateFormatter._(_ret, _lib, retain: false, release: true);
+  }
+
+  static NSDateFormatter alloc(PedometerBindings _lib) {
+    final _ret =
+        _lib._objc_msgSend_2(_lib._class_NSDateFormatter1, _lib._sel_alloc1);
+    return NSDateFormatter._(_ret, _lib, retain: false, release: true);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_selector_object_(
+      PedometerBindings _lib,
+      NSObject aTarget,
+      ffi.Pointer<ObjCSel> aSelector,
+      NSObject anArgument) {
+    return _lib._objc_msgSend_14(
+        _lib._class_NSDateFormatter1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_selector_object_1,
+        aTarget._id,
+        aSelector,
+        anArgument._id);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_(
+      PedometerBindings _lib, NSObject aTarget) {
+    return _lib._objc_msgSend_15(_lib._class_NSDateFormatter1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_1, aTarget._id);
+  }
+
+  static bool getAccessInstanceVariablesDirectly(PedometerBindings _lib) {
+    return _lib._objc_msgSend_12(_lib._class_NSDateFormatter1,
+        _lib._sel_accessInstanceVariablesDirectly1);
+  }
+
+  static NSSet keyPathsForValuesAffectingValueForKey_(
+      PedometerBindings _lib, NSString? key) {
+    final _ret = _lib._objc_msgSend_50(
+        _lib._class_NSDateFormatter1,
+        _lib._sel_keyPathsForValuesAffectingValueForKey_1,
+        key?._id ?? ffi.nullptr);
+    return NSSet._(_ret, _lib, retain: true, release: true);
+  }
+
+  static bool automaticallyNotifiesObserversForKey_(
+      PedometerBindings _lib, NSString? key) {
+    return _lib._objc_msgSend_51(
+        _lib._class_NSDateFormatter1,
+        _lib._sel_automaticallyNotifiesObserversForKey_1,
+        key?._id ?? ffi.nullptr);
+  }
+
+  static NSArray classFallbacksForKeyedArchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_71(_lib._class_NSDateFormatter1,
+        _lib._sel_classFallbacksForKeyedArchiver1);
+    return NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSObject classForKeyedUnarchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(
+        _lib._class_NSDateFormatter1, _lib._sel_classForKeyedUnarchiver1);
+    return NSObject._(_ret, _lib, retain: true, release: true);
+  }
+}
+
+class NSFormatter extends NSObject {
+  NSFormatter._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
+      {bool retain = false, bool release = false})
+      : super._(id, lib, retain: retain, release: release);
+
+  /// Returns a [NSFormatter] that points to the same underlying object as [other].
+  static NSFormatter castFrom<T extends _ObjCWrapper>(T other) {
+    return NSFormatter._(other._id, other._lib, retain: true, release: true);
+  }
+
+  /// Returns a [NSFormatter] that wraps the given raw object pointer.
+  static NSFormatter castFromPointer(
+      PedometerBindings lib, ffi.Pointer<ObjCObject> other,
+      {bool retain = false, bool release = false}) {
+    return NSFormatter._(other, lib, retain: retain, release: release);
+  }
+
+  /// Returns whether [obj] is an instance of [NSFormatter].
+  static bool isInstance(_ObjCWrapper obj) {
+    return obj._lib._objc_msgSend_0(
+        obj._id, obj._lib._sel_isKindOfClass_1, obj._lib._class_NSFormatter1);
+  }
+
+  NSString stringForObjectValue_(NSObject obj) {
+    final _ret =
+        _lib._objc_msgSend_57(_id, _lib._sel_stringForObjectValue_1, obj._id);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSAttributedString attributedStringForObjectValue_withDefaultAttributes_(
+      NSObject obj, NSDictionary? attrs) {
+    final _ret = _lib._objc_msgSend_539(
+        _id,
+        _lib._sel_attributedStringForObjectValue_withDefaultAttributes_1,
+        obj._id,
+        attrs?._id ?? ffi.nullptr);
+    return NSAttributedString._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSString editingStringForObjectValue_(NSObject obj) {
+    final _ret = _lib._objc_msgSend_57(
+        _id, _lib._sel_editingStringForObjectValue_1, obj._id);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  bool getObjectValue_forString_errorDescription_(
+      ffi.Pointer<ffi.Pointer<ObjCObject>> obj,
+      NSString? string,
+      ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
+    return _lib._objc_msgSend_540(
+        _id,
+        _lib._sel_getObjectValue_forString_errorDescription_1,
+        obj,
+        string?._id ?? ffi.nullptr,
+        error);
+  }
+
+  bool isPartialStringValid_newEditingString_errorDescription_(
+      NSString? partialString,
+      ffi.Pointer<ffi.Pointer<ObjCObject>> newString,
+      ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
+    return _lib._objc_msgSend_541(
+        _id,
+        _lib._sel_isPartialStringValid_newEditingString_errorDescription_1,
+        partialString?._id ?? ffi.nullptr,
+        newString,
+        error);
+  }
+
+  bool
+      isPartialStringValid_proposedSelectedRange_originalString_originalSelectedRange_errorDescription_(
+          ffi.Pointer<ffi.Pointer<ObjCObject>> partialStringPtr,
+          ffi.Pointer<_NSRange> proposedSelRangePtr,
+          NSString? origString,
+          _NSRange origSelRange,
+          ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
+    return _lib._objc_msgSend_542(
+        _id,
+        _lib._sel_isPartialStringValid_proposedSelectedRange_originalString_originalSelectedRange_errorDescription_1,
+        partialStringPtr,
+        proposedSelRangePtr,
+        origString?._id ?? ffi.nullptr,
+        origSelRange,
+        error);
+  }
+
+  static NSFormatter new1(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(_lib._class_NSFormatter1, _lib._sel_new1);
+    return NSFormatter._(_ret, _lib, retain: false, release: true);
+  }
+
+  static NSFormatter alloc(PedometerBindings _lib) {
+    final _ret =
+        _lib._objc_msgSend_2(_lib._class_NSFormatter1, _lib._sel_alloc1);
+    return NSFormatter._(_ret, _lib, retain: false, release: true);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_selector_object_(
+      PedometerBindings _lib,
+      NSObject aTarget,
+      ffi.Pointer<ObjCSel> aSelector,
+      NSObject anArgument) {
+    return _lib._objc_msgSend_14(
+        _lib._class_NSFormatter1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_selector_object_1,
+        aTarget._id,
+        aSelector,
+        anArgument._id);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_(
+      PedometerBindings _lib, NSObject aTarget) {
+    return _lib._objc_msgSend_15(_lib._class_NSFormatter1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_1, aTarget._id);
+  }
+
+  static bool getAccessInstanceVariablesDirectly(PedometerBindings _lib) {
+    return _lib._objc_msgSend_12(
+        _lib._class_NSFormatter1, _lib._sel_accessInstanceVariablesDirectly1);
+  }
+
+  static NSSet keyPathsForValuesAffectingValueForKey_(
+      PedometerBindings _lib, NSString? key) {
+    final _ret = _lib._objc_msgSend_50(
+        _lib._class_NSFormatter1,
+        _lib._sel_keyPathsForValuesAffectingValueForKey_1,
+        key?._id ?? ffi.nullptr);
+    return NSSet._(_ret, _lib, retain: true, release: true);
+  }
+
+  static bool automaticallyNotifiesObserversForKey_(
+      PedometerBindings _lib, NSString? key) {
+    return _lib._objc_msgSend_51(
+        _lib._class_NSFormatter1,
+        _lib._sel_automaticallyNotifiesObserversForKey_1,
+        key?._id ?? ffi.nullptr);
+  }
+
+  static NSArray classFallbacksForKeyedArchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_71(
+        _lib._class_NSFormatter1, _lib._sel_classFallbacksForKeyedArchiver1);
+    return NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSObject classForKeyedUnarchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(
+        _lib._class_NSFormatter1, _lib._sel_classForKeyedUnarchiver1);
+    return NSObject._(_ret, _lib, retain: true, release: true);
+  }
+}
+
+abstract class NSFormattingContext {
+  static const int NSFormattingContextUnknown = 0;
+  static const int NSFormattingContextDynamic = 1;
+  static const int NSFormattingContextStandalone = 2;
+  static const int NSFormattingContextListItem = 3;
+  static const int NSFormattingContextBeginningOfSentence = 4;
+  static const int NSFormattingContextMiddleOfSentence = 5;
+}
+
+abstract class NSDateFormatterStyle {
+  static const int NSDateFormatterNoStyle = 0;
+  static const int NSDateFormatterShortStyle = 1;
+  static const int NSDateFormatterMediumStyle = 2;
+  static const int NSDateFormatterLongStyle = 3;
+  static const int NSDateFormatterFullStyle = 4;
+}
+
+abstract class NSDateFormatterBehavior {
+  static const int NSDateFormatterBehaviorDefault = 0;
+  static const int NSDateFormatterBehavior10_4 = 1040;
+}
+
+class NSTimeZone extends NSObject {
+  NSTimeZone._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
+      {bool retain = false, bool release = false})
+      : super._(id, lib, retain: retain, release: release);
+
+  /// Returns a [NSTimeZone] that points to the same underlying object as [other].
+  static NSTimeZone castFrom<T extends _ObjCWrapper>(T other) {
+    return NSTimeZone._(other._id, other._lib, retain: true, release: true);
+  }
+
+  /// Returns a [NSTimeZone] that wraps the given raw object pointer.
+  static NSTimeZone castFromPointer(
+      PedometerBindings lib, ffi.Pointer<ObjCObject> other,
+      {bool retain = false, bool release = false}) {
+    return NSTimeZone._(other, lib, retain: retain, release: release);
+  }
+
+  /// Returns whether [obj] is an instance of [NSTimeZone].
+  static bool isInstance(_ObjCWrapper obj) {
+    return obj._lib._objc_msgSend_0(
+        obj._id, obj._lib._sel_isKindOfClass_1, obj._lib._class_NSTimeZone1);
+  }
+
+  NSString? get name {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_name1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSData? get data {
+    final _ret = _lib._objc_msgSend_39(_id, _lib._sel_data1);
+    return _ret.address == 0
+        ? null
+        : NSData._(_ret, _lib, retain: true, release: true);
+  }
+
+  int secondsFromGMTForDate_(NSDate? aDate) {
+    return _lib._objc_msgSend_555(
+        _id, _lib._sel_secondsFromGMTForDate_1, aDate?._id ?? ffi.nullptr);
+  }
+
+  NSString abbreviationForDate_(NSDate? aDate) {
+    final _ret = _lib._objc_msgSend_546(
+        _id, _lib._sel_abbreviationForDate_1, aDate?._id ?? ffi.nullptr);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  bool isDaylightSavingTimeForDate_(NSDate? aDate) {
+    return _lib._objc_msgSend_151(_id, _lib._sel_isDaylightSavingTimeForDate_1,
+        aDate?._id ?? ffi.nullptr);
+  }
+
+  double daylightSavingTimeOffsetForDate_(NSDate? aDate) {
+    return _lib._objc_msgSend_148(_id,
+        _lib._sel_daylightSavingTimeOffsetForDate_1, aDate?._id ?? ffi.nullptr);
+  }
+
+  NSDate nextDaylightSavingTimeTransitionAfterDate_(NSDate? aDate) {
+    final _ret = _lib._objc_msgSend_149(
+        _id,
+        _lib._sel_nextDaylightSavingTimeTransitionAfterDate_1,
+        aDate?._id ?? ffi.nullptr);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSTimeZone? getSystemTimeZone(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_556(
+        _lib._class_NSTimeZone1, _lib._sel_systemTimeZone1);
+    return _ret.address == 0
+        ? null
+        : NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  static void resetSystemTimeZone(PedometerBindings _lib) {
+    return _lib._objc_msgSend_1(
+        _lib._class_NSTimeZone1, _lib._sel_resetSystemTimeZone1);
+  }
+
+  static NSTimeZone? getDefaultTimeZone(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_556(
+        _lib._class_NSTimeZone1, _lib._sel_defaultTimeZone1);
+    return _ret.address == 0
+        ? null
+        : NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  static void setDefaultTimeZone(PedometerBindings _lib, NSTimeZone? value) {
+    _lib._objc_msgSend_557(_lib._class_NSTimeZone1,
+        _lib._sel_setDefaultTimeZone_1, value?._id ?? ffi.nullptr);
+  }
+
+  static NSTimeZone? getLocalTimeZone(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_556(
+        _lib._class_NSTimeZone1, _lib._sel_localTimeZone1);
+    return _ret.address == 0
+        ? null
+        : NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSArray? getKnownTimeZoneNames(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_71(
+        _lib._class_NSTimeZone1, _lib._sel_knownTimeZoneNames1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSDictionary? getAbbreviationDictionary(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_315(
+        _lib._class_NSTimeZone1, _lib._sel_abbreviationDictionary1);
+    return _ret.address == 0
+        ? null
+        : NSDictionary._(_ret, _lib, retain: true, release: true);
+  }
+
+  static void setAbbreviationDictionary(
+      PedometerBindings _lib, NSDictionary? value) {
+    _lib._objc_msgSend_558(_lib._class_NSTimeZone1,
+        _lib._sel_setAbbreviationDictionary_1, value?._id ?? ffi.nullptr);
+  }
+
+  static NSString? getTimeZoneDataVersion(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_20(
+        _lib._class_NSTimeZone1, _lib._sel_timeZoneDataVersion1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  int get secondsFromGMT {
+    return _lib._objc_msgSend_70(_id, _lib._sel_secondsFromGMT1);
+  }
+
+  NSString? get abbreviation {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_abbreviation1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  bool get daylightSavingTime {
+    return _lib._objc_msgSend_12(_id, _lib._sel_isDaylightSavingTime1);
+  }
+
+  double get daylightSavingTimeOffset {
+    return _lib._objc_msgSend_146(_id, _lib._sel_daylightSavingTimeOffset1);
+  }
+
+  NSDate? get nextDaylightSavingTimeTransition {
+    final _ret = _lib._objc_msgSend_153(
+        _id, _lib._sel_nextDaylightSavingTimeTransition1);
+    return _ret.address == 0
+        ? null
+        : NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSString? get description {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_description1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  bool isEqualToTimeZone_(NSTimeZone? aTimeZone) {
+    return _lib._objc_msgSend_559(
+        _id, _lib._sel_isEqualToTimeZone_1, aTimeZone?._id ?? ffi.nullptr);
+  }
+
+  NSString localizedName_locale_(int style, NSLocale? locale) {
+    final _ret = _lib._objc_msgSend_560(_id, _lib._sel_localizedName_locale_1,
+        style, locale?._id ?? ffi.nullptr);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSTimeZone timeZoneWithName_(
+      PedometerBindings _lib, NSString? tzName) {
+    final _ret = _lib._objc_msgSend_30(_lib._class_NSTimeZone1,
+        _lib._sel_timeZoneWithName_1, tzName?._id ?? ffi.nullptr);
+    return NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSTimeZone timeZoneWithName_data_(
+      PedometerBindings _lib, NSString? tzName, NSData? aData) {
+    final _ret = _lib._objc_msgSend_561(
+        _lib._class_NSTimeZone1,
+        _lib._sel_timeZoneWithName_data_1,
+        tzName?._id ?? ffi.nullptr,
+        aData?._id ?? ffi.nullptr);
+    return NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSTimeZone initWithName_(NSString? tzName) {
+    final _ret = _lib._objc_msgSend_30(
+        _id, _lib._sel_initWithName_1, tzName?._id ?? ffi.nullptr);
+    return NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSTimeZone initWithName_data_(NSString? tzName, NSData? aData) {
+    final _ret = _lib._objc_msgSend_561(_id, _lib._sel_initWithName_data_1,
+        tzName?._id ?? ffi.nullptr, aData?._id ?? ffi.nullptr);
+    return NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSTimeZone timeZoneForSecondsFromGMT_(
+      PedometerBindings _lib, int seconds) {
+    final _ret = _lib._objc_msgSend_562(_lib._class_NSTimeZone1,
+        _lib._sel_timeZoneForSecondsFromGMT_1, seconds);
+    return NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSTimeZone timeZoneWithAbbreviation_(
+      PedometerBindings _lib, NSString? abbreviation) {
+    final _ret = _lib._objc_msgSend_30(_lib._class_NSTimeZone1,
+        _lib._sel_timeZoneWithAbbreviation_1, abbreviation?._id ?? ffi.nullptr);
+    return NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSTimeZone new1(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(_lib._class_NSTimeZone1, _lib._sel_new1);
+    return NSTimeZone._(_ret, _lib, retain: false, release: true);
+  }
+
+  static NSTimeZone alloc(PedometerBindings _lib) {
+    final _ret =
+        _lib._objc_msgSend_2(_lib._class_NSTimeZone1, _lib._sel_alloc1);
+    return NSTimeZone._(_ret, _lib, retain: false, release: true);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_selector_object_(
+      PedometerBindings _lib,
+      NSObject aTarget,
+      ffi.Pointer<ObjCSel> aSelector,
+      NSObject anArgument) {
+    return _lib._objc_msgSend_14(
+        _lib._class_NSTimeZone1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_selector_object_1,
+        aTarget._id,
+        aSelector,
+        anArgument._id);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_(
+      PedometerBindings _lib, NSObject aTarget) {
+    return _lib._objc_msgSend_15(_lib._class_NSTimeZone1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_1, aTarget._id);
+  }
+
+  static bool getAccessInstanceVariablesDirectly(PedometerBindings _lib) {
+    return _lib._objc_msgSend_12(
+        _lib._class_NSTimeZone1, _lib._sel_accessInstanceVariablesDirectly1);
+  }
+
+  static NSSet keyPathsForValuesAffectingValueForKey_(
+      PedometerBindings _lib, NSString? key) {
+    final _ret = _lib._objc_msgSend_50(
+        _lib._class_NSTimeZone1,
+        _lib._sel_keyPathsForValuesAffectingValueForKey_1,
+        key?._id ?? ffi.nullptr);
+    return NSSet._(_ret, _lib, retain: true, release: true);
+  }
+
+  static bool automaticallyNotifiesObserversForKey_(
+      PedometerBindings _lib, NSString? key) {
+    return _lib._objc_msgSend_51(
+        _lib._class_NSTimeZone1,
+        _lib._sel_automaticallyNotifiesObserversForKey_1,
+        key?._id ?? ffi.nullptr);
+  }
+
+  static NSArray classFallbacksForKeyedArchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_71(
+        _lib._class_NSTimeZone1, _lib._sel_classFallbacksForKeyedArchiver1);
+    return NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSObject classForKeyedUnarchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(
+        _lib._class_NSTimeZone1, _lib._sel_classForKeyedUnarchiver1);
+    return NSObject._(_ret, _lib, retain: true, release: true);
+  }
+}
+
+abstract class NSTimeZoneNameStyle {
+  static const int NSTimeZoneNameStyleStandard = 0;
+  static const int NSTimeZoneNameStyleShortStandard = 1;
+  static const int NSTimeZoneNameStyleDaylightSaving = 2;
+  static const int NSTimeZoneNameStyleShortDaylightSaving = 3;
+  static const int NSTimeZoneNameStyleGeneric = 4;
+  static const int NSTimeZoneNameStyleShortGeneric = 5;
+}
+
+class NSCalendar extends NSObject {
+  NSCalendar._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
+      {bool retain = false, bool release = false})
+      : super._(id, lib, retain: retain, release: release);
+
+  /// Returns a [NSCalendar] that points to the same underlying object as [other].
+  static NSCalendar castFrom<T extends _ObjCWrapper>(T other) {
+    return NSCalendar._(other._id, other._lib, retain: true, release: true);
+  }
+
+  /// Returns a [NSCalendar] that wraps the given raw object pointer.
+  static NSCalendar castFromPointer(
+      PedometerBindings lib, ffi.Pointer<ObjCObject> other,
+      {bool retain = false, bool release = false}) {
+    return NSCalendar._(other, lib, retain: retain, release: release);
+  }
+
+  /// Returns whether [obj] is an instance of [NSCalendar].
+  static bool isInstance(_ObjCWrapper obj) {
+    return obj._lib._objc_msgSend_0(
+        obj._id, obj._lib._sel_isKindOfClass_1, obj._lib._class_NSCalendar1);
+  }
+
+  static NSCalendar? getCurrentCalendar(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_563(
+        _lib._class_NSCalendar1, _lib._sel_currentCalendar1);
+    return _ret.address == 0
+        ? null
+        : NSCalendar._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSCalendar? getAutoupdatingCurrentCalendar(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_563(
+        _lib._class_NSCalendar1, _lib._sel_autoupdatingCurrentCalendar1);
+    return _ret.address == 0
+        ? null
+        : NSCalendar._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSCalendar calendarWithIdentifier_(
+      PedometerBindings _lib, NSString calendarIdentifierConstant) {
+    final _ret = _lib._objc_msgSend_564(_lib._class_NSCalendar1,
+        _lib._sel_calendarWithIdentifier_1, calendarIdentifierConstant._id);
+    return NSCalendar._(_ret, _lib, retain: true, release: true);
+  }
+
+  @override
+  NSCalendar init() {
+    final _ret = _lib._objc_msgSend_2(_id, _lib._sel_init1);
+    return NSCalendar._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSObject initWithCalendarIdentifier_(NSString ident) {
+    final _ret = _lib._objc_msgSend_30(
+        _id, _lib._sel_initWithCalendarIdentifier_1, ident._id);
+    return NSObject._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSString get calendarIdentifier {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_calendarIdentifier1);
+    return NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSLocale? get locale {
+    final _ret = _lib._objc_msgSend_268(_id, _lib._sel_locale1);
+    return _ret.address == 0
+        ? null
+        : NSLocale._(_ret, _lib, retain: true, release: true);
+  }
+
+  set locale(NSLocale? value) {
+    _lib._objc_msgSend_554(
+        _id, _lib._sel_setLocale_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSTimeZone? get timeZone {
+    final _ret = _lib._objc_msgSend_556(_id, _lib._sel_timeZone1);
+    return _ret.address == 0
+        ? null
+        : NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  set timeZone(NSTimeZone? value) {
+    _lib._objc_msgSend_557(
+        _id, _lib._sel_setTimeZone_1, value?._id ?? ffi.nullptr);
+  }
+
+  int get firstWeekday {
+    return _lib._objc_msgSend_10(_id, _lib._sel_firstWeekday1);
+  }
+
+  set firstWeekday(int value) {
+    _lib._objc_msgSend_430(_id, _lib._sel_setFirstWeekday_1, value);
+  }
+
+  int get minimumDaysInFirstWeek {
+    return _lib._objc_msgSend_10(_id, _lib._sel_minimumDaysInFirstWeek1);
+  }
+
+  set minimumDaysInFirstWeek(int value) {
+    _lib._objc_msgSend_430(_id, _lib._sel_setMinimumDaysInFirstWeek_1, value);
+  }
+
+  NSArray? get eraSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_eraSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get longEraSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_longEraSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get monthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_monthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get shortMonthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_shortMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get veryShortMonthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_veryShortMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get standaloneMonthSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_standaloneMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get shortStandaloneMonthSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_shortStandaloneMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get veryShortStandaloneMonthSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_veryShortStandaloneMonthSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get weekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_weekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get shortWeekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_shortWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get veryShortWeekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_veryShortWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get standaloneWeekdaySymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_standaloneWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get shortStandaloneWeekdaySymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_shortStandaloneWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get veryShortStandaloneWeekdaySymbols {
+    final _ret = _lib._objc_msgSend_71(
+        _id, _lib._sel_veryShortStandaloneWeekdaySymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get quarterSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_quarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get shortQuarterSymbols {
+    final _ret = _lib._objc_msgSend_71(_id, _lib._sel_shortQuarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get standaloneQuarterSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_standaloneQuarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSArray? get shortStandaloneQuarterSymbols {
+    final _ret =
+        _lib._objc_msgSend_71(_id, _lib._sel_shortStandaloneQuarterSymbols1);
+    return _ret.address == 0
+        ? null
+        : NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSString? get AMSymbol {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_AMSymbol1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSString? get PMSymbol {
+    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_PMSymbol1);
+    return _ret.address == 0
+        ? null
+        : NSString._(_ret, _lib, retain: true, release: true);
+  }
+
+  _NSRange minimumRangeOfUnit_(int unit) {
+    return _lib._objc_msgSend_565(_id, _lib._sel_minimumRangeOfUnit_1, unit);
+  }
+
+  _NSRange maximumRangeOfUnit_(int unit) {
+    return _lib._objc_msgSend_565(_id, _lib._sel_maximumRangeOfUnit_1, unit);
+  }
+
+  _NSRange rangeOfUnit_inUnit_forDate_(int smaller, int larger, NSDate? date) {
+    return _lib._objc_msgSend_566(_id, _lib._sel_rangeOfUnit_inUnit_forDate_1,
+        smaller, larger, date?._id ?? ffi.nullptr);
+  }
+
+  int ordinalityOfUnit_inUnit_forDate_(int smaller, int larger, NSDate? date) {
+    return _lib._objc_msgSend_567(
+        _id,
+        _lib._sel_ordinalityOfUnit_inUnit_forDate_1,
+        smaller,
+        larger,
+        date?._id ?? ffi.nullptr);
+  }
+
+  bool rangeOfUnit_startDate_interval_forDate_(
+      int unit,
+      ffi.Pointer<ffi.Pointer<ObjCObject>> datep,
+      ffi.Pointer<ffi.Double> tip,
+      NSDate? date) {
+    return _lib._objc_msgSend_568(
+        _id,
+        _lib._sel_rangeOfUnit_startDate_interval_forDate_1,
+        unit,
+        datep,
+        tip,
+        date?._id ?? ffi.nullptr);
+  }
+
+  NSDate dateFromComponents_(NSDateComponents? comps) {
+    final _ret = _lib._objc_msgSend_574(
+        _id, _lib._sel_dateFromComponents_1, comps?._id ?? ffi.nullptr);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDateComponents components_fromDate_(int unitFlags, NSDate? date) {
+    final _ret = _lib._objc_msgSend_575(_id, _lib._sel_components_fromDate_1,
+        unitFlags, date?._id ?? ffi.nullptr);
+    return NSDateComponents._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate dateByAddingComponents_toDate_options_(
+      NSDateComponents? comps, NSDate? date, int opts) {
+    final _ret = _lib._objc_msgSend_576(
+        _id,
+        _lib._sel_dateByAddingComponents_toDate_options_1,
+        comps?._id ?? ffi.nullptr,
+        date?._id ?? ffi.nullptr,
+        opts);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDateComponents components_fromDate_toDate_options_(
+      int unitFlags, NSDate? startingDate, NSDate? resultDate, int opts) {
+    final _ret = _lib._objc_msgSend_577(
+        _id,
+        _lib._sel_components_fromDate_toDate_options_1,
+        unitFlags,
+        startingDate?._id ?? ffi.nullptr,
+        resultDate?._id ?? ffi.nullptr,
+        opts);
+    return NSDateComponents._(_ret, _lib, retain: true, release: true);
+  }
+
+  void getEra_year_month_day_fromDate_(
+      ffi.Pointer<ffi.Long> eraValuePointer,
+      ffi.Pointer<ffi.Long> yearValuePointer,
+      ffi.Pointer<ffi.Long> monthValuePointer,
+      ffi.Pointer<ffi.Long> dayValuePointer,
+      NSDate? date) {
+    return _lib._objc_msgSend_578(
+        _id,
+        _lib._sel_getEra_year_month_day_fromDate_1,
+        eraValuePointer,
+        yearValuePointer,
+        monthValuePointer,
+        dayValuePointer,
+        date?._id ?? ffi.nullptr);
+  }
+
+  void getEra_yearForWeekOfYear_weekOfYear_weekday_fromDate_(
+      ffi.Pointer<ffi.Long> eraValuePointer,
+      ffi.Pointer<ffi.Long> yearValuePointer,
+      ffi.Pointer<ffi.Long> weekValuePointer,
+      ffi.Pointer<ffi.Long> weekdayValuePointer,
+      NSDate? date) {
+    return _lib._objc_msgSend_578(
+        _id,
+        _lib._sel_getEra_yearForWeekOfYear_weekOfYear_weekday_fromDate_1,
+        eraValuePointer,
+        yearValuePointer,
+        weekValuePointer,
+        weekdayValuePointer,
+        date?._id ?? ffi.nullptr);
+  }
+
+  void getHour_minute_second_nanosecond_fromDate_(
+      ffi.Pointer<ffi.Long> hourValuePointer,
+      ffi.Pointer<ffi.Long> minuteValuePointer,
+      ffi.Pointer<ffi.Long> secondValuePointer,
+      ffi.Pointer<ffi.Long> nanosecondValuePointer,
+      NSDate? date) {
+    return _lib._objc_msgSend_578(
+        _id,
+        _lib._sel_getHour_minute_second_nanosecond_fromDate_1,
+        hourValuePointer,
+        minuteValuePointer,
+        secondValuePointer,
+        nanosecondValuePointer,
+        date?._id ?? ffi.nullptr);
+  }
+
+  int component_fromDate_(int unit, NSDate? date) {
+    return _lib._objc_msgSend_579(
+        _id, _lib._sel_component_fromDate_1, unit, date?._id ?? ffi.nullptr);
+  }
+
+  NSDate dateWithEra_year_month_day_hour_minute_second_nanosecond_(
+      int eraValue,
+      int yearValue,
+      int monthValue,
+      int dayValue,
+      int hourValue,
+      int minuteValue,
+      int secondValue,
+      int nanosecondValue) {
+    final _ret = _lib._objc_msgSend_580(
+        _id,
+        _lib._sel_dateWithEra_year_month_day_hour_minute_second_nanosecond_1,
+        eraValue,
+        yearValue,
+        monthValue,
+        dayValue,
+        hourValue,
+        minuteValue,
+        secondValue,
+        nanosecondValue);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate
+      dateWithEra_yearForWeekOfYear_weekOfYear_weekday_hour_minute_second_nanosecond_(
+          int eraValue,
+          int yearValue,
+          int weekValue,
+          int weekdayValue,
+          int hourValue,
+          int minuteValue,
+          int secondValue,
+          int nanosecondValue) {
+    final _ret = _lib._objc_msgSend_580(
+        _id,
+        _lib._sel_dateWithEra_yearForWeekOfYear_weekOfYear_weekday_hour_minute_second_nanosecond_1,
+        eraValue,
+        yearValue,
+        weekValue,
+        weekdayValue,
+        hourValue,
+        minuteValue,
+        secondValue,
+        nanosecondValue);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate startOfDayForDate_(NSDate? date) {
+    final _ret = _lib._objc_msgSend_149(
+        _id, _lib._sel_startOfDayForDate_1, date?._id ?? ffi.nullptr);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDateComponents componentsInTimeZone_fromDate_(
+      NSTimeZone? timezone, NSDate? date) {
+    final _ret = _lib._objc_msgSend_581(
+        _id,
+        _lib._sel_componentsInTimeZone_fromDate_1,
+        timezone?._id ?? ffi.nullptr,
+        date?._id ?? ffi.nullptr);
+    return NSDateComponents._(_ret, _lib, retain: true, release: true);
+  }
+
+  int compareDate_toDate_toUnitGranularity_(
+      NSDate? date1, NSDate? date2, int unit) {
+    return _lib._objc_msgSend_582(
+        _id,
+        _lib._sel_compareDate_toDate_toUnitGranularity_1,
+        date1?._id ?? ffi.nullptr,
+        date2?._id ?? ffi.nullptr,
+        unit);
+  }
+
+  bool isDate_equalToDate_toUnitGranularity_(
+      NSDate? date1, NSDate? date2, int unit) {
+    return _lib._objc_msgSend_583(
+        _id,
+        _lib._sel_isDate_equalToDate_toUnitGranularity_1,
+        date1?._id ?? ffi.nullptr,
+        date2?._id ?? ffi.nullptr,
+        unit);
+  }
+
+  bool isDate_inSameDayAsDate_(NSDate? date1, NSDate? date2) {
+    return _lib._objc_msgSend_584(_id, _lib._sel_isDate_inSameDayAsDate_1,
+        date1?._id ?? ffi.nullptr, date2?._id ?? ffi.nullptr);
+  }
+
+  bool isDateInToday_(NSDate? date) {
+    return _lib._objc_msgSend_151(
+        _id, _lib._sel_isDateInToday_1, date?._id ?? ffi.nullptr);
+  }
+
+  bool isDateInYesterday_(NSDate? date) {
+    return _lib._objc_msgSend_151(
+        _id, _lib._sel_isDateInYesterday_1, date?._id ?? ffi.nullptr);
+  }
+
+  bool isDateInTomorrow_(NSDate? date) {
+    return _lib._objc_msgSend_151(
+        _id, _lib._sel_isDateInTomorrow_1, date?._id ?? ffi.nullptr);
+  }
+
+  bool isDateInWeekend_(NSDate? date) {
+    return _lib._objc_msgSend_151(
+        _id, _lib._sel_isDateInWeekend_1, date?._id ?? ffi.nullptr);
+  }
+
+  bool rangeOfWeekendStartDate_interval_containingDate_(
+      ffi.Pointer<ffi.Pointer<ObjCObject>> datep,
+      ffi.Pointer<ffi.Double> tip,
+      NSDate? date) {
+    return _lib._objc_msgSend_585(
+        _id,
+        _lib._sel_rangeOfWeekendStartDate_interval_containingDate_1,
+        datep,
+        tip,
+        date?._id ?? ffi.nullptr);
+  }
+
+  bool nextWeekendStartDate_interval_options_afterDate_(
+      ffi.Pointer<ffi.Pointer<ObjCObject>> datep,
+      ffi.Pointer<ffi.Double> tip,
+      int options,
+      NSDate? date) {
+    return _lib._objc_msgSend_586(
+        _id,
+        _lib._sel_nextWeekendStartDate_interval_options_afterDate_1,
+        datep,
+        tip,
+        options,
+        date?._id ?? ffi.nullptr);
+  }
+
+  NSDateComponents components_fromDateComponents_toDateComponents_options_(
+      int unitFlags,
+      NSDateComponents? startingDateComp,
+      NSDateComponents? resultDateComp,
+      int options) {
+    final _ret = _lib._objc_msgSend_587(
+        _id,
+        _lib._sel_components_fromDateComponents_toDateComponents_options_1,
+        unitFlags,
+        startingDateComp?._id ?? ffi.nullptr,
+        resultDateComp?._id ?? ffi.nullptr,
+        options);
+    return NSDateComponents._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate dateByAddingUnit_value_toDate_options_(
+      int unit, int value, NSDate? date, int options) {
+    final _ret = _lib._objc_msgSend_588(
+        _id,
+        _lib._sel_dateByAddingUnit_value_toDate_options_1,
+        unit,
+        value,
+        date?._id ?? ffi.nullptr,
+        options);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  void enumerateDatesStartingAfterDate_matchingComponents_options_usingBlock_(
+      NSDate? start, NSDateComponents? comps, int opts, ObjCBlock33 block) {
+    return _lib._objc_msgSend_589(
+        _id,
+        _lib._sel_enumerateDatesStartingAfterDate_matchingComponents_options_usingBlock_1,
+        start?._id ?? ffi.nullptr,
+        comps?._id ?? ffi.nullptr,
+        opts,
+        block._id);
+  }
+
+  NSDate nextDateAfterDate_matchingComponents_options_(
+      NSDate? date, NSDateComponents? comps, int options) {
+    final _ret = _lib._objc_msgSend_590(
+        _id,
+        _lib._sel_nextDateAfterDate_matchingComponents_options_1,
+        date?._id ?? ffi.nullptr,
+        comps?._id ?? ffi.nullptr,
+        options);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate nextDateAfterDate_matchingUnit_value_options_(
+      NSDate? date, int unit, int value, int options) {
+    final _ret = _lib._objc_msgSend_591(
+        _id,
+        _lib._sel_nextDateAfterDate_matchingUnit_value_options_1,
+        date?._id ?? ffi.nullptr,
+        unit,
+        value,
+        options);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate nextDateAfterDate_matchingHour_minute_second_options_(NSDate? date,
+      int hourValue, int minuteValue, int secondValue, int options) {
+    final _ret = _lib._objc_msgSend_592(
+        _id,
+        _lib._sel_nextDateAfterDate_matchingHour_minute_second_options_1,
+        date?._id ?? ffi.nullptr,
+        hourValue,
+        minuteValue,
+        secondValue,
+        options);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate dateBySettingUnit_value_ofDate_options_(
+      int unit, int v, NSDate? date, int opts) {
+    final _ret = _lib._objc_msgSend_588(
+        _id,
+        _lib._sel_dateBySettingUnit_value_ofDate_options_1,
+        unit,
+        v,
+        date?._id ?? ffi.nullptr,
+        opts);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  NSDate dateBySettingHour_minute_second_ofDate_options_(
+      int h, int m, int s, NSDate? date, int opts) {
+    final _ret = _lib._objc_msgSend_593(
+        _id,
+        _lib._sel_dateBySettingHour_minute_second_ofDate_options_1,
+        h,
+        m,
+        s,
+        date?._id ?? ffi.nullptr,
+        opts);
+    return NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  bool date_matchesComponents_(NSDate? date, NSDateComponents? components) {
+    return _lib._objc_msgSend_594(_id, _lib._sel_date_matchesComponents_1,
+        date?._id ?? ffi.nullptr, components?._id ?? ffi.nullptr);
+  }
+
+  static NSCalendar new1(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(_lib._class_NSCalendar1, _lib._sel_new1);
+    return NSCalendar._(_ret, _lib, retain: false, release: true);
+  }
+
+  static NSCalendar alloc(PedometerBindings _lib) {
+    final _ret =
+        _lib._objc_msgSend_2(_lib._class_NSCalendar1, _lib._sel_alloc1);
+    return NSCalendar._(_ret, _lib, retain: false, release: true);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_selector_object_(
+      PedometerBindings _lib,
+      NSObject aTarget,
+      ffi.Pointer<ObjCSel> aSelector,
+      NSObject anArgument) {
+    return _lib._objc_msgSend_14(
+        _lib._class_NSCalendar1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_selector_object_1,
+        aTarget._id,
+        aSelector,
+        anArgument._id);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_(
+      PedometerBindings _lib, NSObject aTarget) {
+    return _lib._objc_msgSend_15(_lib._class_NSCalendar1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_1, aTarget._id);
+  }
+
+  static bool getAccessInstanceVariablesDirectly(PedometerBindings _lib) {
+    return _lib._objc_msgSend_12(
+        _lib._class_NSCalendar1, _lib._sel_accessInstanceVariablesDirectly1);
+  }
+
+  static NSSet keyPathsForValuesAffectingValueForKey_(
+      PedometerBindings _lib, NSString? key) {
+    final _ret = _lib._objc_msgSend_50(
+        _lib._class_NSCalendar1,
+        _lib._sel_keyPathsForValuesAffectingValueForKey_1,
+        key?._id ?? ffi.nullptr);
+    return NSSet._(_ret, _lib, retain: true, release: true);
+  }
+
+  static bool automaticallyNotifiesObserversForKey_(
+      PedometerBindings _lib, NSString? key) {
+    return _lib._objc_msgSend_51(
+        _lib._class_NSCalendar1,
+        _lib._sel_automaticallyNotifiesObserversForKey_1,
+        key?._id ?? ffi.nullptr);
+  }
+
+  static NSArray classFallbacksForKeyedArchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_71(
+        _lib._class_NSCalendar1, _lib._sel_classFallbacksForKeyedArchiver1);
+    return NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSObject classForKeyedUnarchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(
+        _lib._class_NSCalendar1, _lib._sel_classForKeyedUnarchiver1);
+    return NSObject._(_ret, _lib, retain: true, release: true);
+  }
+}
+
+abstract class NSCalendarUnit {
+  static const int NSCalendarUnitEra = 2;
+  static const int NSCalendarUnitYear = 4;
+  static const int NSCalendarUnitMonth = 8;
+  static const int NSCalendarUnitDay = 16;
+  static const int NSCalendarUnitHour = 32;
+  static const int NSCalendarUnitMinute = 64;
+  static const int NSCalendarUnitSecond = 128;
+  static const int NSCalendarUnitWeekday = 512;
+  static const int NSCalendarUnitWeekdayOrdinal = 1024;
+  static const int NSCalendarUnitQuarter = 2048;
+  static const int NSCalendarUnitWeekOfMonth = 4096;
+  static const int NSCalendarUnitWeekOfYear = 8192;
+  static const int NSCalendarUnitYearForWeekOfYear = 16384;
+  static const int NSCalendarUnitNanosecond = 32768;
+  static const int NSCalendarUnitCalendar = 1048576;
+  static const int NSCalendarUnitTimeZone = 2097152;
+  static const int NSEraCalendarUnit = 2;
+  static const int NSYearCalendarUnit = 4;
+  static const int NSMonthCalendarUnit = 8;
+  static const int NSDayCalendarUnit = 16;
+  static const int NSHourCalendarUnit = 32;
+  static const int NSMinuteCalendarUnit = 64;
+  static const int NSSecondCalendarUnit = 128;
+  static const int NSWeekCalendarUnit = 256;
+  static const int NSWeekdayCalendarUnit = 512;
+  static const int NSWeekdayOrdinalCalendarUnit = 1024;
+  static const int NSQuarterCalendarUnit = 2048;
+  static const int NSWeekOfMonthCalendarUnit = 4096;
+  static const int NSWeekOfYearCalendarUnit = 8192;
+  static const int NSYearForWeekOfYearCalendarUnit = 16384;
+  static const int NSCalendarCalendarUnit = 1048576;
+  static const int NSTimeZoneCalendarUnit = 2097152;
+}
+
+class NSDateComponents extends NSObject {
+  NSDateComponents._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
+      {bool retain = false, bool release = false})
+      : super._(id, lib, retain: retain, release: release);
+
+  /// Returns a [NSDateComponents] that points to the same underlying object as [other].
+  static NSDateComponents castFrom<T extends _ObjCWrapper>(T other) {
+    return NSDateComponents._(other._id, other._lib,
+        retain: true, release: true);
+  }
+
+  /// Returns a [NSDateComponents] that wraps the given raw object pointer.
+  static NSDateComponents castFromPointer(
+      PedometerBindings lib, ffi.Pointer<ObjCObject> other,
+      {bool retain = false, bool release = false}) {
+    return NSDateComponents._(other, lib, retain: retain, release: release);
+  }
+
+  /// Returns whether [obj] is an instance of [NSDateComponents].
+  static bool isInstance(_ObjCWrapper obj) {
+    return obj._lib._objc_msgSend_0(obj._id, obj._lib._sel_isKindOfClass_1,
+        obj._lib._class_NSDateComponents1);
+  }
+
+  NSCalendar? get calendar {
+    final _ret = _lib._objc_msgSend_563(_id, _lib._sel_calendar1);
+    return _ret.address == 0
+        ? null
+        : NSCalendar._(_ret, _lib, retain: true, release: true);
+  }
+
+  set calendar(NSCalendar? value) {
+    _lib._objc_msgSend_569(
+        _id, _lib._sel_setCalendar_1, value?._id ?? ffi.nullptr);
+  }
+
+  NSTimeZone? get timeZone {
+    final _ret = _lib._objc_msgSend_556(_id, _lib._sel_timeZone1);
+    return _ret.address == 0
+        ? null
+        : NSTimeZone._(_ret, _lib, retain: true, release: true);
+  }
+
+  set timeZone(NSTimeZone? value) {
+    _lib._objc_msgSend_557(
+        _id, _lib._sel_setTimeZone_1, value?._id ?? ffi.nullptr);
+  }
+
+  int get era {
+    return _lib._objc_msgSend_70(_id, _lib._sel_era1);
+  }
+
+  set era(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setEra_1, value);
+  }
+
+  int get year {
+    return _lib._objc_msgSend_70(_id, _lib._sel_year1);
+  }
+
+  set year(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setYear_1, value);
+  }
+
+  int get month {
+    return _lib._objc_msgSend_70(_id, _lib._sel_month1);
+  }
+
+  set month(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setMonth_1, value);
+  }
+
+  int get day {
+    return _lib._objc_msgSend_70(_id, _lib._sel_day1);
+  }
+
+  set day(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setDay_1, value);
+  }
+
+  int get hour {
+    return _lib._objc_msgSend_70(_id, _lib._sel_hour1);
+  }
+
+  set hour(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setHour_1, value);
+  }
+
+  int get minute {
+    return _lib._objc_msgSend_70(_id, _lib._sel_minute1);
+  }
+
+  set minute(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setMinute_1, value);
+  }
+
+  int get second {
+    return _lib._objc_msgSend_70(_id, _lib._sel_second1);
+  }
+
+  set second(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setSecond_1, value);
+  }
+
+  int get nanosecond {
+    return _lib._objc_msgSend_70(_id, _lib._sel_nanosecond1);
+  }
+
+  set nanosecond(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setNanosecond_1, value);
+  }
+
+  int get weekday {
+    return _lib._objc_msgSend_70(_id, _lib._sel_weekday1);
+  }
+
+  set weekday(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setWeekday_1, value);
+  }
+
+  int get weekdayOrdinal {
+    return _lib._objc_msgSend_70(_id, _lib._sel_weekdayOrdinal1);
+  }
+
+  set weekdayOrdinal(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setWeekdayOrdinal_1, value);
+  }
+
+  int get quarter {
+    return _lib._objc_msgSend_70(_id, _lib._sel_quarter1);
+  }
+
+  set quarter(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setQuarter_1, value);
+  }
+
+  int get weekOfMonth {
+    return _lib._objc_msgSend_70(_id, _lib._sel_weekOfMonth1);
+  }
+
+  set weekOfMonth(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setWeekOfMonth_1, value);
+  }
+
+  int get weekOfYear {
+    return _lib._objc_msgSend_70(_id, _lib._sel_weekOfYear1);
+  }
+
+  set weekOfYear(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setWeekOfYear_1, value);
+  }
+
+  int get yearForWeekOfYear {
+    return _lib._objc_msgSend_70(_id, _lib._sel_yearForWeekOfYear1);
+  }
+
+  set yearForWeekOfYear(int value) {
+    _lib._objc_msgSend_570(_id, _lib._sel_setYearForWeekOfYear_1, value);
+  }
+
+  bool get leapMonth {
+    return _lib._objc_msgSend_12(_id, _lib._sel_isLeapMonth1);
+  }
+
+  set leapMonth(bool value) {
+    _lib._objc_msgSend_440(_id, _lib._sel_setLeapMonth_1, value);
+  }
+
+  NSDate? get date {
+    final _ret = _lib._objc_msgSend_153(_id, _lib._sel_date1);
+    return _ret.address == 0
+        ? null
+        : NSDate._(_ret, _lib, retain: true, release: true);
+  }
+
+  int week() {
+    return _lib._objc_msgSend_70(_id, _lib._sel_week1);
+  }
+
+  void setWeek_(int v) {
+    return _lib._objc_msgSend_345(_id, _lib._sel_setWeek_1, v);
+  }
+
+  void setValue_forComponent_(int value, int unit) {
+    return _lib._objc_msgSend_571(
+        _id, _lib._sel_setValue_forComponent_1, value, unit);
+  }
+
+  int valueForComponent_(int unit) {
+    return _lib._objc_msgSend_572(_id, _lib._sel_valueForComponent_1, unit);
+  }
+
+  bool get validDate {
+    return _lib._objc_msgSend_12(_id, _lib._sel_isValidDate1);
+  }
+
+  bool isValidDateInCalendar_(NSCalendar? calendar) {
+    return _lib._objc_msgSend_573(
+        _id, _lib._sel_isValidDateInCalendar_1, calendar?._id ?? ffi.nullptr);
+  }
+
+  static NSDateComponents new1(PedometerBindings _lib) {
+    final _ret =
+        _lib._objc_msgSend_2(_lib._class_NSDateComponents1, _lib._sel_new1);
+    return NSDateComponents._(_ret, _lib, retain: false, release: true);
+  }
+
+  static NSDateComponents alloc(PedometerBindings _lib) {
+    final _ret =
+        _lib._objc_msgSend_2(_lib._class_NSDateComponents1, _lib._sel_alloc1);
+    return NSDateComponents._(_ret, _lib, retain: false, release: true);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_selector_object_(
+      PedometerBindings _lib,
+      NSObject aTarget,
+      ffi.Pointer<ObjCSel> aSelector,
+      NSObject anArgument) {
+    return _lib._objc_msgSend_14(
+        _lib._class_NSDateComponents1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_selector_object_1,
+        aTarget._id,
+        aSelector,
+        anArgument._id);
+  }
+
+  static void cancelPreviousPerformRequestsWithTarget_(
+      PedometerBindings _lib, NSObject aTarget) {
+    return _lib._objc_msgSend_15(_lib._class_NSDateComponents1,
+        _lib._sel_cancelPreviousPerformRequestsWithTarget_1, aTarget._id);
+  }
+
+  static bool getAccessInstanceVariablesDirectly(PedometerBindings _lib) {
+    return _lib._objc_msgSend_12(_lib._class_NSDateComponents1,
+        _lib._sel_accessInstanceVariablesDirectly1);
+  }
+
+  static NSSet keyPathsForValuesAffectingValueForKey_(
+      PedometerBindings _lib, NSString? key) {
+    final _ret = _lib._objc_msgSend_50(
+        _lib._class_NSDateComponents1,
+        _lib._sel_keyPathsForValuesAffectingValueForKey_1,
+        key?._id ?? ffi.nullptr);
+    return NSSet._(_ret, _lib, retain: true, release: true);
+  }
+
+  static bool automaticallyNotifiesObserversForKey_(
+      PedometerBindings _lib, NSString? key) {
+    return _lib._objc_msgSend_51(
+        _lib._class_NSDateComponents1,
+        _lib._sel_automaticallyNotifiesObserversForKey_1,
+        key?._id ?? ffi.nullptr);
+  }
+
+  static NSArray classFallbacksForKeyedArchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_71(_lib._class_NSDateComponents1,
+        _lib._sel_classFallbacksForKeyedArchiver1);
+    return NSArray._(_ret, _lib, retain: true, release: true);
+  }
+
+  static NSObject classForKeyedUnarchiver(PedometerBindings _lib) {
+    final _ret = _lib._objc_msgSend_2(
+        _lib._class_NSDateComponents1, _lib._sel_classForKeyedUnarchiver1);
+    return NSObject._(_ret, _lib, retain: true, release: true);
+  }
+}
+
+abstract class NSCalendarOptions {
+  static const int NSCalendarWrapComponents = 1;
+  static const int NSCalendarMatchStrictly = 2;
+  static const int NSCalendarSearchBackwards = 4;
+  static const int NSCalendarMatchPreviousTimePreservingSmallerUnits = 256;
+  static const int NSCalendarMatchNextTimePreservingSmallerUnits = 512;
+  static const int NSCalendarMatchNextTime = 1024;
+  static const int NSCalendarMatchFirst = 4096;
+  static const int NSCalendarMatchLast = 8192;
+}
+
+void _ObjCBlock33_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
+    ffi.Pointer<ObjCObject> arg0, bool arg1, ffi.Pointer<ffi.Bool> arg2) {
+  return block.ref.target
+      .cast<
+          ffi.NativeFunction<
+              ffi.Void Function(ffi.Pointer<ObjCObject> arg0, ffi.Bool arg1,
+                  ffi.Pointer<ffi.Bool> arg2)>>()
+      .asFunction<
+          void Function(ffi.Pointer<ObjCObject> arg0, bool arg1,
+              ffi.Pointer<ffi.Bool> arg2)>()(arg0, arg1, arg2);
+}
+
+final _ObjCBlock33_closureRegistry = <int, Function>{};
+int _ObjCBlock33_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock33_registerClosure(Function fn) {
+  final id = ++_ObjCBlock33_closureRegistryIndex;
+  _ObjCBlock33_closureRegistry[id] = fn;
+  return ffi.Pointer<ffi.Void>.fromAddress(id);
+}
+
+void _ObjCBlock33_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
+    ffi.Pointer<ObjCObject> arg0, bool arg1, ffi.Pointer<ffi.Bool> arg2) {
+  return _ObjCBlock33_closureRegistry[block.ref.target.address]!(
+      arg0, arg1, arg2);
+}
+
+class ObjCBlock33 extends _ObjCBlockBase {
+  ObjCBlock33._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+      : super._(id, lib, retain: false, release: true);
+
+  /// Creates a block from a C function pointer.
+  ObjCBlock33.fromFunctionPointer(
+      PedometerBindings lib,
+      ffi.Pointer<
+              ffi.NativeFunction<
+                  ffi.Void Function(ffi.Pointer<ObjCObject> arg0, ffi.Bool arg1,
+                      ffi.Pointer<ffi.Bool> arg2)>>
+          ptr)
+      : this._(
+            lib._newBlock1(
+                _cFuncTrampoline ??= ffi.Pointer.fromFunction<
+                            ffi.Void Function(
+                                ffi.Pointer<_ObjCBlock> block,
+                                ffi.Pointer<ObjCObject> arg0,
+                                ffi.Bool arg1,
+                                ffi.Pointer<ffi.Bool> arg2)>(
+                        _ObjCBlock33_fnPtrTrampoline)
+                    .cast(),
+                ptr.cast()),
+            lib);
+  static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
+
+  /// Creates a block from a Dart function.
+  ObjCBlock33.fromFunction(
+      PedometerBindings lib,
+      void Function(ffi.Pointer<ObjCObject> arg0, bool arg1,
+              ffi.Pointer<ffi.Bool> arg2)
+          fn)
+      : this._(
+            lib._newBlock1(
+                _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
+                            ffi.Void Function(
+                                ffi.Pointer<_ObjCBlock> block,
+                                ffi.Pointer<ObjCObject> arg0,
+                                ffi.Bool arg1,
+                                ffi.Pointer<ffi.Bool> arg2)>(
+                        _ObjCBlock33_closureTrampoline)
+                    .cast(),
+                _ObjCBlock33_registerClosure(fn)),
+            lib);
+  static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
+  void call(
+      ffi.Pointer<ObjCObject> arg0, bool arg1, ffi.Pointer<ffi.Bool> arg2) {
+    return _id.ref.invoke
+        .cast<
+            ffi.NativeFunction<
+                ffi.Void Function(
+                    ffi.Pointer<_ObjCBlock> block,
+                    ffi.Pointer<ObjCObject> arg0,
+                    ffi.Bool arg1,
+                    ffi.Pointer<ffi.Bool> arg2)>>()
+        .asFunction<
+            void Function(
+                ffi.Pointer<_ObjCBlock> block,
+                ffi.Pointer<ObjCObject> arg0,
+                bool arg1,
+                ffi.Pointer<ffi.Bool> arg2)>()(_id, arg0, arg1, arg2);
+  }
+
+  ffi.Pointer<_ObjCBlock> get pointer => _id;
+}
+
 class NSScanner extends NSObject {
   NSScanner._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
       {bool retain = false, bool release = false})
@@ -39211,7 +42781,7 @@ class NSScanner extends NSObject {
   }
 
   set charactersToBeSkipped(NSCharacterSet? value) {
-    _lib._objc_msgSend_539(
+    _lib._objc_msgSend_597(
         _id, _lib._sel_setCharactersToBeSkipped_1, value?._id ?? ffi.nullptr);
   }
 
@@ -39239,55 +42809,55 @@ class NSScanner extends NSObject {
   }
 
   bool scanInt_(ffi.Pointer<ffi.Int> result) {
-    return _lib._objc_msgSend_540(_id, _lib._sel_scanInt_1, result);
+    return _lib._objc_msgSend_598(_id, _lib._sel_scanInt_1, result);
   }
 
   bool scanInteger_(ffi.Pointer<ffi.Long> result) {
-    return _lib._objc_msgSend_541(_id, _lib._sel_scanInteger_1, result);
+    return _lib._objc_msgSend_599(_id, _lib._sel_scanInteger_1, result);
   }
 
   bool scanLongLong_(ffi.Pointer<ffi.LongLong> result) {
-    return _lib._objc_msgSend_542(_id, _lib._sel_scanLongLong_1, result);
+    return _lib._objc_msgSend_600(_id, _lib._sel_scanLongLong_1, result);
   }
 
   bool scanUnsignedLongLong_(ffi.Pointer<ffi.UnsignedLongLong> result) {
-    return _lib._objc_msgSend_543(
+    return _lib._objc_msgSend_601(
         _id, _lib._sel_scanUnsignedLongLong_1, result);
   }
 
   bool scanFloat_(ffi.Pointer<ffi.Float> result) {
-    return _lib._objc_msgSend_544(_id, _lib._sel_scanFloat_1, result);
+    return _lib._objc_msgSend_602(_id, _lib._sel_scanFloat_1, result);
   }
 
   bool scanDouble_(ffi.Pointer<ffi.Double> result) {
-    return _lib._objc_msgSend_545(_id, _lib._sel_scanDouble_1, result);
+    return _lib._objc_msgSend_603(_id, _lib._sel_scanDouble_1, result);
   }
 
   bool scanHexInt_(ffi.Pointer<ffi.UnsignedInt> result) {
-    return _lib._objc_msgSend_546(_id, _lib._sel_scanHexInt_1, result);
+    return _lib._objc_msgSend_604(_id, _lib._sel_scanHexInt_1, result);
   }
 
   bool scanHexLongLong_(ffi.Pointer<ffi.UnsignedLongLong> result) {
-    return _lib._objc_msgSend_543(_id, _lib._sel_scanHexLongLong_1, result);
+    return _lib._objc_msgSend_601(_id, _lib._sel_scanHexLongLong_1, result);
   }
 
   bool scanHexFloat_(ffi.Pointer<ffi.Float> result) {
-    return _lib._objc_msgSend_544(_id, _lib._sel_scanHexFloat_1, result);
+    return _lib._objc_msgSend_602(_id, _lib._sel_scanHexFloat_1, result);
   }
 
   bool scanHexDouble_(ffi.Pointer<ffi.Double> result) {
-    return _lib._objc_msgSend_545(_id, _lib._sel_scanHexDouble_1, result);
+    return _lib._objc_msgSend_603(_id, _lib._sel_scanHexDouble_1, result);
   }
 
   bool scanString_intoString_(
       NSString? string, ffi.Pointer<ffi.Pointer<ObjCObject>> result) {
-    return _lib._objc_msgSend_547(_id, _lib._sel_scanString_intoString_1,
+    return _lib._objc_msgSend_605(_id, _lib._sel_scanString_intoString_1,
         string?._id ?? ffi.nullptr, result);
   }
 
   bool scanCharactersFromSet_intoString_(
       NSCharacterSet? set, ffi.Pointer<ffi.Pointer<ObjCObject>> result) {
-    return _lib._objc_msgSend_548(
+    return _lib._objc_msgSend_606(
         _id,
         _lib._sel_scanCharactersFromSet_intoString_1,
         set?._id ?? ffi.nullptr,
@@ -39296,13 +42866,13 @@ class NSScanner extends NSObject {
 
   bool scanUpToString_intoString_(
       NSString? string, ffi.Pointer<ffi.Pointer<ObjCObject>> result) {
-    return _lib._objc_msgSend_547(_id, _lib._sel_scanUpToString_intoString_1,
+    return _lib._objc_msgSend_605(_id, _lib._sel_scanUpToString_intoString_1,
         string?._id ?? ffi.nullptr, result);
   }
 
   bool scanUpToCharactersFromSet_intoString_(
       NSCharacterSet? set, ffi.Pointer<ffi.Pointer<ObjCObject>> result) {
-    return _lib._objc_msgSend_548(
+    return _lib._objc_msgSend_606(
         _id,
         _lib._sel_scanUpToCharactersFromSet_intoString_1,
         set?._id ?? ffi.nullptr,
@@ -39328,7 +42898,7 @@ class NSScanner extends NSObject {
   }
 
   bool scanDecimal_(ffi.Pointer<NSDecimal> dcm) {
-    return _lib._objc_msgSend_549(_id, _lib._sel_scanDecimal_1, dcm);
+    return _lib._objc_msgSend_607(_id, _lib._sel_scanDecimal_1, dcm);
   }
 
   static NSScanner new1(PedometerBindings _lib) {
@@ -39422,7 +42992,7 @@ class NSException extends NSObject {
 
   static NSException exceptionWithName_reason_userInfo_(PedometerBindings _lib,
       NSString name, NSString? reason, NSDictionary? userInfo) {
-    final _ret = _lib._objc_msgSend_550(
+    final _ret = _lib._objc_msgSend_608(
         _lib._class_NSException1,
         _lib._sel_exceptionWithName_reason_userInfo_1,
         name._id,
@@ -39433,7 +43003,7 @@ class NSException extends NSObject {
 
   NSException initWithName_reason_userInfo_(
       NSString aName, NSString? aReason, NSDictionary? aUserInfo) {
-    final _ret = _lib._objc_msgSend_551(
+    final _ret = _lib._objc_msgSend_609(
         _id,
         _lib._sel_initWithName_reason_userInfo_1,
         aName._id,
@@ -39482,13 +43052,13 @@ class NSException extends NSObject {
 
   static void raise_format_(
       PedometerBindings _lib, NSString name, NSString? format) {
-    return _lib._objc_msgSend_552(_lib._class_NSException1,
+    return _lib._objc_msgSend_610(_lib._class_NSException1,
         _lib._sel_raise_format_1, name._id, format?._id ?? ffi.nullptr);
   }
 
   static void raise_format_arguments_(PedometerBindings _lib, NSString name,
       NSString? format, ffi.Pointer<__va_list_tag> argList) {
-    return _lib._objc_msgSend_553(
+    return _lib._objc_msgSend_611(
         _lib._class_NSException1,
         _lib._sel_raise_format_arguments_1,
         name._id,
@@ -39585,7 +43155,7 @@ class NSRunLoop extends NSObject {
   }
 
   static NSRunLoop? getCurrentRunLoop(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_554(
+    final _ret = _lib._objc_msgSend_612(
         _lib._class_NSRunLoop1, _lib._sel_currentRunLoop1);
     return _ret.address == 0
         ? null
@@ -39594,7 +43164,7 @@ class NSRunLoop extends NSObject {
 
   static NSRunLoop? getMainRunLoop(PedometerBindings _lib) {
     final _ret =
-        _lib._objc_msgSend_554(_lib._class_NSRunLoop1, _lib._sel_mainRunLoop1);
+        _lib._objc_msgSend_612(_lib._class_NSRunLoop1, _lib._sel_mainRunLoop1);
     return _ret.address == 0
         ? null
         : NSRunLoop._(_ret, _lib, retain: true, release: true);
@@ -39606,32 +43176,32 @@ class NSRunLoop extends NSObject {
   }
 
   ffi.Pointer<__CFRunLoop> getCFRunLoop() {
-    return _lib._objc_msgSend_555(_id, _lib._sel_getCFRunLoop1);
+    return _lib._objc_msgSend_613(_id, _lib._sel_getCFRunLoop1);
   }
 
   void addTimer_forMode_(NSTimer? timer, NSString mode) {
-    return _lib._objc_msgSend_562(
+    return _lib._objc_msgSend_619(
         _id, _lib._sel_addTimer_forMode_1, timer?._id ?? ffi.nullptr, mode._id);
   }
 
   void addPort_forMode_(NSPort? aPort, NSString mode) {
-    return _lib._objc_msgSend_567(
+    return _lib._objc_msgSend_624(
         _id, _lib._sel_addPort_forMode_1, aPort?._id ?? ffi.nullptr, mode._id);
   }
 
   void removePort_forMode_(NSPort? aPort, NSString mode) {
-    return _lib._objc_msgSend_567(_id, _lib._sel_removePort_forMode_1,
+    return _lib._objc_msgSend_624(_id, _lib._sel_removePort_forMode_1,
         aPort?._id ?? ffi.nullptr, mode._id);
   }
 
   NSDate limitDateForMode_(NSString mode) {
     final _ret =
-        _lib._objc_msgSend_568(_id, _lib._sel_limitDateForMode_1, mode._id);
+        _lib._objc_msgSend_547(_id, _lib._sel_limitDateForMode_1, mode._id);
     return NSDate._(_ret, _lib, retain: true, release: true);
   }
 
   void acceptInputForMode_beforeDate_(NSString mode, NSDate? limitDate) {
-    return _lib._objc_msgSend_569(
+    return _lib._objc_msgSend_625(
         _id,
         _lib._sel_acceptInputForMode_beforeDate_1,
         mode._id,
@@ -39648,7 +43218,7 @@ class NSRunLoop extends NSObject {
   }
 
   bool runMode_beforeDate_(NSString mode, NSDate? limitDate) {
-    return _lib._objc_msgSend_570(_id, _lib._sel_runMode_beforeDate_1, mode._id,
+    return _lib._objc_msgSend_626(_id, _lib._sel_runMode_beforeDate_1, mode._id,
         limitDate?._id ?? ffi.nullptr);
   }
 
@@ -39656,7 +43226,7 @@ class NSRunLoop extends NSObject {
   /// - parameter: modes   An array of input modes for which the block may be executed.
   /// - parameter: block   The block to execute
   void performInModes_block_(NSArray? modes, ObjCBlock21 block) {
-    return _lib._objc_msgSend_571(_id, _lib._sel_performInModes_block_1,
+    return _lib._objc_msgSend_627(_id, _lib._sel_performInModes_block_1,
         modes?._id ?? ffi.nullptr, block._id);
   }
 
@@ -39672,7 +43242,7 @@ class NSRunLoop extends NSObject {
       NSObject arg,
       int order,
       NSArray? modes) {
-    return _lib._objc_msgSend_572(
+    return _lib._objc_msgSend_628(
         _id,
         _lib._sel_performSelector_target_argument_order_modes_1,
         aSelector,
@@ -39791,7 +43361,7 @@ class NSTimer extends NSObject {
       double ti,
       NSInvocation? invocation,
       bool yesOrNo) {
-    final _ret = _lib._objc_msgSend_556(
+    final _ret = _lib._objc_msgSend_614(
         _lib._class_NSTimer1,
         _lib._sel_timerWithTimeInterval_invocation_repeats_1,
         ti,
@@ -39805,7 +43375,7 @@ class NSTimer extends NSObject {
       double ti,
       NSInvocation? invocation,
       bool yesOrNo) {
-    final _ret = _lib._objc_msgSend_556(
+    final _ret = _lib._objc_msgSend_614(
         _lib._class_NSTimer1,
         _lib._sel_scheduledTimerWithTimeInterval_invocation_repeats_1,
         ti,
@@ -39821,7 +43391,7 @@ class NSTimer extends NSObject {
       ffi.Pointer<ObjCSel> aSelector,
       NSObject userInfo,
       bool yesOrNo) {
-    final _ret = _lib._objc_msgSend_557(
+    final _ret = _lib._objc_msgSend_615(
         _lib._class_NSTimer1,
         _lib._sel_timerWithTimeInterval_target_selector_userInfo_repeats_1,
         ti,
@@ -39840,7 +43410,7 @@ class NSTimer extends NSObject {
           ffi.Pointer<ObjCSel> aSelector,
           NSObject userInfo,
           bool yesOrNo) {
-    final _ret = _lib._objc_msgSend_557(
+    final _ret = _lib._objc_msgSend_615(
         _lib._class_NSTimer1,
         _lib._sel_scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_1,
         ti,
@@ -39856,8 +43426,8 @@ class NSTimer extends NSObject {
   /// - parameter:  repeats  If YES, the timer will repeatedly reschedule itself until invalidated. If NO, the timer will be invalidated after it fires.
   /// - parameter:  block  The execution body of the timer; the timer itself is passed as the parameter to this block when executed to aid in avoiding cyclical references
   static NSTimer timerWithTimeInterval_repeats_block_(PedometerBindings _lib,
-      double interval, bool repeats, ObjCBlock33 block) {
-    final _ret = _lib._objc_msgSend_558(
+      double interval, bool repeats, ObjCBlock34 block) {
+    final _ret = _lib._objc_msgSend_616(
         _lib._class_NSTimer1,
         _lib._sel_timerWithTimeInterval_repeats_block_1,
         interval,
@@ -39874,8 +43444,8 @@ class NSTimer extends NSObject {
       PedometerBindings _lib,
       double interval,
       bool repeats,
-      ObjCBlock33 block) {
-    final _ret = _lib._objc_msgSend_558(
+      ObjCBlock34 block) {
+    final _ret = _lib._objc_msgSend_616(
         _lib._class_NSTimer1,
         _lib._sel_scheduledTimerWithTimeInterval_repeats_block_1,
         interval,
@@ -39890,8 +43460,8 @@ class NSTimer extends NSObject {
   /// - parameter:  repeats  If YES, the timer will repeatedly reschedule itself until invalidated. If NO, the timer will be invalidated after it fires.
   /// - parameter:  block  The execution body of the timer; the timer itself is passed as the parameter to this block when executed to aid in avoiding cyclical references
   NSTimer initWithFireDate_interval_repeats_block_(
-      NSDate? date, double interval, bool repeats, ObjCBlock33 block) {
-    final _ret = _lib._objc_msgSend_559(
+      NSDate? date, double interval, bool repeats, ObjCBlock34 block) {
+    final _ret = _lib._objc_msgSend_617(
         _id,
         _lib._sel_initWithFireDate_interval_repeats_block_1,
         date?._id ?? ffi.nullptr,
@@ -39908,7 +43478,7 @@ class NSTimer extends NSObject {
       ffi.Pointer<ObjCSel> s,
       NSObject ui,
       bool rep) {
-    final _ret = _lib._objc_msgSend_560(
+    final _ret = _lib._objc_msgSend_618(
         _id,
         _lib._sel_initWithFireDate_interval_target_selector_userInfo_repeats_1,
         date?._id ?? ffi.nullptr,
@@ -39932,7 +43502,7 @@ class NSTimer extends NSObject {
   }
 
   set fireDate(NSDate? value) {
-    _lib._objc_msgSend_561(
+    _lib._objc_msgSend_595(
         _id, _lib._sel_setFireDate_1, value?._id ?? ffi.nullptr);
   }
 
@@ -40025,7 +43595,7 @@ class NSTimer extends NSObject {
   }
 }
 
-void _ObjCBlock33_fnPtrTrampoline(
+void _ObjCBlock34_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
   return block.ref.target
       .cast<
@@ -40033,25 +43603,25 @@ void _ObjCBlock33_fnPtrTrampoline(
       .asFunction<void Function(ffi.Pointer<ObjCObject> arg0)>()(arg0);
 }
 
-final _ObjCBlock33_closureRegistry = <int, Function>{};
-int _ObjCBlock33_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock33_registerClosure(Function fn) {
-  final id = ++_ObjCBlock33_closureRegistryIndex;
-  _ObjCBlock33_closureRegistry[id] = fn;
+final _ObjCBlock34_closureRegistry = <int, Function>{};
+int _ObjCBlock34_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock34_registerClosure(Function fn) {
+  final id = ++_ObjCBlock34_closureRegistryIndex;
+  _ObjCBlock34_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock33_closureTrampoline(
+void _ObjCBlock34_closureTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
-  return _ObjCBlock33_closureRegistry[block.ref.target.address]!(arg0);
+  return _ObjCBlock34_closureRegistry[block.ref.target.address]!(arg0);
 }
 
-class ObjCBlock33 extends _ObjCBlockBase {
-  ObjCBlock33._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock34 extends _ObjCBlockBase {
+  ObjCBlock34._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock33.fromFunctionPointer(
+  ObjCBlock34.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -40062,23 +43632,23 @@ class ObjCBlock33 extends _ObjCBlockBase {
                 _cFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock33_fnPtrTrampoline)
+                        _ObjCBlock34_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock33.fromFunction(
+  ObjCBlock34.fromFunction(
       PedometerBindings lib, void Function(ffi.Pointer<ObjCObject> arg0) fn)
       : this._(
             lib._newBlock1(
                 _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock33_closureTrampoline)
+                        _ObjCBlock34_closureTrampoline)
                     .cast(),
-                _ObjCBlock33_registerClosure(fn)),
+                _ObjCBlock34_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0) {
@@ -40119,7 +43689,7 @@ class NSPort extends NSObject {
   }
 
   static NSPort port(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_563(_lib._class_NSPort1, _lib._sel_port1);
+    final _ret = _lib._objc_msgSend_620(_lib._class_NSPort1, _lib._sel_port1);
     return NSPort._(_ret, _lib, retain: true, release: true);
   }
 
@@ -40142,12 +43712,12 @@ class NSPort extends NSObject {
   }
 
   void scheduleInRunLoop_forMode_(NSRunLoop? runLoop, NSString mode) {
-    return _lib._objc_msgSend_564(_id, _lib._sel_scheduleInRunLoop_forMode_1,
+    return _lib._objc_msgSend_621(_id, _lib._sel_scheduleInRunLoop_forMode_1,
         runLoop?._id ?? ffi.nullptr, mode._id);
   }
 
   void removeFromRunLoop_forMode_(NSRunLoop? runLoop, NSString mode) {
-    return _lib._objc_msgSend_564(_id, _lib._sel_removeFromRunLoop_forMode_1,
+    return _lib._objc_msgSend_621(_id, _lib._sel_removeFromRunLoop_forMode_1,
         runLoop?._id ?? ffi.nullptr, mode._id);
   }
 
@@ -40160,7 +43730,7 @@ class NSPort extends NSObject {
       NSMutableArray? components,
       NSPort? receivePort,
       int headerSpaceReserved) {
-    return _lib._objc_msgSend_565(
+    return _lib._objc_msgSend_622(
         _id,
         _lib._sel_sendBeforeDate_components_from_reserved_1,
         limitDate?._id ?? ffi.nullptr,
@@ -40175,7 +43745,7 @@ class NSPort extends NSObject {
       NSMutableArray? components,
       NSPort? receivePort,
       int headerSpaceReserved) {
-    return _lib._objc_msgSend_566(
+    return _lib._objc_msgSend_623(
         _id,
         _lib._sel_sendBeforeDate_msgid_components_from_reserved_1,
         limitDate?._id ?? ffi.nullptr,
@@ -40280,7 +43850,7 @@ class NSFileHandle extends NSObject {
   }
 
   NSFileHandle initWithFileDescriptor_closeOnDealloc_(int fd, bool closeopt) {
-    final _ret = _lib._objc_msgSend_573(
+    final _ret = _lib._objc_msgSend_629(
         _id, _lib._sel_initWithFileDescriptor_closeOnDealloc_1, fd, closeopt);
     return NSFileHandle._(_ret, _lib, retain: true, release: true);
   }
@@ -40293,46 +43863,46 @@ class NSFileHandle extends NSObject {
 
   NSData readDataToEndOfFileAndReturnError_(
       ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_574(
+    final _ret = _lib._objc_msgSend_630(
         _id, _lib._sel_readDataToEndOfFileAndReturnError_1, error);
     return NSData._(_ret, _lib, retain: true, release: true);
   }
 
   NSData readDataUpToLength_error_(
       int length, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_575(
+    final _ret = _lib._objc_msgSend_631(
         _id, _lib._sel_readDataUpToLength_error_1, length, error);
     return NSData._(_ret, _lib, retain: true, release: true);
   }
 
   bool writeData_error_(
       NSData? data, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    return _lib._objc_msgSend_576(
+    return _lib._objc_msgSend_632(
         _id, _lib._sel_writeData_error_1, data?._id ?? ffi.nullptr, error);
   }
 
   bool getOffset_error_(ffi.Pointer<ffi.UnsignedLongLong> offsetInFile,
       ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    return _lib._objc_msgSend_577(
+    return _lib._objc_msgSend_633(
         _id, _lib._sel_getOffset_error_1, offsetInFile, error);
   }
 
   bool seekToEndReturningOffset_error_(
       ffi.Pointer<ffi.UnsignedLongLong> offsetInFile,
       ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    return _lib._objc_msgSend_577(
+    return _lib._objc_msgSend_633(
         _id, _lib._sel_seekToEndReturningOffset_error_1, offsetInFile, error);
   }
 
   bool seekToOffset_error_(
       int offset, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    return _lib._objc_msgSend_578(
+    return _lib._objc_msgSend_634(
         _id, _lib._sel_seekToOffset_error_1, offset, error);
   }
 
   bool truncateAtOffset_error_(
       int offset, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    return _lib._objc_msgSend_578(
+    return _lib._objc_msgSend_634(
         _id, _lib._sel_truncateAtOffset_error_1, offset, error);
   }
 
@@ -40346,7 +43916,7 @@ class NSFileHandle extends NSObject {
   }
 
   static NSFileHandle? getFileHandleWithStandardInput(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_579(
+    final _ret = _lib._objc_msgSend_635(
         _lib._class_NSFileHandle1, _lib._sel_fileHandleWithStandardInput1);
     return _ret.address == 0
         ? null
@@ -40354,7 +43924,7 @@ class NSFileHandle extends NSObject {
   }
 
   static NSFileHandle? getFileHandleWithStandardOutput(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_579(
+    final _ret = _lib._objc_msgSend_635(
         _lib._class_NSFileHandle1, _lib._sel_fileHandleWithStandardOutput1);
     return _ret.address == 0
         ? null
@@ -40362,7 +43932,7 @@ class NSFileHandle extends NSObject {
   }
 
   static NSFileHandle? getFileHandleWithStandardError(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_579(
+    final _ret = _lib._objc_msgSend_635(
         _lib._class_NSFileHandle1, _lib._sel_fileHandleWithStandardError1);
     return _ret.address == 0
         ? null
@@ -40370,7 +43940,7 @@ class NSFileHandle extends NSObject {
   }
 
   static NSFileHandle? getFileHandleWithNullDevice(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_579(
+    final _ret = _lib._objc_msgSend_635(
         _lib._class_NSFileHandle1, _lib._sel_fileHandleWithNullDevice1);
     return _ret.address == 0
         ? null
@@ -40400,7 +43970,7 @@ class NSFileHandle extends NSObject {
 
   static NSFileHandle fileHandleForReadingFromURL_error_(PedometerBindings _lib,
       NSURL? url, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_580(
+    final _ret = _lib._objc_msgSend_636(
         _lib._class_NSFileHandle1,
         _lib._sel_fileHandleForReadingFromURL_error_1,
         url?._id ?? ffi.nullptr,
@@ -40410,7 +43980,7 @@ class NSFileHandle extends NSObject {
 
   static NSFileHandle fileHandleForWritingToURL_error_(PedometerBindings _lib,
       NSURL? url, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_580(
+    final _ret = _lib._objc_msgSend_636(
         _lib._class_NSFileHandle1,
         _lib._sel_fileHandleForWritingToURL_error_1,
         url?._id ?? ffi.nullptr,
@@ -40420,7 +43990,7 @@ class NSFileHandle extends NSObject {
 
   static NSFileHandle fileHandleForUpdatingURL_error_(PedometerBindings _lib,
       NSURL? url, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_580(
+    final _ret = _lib._objc_msgSend_636(
         _lib._class_NSFileHandle1,
         _lib._sel_fileHandleForUpdatingURL_error_1,
         url?._id ?? ffi.nullptr,
@@ -40475,27 +44045,27 @@ class NSFileHandle extends NSObject {
         _id, _lib._sel_waitForDataInBackgroundAndNotify1);
   }
 
-  ObjCBlock34 get readabilityHandler {
-    final _ret = _lib._objc_msgSend_581(_id, _lib._sel_readabilityHandler1);
-    return ObjCBlock34._(_ret, _lib);
+  ObjCBlock35 get readabilityHandler {
+    final _ret = _lib._objc_msgSend_637(_id, _lib._sel_readabilityHandler1);
+    return ObjCBlock35._(_ret, _lib);
   }
 
-  set readabilityHandler(ObjCBlock34 value) {
-    _lib._objc_msgSend_582(_id, _lib._sel_setReadabilityHandler_1, value._id);
+  set readabilityHandler(ObjCBlock35 value) {
+    _lib._objc_msgSend_638(_id, _lib._sel_setReadabilityHandler_1, value._id);
   }
 
-  ObjCBlock34 get writeabilityHandler {
-    final _ret = _lib._objc_msgSend_581(_id, _lib._sel_writeabilityHandler1);
-    return ObjCBlock34._(_ret, _lib);
+  ObjCBlock35 get writeabilityHandler {
+    final _ret = _lib._objc_msgSend_637(_id, _lib._sel_writeabilityHandler1);
+    return ObjCBlock35._(_ret, _lib);
   }
 
-  set writeabilityHandler(ObjCBlock34 value) {
-    _lib._objc_msgSend_582(_id, _lib._sel_setWriteabilityHandler_1, value._id);
+  set writeabilityHandler(ObjCBlock35 value) {
+    _lib._objc_msgSend_638(_id, _lib._sel_setWriteabilityHandler_1, value._id);
   }
 
   NSFileHandle initWithFileDescriptor_(int fd) {
     final _ret =
-        _lib._objc_msgSend_583(_id, _lib._sel_initWithFileDescriptor_1, fd);
+        _lib._objc_msgSend_639(_id, _lib._sel_initWithFileDescriptor_1, fd);
     return NSFileHandle._(_ret, _lib, retain: true, release: true);
   }
 
@@ -40528,11 +44098,11 @@ class NSFileHandle extends NSObject {
   }
 
   void seekToFileOffset_(int offset) {
-    return _lib._objc_msgSend_584(_id, _lib._sel_seekToFileOffset_1, offset);
+    return _lib._objc_msgSend_640(_id, _lib._sel_seekToFileOffset_1, offset);
   }
 
   void truncateFileAtOffset_(int offset) {
-    return _lib._objc_msgSend_584(
+    return _lib._objc_msgSend_640(
         _id, _lib._sel_truncateFileAtOffset_1, offset);
   }
 
@@ -40610,7 +44180,7 @@ class NSFileHandle extends NSObject {
   }
 }
 
-void _ObjCBlock34_fnPtrTrampoline(
+void _ObjCBlock35_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
   return block.ref.target
       .cast<
@@ -40618,25 +44188,25 @@ void _ObjCBlock34_fnPtrTrampoline(
       .asFunction<void Function(ffi.Pointer<ObjCObject> arg0)>()(arg0);
 }
 
-final _ObjCBlock34_closureRegistry = <int, Function>{};
-int _ObjCBlock34_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock34_registerClosure(Function fn) {
-  final id = ++_ObjCBlock34_closureRegistryIndex;
-  _ObjCBlock34_closureRegistry[id] = fn;
+final _ObjCBlock35_closureRegistry = <int, Function>{};
+int _ObjCBlock35_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock35_registerClosure(Function fn) {
+  final id = ++_ObjCBlock35_closureRegistryIndex;
+  _ObjCBlock35_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock34_closureTrampoline(
+void _ObjCBlock35_closureTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
-  return _ObjCBlock34_closureRegistry[block.ref.target.address]!(arg0);
+  return _ObjCBlock35_closureRegistry[block.ref.target.address]!(arg0);
 }
 
-class ObjCBlock34 extends _ObjCBlockBase {
-  ObjCBlock34._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock35 extends _ObjCBlockBase {
+  ObjCBlock35._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock34.fromFunctionPointer(
+  ObjCBlock35.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -40647,23 +44217,23 @@ class ObjCBlock34 extends _ObjCBlockBase {
                 _cFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock34_fnPtrTrampoline)
+                        _ObjCBlock35_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock34.fromFunction(
+  ObjCBlock35.fromFunction(
       PedometerBindings lib, void Function(ffi.Pointer<ObjCObject> arg0) fn)
       : this._(
             lib._newBlock1(
                 _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock34_closureTrampoline)
+                        _ObjCBlock35_closureTrampoline)
                     .cast(),
-                _ObjCBlock34_registerClosure(fn)),
+                _ObjCBlock35_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0) {
@@ -40719,7 +44289,7 @@ class NSHTTPCookieStorage extends NSObject {
   /// which will not be shared with other applications.
   static NSHTTPCookieStorage? getSharedHTTPCookieStorage(
       PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_585(
+    final _ret = _lib._objc_msgSend_641(
         _lib._class_NSHTTPCookieStorage1, _lib._sel_sharedHTTPCookieStorage1);
     return _ret.address == 0
         ? null
@@ -40738,7 +44308,7 @@ class NSHTTPCookieStorage extends NSObject {
   /// method with the same identifier will return the same cookie storage instance.
   static NSHTTPCookieStorage sharedCookieStorageForGroupContainerIdentifier_(
       PedometerBindings _lib, NSString? identifier) {
-    final _ret = _lib._objc_msgSend_586(
+    final _ret = _lib._objc_msgSend_642(
         _lib._class_NSHTTPCookieStorage1,
         _lib._sel_sharedCookieStorageForGroupContainerIdentifier_1,
         identifier?._id ?? ffi.nullptr);
@@ -40761,7 +44331,7 @@ class NSHTTPCookieStorage extends NSObject {
   /// @discussion The cookie will override an existing cookie with the
   /// same name, domain and path, if any.
   void setCookie_(NSHTTPCookie? cookie) {
-    return _lib._objc_msgSend_589(
+    return _lib._objc_msgSend_645(
         _id, _lib._sel_setCookie_1, cookie?._id ?? ffi.nullptr);
   }
 
@@ -40769,7 +44339,7 @@ class NSHTTPCookieStorage extends NSObject {
   /// @method deleteCookie:
   /// @abstract Delete the specified cookie
   void deleteCookie_(NSHTTPCookie? cookie) {
-    return _lib._objc_msgSend_589(
+    return _lib._objc_msgSend_645(
         _id, _lib._sel_deleteCookie_1, cookie?._id ?? ffi.nullptr);
   }
 
@@ -40814,7 +44384,7 @@ class NSHTTPCookieStorage extends NSObject {
   /// in accordance with policy settings.
   void setCookies_forURL_mainDocumentURL_(
       NSArray? cookies, NSURL? URL, NSURL? mainDocumentURL) {
-    return _lib._objc_msgSend_590(
+    return _lib._objc_msgSend_646(
         _id,
         _lib._sel_setCookies_forURL_mainDocumentURL_1,
         cookies?._id ?? ffi.nullptr,
@@ -40826,14 +44396,14 @@ class NSHTTPCookieStorage extends NSObject {
   /// @abstract The cookie accept policy preference of the
   /// receiver.
   int get cookieAcceptPolicy {
-    return _lib._objc_msgSend_591(_id, _lib._sel_cookieAcceptPolicy1);
+    return _lib._objc_msgSend_647(_id, _lib._sel_cookieAcceptPolicy1);
   }
 
   /// !
   /// @abstract The cookie accept policy preference of the
   /// receiver.
   set cookieAcceptPolicy(int value) {
-    _lib._objc_msgSend_592(_id, _lib._sel_setCookieAcceptPolicy_1, value);
+    _lib._objc_msgSend_648(_id, _lib._sel_setCookieAcceptPolicy_1, value);
   }
 
   /// !
@@ -40850,13 +44420,13 @@ class NSHTTPCookieStorage extends NSObject {
   }
 
   void storeCookies_forTask_(NSArray? cookies, NSURLSessionTask? task) {
-    return _lib._objc_msgSend_610(_id, _lib._sel_storeCookies_forTask_1,
+    return _lib._objc_msgSend_666(_id, _lib._sel_storeCookies_forTask_1,
         cookies?._id ?? ffi.nullptr, task?._id ?? ffi.nullptr);
   }
 
   void getCookiesForTask_completionHandler_(
-      NSURLSessionTask? task, ObjCBlock35 completionHandler) {
-    return _lib._objc_msgSend_611(
+      NSURLSessionTask? task, ObjCBlock36 completionHandler) {
+    return _lib._objc_msgSend_667(
         _id,
         _lib._sel_getCookiesForTask_completionHandler_1,
         task?._id ?? ffi.nullptr,
@@ -41101,7 +44671,7 @@ class NSHTTPCookie extends NSObject {
   /// value.
   static NSHTTPCookie cookieWithProperties_(
       PedometerBindings _lib, NSDictionary? properties) {
-    final _ret = _lib._objc_msgSend_587(_lib._class_NSHTTPCookie1,
+    final _ret = _lib._objc_msgSend_643(_lib._class_NSHTTPCookie1,
         _lib._sel_cookieWithProperties_1, properties?._id ?? ffi.nullptr);
     return NSHTTPCookie._(_ret, _lib, retain: true, release: true);
   }
@@ -41132,7 +44702,7 @@ class NSHTTPCookie extends NSObject {
   /// you can pass a dictionary containing data other than cookie data.
   static NSArray cookiesWithResponseHeaderFields_forURL_(
       PedometerBindings _lib, NSDictionary? headerFields, NSURL? URL) {
-    final _ret = _lib._objc_msgSend_588(
+    final _ret = _lib._objc_msgSend_644(
         _lib._class_NSHTTPCookie1,
         _lib._sel_cookiesWithResponseHeaderFields_forURL_1,
         headerFields?._id ?? ffi.nullptr,
@@ -41429,21 +44999,21 @@ class NSURLSessionTask extends NSObject {
   }
 
   NSURLRequest? get originalRequest {
-    final _ret = _lib._objc_msgSend_605(_id, _lib._sel_originalRequest1);
+    final _ret = _lib._objc_msgSend_661(_id, _lib._sel_originalRequest1);
     return _ret.address == 0
         ? null
         : NSURLRequest._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLRequest? get currentRequest {
-    final _ret = _lib._objc_msgSend_605(_id, _lib._sel_currentRequest1);
+    final _ret = _lib._objc_msgSend_661(_id, _lib._sel_currentRequest1);
     return _ret.address == 0
         ? null
         : NSURLRequest._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLResponse? get response {
-    final _ret = _lib._objc_msgSend_607(_id, _lib._sel_response1);
+    final _ret = _lib._objc_msgSend_663(_id, _lib._sel_response1);
     return _ret.address == 0
         ? null
         : NSURLResponse._(_ret, _lib, retain: true, release: true);
@@ -41476,7 +45046,7 @@ class NSURLSessionTask extends NSObject {
   }
 
   set earliestBeginDate(NSDate? value) {
-    _lib._objc_msgSend_561(
+    _lib._objc_msgSend_595(
         _id, _lib._sel_setEarliestBeginDate_1, value?._id ?? ffi.nullptr);
   }
 
@@ -41534,7 +45104,7 @@ class NSURLSessionTask extends NSObject {
   }
 
   int get state {
-    return _lib._objc_msgSend_608(_id, _lib._sel_state1);
+    return _lib._objc_msgSend_664(_id, _lib._sel_state1);
   }
 
   NSError? get error {
@@ -41557,7 +45127,7 @@ class NSURLSessionTask extends NSObject {
   }
 
   set priority(double value) {
-    _lib._objc_msgSend_609(_id, _lib._sel_setPriority_1, value);
+    _lib._objc_msgSend_665(_id, _lib._sel_setPriority_1, value);
   }
 
   bool get prefersIncrementalDelivery {
@@ -41733,7 +45303,7 @@ class NSURLRequest extends NSObject {
       NSURL? URL,
       int cachePolicy,
       double timeoutInterval) {
-    final _ret = _lib._objc_msgSend_593(
+    final _ret = _lib._objc_msgSend_649(
         _lib._class_NSURLRequest1,
         _lib._sel_requestWithURL_cachePolicy_timeoutInterval_1,
         URL?._id ?? ffi.nullptr,
@@ -41770,7 +45340,7 @@ class NSURLRequest extends NSObject {
   /// @result An initialized NSURLRequest.
   NSURLRequest initWithURL_cachePolicy_timeoutInterval_(
       NSURL? URL, int cachePolicy, double timeoutInterval) {
-    final _ret = _lib._objc_msgSend_593(
+    final _ret = _lib._objc_msgSend_649(
         _id,
         _lib._sel_initWithURL_cachePolicy_timeoutInterval_1,
         URL?._id ?? ffi.nullptr,
@@ -41793,7 +45363,7 @@ class NSURLRequest extends NSObject {
   /// @abstract Returns the cache policy of the receiver.
   /// @result The cache policy of the receiver.
   int get cachePolicy {
-    return _lib._objc_msgSend_594(_id, _lib._sel_cachePolicy1);
+    return _lib._objc_msgSend_650(_id, _lib._sel_cachePolicy1);
   }
 
   /// !
@@ -41833,7 +45403,7 @@ class NSURLRequest extends NSObject {
   /// not explicitly set a networkServiceType (using the setNetworkServiceType method).
   /// @result The NSURLRequestNetworkServiceType associated with this request.
   int get networkServiceType {
-    return _lib._objc_msgSend_595(_id, _lib._sel_networkServiceType1);
+    return _lib._objc_msgSend_651(_id, _lib._sel_networkServiceType1);
   }
 
   /// !
@@ -41879,7 +45449,7 @@ class NSURLRequest extends NSObject {
   /// have not explicitly set an attribution.
   /// @result The NSURLRequestAttribution associated with this request.
   int get attribution {
-    return _lib._objc_msgSend_596(_id, _lib._sel_attribution1);
+    return _lib._objc_msgSend_652(_id, _lib._sel_attribution1);
   }
 
   /// !
@@ -41942,7 +45512,7 @@ class NSURLRequest extends NSObject {
   /// NSCoding protocol
   /// @result The request body stream of the receiver.
   NSInputStream? get HTTPBodyStream {
-    final _ret = _lib._objc_msgSend_604(_id, _lib._sel_HTTPBodyStream1);
+    final _ret = _lib._objc_msgSend_660(_id, _lib._sel_HTTPBodyStream1);
     return _ret.address == 0
         ? null
         : NSInputStream._(_ret, _lib, retain: true, release: true);
@@ -42171,12 +45741,12 @@ class NSInputStream extends NSStream {
   }
 
   int read_maxLength_(ffi.Pointer<ffi.Uint8> buffer, int len) {
-    return _lib._objc_msgSend_598(_id, _lib._sel_read_maxLength_1, buffer, len);
+    return _lib._objc_msgSend_654(_id, _lib._sel_read_maxLength_1, buffer, len);
   }
 
   bool getBuffer_length_(ffi.Pointer<ffi.Pointer<ffi.Uint8>> buffer,
       ffi.Pointer<ffi.UnsignedLong> len) {
-    return _lib._objc_msgSend_603(
+    return _lib._objc_msgSend_659(
         _id, _lib._sel_getBuffer_length_1, buffer, len);
   }
 
@@ -42228,7 +45798,7 @@ class NSInputStream extends NSStream {
       int port,
       ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
       ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream) {
-    return _lib._objc_msgSend_601(
+    return _lib._objc_msgSend_657(
         _lib._class_NSInputStream1,
         _lib._sel_getStreamsToHostWithName_port_inputStream_outputStream_1,
         hostname?._id ?? ffi.nullptr,
@@ -42242,7 +45812,7 @@ class NSInputStream extends NSStream {
       int bufferSize,
       ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
       ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream) {
-    return _lib._objc_msgSend_602(
+    return _lib._objc_msgSend_658(
         _lib._class_NSInputStream1,
         _lib._sel_getBoundStreamsWithBufferSize_inputStream_outputStream_1,
         bufferSize,
@@ -42371,17 +45941,17 @@ class NSStream extends NSObject {
   }
 
   void scheduleInRunLoop_forMode_(NSRunLoop? aRunLoop, NSString mode) {
-    return _lib._objc_msgSend_564(_id, _lib._sel_scheduleInRunLoop_forMode_1,
+    return _lib._objc_msgSend_621(_id, _lib._sel_scheduleInRunLoop_forMode_1,
         aRunLoop?._id ?? ffi.nullptr, mode._id);
   }
 
   void removeFromRunLoop_forMode_(NSRunLoop? aRunLoop, NSString mode) {
-    return _lib._objc_msgSend_564(_id, _lib._sel_removeFromRunLoop_forMode_1,
+    return _lib._objc_msgSend_621(_id, _lib._sel_removeFromRunLoop_forMode_1,
         aRunLoop?._id ?? ffi.nullptr, mode._id);
   }
 
   int get streamStatus {
-    return _lib._objc_msgSend_597(_id, _lib._sel_streamStatus1);
+    return _lib._objc_msgSend_653(_id, _lib._sel_streamStatus1);
   }
 
   NSError? get streamError {
@@ -42397,7 +45967,7 @@ class NSStream extends NSObject {
       int port,
       ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
       ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream) {
-    return _lib._objc_msgSend_601(
+    return _lib._objc_msgSend_657(
         _lib._class_NSStream1,
         _lib._sel_getStreamsToHostWithName_port_inputStream_outputStream_1,
         hostname?._id ?? ffi.nullptr,
@@ -42411,7 +45981,7 @@ class NSStream extends NSObject {
       int bufferSize,
       ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
       ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream) {
-    return _lib._objc_msgSend_602(
+    return _lib._objc_msgSend_658(
         _lib._class_NSStream1,
         _lib._sel_getBoundStreamsWithBufferSize_inputStream_outputStream_1,
         bufferSize,
@@ -42518,7 +46088,7 @@ class NSOutputStream extends NSStream {
   }
 
   int write_maxLength_(ffi.Pointer<ffi.Uint8> buffer, int len) {
-    return _lib._objc_msgSend_598(
+    return _lib._objc_msgSend_654(
         _id, _lib._sel_write_maxLength_1, buffer, len);
   }
 
@@ -42533,13 +46103,13 @@ class NSOutputStream extends NSStream {
 
   NSOutputStream initToBuffer_capacity_(
       ffi.Pointer<ffi.Uint8> buffer, int capacity) {
-    final _ret = _lib._objc_msgSend_599(
+    final _ret = _lib._objc_msgSend_655(
         _id, _lib._sel_initToBuffer_capacity_1, buffer, capacity);
     return NSOutputStream._(_ret, _lib, retain: true, release: true);
   }
 
   NSOutputStream initWithURL_append_(NSURL? url, bool shouldAppend) {
-    final _ret = _lib._objc_msgSend_600(_id, _lib._sel_initWithURL_append_1,
+    final _ret = _lib._objc_msgSend_656(_id, _lib._sel_initWithURL_append_1,
         url?._id ?? ffi.nullptr, shouldAppend);
     return NSOutputStream._(_ret, _lib, retain: true, release: true);
   }
@@ -42558,7 +46128,7 @@ class NSOutputStream extends NSStream {
 
   static NSOutputStream outputStreamToBuffer_capacity_(
       PedometerBindings _lib, ffi.Pointer<ffi.Uint8> buffer, int capacity) {
-    final _ret = _lib._objc_msgSend_599(_lib._class_NSOutputStream1,
+    final _ret = _lib._objc_msgSend_655(_lib._class_NSOutputStream1,
         _lib._sel_outputStreamToBuffer_capacity_1, buffer, capacity);
     return NSOutputStream._(_ret, _lib, retain: true, release: true);
   }
@@ -42575,7 +46145,7 @@ class NSOutputStream extends NSStream {
 
   static NSOutputStream outputStreamWithURL_append_(
       PedometerBindings _lib, NSURL? url, bool shouldAppend) {
-    final _ret = _lib._objc_msgSend_600(
+    final _ret = _lib._objc_msgSend_656(
         _lib._class_NSOutputStream1,
         _lib._sel_outputStreamWithURL_append_1,
         url?._id ?? ffi.nullptr,
@@ -42589,7 +46159,7 @@ class NSOutputStream extends NSStream {
       int port,
       ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
       ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream) {
-    return _lib._objc_msgSend_601(
+    return _lib._objc_msgSend_657(
         _lib._class_NSOutputStream1,
         _lib._sel_getStreamsToHostWithName_port_inputStream_outputStream_1,
         hostname?._id ?? ffi.nullptr,
@@ -42603,7 +46173,7 @@ class NSOutputStream extends NSStream {
       int bufferSize,
       ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
       ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream) {
-    return _lib._objc_msgSend_602(
+    return _lib._objc_msgSend_658(
         _lib._class_NSOutputStream1,
         _lib._sel_getBoundStreamsWithBufferSize_inputStream_outputStream_1,
         bufferSize,
@@ -42722,7 +46292,7 @@ class NSURLResponse extends NSObject {
   /// @discussion This is the designated initializer for NSURLResponse.
   NSURLResponse initWithURL_MIMEType_expectedContentLength_textEncodingName_(
       NSURL? URL, NSString? MIMEType, int length, NSString? name) {
-    final _ret = _lib._objc_msgSend_606(
+    final _ret = _lib._objc_msgSend_662(
         _id,
         _lib._sel_initWithURL_MIMEType_expectedContentLength_textEncodingName_1,
         URL?._id ?? ffi.nullptr,
@@ -42879,7 +46449,7 @@ abstract class NSURLSessionTaskState {
   static const int NSURLSessionTaskStateCompleted = 3;
 }
 
-void _ObjCBlock35_fnPtrTrampoline(
+void _ObjCBlock36_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
   return block.ref.target
       .cast<
@@ -42887,25 +46457,25 @@ void _ObjCBlock35_fnPtrTrampoline(
       .asFunction<void Function(ffi.Pointer<ObjCObject> arg0)>()(arg0);
 }
 
-final _ObjCBlock35_closureRegistry = <int, Function>{};
-int _ObjCBlock35_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock35_registerClosure(Function fn) {
-  final id = ++_ObjCBlock35_closureRegistryIndex;
-  _ObjCBlock35_closureRegistry[id] = fn;
+final _ObjCBlock36_closureRegistry = <int, Function>{};
+int _ObjCBlock36_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock36_registerClosure(Function fn) {
+  final id = ++_ObjCBlock36_closureRegistryIndex;
+  _ObjCBlock36_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock35_closureTrampoline(
+void _ObjCBlock36_closureTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
-  return _ObjCBlock35_closureRegistry[block.ref.target.address]!(arg0);
+  return _ObjCBlock36_closureRegistry[block.ref.target.address]!(arg0);
 }
 
-class ObjCBlock35 extends _ObjCBlockBase {
-  ObjCBlock35._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock36 extends _ObjCBlockBase {
+  ObjCBlock36._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock35.fromFunctionPointer(
+  ObjCBlock36.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -42916,23 +46486,23 @@ class ObjCBlock35 extends _ObjCBlockBase {
                 _cFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock35_fnPtrTrampoline)
+                        _ObjCBlock36_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock35.fromFunction(
+  ObjCBlock36.fromFunction(
       PedometerBindings lib, void Function(ffi.Pointer<ObjCObject> arg0) fn)
       : this._(
             lib._newBlock1(
                 _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock35_closureTrampoline)
+                        _ObjCBlock36_closureTrampoline)
                     .cast(),
-                _ObjCBlock35_registerClosure(fn)),
+                _ObjCBlock36_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0) {
@@ -42980,14 +46550,14 @@ class NSIndexPath extends NSObject {
 
   static NSIndexPath indexPathWithIndexes_length_(PedometerBindings _lib,
       ffi.Pointer<ffi.UnsignedLong> indexes, int length) {
-    final _ret = _lib._objc_msgSend_612(_lib._class_NSIndexPath1,
+    final _ret = _lib._objc_msgSend_668(_lib._class_NSIndexPath1,
         _lib._sel_indexPathWithIndexes_length_1, indexes, length);
     return NSIndexPath._(_ret, _lib, retain: true, release: true);
   }
 
   NSIndexPath initWithIndexes_length_(
       ffi.Pointer<ffi.UnsignedLong> indexes, int length) {
-    final _ret = _lib._objc_msgSend_612(
+    final _ret = _lib._objc_msgSend_668(
         _id, _lib._sel_initWithIndexes_length_1, indexes, length);
     return NSIndexPath._(_ret, _lib, retain: true, release: true);
   }
@@ -42999,13 +46569,13 @@ class NSIndexPath extends NSObject {
 
   NSIndexPath indexPathByAddingIndex_(int index) {
     final _ret =
-        _lib._objc_msgSend_613(_id, _lib._sel_indexPathByAddingIndex_1, index);
+        _lib._objc_msgSend_669(_id, _lib._sel_indexPathByAddingIndex_1, index);
     return NSIndexPath._(_ret, _lib, retain: true, release: true);
   }
 
   NSIndexPath indexPathByRemovingLastIndex() {
     final _ret =
-        _lib._objc_msgSend_614(_id, _lib._sel_indexPathByRemovingLastIndex1);
+        _lib._objc_msgSend_670(_id, _lib._sel_indexPathByRemovingLastIndex1);
     return NSIndexPath._(_ret, _lib, retain: true, release: true);
   }
 
@@ -43025,18 +46595,18 @@ class NSIndexPath extends NSObject {
   /// It is the developer’s responsibility to allocate the memory for the C array.
   void getIndexes_range_(
       ffi.Pointer<ffi.UnsignedLong> indexes, _NSRange positionRange) {
-    return _lib._objc_msgSend_615(
+    return _lib._objc_msgSend_671(
         _id, _lib._sel_getIndexes_range_1, indexes, positionRange);
   }
 
   int compare_(NSIndexPath? otherObject) {
-    return _lib._objc_msgSend_616(
+    return _lib._objc_msgSend_672(
         _id, _lib._sel_compare_1, otherObject?._id ?? ffi.nullptr);
   }
 
   /// This method is unsafe because it could potentially cause buffer overruns. You should use -getIndexes:range: instead.
   void getIndexes_(ffi.Pointer<ffi.UnsignedLong> indexes) {
-    return _lib._objc_msgSend_617(_id, _lib._sel_getIndexes_1, indexes);
+    return _lib._objc_msgSend_673(_id, _lib._sel_getIndexes_1, indexes);
   }
 
   static NSIndexPath new1(PedometerBindings _lib) {
@@ -43135,7 +46705,7 @@ class NSInflectionRule extends NSObject {
   }
 
   static NSInflectionRule? getAutomaticRule(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_618(
+    final _ret = _lib._objc_msgSend_674(
         _lib._class_NSInflectionRule1, _lib._sel_automaticRule1);
     return _ret.address == 0
         ? null
@@ -43242,38 +46812,38 @@ class NSMorphology extends NSObject {
   }
 
   int get grammaticalGender {
-    return _lib._objc_msgSend_619(_id, _lib._sel_grammaticalGender1);
+    return _lib._objc_msgSend_675(_id, _lib._sel_grammaticalGender1);
   }
 
   set grammaticalGender(int value) {
-    _lib._objc_msgSend_620(_id, _lib._sel_setGrammaticalGender_1, value);
+    _lib._objc_msgSend_676(_id, _lib._sel_setGrammaticalGender_1, value);
   }
 
   int get partOfSpeech {
-    return _lib._objc_msgSend_621(_id, _lib._sel_partOfSpeech1);
+    return _lib._objc_msgSend_677(_id, _lib._sel_partOfSpeech1);
   }
 
   set partOfSpeech(int value) {
-    _lib._objc_msgSend_622(_id, _lib._sel_setPartOfSpeech_1, value);
+    _lib._objc_msgSend_678(_id, _lib._sel_setPartOfSpeech_1, value);
   }
 
   int get number {
-    return _lib._objc_msgSend_623(_id, _lib._sel_number1);
+    return _lib._objc_msgSend_679(_id, _lib._sel_number1);
   }
 
   set number(int value) {
-    _lib._objc_msgSend_624(_id, _lib._sel_setNumber_1, value);
+    _lib._objc_msgSend_680(_id, _lib._sel_setNumber_1, value);
   }
 
   NSMorphologyCustomPronoun customPronounForLanguage_(NSString? language) {
-    final _ret = _lib._objc_msgSend_625(_id,
+    final _ret = _lib._objc_msgSend_681(_id,
         _lib._sel_customPronounForLanguage_1, language?._id ?? ffi.nullptr);
     return NSMorphologyCustomPronoun._(_ret, _lib, retain: true, release: true);
   }
 
   bool setCustomPronoun_forLanguage_error_(NSMorphologyCustomPronoun? features,
       NSString? language, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    return _lib._objc_msgSend_626(
+    return _lib._objc_msgSend_682(
         _id,
         _lib._sel_setCustomPronoun_forLanguage_error_1,
         features?._id ?? ffi.nullptr,
@@ -43286,7 +46856,7 @@ class NSMorphology extends NSObject {
   }
 
   static NSMorphology? getUserMorphology(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_627(
+    final _ret = _lib._objc_msgSend_683(
         _lib._class_NSMorphology1, _lib._sel_userMorphology1);
     return _ret.address == 0
         ? null
@@ -43608,12 +47178,12 @@ class NSOperationQueue extends NSObject {
   }
 
   void addOperation_(NSOperation? op) {
-    return _lib._objc_msgSend_628(
+    return _lib._objc_msgSend_684(
         _id, _lib._sel_addOperation_1, op?._id ?? ffi.nullptr);
   }
 
   void addOperations_waitUntilFinished_(NSArray? ops, bool wait) {
-    return _lib._objc_msgSend_631(
+    return _lib._objc_msgSend_687(
         _id,
         _lib._sel_addOperations_waitUntilFinished_1,
         ops?._id ?? ffi.nullptr,
@@ -43640,7 +47210,7 @@ class NSOperationQueue extends NSObject {
   }
 
   set maxConcurrentOperationCount(int value) {
-    _lib._objc_msgSend_632(
+    _lib._objc_msgSend_570(
         _id, _lib._sel_setMaxConcurrentOperationCount_1, value);
   }
 
@@ -43672,12 +47242,12 @@ class NSOperationQueue extends NSObject {
   }
 
   NSObject get underlyingQueue {
-    final _ret = _lib._objc_msgSend_633(_id, _lib._sel_underlyingQueue1);
+    final _ret = _lib._objc_msgSend_688(_id, _lib._sel_underlyingQueue1);
     return NSObject._(_ret, _lib, retain: true, release: true);
   }
 
   set underlyingQueue(NSObject value) {
-    _lib._objc_msgSend_634(_id, _lib._sel_setUnderlyingQueue_1, value._id);
+    _lib._objc_msgSend_689(_id, _lib._sel_setUnderlyingQueue_1, value._id);
   }
 
   void cancelAllOperations() {
@@ -43690,7 +47260,7 @@ class NSOperationQueue extends NSObject {
   }
 
   static NSOperationQueue? getCurrentQueue(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_635(
+    final _ret = _lib._objc_msgSend_690(
         _lib._class_NSOperationQueue1, _lib._sel_currentQueue1);
     return _ret.address == 0
         ? null
@@ -43698,7 +47268,7 @@ class NSOperationQueue extends NSObject {
   }
 
   static NSOperationQueue? getMainQueue(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_635(
+    final _ret = _lib._objc_msgSend_690(
         _lib._class_NSOperationQueue1, _lib._sel_mainQueue1);
     return _ret.address == 0
         ? null
@@ -43842,12 +47412,12 @@ class NSOperation extends NSObject {
   }
 
   void addDependency_(NSOperation? op) {
-    return _lib._objc_msgSend_628(
+    return _lib._objc_msgSend_684(
         _id, _lib._sel_addDependency_1, op?._id ?? ffi.nullptr);
   }
 
   void removeDependency_(NSOperation? op) {
-    return _lib._objc_msgSend_628(
+    return _lib._objc_msgSend_684(
         _id, _lib._sel_removeDependency_1, op?._id ?? ffi.nullptr);
   }
 
@@ -43859,11 +47429,11 @@ class NSOperation extends NSObject {
   }
 
   int get queuePriority {
-    return _lib._objc_msgSend_629(_id, _lib._sel_queuePriority1);
+    return _lib._objc_msgSend_685(_id, _lib._sel_queuePriority1);
   }
 
   set queuePriority(int value) {
-    _lib._objc_msgSend_630(_id, _lib._sel_setQueuePriority_1, value);
+    _lib._objc_msgSend_686(_id, _lib._sel_setQueuePriority_1, value);
   }
 
   ObjCBlock21 get completionBlock {
@@ -44004,26 +47574,26 @@ class NSPointerArray extends NSObject {
 
   NSPointerArray initWithOptions_(int options) {
     final _ret =
-        _lib._objc_msgSend_636(_id, _lib._sel_initWithOptions_1, options);
+        _lib._objc_msgSend_691(_id, _lib._sel_initWithOptions_1, options);
     return NSPointerArray._(_ret, _lib, retain: true, release: true);
   }
 
   NSPointerArray initWithPointerFunctions_(NSPointerFunctions? functions) {
-    final _ret = _lib._objc_msgSend_650(_id,
+    final _ret = _lib._objc_msgSend_705(_id,
         _lib._sel_initWithPointerFunctions_1, functions?._id ?? ffi.nullptr);
     return NSPointerArray._(_ret, _lib, retain: true, release: true);
   }
 
   static NSPointerArray pointerArrayWithOptions_(
       PedometerBindings _lib, int options) {
-    final _ret = _lib._objc_msgSend_651(_lib._class_NSPointerArray1,
+    final _ret = _lib._objc_msgSend_706(_lib._class_NSPointerArray1,
         _lib._sel_pointerArrayWithOptions_1, options);
     return NSPointerArray._(_ret, _lib, retain: true, release: true);
   }
 
   static NSPointerArray pointerArrayWithPointerFunctions_(
       PedometerBindings _lib, NSPointerFunctions? functions) {
-    final _ret = _lib._objc_msgSend_652(
+    final _ret = _lib._objc_msgSend_707(
         _lib._class_NSPointerArray1,
         _lib._sel_pointerArrayWithPointerFunctions_1,
         functions?._id ?? ffi.nullptr);
@@ -44031,14 +47601,14 @@ class NSPointerArray extends NSObject {
   }
 
   NSPointerFunctions? get pointerFunctions {
-    final _ret = _lib._objc_msgSend_653(_id, _lib._sel_pointerFunctions1);
+    final _ret = _lib._objc_msgSend_708(_id, _lib._sel_pointerFunctions1);
     return _ret.address == 0
         ? null
         : NSPointerFunctions._(_ret, _lib, retain: true, release: true);
   }
 
   ffi.Pointer<ffi.Void> pointerAtIndex_(int index) {
-    return _lib._objc_msgSend_654(_id, _lib._sel_pointerAtIndex_1, index);
+    return _lib._objc_msgSend_709(_id, _lib._sel_pointerAtIndex_1, index);
   }
 
   void addPointer_(ffi.Pointer<ffi.Void> pointer) {
@@ -44056,7 +47626,7 @@ class NSPointerArray extends NSObject {
 
   void replacePointerAtIndex_withPointer_(
       int index, ffi.Pointer<ffi.Void> item) {
-    return _lib._objc_msgSend_655(
+    return _lib._objc_msgSend_710(
         _id, _lib._sel_replacePointerAtIndex_withPointer_1, index, item);
   }
 
@@ -44073,13 +47643,13 @@ class NSPointerArray extends NSObject {
   }
 
   static NSPointerArray strongObjectsPointerArray(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_656(
+    final _ret = _lib._objc_msgSend_711(
         _lib._class_NSPointerArray1, _lib._sel_strongObjectsPointerArray1);
     return NSPointerArray._(_ret, _lib, retain: true, release: true);
   }
 
   static NSPointerArray weakObjectsPointerArray(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_656(
+    final _ret = _lib._objc_msgSend_711(
         _lib._class_NSPointerArray1, _lib._sel_weakObjectsPointerArray1);
     return NSPointerArray._(_ret, _lib, retain: true, release: true);
   }
@@ -44199,13 +47769,13 @@ class NSPointerFunctions extends NSObject {
 
   NSPointerFunctions initWithOptions_(int options) {
     final _ret =
-        _lib._objc_msgSend_636(_id, _lib._sel_initWithOptions_1, options);
+        _lib._objc_msgSend_691(_id, _lib._sel_initWithOptions_1, options);
     return NSPointerFunctions._(_ret, _lib, retain: true, release: true);
   }
 
   static NSPointerFunctions pointerFunctionsWithOptions_(
       PedometerBindings _lib, int options) {
-    final _ret = _lib._objc_msgSend_637(_lib._class_NSPointerFunctions1,
+    final _ret = _lib._objc_msgSend_692(_lib._class_NSPointerFunctions1,
         _lib._sel_pointerFunctionsWithOptions_1, options);
     return NSPointerFunctions._(_ret, _lib, retain: true, release: true);
   }
@@ -44218,7 +47788,7 @@ class NSPointerFunctions extends NSObject {
                       ffi.NativeFunction<
                           ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>)>>
       get hashFunction {
-    return _lib._objc_msgSend_638(_id, _lib._sel_hashFunction1);
+    return _lib._objc_msgSend_693(_id, _lib._sel_hashFunction1);
   }
 
   set hashFunction(
@@ -44231,7 +47801,7 @@ class NSPointerFunctions extends NSObject {
                               ffi.UnsignedLong Function(
                                   ffi.Pointer<ffi.Void>)>>)>>
           value) {
-    _lib._objc_msgSend_639(_id, _lib._sel_setHashFunction_1, value);
+    _lib._objc_msgSend_694(_id, _lib._sel_setHashFunction_1, value);
   }
 
   ffi.Pointer<
@@ -44243,7 +47813,7 @@ class NSPointerFunctions extends NSObject {
                       ffi.NativeFunction<
                           ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>)>>
       get isEqualFunction {
-    return _lib._objc_msgSend_640(_id, _lib._sel_isEqualFunction1);
+    return _lib._objc_msgSend_695(_id, _lib._sel_isEqualFunction1);
   }
 
   set isEqualFunction(
@@ -44257,13 +47827,13 @@ class NSPointerFunctions extends NSObject {
                               ffi.UnsignedLong Function(
                                   ffi.Pointer<ffi.Void>)>>)>>
           value) {
-    _lib._objc_msgSend_641(_id, _lib._sel_setIsEqualFunction_1, value);
+    _lib._objc_msgSend_696(_id, _lib._sel_setIsEqualFunction_1, value);
   }
 
   ffi.Pointer<
           ffi.NativeFunction<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>
       get sizeFunction {
-    return _lib._objc_msgSend_642(_id, _lib._sel_sizeFunction1);
+    return _lib._objc_msgSend_697(_id, _lib._sel_sizeFunction1);
   }
 
   set sizeFunction(
@@ -44271,14 +47841,14 @@ class NSPointerFunctions extends NSObject {
               ffi.NativeFunction<
                   ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>
           value) {
-    _lib._objc_msgSend_643(_id, _lib._sel_setSizeFunction_1, value);
+    _lib._objc_msgSend_698(_id, _lib._sel_setSizeFunction_1, value);
   }
 
   ffi.Pointer<
           ffi.NativeFunction<
               ffi.Pointer<ObjCObject> Function(ffi.Pointer<ffi.Void>)>>
       get descriptionFunction {
-    return _lib._objc_msgSend_644(_id, _lib._sel_descriptionFunction1);
+    return _lib._objc_msgSend_699(_id, _lib._sel_descriptionFunction1);
   }
 
   set descriptionFunction(
@@ -44286,7 +47856,7 @@ class NSPointerFunctions extends NSObject {
               ffi.NativeFunction<
                   ffi.Pointer<ObjCObject> Function(ffi.Pointer<ffi.Void>)>>
           value) {
-    _lib._objc_msgSend_645(_id, _lib._sel_setDescriptionFunction_1, value);
+    _lib._objc_msgSend_700(_id, _lib._sel_setDescriptionFunction_1, value);
   }
 
   ffi.Pointer<
@@ -44297,7 +47867,7 @@ class NSPointerFunctions extends NSObject {
                       ffi.NativeFunction<
                           ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>)>>
       get relinquishFunction {
-    return _lib._objc_msgSend_646(_id, _lib._sel_relinquishFunction1);
+    return _lib._objc_msgSend_701(_id, _lib._sel_relinquishFunction1);
   }
 
   set relinquishFunction(
@@ -44310,7 +47880,7 @@ class NSPointerFunctions extends NSObject {
                               ffi.UnsignedLong Function(
                                   ffi.Pointer<ffi.Void>)>>)>>
           value) {
-    _lib._objc_msgSend_647(_id, _lib._sel_setRelinquishFunction_1, value);
+    _lib._objc_msgSend_702(_id, _lib._sel_setRelinquishFunction_1, value);
   }
 
   ffi.Pointer<
@@ -44321,7 +47891,7 @@ class NSPointerFunctions extends NSObject {
                   ffi.NativeFunction<
                       ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>>,
               ffi.Bool)>> get acquireFunction {
-    return _lib._objc_msgSend_648(_id, _lib._sel_acquireFunction1);
+    return _lib._objc_msgSend_703(_id, _lib._sel_acquireFunction1);
   }
 
   set acquireFunction(
@@ -44335,7 +47905,7 @@ class NSPointerFunctions extends NSObject {
                                   ffi.Pointer<ffi.Void>)>>,
                       ffi.Bool)>>
           value) {
-    _lib._objc_msgSend_649(_id, _lib._sel_setAcquireFunction_1, value);
+    _lib._objc_msgSend_704(_id, _lib._sel_setAcquireFunction_1, value);
   }
 
   bool get usesStrongWriteBarrier {
@@ -44445,7 +48015,7 @@ class NSProcessInfo extends NSObject {
   }
 
   static NSProcessInfo? getProcessInfo(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_657(
+    final _ret = _lib._objc_msgSend_712(
         _lib._class_NSProcessInfo1, _lib._sel_processInfo1);
     return _ret.address == 0
         ? null
@@ -44514,7 +48084,7 @@ class NSProcessInfo extends NSObject {
   }
 
   NSOperatingSystemVersion get operatingSystemVersion {
-    return _lib._objc_msgSend_658(_id, _lib._sel_operatingSystemVersion1);
+    return _lib._objc_msgSend_713(_id, _lib._sel_operatingSystemVersion1);
   }
 
   int get processorCount {
@@ -44530,7 +48100,7 @@ class NSProcessInfo extends NSObject {
   }
 
   bool isOperatingSystemAtLeastVersion_(NSOperatingSystemVersion version) {
-    return _lib._objc_msgSend_659(
+    return _lib._objc_msgSend_714(
         _id, _lib._sel_isOperatingSystemAtLeastVersion_1, version);
   }
 
@@ -44567,7 +48137,7 @@ class NSProcessInfo extends NSObject {
   }
 
   NSObject beginActivityWithOptions_reason_(int options, NSString? reason) {
-    final _ret = _lib._objc_msgSend_660(
+    final _ret = _lib._objc_msgSend_715(
         _id,
         _lib._sel_beginActivityWithOptions_reason_1,
         options,
@@ -44582,7 +48152,7 @@ class NSProcessInfo extends NSObject {
 
   void performActivityWithOptions_reason_usingBlock_(
       int options, NSString? reason, ObjCBlock21 block) {
-    return _lib._objc_msgSend_661(
+    return _lib._objc_msgSend_716(
         _id,
         _lib._sel_performActivityWithOptions_reason_usingBlock_1,
         options,
@@ -44591,8 +48161,8 @@ class NSProcessInfo extends NSObject {
   }
 
   void performExpiringActivityWithReason_usingBlock_(
-      NSString? reason, ObjCBlock36 block) {
-    return _lib._objc_msgSend_662(
+      NSString? reason, ObjCBlock37 block) {
+    return _lib._objc_msgSend_717(
         _id,
         _lib._sel_performExpiringActivityWithReason_usingBlock_1,
         reason?._id ?? ffi.nullptr,
@@ -44614,7 +48184,7 @@ class NSProcessInfo extends NSObject {
   }
 
   int get thermalState {
-    return _lib._objc_msgSend_663(_id, _lib._sel_thermalState1);
+    return _lib._objc_msgSend_718(_id, _lib._sel_thermalState1);
   }
 
   bool get lowPowerModeEnabled {
@@ -44717,50 +48287,50 @@ abstract class NSActivityOptions {
   static const int NSActivityLatencyCritical = 1095216660480;
 }
 
-void _ObjCBlock36_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block, bool arg0) {
+void _ObjCBlock37_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block, bool arg0) {
   return block.ref.target
       .cast<ffi.NativeFunction<ffi.Void Function(ffi.Bool arg0)>>()
       .asFunction<void Function(bool arg0)>()(arg0);
 }
 
-final _ObjCBlock36_closureRegistry = <int, Function>{};
-int _ObjCBlock36_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock36_registerClosure(Function fn) {
-  final id = ++_ObjCBlock36_closureRegistryIndex;
-  _ObjCBlock36_closureRegistry[id] = fn;
+final _ObjCBlock37_closureRegistry = <int, Function>{};
+int _ObjCBlock37_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock37_registerClosure(Function fn) {
+  final id = ++_ObjCBlock37_closureRegistryIndex;
+  _ObjCBlock37_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock36_closureTrampoline(ffi.Pointer<_ObjCBlock> block, bool arg0) {
-  return _ObjCBlock36_closureRegistry[block.ref.target.address]!(arg0);
+void _ObjCBlock37_closureTrampoline(ffi.Pointer<_ObjCBlock> block, bool arg0) {
+  return _ObjCBlock37_closureRegistry[block.ref.target.address]!(arg0);
 }
 
-class ObjCBlock36 extends _ObjCBlockBase {
-  ObjCBlock36._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock37 extends _ObjCBlockBase {
+  ObjCBlock37._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock36.fromFunctionPointer(PedometerBindings lib,
+  ObjCBlock37.fromFunctionPointer(PedometerBindings lib,
       ffi.Pointer<ffi.NativeFunction<ffi.Void Function(ffi.Bool arg0)>> ptr)
       : this._(
             lib._newBlock1(
                 _cFuncTrampoline ??= ffi.Pointer.fromFunction<
                         ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
-                            ffi.Bool arg0)>(_ObjCBlock36_fnPtrTrampoline)
+                            ffi.Bool arg0)>(_ObjCBlock37_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock36.fromFunction(PedometerBindings lib, void Function(bool arg0) fn)
+  ObjCBlock37.fromFunction(PedometerBindings lib, void Function(bool arg0) fn)
       : this._(
             lib._newBlock1(
                 _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
                         ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
-                            ffi.Bool arg0)>(_ObjCBlock36_closureTrampoline)
+                            ffi.Bool arg0)>(_ObjCBlock37_closureTrampoline)
                     .cast(),
-                _ObjCBlock36_registerClosure(fn)),
+                _ObjCBlock37_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(bool arg0) {
@@ -44809,7 +48379,7 @@ class NSTextCheckingResult extends NSObject {
   }
 
   int get resultType {
-    return _lib._objc_msgSend_664(_id, _lib._sel_resultType1);
+    return _lib._objc_msgSend_719(_id, _lib._sel_resultType1);
   }
 
   _NSRange get range {
@@ -44817,7 +48387,7 @@ class NSTextCheckingResult extends NSObject {
   }
 
   NSOrthography? get orthography {
-    final _ret = _lib._objc_msgSend_665(_id, _lib._sel_orthography1);
+    final _ret = _lib._objc_msgSend_720(_id, _lib._sel_orthography1);
     return _ret.address == 0
         ? null
         : NSOrthography._(_ret, _lib, retain: true, release: true);
@@ -44838,7 +48408,7 @@ class NSTextCheckingResult extends NSObject {
   }
 
   NSTimeZone? get timeZone {
-    final _ret = _lib._objc_msgSend_668(_id, _lib._sel_timeZone1);
+    final _ret = _lib._objc_msgSend_556(_id, _lib._sel_timeZone1);
     return _ret.address == 0
         ? null
         : NSTimeZone._(_ret, _lib, retain: true, release: true);
@@ -44877,7 +48447,7 @@ class NSTextCheckingResult extends NSObject {
   }
 
   NSRegularExpression? get regularExpression {
-    final _ret = _lib._objc_msgSend_686(_id, _lib._sel_regularExpression1);
+    final _ret = _lib._objc_msgSend_732(_id, _lib._sel_regularExpression1);
     return _ret.address == 0
         ? null
         : NSRegularExpression._(_ret, _lib, retain: true, release: true);
@@ -44904,7 +48474,7 @@ class NSTextCheckingResult extends NSObject {
   }
 
   NSTextCheckingResult resultByAdjustingRangesWithOffset_(int offset) {
-    final _ret = _lib._objc_msgSend_687(
+    final _ret = _lib._objc_msgSend_733(
         _id, _lib._sel_resultByAdjustingRangesWithOffset_1, offset);
     return NSTextCheckingResult._(_ret, _lib, retain: true, release: true);
   }
@@ -44918,7 +48488,7 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult orthographyCheckingResultWithRange_orthography_(
       PedometerBindings _lib, _NSRange range, NSOrthography? orthography) {
-    final _ret = _lib._objc_msgSend_688(
+    final _ret = _lib._objc_msgSend_734(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_orthographyCheckingResultWithRange_orthography_1,
         range,
@@ -44928,14 +48498,14 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult spellCheckingResultWithRange_(
       PedometerBindings _lib, _NSRange range) {
-    final _ret = _lib._objc_msgSend_689(_lib._class_NSTextCheckingResult1,
+    final _ret = _lib._objc_msgSend_735(_lib._class_NSTextCheckingResult1,
         _lib._sel_spellCheckingResultWithRange_1, range);
     return NSTextCheckingResult._(_ret, _lib, retain: true, release: true);
   }
 
   static NSTextCheckingResult grammarCheckingResultWithRange_details_(
       PedometerBindings _lib, _NSRange range, NSArray? details) {
-    final _ret = _lib._objc_msgSend_690(
+    final _ret = _lib._objc_msgSend_736(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_grammarCheckingResultWithRange_details_1,
         range,
@@ -44945,7 +48515,7 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult dateCheckingResultWithRange_date_(
       PedometerBindings _lib, _NSRange range, NSDate? date) {
-    final _ret = _lib._objc_msgSend_691(
+    final _ret = _lib._objc_msgSend_737(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_dateCheckingResultWithRange_date_1,
         range,
@@ -44960,7 +48530,7 @@ class NSTextCheckingResult extends NSObject {
           NSDate? date,
           NSTimeZone? timeZone,
           double duration) {
-    final _ret = _lib._objc_msgSend_692(
+    final _ret = _lib._objc_msgSend_738(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_dateCheckingResultWithRange_date_timeZone_duration_1,
         range,
@@ -44972,7 +48542,7 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult addressCheckingResultWithRange_components_(
       PedometerBindings _lib, _NSRange range, NSDictionary? components) {
-    final _ret = _lib._objc_msgSend_693(
+    final _ret = _lib._objc_msgSend_739(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_addressCheckingResultWithRange_components_1,
         range,
@@ -44982,7 +48552,7 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult linkCheckingResultWithRange_URL_(
       PedometerBindings _lib, _NSRange range, NSURL? url) {
-    final _ret = _lib._objc_msgSend_694(
+    final _ret = _lib._objc_msgSend_740(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_linkCheckingResultWithRange_URL_1,
         range,
@@ -44992,7 +48562,7 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult quoteCheckingResultWithRange_replacementString_(
       PedometerBindings _lib, _NSRange range, NSString? replacementString) {
-    final _ret = _lib._objc_msgSend_695(
+    final _ret = _lib._objc_msgSend_741(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_quoteCheckingResultWithRange_replacementString_1,
         range,
@@ -45002,7 +48572,7 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult dashCheckingResultWithRange_replacementString_(
       PedometerBindings _lib, _NSRange range, NSString? replacementString) {
-    final _ret = _lib._objc_msgSend_695(
+    final _ret = _lib._objc_msgSend_741(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_dashCheckingResultWithRange_replacementString_1,
         range,
@@ -45013,7 +48583,7 @@ class NSTextCheckingResult extends NSObject {
   static NSTextCheckingResult
       replacementCheckingResultWithRange_replacementString_(
           PedometerBindings _lib, _NSRange range, NSString? replacementString) {
-    final _ret = _lib._objc_msgSend_695(
+    final _ret = _lib._objc_msgSend_741(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_replacementCheckingResultWithRange_replacementString_1,
         range,
@@ -45024,7 +48594,7 @@ class NSTextCheckingResult extends NSObject {
   static NSTextCheckingResult
       correctionCheckingResultWithRange_replacementString_(
           PedometerBindings _lib, _NSRange range, NSString? replacementString) {
-    final _ret = _lib._objc_msgSend_695(
+    final _ret = _lib._objc_msgSend_741(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_correctionCheckingResultWithRange_replacementString_1,
         range,
@@ -45038,7 +48608,7 @@ class NSTextCheckingResult extends NSObject {
           _NSRange range,
           NSString? replacementString,
           NSArray? alternativeStrings) {
-    final _ret = _lib._objc_msgSend_696(
+    final _ret = _lib._objc_msgSend_742(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_correctionCheckingResultWithRange_replacementString_alternativeStrings_1,
         range,
@@ -45053,7 +48623,7 @@ class NSTextCheckingResult extends NSObject {
           ffi.Pointer<_NSRange> ranges,
           int count,
           NSRegularExpression? regularExpression) {
-    final _ret = _lib._objc_msgSend_697(
+    final _ret = _lib._objc_msgSend_743(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_regularExpressionCheckingResultWithRanges_count_regularExpression_1,
         ranges,
@@ -45064,7 +48634,7 @@ class NSTextCheckingResult extends NSObject {
 
   static NSTextCheckingResult phoneNumberCheckingResultWithRange_phoneNumber_(
       PedometerBindings _lib, _NSRange range, NSString? phoneNumber) {
-    final _ret = _lib._objc_msgSend_695(
+    final _ret = _lib._objc_msgSend_741(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_phoneNumberCheckingResultWithRange_phoneNumber_1,
         range,
@@ -45075,7 +48645,7 @@ class NSTextCheckingResult extends NSObject {
   static NSTextCheckingResult
       transitInformationCheckingResultWithRange_components_(
           PedometerBindings _lib, _NSRange range, NSDictionary? components) {
-    final _ret = _lib._objc_msgSend_693(
+    final _ret = _lib._objc_msgSend_739(
         _lib._class_NSTextCheckingResult1,
         _lib._sel_transitInformationCheckingResultWithRange_components_1,
         range,
@@ -45165,298 +48735,6 @@ abstract class NSTextCheckingType {
   static const int NSTextCheckingTypeTransitInformation = 4096;
 }
 
-class NSTimeZone extends NSObject {
-  NSTimeZone._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
-      {bool retain = false, bool release = false})
-      : super._(id, lib, retain: retain, release: release);
-
-  /// Returns a [NSTimeZone] that points to the same underlying object as [other].
-  static NSTimeZone castFrom<T extends _ObjCWrapper>(T other) {
-    return NSTimeZone._(other._id, other._lib, retain: true, release: true);
-  }
-
-  /// Returns a [NSTimeZone] that wraps the given raw object pointer.
-  static NSTimeZone castFromPointer(
-      PedometerBindings lib, ffi.Pointer<ObjCObject> other,
-      {bool retain = false, bool release = false}) {
-    return NSTimeZone._(other, lib, retain: retain, release: release);
-  }
-
-  /// Returns whether [obj] is an instance of [NSTimeZone].
-  static bool isInstance(_ObjCWrapper obj) {
-    return obj._lib._objc_msgSend_0(
-        obj._id, obj._lib._sel_isKindOfClass_1, obj._lib._class_NSTimeZone1);
-  }
-
-  NSString? get name {
-    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_name1);
-    return _ret.address == 0
-        ? null
-        : NSString._(_ret, _lib, retain: true, release: true);
-  }
-
-  NSData? get data {
-    final _ret = _lib._objc_msgSend_39(_id, _lib._sel_data1);
-    return _ret.address == 0
-        ? null
-        : NSData._(_ret, _lib, retain: true, release: true);
-  }
-
-  int secondsFromGMTForDate_(NSDate? aDate) {
-    return _lib._objc_msgSend_666(
-        _id, _lib._sel_secondsFromGMTForDate_1, aDate?._id ?? ffi.nullptr);
-  }
-
-  NSString abbreviationForDate_(NSDate? aDate) {
-    final _ret = _lib._objc_msgSend_667(
-        _id, _lib._sel_abbreviationForDate_1, aDate?._id ?? ffi.nullptr);
-    return NSString._(_ret, _lib, retain: true, release: true);
-  }
-
-  bool isDaylightSavingTimeForDate_(NSDate? aDate) {
-    return _lib._objc_msgSend_151(_id, _lib._sel_isDaylightSavingTimeForDate_1,
-        aDate?._id ?? ffi.nullptr);
-  }
-
-  double daylightSavingTimeOffsetForDate_(NSDate? aDate) {
-    return _lib._objc_msgSend_148(_id,
-        _lib._sel_daylightSavingTimeOffsetForDate_1, aDate?._id ?? ffi.nullptr);
-  }
-
-  NSDate nextDaylightSavingTimeTransitionAfterDate_(NSDate? aDate) {
-    final _ret = _lib._objc_msgSend_149(
-        _id,
-        _lib._sel_nextDaylightSavingTimeTransitionAfterDate_1,
-        aDate?._id ?? ffi.nullptr);
-    return NSDate._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSTimeZone? getSystemTimeZone(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_668(
-        _lib._class_NSTimeZone1, _lib._sel_systemTimeZone1);
-    return _ret.address == 0
-        ? null
-        : NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  static void resetSystemTimeZone(PedometerBindings _lib) {
-    return _lib._objc_msgSend_1(
-        _lib._class_NSTimeZone1, _lib._sel_resetSystemTimeZone1);
-  }
-
-  static NSTimeZone? getDefaultTimeZone(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_668(
-        _lib._class_NSTimeZone1, _lib._sel_defaultTimeZone1);
-    return _ret.address == 0
-        ? null
-        : NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  static void setDefaultTimeZone(PedometerBindings _lib, NSTimeZone? value) {
-    _lib._objc_msgSend_669(_lib._class_NSTimeZone1,
-        _lib._sel_setDefaultTimeZone_1, value?._id ?? ffi.nullptr);
-  }
-
-  static NSTimeZone? getLocalTimeZone(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_668(
-        _lib._class_NSTimeZone1, _lib._sel_localTimeZone1);
-    return _ret.address == 0
-        ? null
-        : NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSArray? getKnownTimeZoneNames(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_71(
-        _lib._class_NSTimeZone1, _lib._sel_knownTimeZoneNames1);
-    return _ret.address == 0
-        ? null
-        : NSArray._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSDictionary? getAbbreviationDictionary(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_315(
-        _lib._class_NSTimeZone1, _lib._sel_abbreviationDictionary1);
-    return _ret.address == 0
-        ? null
-        : NSDictionary._(_ret, _lib, retain: true, release: true);
-  }
-
-  static void setAbbreviationDictionary(
-      PedometerBindings _lib, NSDictionary? value) {
-    _lib._objc_msgSend_670(_lib._class_NSTimeZone1,
-        _lib._sel_setAbbreviationDictionary_1, value?._id ?? ffi.nullptr);
-  }
-
-  static NSString? getTimeZoneDataVersion(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_20(
-        _lib._class_NSTimeZone1, _lib._sel_timeZoneDataVersion1);
-    return _ret.address == 0
-        ? null
-        : NSString._(_ret, _lib, retain: true, release: true);
-  }
-
-  int get secondsFromGMT {
-    return _lib._objc_msgSend_70(_id, _lib._sel_secondsFromGMT1);
-  }
-
-  NSString? get abbreviation {
-    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_abbreviation1);
-    return _ret.address == 0
-        ? null
-        : NSString._(_ret, _lib, retain: true, release: true);
-  }
-
-  bool get daylightSavingTime {
-    return _lib._objc_msgSend_12(_id, _lib._sel_isDaylightSavingTime1);
-  }
-
-  double get daylightSavingTimeOffset {
-    return _lib._objc_msgSend_146(_id, _lib._sel_daylightSavingTimeOffset1);
-  }
-
-  NSDate? get nextDaylightSavingTimeTransition {
-    final _ret = _lib._objc_msgSend_153(
-        _id, _lib._sel_nextDaylightSavingTimeTransition1);
-    return _ret.address == 0
-        ? null
-        : NSDate._(_ret, _lib, retain: true, release: true);
-  }
-
-  NSString? get description {
-    final _ret = _lib._objc_msgSend_20(_id, _lib._sel_description1);
-    return _ret.address == 0
-        ? null
-        : NSString._(_ret, _lib, retain: true, release: true);
-  }
-
-  bool isEqualToTimeZone_(NSTimeZone? aTimeZone) {
-    return _lib._objc_msgSend_671(
-        _id, _lib._sel_isEqualToTimeZone_1, aTimeZone?._id ?? ffi.nullptr);
-  }
-
-  NSString localizedName_locale_(int style, NSLocale? locale) {
-    final _ret = _lib._objc_msgSend_672(_id, _lib._sel_localizedName_locale_1,
-        style, locale?._id ?? ffi.nullptr);
-    return NSString._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSTimeZone timeZoneWithName_(
-      PedometerBindings _lib, NSString? tzName) {
-    final _ret = _lib._objc_msgSend_30(_lib._class_NSTimeZone1,
-        _lib._sel_timeZoneWithName_1, tzName?._id ?? ffi.nullptr);
-    return NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSTimeZone timeZoneWithName_data_(
-      PedometerBindings _lib, NSString? tzName, NSData? aData) {
-    final _ret = _lib._objc_msgSend_673(
-        _lib._class_NSTimeZone1,
-        _lib._sel_timeZoneWithName_data_1,
-        tzName?._id ?? ffi.nullptr,
-        aData?._id ?? ffi.nullptr);
-    return NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  NSTimeZone initWithName_(NSString? tzName) {
-    final _ret = _lib._objc_msgSend_30(
-        _id, _lib._sel_initWithName_1, tzName?._id ?? ffi.nullptr);
-    return NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  NSTimeZone initWithName_data_(NSString? tzName, NSData? aData) {
-    final _ret = _lib._objc_msgSend_673(_id, _lib._sel_initWithName_data_1,
-        tzName?._id ?? ffi.nullptr, aData?._id ?? ffi.nullptr);
-    return NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSTimeZone timeZoneForSecondsFromGMT_(
-      PedometerBindings _lib, int seconds) {
-    final _ret = _lib._objc_msgSend_674(_lib._class_NSTimeZone1,
-        _lib._sel_timeZoneForSecondsFromGMT_1, seconds);
-    return NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSTimeZone timeZoneWithAbbreviation_(
-      PedometerBindings _lib, NSString? abbreviation) {
-    final _ret = _lib._objc_msgSend_30(_lib._class_NSTimeZone1,
-        _lib._sel_timeZoneWithAbbreviation_1, abbreviation?._id ?? ffi.nullptr);
-    return NSTimeZone._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSTimeZone new1(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_2(_lib._class_NSTimeZone1, _lib._sel_new1);
-    return NSTimeZone._(_ret, _lib, retain: false, release: true);
-  }
-
-  static NSTimeZone alloc(PedometerBindings _lib) {
-    final _ret =
-        _lib._objc_msgSend_2(_lib._class_NSTimeZone1, _lib._sel_alloc1);
-    return NSTimeZone._(_ret, _lib, retain: false, release: true);
-  }
-
-  static void cancelPreviousPerformRequestsWithTarget_selector_object_(
-      PedometerBindings _lib,
-      NSObject aTarget,
-      ffi.Pointer<ObjCSel> aSelector,
-      NSObject anArgument) {
-    return _lib._objc_msgSend_14(
-        _lib._class_NSTimeZone1,
-        _lib._sel_cancelPreviousPerformRequestsWithTarget_selector_object_1,
-        aTarget._id,
-        aSelector,
-        anArgument._id);
-  }
-
-  static void cancelPreviousPerformRequestsWithTarget_(
-      PedometerBindings _lib, NSObject aTarget) {
-    return _lib._objc_msgSend_15(_lib._class_NSTimeZone1,
-        _lib._sel_cancelPreviousPerformRequestsWithTarget_1, aTarget._id);
-  }
-
-  static bool getAccessInstanceVariablesDirectly(PedometerBindings _lib) {
-    return _lib._objc_msgSend_12(
-        _lib._class_NSTimeZone1, _lib._sel_accessInstanceVariablesDirectly1);
-  }
-
-  static NSSet keyPathsForValuesAffectingValueForKey_(
-      PedometerBindings _lib, NSString? key) {
-    final _ret = _lib._objc_msgSend_50(
-        _lib._class_NSTimeZone1,
-        _lib._sel_keyPathsForValuesAffectingValueForKey_1,
-        key?._id ?? ffi.nullptr);
-    return NSSet._(_ret, _lib, retain: true, release: true);
-  }
-
-  static bool automaticallyNotifiesObserversForKey_(
-      PedometerBindings _lib, NSString? key) {
-    return _lib._objc_msgSend_51(
-        _lib._class_NSTimeZone1,
-        _lib._sel_automaticallyNotifiesObserversForKey_1,
-        key?._id ?? ffi.nullptr);
-  }
-
-  static NSArray classFallbacksForKeyedArchiver(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_71(
-        _lib._class_NSTimeZone1, _lib._sel_classFallbacksForKeyedArchiver1);
-    return NSArray._(_ret, _lib, retain: true, release: true);
-  }
-
-  static NSObject classForKeyedUnarchiver(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_2(
-        _lib._class_NSTimeZone1, _lib._sel_classForKeyedUnarchiver1);
-    return NSObject._(_ret, _lib, retain: true, release: true);
-  }
-}
-
-abstract class NSTimeZoneNameStyle {
-  static const int NSTimeZoneNameStyleStandard = 0;
-  static const int NSTimeZoneNameStyleShortStandard = 1;
-  static const int NSTimeZoneNameStyleDaylightSaving = 2;
-  static const int NSTimeZoneNameStyleShortDaylightSaving = 3;
-  static const int NSTimeZoneNameStyleGeneric = 4;
-  static const int NSTimeZoneNameStyleShortGeneric = 5;
-}
-
 class NSRegularExpression extends NSObject {
   NSRegularExpression._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
       {bool retain = false, bool release = false})
@@ -45486,7 +48764,7 @@ class NSRegularExpression extends NSObject {
       NSString? pattern,
       int options,
       ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_675(
+    final _ret = _lib._objc_msgSend_721(
         _lib._class_NSRegularExpression1,
         _lib._sel_regularExpressionWithPattern_options_error_1,
         pattern?._id ?? ffi.nullptr,
@@ -45497,7 +48775,7 @@ class NSRegularExpression extends NSObject {
 
   NSRegularExpression initWithPattern_options_error_(NSString? pattern,
       int options, ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_676(
+    final _ret = _lib._objc_msgSend_722(
         _id,
         _lib._sel_initWithPattern_options_error_1,
         pattern?._id ?? ffi.nullptr,
@@ -45514,7 +48792,7 @@ class NSRegularExpression extends NSObject {
   }
 
   int get options {
-    return _lib._objc_msgSend_677(_id, _lib._sel_options1);
+    return _lib._objc_msgSend_723(_id, _lib._sel_options1);
   }
 
   int get numberOfCaptureGroups {
@@ -45529,8 +48807,8 @@ class NSRegularExpression extends NSObject {
   }
 
   void enumerateMatchesInString_options_range_usingBlock_(
-      NSString? string, int options, _NSRange range, ObjCBlock37 block) {
-    return _lib._objc_msgSend_678(
+      NSString? string, int options, _NSRange range, ObjCBlock38 block) {
+    return _lib._objc_msgSend_724(
         _id,
         _lib._sel_enumerateMatchesInString_options_range_usingBlock_1,
         string?._id ?? ffi.nullptr,
@@ -45541,7 +48819,7 @@ class NSRegularExpression extends NSObject {
 
   NSArray matchesInString_options_range_(
       NSString? string, int options, _NSRange range) {
-    final _ret = _lib._objc_msgSend_679(
+    final _ret = _lib._objc_msgSend_725(
         _id,
         _lib._sel_matchesInString_options_range_1,
         string?._id ?? ffi.nullptr,
@@ -45552,7 +48830,7 @@ class NSRegularExpression extends NSObject {
 
   int numberOfMatchesInString_options_range_(
       NSString? string, int options, _NSRange range) {
-    return _lib._objc_msgSend_680(
+    return _lib._objc_msgSend_726(
         _id,
         _lib._sel_numberOfMatchesInString_options_range_1,
         string?._id ?? ffi.nullptr,
@@ -45562,7 +48840,7 @@ class NSRegularExpression extends NSObject {
 
   NSTextCheckingResult firstMatchInString_options_range_(
       NSString? string, int options, _NSRange range) {
-    final _ret = _lib._objc_msgSend_681(
+    final _ret = _lib._objc_msgSend_727(
         _id,
         _lib._sel_firstMatchInString_options_range_1,
         string?._id ?? ffi.nullptr,
@@ -45573,7 +48851,7 @@ class NSRegularExpression extends NSObject {
 
   _NSRange rangeOfFirstMatchInString_options_range_(
       NSString? string, int options, _NSRange range) {
-    return _lib._objc_msgSend_682(
+    return _lib._objc_msgSend_728(
         _id,
         _lib._sel_rangeOfFirstMatchInString_options_range_1,
         string?._id ?? ffi.nullptr,
@@ -45583,7 +48861,7 @@ class NSRegularExpression extends NSObject {
 
   NSString stringByReplacingMatchesInString_options_range_withTemplate_(
       NSString? string, int options, _NSRange range, NSString? templ) {
-    final _ret = _lib._objc_msgSend_683(
+    final _ret = _lib._objc_msgSend_729(
         _id,
         _lib._sel_stringByReplacingMatchesInString_options_range_withTemplate_1,
         string?._id ?? ffi.nullptr,
@@ -45595,7 +48873,7 @@ class NSRegularExpression extends NSObject {
 
   int replaceMatchesInString_options_range_withTemplate_(
       NSMutableString? string, int options, _NSRange range, NSString? templ) {
-    return _lib._objc_msgSend_684(
+    return _lib._objc_msgSend_730(
         _id,
         _lib._sel_replaceMatchesInString_options_range_withTemplate_1,
         string?._id ?? ffi.nullptr,
@@ -45609,7 +48887,7 @@ class NSRegularExpression extends NSObject {
       NSString? string,
       int offset,
       NSString? templ) {
-    final _ret = _lib._objc_msgSend_685(
+    final _ret = _lib._objc_msgSend_731(
         _id,
         _lib._sel_replacementStringForResult_inString_offset_template_1,
         result?._id ?? ffi.nullptr,
@@ -45710,7 +48988,7 @@ abstract class NSMatchingOptions {
   static const int NSMatchingWithoutAnchoringBounds = 16;
 }
 
-void _ObjCBlock37_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock38_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, int arg1, ffi.Pointer<ffi.Bool> arg2) {
   return block.ref.target
       .cast<
@@ -45722,26 +49000,26 @@ void _ObjCBlock37_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
               ffi.Pointer<ffi.Bool> arg2)>()(arg0, arg1, arg2);
 }
 
-final _ObjCBlock37_closureRegistry = <int, Function>{};
-int _ObjCBlock37_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock37_registerClosure(Function fn) {
-  final id = ++_ObjCBlock37_closureRegistryIndex;
-  _ObjCBlock37_closureRegistry[id] = fn;
+final _ObjCBlock38_closureRegistry = <int, Function>{};
+int _ObjCBlock38_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock38_registerClosure(Function fn) {
+  final id = ++_ObjCBlock38_closureRegistryIndex;
+  _ObjCBlock38_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock37_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock38_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, int arg1, ffi.Pointer<ffi.Bool> arg2) {
-  return _ObjCBlock37_closureRegistry[block.ref.target.address]!(
+  return _ObjCBlock38_closureRegistry[block.ref.target.address]!(
       arg0, arg1, arg2);
 }
 
-class ObjCBlock37 extends _ObjCBlockBase {
-  ObjCBlock37._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock38 extends _ObjCBlockBase {
+  ObjCBlock38._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock37.fromFunctionPointer(
+  ObjCBlock38.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -45756,14 +49034,14 @@ class ObjCBlock37 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Int32 arg1,
                                 ffi.Pointer<ffi.Bool> arg2)>(
-                        _ObjCBlock37_fnPtrTrampoline)
+                        _ObjCBlock38_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock37.fromFunction(
+  ObjCBlock38.fromFunction(
       PedometerBindings lib,
       void Function(ffi.Pointer<ObjCObject> arg0, int arg1,
               ffi.Pointer<ffi.Bool> arg2)
@@ -45776,9 +49054,9 @@ class ObjCBlock37 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Int32 arg1,
                                 ffi.Pointer<ffi.Bool> arg2)>(
-                        _ObjCBlock37_closureTrampoline)
+                        _ObjCBlock38_closureTrampoline)
                     .cast(),
-                _ObjCBlock37_registerClosure(fn)),
+                _ObjCBlock38_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(
@@ -45858,7 +49136,7 @@ class NSURLCache extends NSObject {
   /// becoming unexpectedly unretrievable.
   /// @result the shared NSURLCache instance.
   static NSURLCache? getSharedURLCache(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_698(
+    final _ret = _lib._objc_msgSend_744(
         _lib._class_NSURLCache1, _lib._sel_sharedURLCache1);
     return _ret.address == 0
         ? null
@@ -45890,7 +49168,7 @@ class NSURLCache extends NSObject {
   /// becoming unexpectedly unretrievable.
   /// @result the shared NSURLCache instance.
   static void setSharedURLCache(PedometerBindings _lib, NSURLCache? value) {
-    _lib._objc_msgSend_699(_lib._class_NSURLCache1,
+    _lib._objc_msgSend_745(_lib._class_NSURLCache1,
         _lib._sel_setSharedURLCache_1, value?._id ?? ffi.nullptr);
   }
 
@@ -45909,7 +49187,7 @@ class NSURLCache extends NSObject {
   /// by disk.
   NSURLCache initWithMemoryCapacity_diskCapacity_diskPath_(
       int memoryCapacity, int diskCapacity, NSString? path) {
-    final _ret = _lib._objc_msgSend_700(
+    final _ret = _lib._objc_msgSend_746(
         _id,
         _lib._sel_initWithMemoryCapacity_diskCapacity_diskPath_1,
         memoryCapacity,
@@ -45927,7 +49205,7 @@ class NSURLCache extends NSObject {
   /// @result an initialized NSURLCache, with the given capacity, optionally backed by disk.
   NSURLCache initWithMemoryCapacity_diskCapacity_directoryURL_(
       int memoryCapacity, int diskCapacity, NSURL? directoryURL) {
-    final _ret = _lib._objc_msgSend_701(
+    final _ret = _lib._objc_msgSend_747(
         _id,
         _lib._sel_initWithMemoryCapacity_diskCapacity_directoryURL_1,
         memoryCapacity,
@@ -45947,7 +49225,7 @@ class NSURLCache extends NSObject {
   /// request, or nil if there is no NSCachedURLResponse stored with the
   /// given request.
   NSCachedURLResponse cachedResponseForRequest_(NSURLRequest? request) {
-    final _ret = _lib._objc_msgSend_705(
+    final _ret = _lib._objc_msgSend_751(
         _id, _lib._sel_cachedResponseForRequest_1, request?._id ?? ffi.nullptr);
     return NSCachedURLResponse._(_ret, _lib, retain: true, release: true);
   }
@@ -45960,7 +49238,7 @@ class NSURLCache extends NSObject {
   /// @param request the NSURLRequest to use as a key for the storage.
   void storeCachedResponse_forRequest_(
       NSCachedURLResponse? cachedResponse, NSURLRequest? request) {
-    return _lib._objc_msgSend_706(
+    return _lib._objc_msgSend_752(
         _id,
         _lib._sel_storeCachedResponse_forRequest_1,
         cachedResponse?._id ?? ffi.nullptr,
@@ -45975,7 +49253,7 @@ class NSURLCache extends NSObject {
   /// stored with the given request.
   /// @param request the NSURLRequest to use as a key for the lookup.
   void removeCachedResponseForRequest_(NSURLRequest? request) {
-    return _lib._objc_msgSend_707(
+    return _lib._objc_msgSend_753(
         _id,
         _lib._sel_removeCachedResponseForRequest_1,
         request?._id ?? ffi.nullptr);
@@ -46049,7 +49327,7 @@ class NSURLCache extends NSObject {
 
   void storeCachedResponse_forDataTask_(
       NSCachedURLResponse? cachedResponse, NSURLSessionDataTask? dataTask) {
-    return _lib._objc_msgSend_708(
+    return _lib._objc_msgSend_754(
         _id,
         _lib._sel_storeCachedResponse_forDataTask_1,
         cachedResponse?._id ?? ffi.nullptr,
@@ -46057,8 +49335,8 @@ class NSURLCache extends NSObject {
   }
 
   void getCachedResponseForDataTask_completionHandler_(
-      NSURLSessionDataTask? dataTask, ObjCBlock38 completionHandler) {
-    return _lib._objc_msgSend_709(
+      NSURLSessionDataTask? dataTask, ObjCBlock39 completionHandler) {
+    return _lib._objc_msgSend_755(
         _id,
         _lib._sel_getCachedResponseForDataTask_completionHandler_1,
         dataTask?._id ?? ffi.nullptr,
@@ -46066,7 +49344,7 @@ class NSURLCache extends NSObject {
   }
 
   void removeCachedResponseForDataTask_(NSURLSessionDataTask? dataTask) {
-    return _lib._objc_msgSend_710(
+    return _lib._objc_msgSend_756(
         _id,
         _lib._sel_removeCachedResponseForDataTask_1,
         dataTask?._id ?? ffi.nullptr);
@@ -46180,7 +49458,7 @@ class NSCachedURLResponse extends NSObject {
   /// @result an initialized NSCachedURLResponse.
   NSCachedURLResponse initWithResponse_data_(
       NSURLResponse? response, NSData? data) {
-    final _ret = _lib._objc_msgSend_702(_id, _lib._sel_initWithResponse_data_1,
+    final _ret = _lib._objc_msgSend_748(_id, _lib._sel_initWithResponse_data_1,
         response?._id ?? ffi.nullptr, data?._id ?? ffi.nullptr);
     return NSCachedURLResponse._(_ret, _lib, retain: true, release: true);
   }
@@ -46201,7 +49479,7 @@ class NSCachedURLResponse extends NSObject {
       NSData? data,
       NSDictionary? userInfo,
       int storagePolicy) {
-    final _ret = _lib._objc_msgSend_703(
+    final _ret = _lib._objc_msgSend_749(
         _id,
         _lib._sel_initWithResponse_data_userInfo_storagePolicy_1,
         response?._id ?? ffi.nullptr,
@@ -46215,7 +49493,7 @@ class NSCachedURLResponse extends NSObject {
   /// @abstract Returns the response wrapped by this instance.
   /// @result The response wrapped by this instance.
   NSURLResponse? get response {
-    final _ret = _lib._objc_msgSend_607(_id, _lib._sel_response1);
+    final _ret = _lib._objc_msgSend_663(_id, _lib._sel_response1);
     return _ret.address == 0
         ? null
         : NSURLResponse._(_ret, _lib, retain: true, release: true);
@@ -46245,7 +49523,7 @@ class NSCachedURLResponse extends NSObject {
   /// @abstract Returns the NSURLCacheStoragePolicy constant of the receiver.
   /// @result The NSURLCacheStoragePolicy constant of the receiver.
   int get storagePolicy {
-    return _lib._objc_msgSend_704(_id, _lib._sel_storagePolicy1);
+    return _lib._objc_msgSend_750(_id, _lib._sel_storagePolicy1);
   }
 
   static NSCachedURLResponse new1(PedometerBindings _lib) {
@@ -46433,7 +49711,7 @@ class NSURLSessionDataTask extends NSURLSessionTask {
   }
 }
 
-void _ObjCBlock38_fnPtrTrampoline(
+void _ObjCBlock39_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
   return block.ref.target
       .cast<
@@ -46441,25 +49719,25 @@ void _ObjCBlock38_fnPtrTrampoline(
       .asFunction<void Function(ffi.Pointer<ObjCObject> arg0)>()(arg0);
 }
 
-final _ObjCBlock38_closureRegistry = <int, Function>{};
-int _ObjCBlock38_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock38_registerClosure(Function fn) {
-  final id = ++_ObjCBlock38_closureRegistryIndex;
-  _ObjCBlock38_closureRegistry[id] = fn;
+final _ObjCBlock39_closureRegistry = <int, Function>{};
+int _ObjCBlock39_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock39_registerClosure(Function fn) {
+  final id = ++_ObjCBlock39_closureRegistryIndex;
+  _ObjCBlock39_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock38_closureTrampoline(
+void _ObjCBlock39_closureTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
-  return _ObjCBlock38_closureRegistry[block.ref.target.address]!(arg0);
+  return _ObjCBlock39_closureRegistry[block.ref.target.address]!(arg0);
 }
 
-class ObjCBlock38 extends _ObjCBlockBase {
-  ObjCBlock38._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock39 extends _ObjCBlockBase {
+  ObjCBlock39._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock38.fromFunctionPointer(
+  ObjCBlock39.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -46470,23 +49748,23 @@ class ObjCBlock38 extends _ObjCBlockBase {
                 _cFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock38_fnPtrTrampoline)
+                        _ObjCBlock39_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock38.fromFunction(
+  ObjCBlock39.fromFunction(
       PedometerBindings lib, void Function(ffi.Pointer<ObjCObject> arg0) fn)
       : this._(
             lib._newBlock1(
                 _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock38_closureTrampoline)
+                        _ObjCBlock39_closureTrampoline)
                     .cast(),
-                _ObjCBlock38_registerClosure(fn)),
+                _ObjCBlock39_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0) {
@@ -46604,7 +49882,7 @@ class NSURLConnection extends NSObject {
 
   NSURLConnection initWithRequest_delegate_startImmediately_(
       NSURLRequest? request, NSObject delegate, bool startImmediately) {
-    final _ret = _lib._objc_msgSend_711(
+    final _ret = _lib._objc_msgSend_757(
         _id,
         _lib._sel_initWithRequest_delegate_startImmediately_1,
         request?._id ?? ffi.nullptr,
@@ -46615,7 +49893,7 @@ class NSURLConnection extends NSObject {
 
   NSURLConnection initWithRequest_delegate_(
       NSURLRequest? request, NSObject delegate) {
-    final _ret = _lib._objc_msgSend_712(
+    final _ret = _lib._objc_msgSend_758(
         _id,
         _lib._sel_initWithRequest_delegate_1,
         request?._id ?? ffi.nullptr,
@@ -46625,7 +49903,7 @@ class NSURLConnection extends NSObject {
 
   static NSURLConnection connectionWithRequest_delegate_(
       PedometerBindings _lib, NSURLRequest? request, NSObject delegate) {
-    final _ret = _lib._objc_msgSend_713(
+    final _ret = _lib._objc_msgSend_759(
         _lib._class_NSURLConnection1,
         _lib._sel_connectionWithRequest_delegate_1,
         request?._id ?? ffi.nullptr,
@@ -46634,14 +49912,14 @@ class NSURLConnection extends NSObject {
   }
 
   NSURLRequest? get originalRequest {
-    final _ret = _lib._objc_msgSend_605(_id, _lib._sel_originalRequest1);
+    final _ret = _lib._objc_msgSend_661(_id, _lib._sel_originalRequest1);
     return _ret.address == 0
         ? null
         : NSURLRequest._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLRequest? get currentRequest {
-    final _ret = _lib._objc_msgSend_605(_id, _lib._sel_currentRequest1);
+    final _ret = _lib._objc_msgSend_661(_id, _lib._sel_currentRequest1);
     return _ret.address == 0
         ? null
         : NSURLRequest._(_ret, _lib, retain: true, release: true);
@@ -46656,12 +49934,12 @@ class NSURLConnection extends NSObject {
   }
 
   void scheduleInRunLoop_forMode_(NSRunLoop? aRunLoop, NSString mode) {
-    return _lib._objc_msgSend_564(_id, _lib._sel_scheduleInRunLoop_forMode_1,
+    return _lib._objc_msgSend_621(_id, _lib._sel_scheduleInRunLoop_forMode_1,
         aRunLoop?._id ?? ffi.nullptr, mode._id);
   }
 
   void unscheduleFromRunLoop_forMode_(NSRunLoop? aRunLoop, NSString mode) {
-    return _lib._objc_msgSend_564(
+    return _lib._objc_msgSend_621(
         _id,
         _lib._sel_unscheduleFromRunLoop_forMode_1,
         aRunLoop?._id ?? ffi.nullptr,
@@ -46669,7 +49947,7 @@ class NSURLConnection extends NSObject {
   }
 
   void setDelegateQueue_(NSOperationQueue? queue) {
-    return _lib._objc_msgSend_714(
+    return _lib._objc_msgSend_760(
         _id, _lib._sel_setDelegateQueue_1, queue?._id ?? ffi.nullptr);
   }
 
@@ -46698,7 +49976,7 @@ class NSURLConnection extends NSObject {
   /// initialize a connection and the associated I/O can be
   /// started, NO otherwise.
   static bool canHandleRequest_(PedometerBindings _lib, NSURLRequest? request) {
-    return _lib._objc_msgSend_715(_lib._class_NSURLConnection1,
+    return _lib._objc_msgSend_761(_lib._class_NSURLConnection1,
         _lib._sel_canHandleRequest_1, request?._id ?? ffi.nullptr);
   }
 
@@ -46744,7 +50022,7 @@ class NSURLConnection extends NSObject {
       NSURLRequest? request,
       ffi.Pointer<ffi.Pointer<ObjCObject>> response,
       ffi.Pointer<ffi.Pointer<ObjCObject>> error) {
-    final _ret = _lib._objc_msgSend_716(
+    final _ret = _lib._objc_msgSend_762(
         _lib._class_NSURLConnection1,
         _lib._sel_sendSynchronousRequest_returningResponse_error_1,
         request?._id ?? ffi.nullptr,
@@ -46788,8 +50066,8 @@ class NSURLConnection extends NSObject {
       PedometerBindings _lib,
       NSURLRequest? request,
       NSOperationQueue? queue,
-      ObjCBlock39 handler) {
-    return _lib._objc_msgSend_717(
+      ObjCBlock40 handler) {
+    return _lib._objc_msgSend_763(
         _lib._class_NSURLConnection1,
         _lib._sel_sendAsynchronousRequest_queue_completionHandler_1,
         request?._id ?? ffi.nullptr,
@@ -46863,7 +50141,7 @@ class NSURLConnection extends NSObject {
   }
 }
 
-void _ObjCBlock39_fnPtrTrampoline(
+void _ObjCBlock40_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0,
     ffi.Pointer<ObjCObject> arg1,
@@ -46882,29 +50160,29 @@ void _ObjCBlock39_fnPtrTrampoline(
               ffi.Pointer<ObjCObject> arg2)>()(arg0, arg1, arg2);
 }
 
-final _ObjCBlock39_closureRegistry = <int, Function>{};
-int _ObjCBlock39_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock39_registerClosure(Function fn) {
-  final id = ++_ObjCBlock39_closureRegistryIndex;
-  _ObjCBlock39_closureRegistry[id] = fn;
+final _ObjCBlock40_closureRegistry = <int, Function>{};
+int _ObjCBlock40_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock40_registerClosure(Function fn) {
+  final id = ++_ObjCBlock40_closureRegistryIndex;
+  _ObjCBlock40_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock39_closureTrampoline(
+void _ObjCBlock40_closureTrampoline(
     ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0,
     ffi.Pointer<ObjCObject> arg1,
     ffi.Pointer<ObjCObject> arg2) {
-  return _ObjCBlock39_closureRegistry[block.ref.target.address]!(
+  return _ObjCBlock40_closureRegistry[block.ref.target.address]!(
       arg0, arg1, arg2);
 }
 
-class ObjCBlock39 extends _ObjCBlockBase {
-  ObjCBlock39._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock40 extends _ObjCBlockBase {
+  ObjCBlock40._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock39.fromFunctionPointer(
+  ObjCBlock40.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -46921,14 +50199,14 @@ class ObjCBlock39 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1,
                                 ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock39_fnPtrTrampoline)
+                        _ObjCBlock40_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock39.fromFunction(
+  ObjCBlock40.fromFunction(
       PedometerBindings lib,
       void Function(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
               ffi.Pointer<ObjCObject> arg2)
@@ -46941,9 +50219,9 @@ class ObjCBlock39 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1,
                                 ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock39_closureTrampoline)
+                        _ObjCBlock40_closureTrampoline)
                     .cast(),
-                _ObjCBlock39_registerClosure(fn)),
+                _ObjCBlock40_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
@@ -46998,7 +50276,7 @@ class NSURLCredential extends NSObject {
   /// @abstract Determine whether this credential is or should be stored persistently
   /// @result A value indicating whether this credential is stored permanently, per session or not at all.
   int get persistence {
-    return _lib._objc_msgSend_718(_id, _lib._sel_persistence1);
+    return _lib._objc_msgSend_764(_id, _lib._sel_persistence1);
   }
 
   /// !
@@ -47010,7 +50288,7 @@ class NSURLCredential extends NSObject {
   /// @result The initialized NSURLCredential
   NSURLCredential initWithUser_password_persistence_(
       NSString? user, NSString? password, int persistence) {
-    final _ret = _lib._objc_msgSend_719(
+    final _ret = _lib._objc_msgSend_765(
         _id,
         _lib._sel_initWithUser_password_persistence_1,
         user?._id ?? ffi.nullptr,
@@ -47031,7 +50309,7 @@ class NSURLCredential extends NSObject {
       NSString? user,
       NSString? password,
       int persistence) {
-    final _ret = _lib._objc_msgSend_720(
+    final _ret = _lib._objc_msgSend_766(
         _lib._class_NSURLCredential1,
         _lib._sel_credentialWithUser_password_persistence_1,
         user?._id ?? ffi.nullptr,
@@ -47085,7 +50363,7 @@ class NSURLCredential extends NSObject {
       ffi.Pointer<__SecIdentity> identity,
       NSArray? certArray,
       int persistence) {
-    final _ret = _lib._objc_msgSend_721(
+    final _ret = _lib._objc_msgSend_767(
         _id,
         _lib._sel_initWithIdentity_certificates_persistence_1,
         identity,
@@ -47106,7 +50384,7 @@ class NSURLCredential extends NSObject {
       ffi.Pointer<__SecIdentity> identity,
       NSArray? certArray,
       int persistence) {
-    final _ret = _lib._objc_msgSend_722(
+    final _ret = _lib._objc_msgSend_768(
         _lib._class_NSURLCredential1,
         _lib._sel_credentialWithIdentity_certificates_persistence_1,
         identity,
@@ -47119,7 +50397,7 @@ class NSURLCredential extends NSObject {
   /// @abstract Returns the SecIdentityRef of this credential, if it was created with a certificate and identity
   /// @result A SecIdentityRef or NULL if this is a username/password credential
   ffi.Pointer<__SecIdentity> get identity {
-    return _lib._objc_msgSend_723(_id, _lib._sel_identity1);
+    return _lib._objc_msgSend_769(_id, _lib._sel_identity1);
   }
 
   /// !
@@ -47137,7 +50415,7 @@ class NSURLCredential extends NSObject {
   /// @abstract Initialize a new NSURLCredential which specifies that the specified trust has been accepted.
   /// @result the Initialized NSURLCredential
   NSURLCredential initWithTrust_(ffi.Pointer<__SecTrust> trust) {
-    final _ret = _lib._objc_msgSend_724(_id, _lib._sel_initWithTrust_1, trust);
+    final _ret = _lib._objc_msgSend_770(_id, _lib._sel_initWithTrust_1, trust);
     return NSURLCredential._(_ret, _lib, retain: true, release: true);
   }
 
@@ -47147,7 +50425,7 @@ class NSURLCredential extends NSObject {
   /// @result The new autoreleased NSURLCredential
   static NSURLCredential credentialForTrust_(
       PedometerBindings _lib, ffi.Pointer<__SecTrust> trust) {
-    final _ret = _lib._objc_msgSend_725(
+    final _ret = _lib._objc_msgSend_771(
         _lib._class_NSURLCredential1, _lib._sel_credentialForTrust_1, trust);
     return NSURLCredential._(_ret, _lib, retain: true, release: true);
   }
@@ -47284,7 +50562,7 @@ class NSURLProtectionSpace extends NSObject {
       NSString? protocol,
       NSString? realm,
       NSString? authenticationMethod) {
-    final _ret = _lib._objc_msgSend_726(
+    final _ret = _lib._objc_msgSend_772(
         _id,
         _lib._sel_initWithHost_port_protocol_realm_authenticationMethod_1,
         host?._id ?? ffi.nullptr,
@@ -47314,7 +50592,7 @@ class NSURLProtectionSpace extends NSObject {
       NSString? type,
       NSString? realm,
       NSString? authenticationMethod) {
-    final _ret = _lib._objc_msgSend_726(
+    final _ret = _lib._objc_msgSend_772(
         _id,
         _lib._sel_initWithProxyHost_port_type_realm_authenticationMethod_1,
         host?._id ?? ffi.nullptr,
@@ -47413,7 +50691,7 @@ class NSURLProtectionSpace extends NSObject {
   /// @abstract Returns a SecTrustRef which represents the state of the servers SSL transaction state
   /// @result A SecTrustRef from Security.framework.  (Nil if the authenticationMethod is not NSURLAuthenticationMethodServerTrust)
   ffi.Pointer<__SecTrust> get serverTrust {
-    return _lib._objc_msgSend_727(_id, _lib._sel_serverTrust1);
+    return _lib._objc_msgSend_773(_id, _lib._sel_serverTrust1);
   }
 
   static NSURLProtectionSpace new1(PedometerBindings _lib) {
@@ -47516,7 +50794,7 @@ class NSURLCredentialStorage extends NSObject {
   /// @result the shared authentication storage
   static NSURLCredentialStorage? getSharedCredentialStorage(
       PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_728(_lib._class_NSURLCredentialStorage1,
+    final _ret = _lib._objc_msgSend_774(_lib._class_NSURLCredentialStorage1,
         _lib._sel_sharedCredentialStorage1);
     return _ret.address == 0
         ? null
@@ -47529,7 +50807,7 @@ class NSURLCredentialStorage extends NSObject {
   /// @param space An NSURLProtectionSpace indicating the protection space for which to get credentials
   /// @result A dictionary where the keys are usernames and the values are the corresponding NSURLCredentials.
   NSDictionary credentialsForProtectionSpace_(NSURLProtectionSpace? space) {
-    final _ret = _lib._objc_msgSend_729(_id,
+    final _ret = _lib._objc_msgSend_775(_id,
         _lib._sel_credentialsForProtectionSpace_1, space?._id ?? ffi.nullptr);
     return NSDictionary._(_ret, _lib, retain: true, release: true);
   }
@@ -47556,7 +50834,7 @@ class NSURLCredentialStorage extends NSObject {
   /// the new one will replace it.
   void setCredential_forProtectionSpace_(
       NSURLCredential? credential, NSURLProtectionSpace? space) {
-    return _lib._objc_msgSend_730(
+    return _lib._objc_msgSend_776(
         _id,
         _lib._sel_setCredential_forProtectionSpace_1,
         credential?._id ?? ffi.nullptr,
@@ -47573,7 +50851,7 @@ class NSURLCredentialStorage extends NSObject {
   /// See removeCredential:forProtectionSpace:options.
   void removeCredential_forProtectionSpace_(
       NSURLCredential? credential, NSURLProtectionSpace? space) {
-    return _lib._objc_msgSend_730(
+    return _lib._objc_msgSend_776(
         _id,
         _lib._sel_removeCredential_forProtectionSpace_1,
         credential?._id ?? ffi.nullptr,
@@ -47592,7 +50870,7 @@ class NSURLCredentialStorage extends NSObject {
   /// @discussion The credential is removed from both persistent and temporary storage.
   void removeCredential_forProtectionSpace_options_(NSURLCredential? credential,
       NSURLProtectionSpace? space, NSDictionary? options) {
-    return _lib._objc_msgSend_731(
+    return _lib._objc_msgSend_777(
         _id,
         _lib._sel_removeCredential_forProtectionSpace_options_1,
         credential?._id ?? ffi.nullptr,
@@ -47606,7 +50884,7 @@ class NSURLCredentialStorage extends NSObject {
   /// @param space The protection space for which to get the default credential.
   NSURLCredential defaultCredentialForProtectionSpace_(
       NSURLProtectionSpace? space) {
-    final _ret = _lib._objc_msgSend_732(
+    final _ret = _lib._objc_msgSend_778(
         _id,
         _lib._sel_defaultCredentialForProtectionSpace_1,
         space?._id ?? ffi.nullptr);
@@ -47621,7 +50899,7 @@ class NSURLCredentialStorage extends NSObject {
   /// @discussion If the credential is not yet in the set for the protection space, it will be added to it.
   void setDefaultCredential_forProtectionSpace_(
       NSURLCredential? credential, NSURLProtectionSpace? space) {
-    return _lib._objc_msgSend_730(
+    return _lib._objc_msgSend_776(
         _id,
         _lib._sel_setDefaultCredential_forProtectionSpace_1,
         credential?._id ?? ffi.nullptr,
@@ -47631,8 +50909,8 @@ class NSURLCredentialStorage extends NSObject {
   void getCredentialsForProtectionSpace_task_completionHandler_(
       NSURLProtectionSpace? protectionSpace,
       NSURLSessionTask? task,
-      ObjCBlock40 completionHandler) {
-    return _lib._objc_msgSend_733(
+      ObjCBlock41 completionHandler) {
+    return _lib._objc_msgSend_779(
         _id,
         _lib._sel_getCredentialsForProtectionSpace_task_completionHandler_1,
         protectionSpace?._id ?? ffi.nullptr,
@@ -47642,7 +50920,7 @@ class NSURLCredentialStorage extends NSObject {
 
   void setCredential_forProtectionSpace_task_(NSURLCredential? credential,
       NSURLProtectionSpace? protectionSpace, NSURLSessionTask? task) {
-    return _lib._objc_msgSend_734(
+    return _lib._objc_msgSend_780(
         _id,
         _lib._sel_setCredential_forProtectionSpace_task_1,
         credential?._id ?? ffi.nullptr,
@@ -47655,7 +50933,7 @@ class NSURLCredentialStorage extends NSObject {
       NSURLProtectionSpace? protectionSpace,
       NSDictionary? options,
       NSURLSessionTask? task) {
-    return _lib._objc_msgSend_735(
+    return _lib._objc_msgSend_781(
         _id,
         _lib._sel_removeCredential_forProtectionSpace_options_task_1,
         credential?._id ?? ffi.nullptr,
@@ -47667,8 +50945,8 @@ class NSURLCredentialStorage extends NSObject {
   void getDefaultCredentialForProtectionSpace_task_completionHandler_(
       NSURLProtectionSpace? space,
       NSURLSessionTask? task,
-      ObjCBlock41 completionHandler) {
-    return _lib._objc_msgSend_736(
+      ObjCBlock42 completionHandler) {
+    return _lib._objc_msgSend_782(
         _id,
         _lib._sel_getDefaultCredentialForProtectionSpace_task_completionHandler_1,
         space?._id ?? ffi.nullptr,
@@ -47680,7 +50958,7 @@ class NSURLCredentialStorage extends NSObject {
       NSURLCredential? credential,
       NSURLProtectionSpace? protectionSpace,
       NSURLSessionTask? task) {
-    return _lib._objc_msgSend_734(
+    return _lib._objc_msgSend_780(
         _id,
         _lib._sel_setDefaultCredential_forProtectionSpace_task_1,
         credential?._id ?? ffi.nullptr,
@@ -47754,76 +51032,6 @@ class NSURLCredentialStorage extends NSObject {
   }
 }
 
-void _ObjCBlock40_fnPtrTrampoline(
-    ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
-  return block.ref.target
-      .cast<
-          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ObjCObject> arg0)>>()
-      .asFunction<void Function(ffi.Pointer<ObjCObject> arg0)>()(arg0);
-}
-
-final _ObjCBlock40_closureRegistry = <int, Function>{};
-int _ObjCBlock40_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock40_registerClosure(Function fn) {
-  final id = ++_ObjCBlock40_closureRegistryIndex;
-  _ObjCBlock40_closureRegistry[id] = fn;
-  return ffi.Pointer<ffi.Void>.fromAddress(id);
-}
-
-void _ObjCBlock40_closureTrampoline(
-    ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
-  return _ObjCBlock40_closureRegistry[block.ref.target.address]!(arg0);
-}
-
-class ObjCBlock40 extends _ObjCBlockBase {
-  ObjCBlock40._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
-      : super._(id, lib, retain: false, release: true);
-
-  /// Creates a block from a C function pointer.
-  ObjCBlock40.fromFunctionPointer(
-      PedometerBindings lib,
-      ffi.Pointer<
-              ffi.NativeFunction<
-                  ffi.Void Function(ffi.Pointer<ObjCObject> arg0)>>
-          ptr)
-      : this._(
-            lib._newBlock1(
-                _cFuncTrampoline ??= ffi.Pointer.fromFunction<
-                            ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
-                                ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock40_fnPtrTrampoline)
-                    .cast(),
-                ptr.cast()),
-            lib);
-  static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
-
-  /// Creates a block from a Dart function.
-  ObjCBlock40.fromFunction(
-      PedometerBindings lib, void Function(ffi.Pointer<ObjCObject> arg0) fn)
-      : this._(
-            lib._newBlock1(
-                _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
-                            ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
-                                ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock40_closureTrampoline)
-                    .cast(),
-                _ObjCBlock40_registerClosure(fn)),
-            lib);
-  static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
-  void call(ffi.Pointer<ObjCObject> arg0) {
-    return _id.ref.invoke
-        .cast<
-            ffi.NativeFunction<
-                ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
-                    ffi.Pointer<ObjCObject> arg0)>>()
-        .asFunction<
-            void Function(ffi.Pointer<_ObjCBlock> block,
-                ffi.Pointer<ObjCObject> arg0)>()(_id, arg0);
-  }
-
-  ffi.Pointer<_ObjCBlock> get pointer => _id;
-}
-
 void _ObjCBlock41_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
   return block.ref.target
@@ -47894,6 +51102,76 @@ class ObjCBlock41 extends _ObjCBlockBase {
   ffi.Pointer<_ObjCBlock> get pointer => _id;
 }
 
+void _ObjCBlock42_fnPtrTrampoline(
+    ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
+  return block.ref.target
+      .cast<
+          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ObjCObject> arg0)>>()
+      .asFunction<void Function(ffi.Pointer<ObjCObject> arg0)>()(arg0);
+}
+
+final _ObjCBlock42_closureRegistry = <int, Function>{};
+int _ObjCBlock42_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock42_registerClosure(Function fn) {
+  final id = ++_ObjCBlock42_closureRegistryIndex;
+  _ObjCBlock42_closureRegistry[id] = fn;
+  return ffi.Pointer<ffi.Void>.fromAddress(id);
+}
+
+void _ObjCBlock42_closureTrampoline(
+    ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
+  return _ObjCBlock42_closureRegistry[block.ref.target.address]!(arg0);
+}
+
+class ObjCBlock42 extends _ObjCBlockBase {
+  ObjCBlock42._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+      : super._(id, lib, retain: false, release: true);
+
+  /// Creates a block from a C function pointer.
+  ObjCBlock42.fromFunctionPointer(
+      PedometerBindings lib,
+      ffi.Pointer<
+              ffi.NativeFunction<
+                  ffi.Void Function(ffi.Pointer<ObjCObject> arg0)>>
+          ptr)
+      : this._(
+            lib._newBlock1(
+                _cFuncTrampoline ??= ffi.Pointer.fromFunction<
+                            ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
+                                ffi.Pointer<ObjCObject> arg0)>(
+                        _ObjCBlock42_fnPtrTrampoline)
+                    .cast(),
+                ptr.cast()),
+            lib);
+  static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
+
+  /// Creates a block from a Dart function.
+  ObjCBlock42.fromFunction(
+      PedometerBindings lib, void Function(ffi.Pointer<ObjCObject> arg0) fn)
+      : this._(
+            lib._newBlock1(
+                _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
+                            ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
+                                ffi.Pointer<ObjCObject> arg0)>(
+                        _ObjCBlock42_closureTrampoline)
+                    .cast(),
+                _ObjCBlock42_registerClosure(fn)),
+            lib);
+  static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
+  void call(ffi.Pointer<ObjCObject> arg0) {
+    return _id.ref.invoke
+        .cast<
+            ffi.NativeFunction<
+                ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
+                    ffi.Pointer<ObjCObject> arg0)>>()
+        .asFunction<
+            void Function(ffi.Pointer<_ObjCBlock> block,
+                ffi.Pointer<ObjCObject> arg0)>()(_id, arg0);
+  }
+
+  ffi.Pointer<_ObjCBlock> get pointer => _id;
+}
+
 /// !
 /// @class NSURLProtocol
 ///
@@ -47938,7 +51216,7 @@ class NSURLProtocol extends NSObject {
   /// to the URL loading system.
   NSURLProtocol initWithRequest_cachedResponse_client_(NSURLRequest? request,
       NSCachedURLResponse? cachedResponse, NSObject? client) {
-    final _ret = _lib._objc_msgSend_737(
+    final _ret = _lib._objc_msgSend_783(
         _id,
         _lib._sel_initWithRequest_cachedResponse_client_1,
         request?._id ?? ffi.nullptr,
@@ -47961,7 +51239,7 @@ class NSURLProtocol extends NSObject {
   /// @abstract Returns the NSURLRequest of the receiver.
   /// @result The NSURLRequest of the receiver.
   NSURLRequest? get request {
-    final _ret = _lib._objc_msgSend_605(_id, _lib._sel_request1);
+    final _ret = _lib._objc_msgSend_661(_id, _lib._sel_request1);
     return _ret.address == 0
         ? null
         : NSURLRequest._(_ret, _lib, retain: true, release: true);
@@ -47971,7 +51249,7 @@ class NSURLProtocol extends NSObject {
   /// @abstract Returns the NSCachedURLResponse of the receiver.
   /// @result The NSCachedURLResponse of the receiver.
   NSCachedURLResponse? get cachedResponse {
-    final _ret = _lib._objc_msgSend_738(_id, _lib._sel_cachedResponse1);
+    final _ret = _lib._objc_msgSend_784(_id, _lib._sel_cachedResponse1);
     return _ret.address == 0
         ? null
         : NSCachedURLResponse._(_ret, _lib, retain: true, release: true);
@@ -47989,7 +51267,7 @@ class NSURLProtocol extends NSObject {
   /// @result YES if the protocol can handle the given request, NO if not.
   static bool canInitWithRequest_(
       PedometerBindings _lib, NSURLRequest? request) {
-    return _lib._objc_msgSend_715(_lib._class_NSURLProtocol1,
+    return _lib._objc_msgSend_761(_lib._class_NSURLProtocol1,
         _lib._sel_canInitWithRequest_1, request?._id ?? ffi.nullptr);
   }
 
@@ -48011,7 +51289,7 @@ class NSURLProtocol extends NSObject {
   /// @result The canonical form of the given request.
   static NSURLRequest canonicalRequestForRequest_(
       PedometerBindings _lib, NSURLRequest? request) {
-    final _ret = _lib._objc_msgSend_739(_lib._class_NSURLProtocol1,
+    final _ret = _lib._objc_msgSend_785(_lib._class_NSURLProtocol1,
         _lib._sel_canonicalRequestForRequest_1, request?._id ?? ffi.nullptr);
     return NSURLRequest._(_ret, _lib, retain: true, release: true);
   }
@@ -48026,7 +51304,7 @@ class NSURLProtocol extends NSObject {
   /// @result YES if the two requests are cache-equivalent, NO otherwise.
   static bool requestIsCacheEquivalent_toRequest_(
       PedometerBindings _lib, NSURLRequest? a, NSURLRequest? b) {
-    return _lib._objc_msgSend_740(
+    return _lib._objc_msgSend_786(
         _lib._class_NSURLProtocol1,
         _lib._sel_requestIsCacheEquivalent_toRequest_1,
         a?._id ?? ffi.nullptr,
@@ -48066,7 +51344,7 @@ class NSURLProtocol extends NSObject {
   /// had previously been stored with the given key in the given request.
   static NSObject propertyForKey_inRequest_(
       PedometerBindings _lib, NSString? key, NSURLRequest? request) {
-    final _ret = _lib._objc_msgSend_741(
+    final _ret = _lib._objc_msgSend_787(
         _lib._class_NSURLProtocol1,
         _lib._sel_propertyForKey_inRequest_1,
         key?._id ?? ffi.nullptr,
@@ -48086,7 +51364,7 @@ class NSURLProtocol extends NSObject {
   /// @param request The request in which to store the property.
   static void setProperty_forKey_inRequest_(PedometerBindings _lib,
       NSObject value, NSString? key, NSMutableURLRequest? request) {
-    return _lib._objc_msgSend_747(
+    return _lib._objc_msgSend_793(
         _lib._class_NSURLProtocol1,
         _lib._sel_setProperty_forKey_inRequest_1,
         value._id,
@@ -48104,7 +51382,7 @@ class NSURLProtocol extends NSObject {
   /// @param request The request to be modified
   static void removePropertyForKey_inRequest_(
       PedometerBindings _lib, NSString? key, NSMutableURLRequest? request) {
-    return _lib._objc_msgSend_748(
+    return _lib._objc_msgSend_794(
         _lib._class_NSURLProtocol1,
         _lib._sel_removePropertyForKey_inRequest_1,
         key?._id ?? ffi.nullptr,
@@ -48150,13 +51428,13 @@ class NSURLProtocol extends NSObject {
   }
 
   static bool canInitWithTask_(PedometerBindings _lib, NSURLSessionTask? task) {
-    return _lib._objc_msgSend_749(_lib._class_NSURLProtocol1,
+    return _lib._objc_msgSend_795(_lib._class_NSURLProtocol1,
         _lib._sel_canInitWithTask_1, task?._id ?? ffi.nullptr);
   }
 
   NSURLProtocol initWithTask_cachedResponse_client_(NSURLSessionTask? task,
       NSCachedURLResponse? cachedResponse, NSObject? client) {
-    final _ret = _lib._objc_msgSend_750(
+    final _ret = _lib._objc_msgSend_796(
         _id,
         _lib._sel_initWithTask_cachedResponse_client_1,
         task?._id ?? ffi.nullptr,
@@ -48166,7 +51444,7 @@ class NSURLProtocol extends NSObject {
   }
 
   NSURLSessionTask? get task {
-    final _ret = _lib._objc_msgSend_751(_id, _lib._sel_task1);
+    final _ret = _lib._objc_msgSend_797(_id, _lib._sel_task1);
     return _ret.address == 0
         ? null
         : NSURLSessionTask._(_ret, _lib, retain: true, release: true);
@@ -48310,13 +51588,13 @@ class NSMutableURLRequest extends NSURLRequest {
   /// @abstract The cache policy of the receiver.
   @override
   int get cachePolicy {
-    return _lib._objc_msgSend_594(_id, _lib._sel_cachePolicy1);
+    return _lib._objc_msgSend_650(_id, _lib._sel_cachePolicy1);
   }
 
   /// !
   /// @abstract The cache policy of the receiver.
   set cachePolicy(int value) {
-    _lib._objc_msgSend_742(_id, _lib._sel_setCachePolicy_1, value);
+    _lib._objc_msgSend_788(_id, _lib._sel_setCachePolicy_1, value);
   }
 
   /// !
@@ -48389,7 +51667,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// of the request.  Most clients should not need to use this method.
   @override
   int get networkServiceType {
-    return _lib._objc_msgSend_595(_id, _lib._sel_networkServiceType1);
+    return _lib._objc_msgSend_651(_id, _lib._sel_networkServiceType1);
   }
 
   /// !
@@ -48397,7 +51675,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// @discussion This method is used to provide the network layers with a hint as to the purpose
   /// of the request.  Most clients should not need to use this method.
   set networkServiceType(int value) {
-    _lib._objc_msgSend_743(_id, _lib._sel_setNetworkServiceType_1, value);
+    _lib._objc_msgSend_789(_id, _lib._sel_setNetworkServiceType_1, value);
   }
 
   /// !
@@ -48485,7 +51763,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// user. Defaults to NSURLRequestAttributionDeveloper.
   @override
   int get attribution {
-    return _lib._objc_msgSend_596(_id, _lib._sel_attribution1);
+    return _lib._objc_msgSend_652(_id, _lib._sel_attribution1);
   }
 
   /// !
@@ -48493,7 +51771,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// @discussion Set to NSURLRequestAttributionUser if the URL was specified by the
   /// user. Defaults to NSURLRequestAttributionDeveloper.
   set attribution(int value) {
-    _lib._objc_msgSend_744(_id, _lib._sel_setAttribution_1, value);
+    _lib._objc_msgSend_790(_id, _lib._sel_setAttribution_1, value);
   }
 
   /// !
@@ -48542,7 +51820,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// the key or value for a key-value pair answers NO when sent this
   /// message, the key-value pair is skipped.
   set allHTTPHeaderFields(NSDictionary? value) {
-    _lib._objc_msgSend_670(
+    _lib._objc_msgSend_558(
         _id, _lib._sel_setAllHTTPHeaderFields_1, value?._id ?? ffi.nullptr);
   }
 
@@ -48556,7 +51834,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// @param value the header field value.
   /// @param field the header field name (case-insensitive).
   void setValue_forHTTPHeaderField_(NSString? value, NSString? field) {
-    return _lib._objc_msgSend_552(_id, _lib._sel_setValue_forHTTPHeaderField_1,
+    return _lib._objc_msgSend_610(_id, _lib._sel_setValue_forHTTPHeaderField_1,
         value?._id ?? ffi.nullptr, field?._id ?? ffi.nullptr);
   }
 
@@ -48574,7 +51852,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// @param value the header field value.
   /// @param field the header field name (case-insensitive).
   void addValue_forHTTPHeaderField_(NSString? value, NSString? field) {
-    return _lib._objc_msgSend_552(_id, _lib._sel_addValue_forHTTPHeaderField_1,
+    return _lib._objc_msgSend_610(_id, _lib._sel_addValue_forHTTPHeaderField_1,
         value?._id ?? ffi.nullptr, field?._id ?? ffi.nullptr);
   }
 
@@ -48595,7 +51873,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// @discussion This data is sent as the message body of the request, as
   /// in done in an HTTP POST request.
   set HTTPBody(NSData? value) {
-    _lib._objc_msgSend_745(
+    _lib._objc_msgSend_791(
         _id, _lib._sel_setHTTPBody_1, value?._id ?? ffi.nullptr);
   }
 
@@ -48608,7 +51886,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// - setting one will clear the other.
   @override
   NSInputStream? get HTTPBodyStream {
-    final _ret = _lib._objc_msgSend_604(_id, _lib._sel_HTTPBodyStream1);
+    final _ret = _lib._objc_msgSend_660(_id, _lib._sel_HTTPBodyStream1);
     return _ret.address == 0
         ? null
         : NSInputStream._(_ret, _lib, retain: true, release: true);
@@ -48622,7 +51900,7 @@ class NSMutableURLRequest extends NSURLRequest {
   /// and the body data (set by setHTTPBody:, above) are mutually exclusive
   /// - setting one will clear the other.
   set HTTPBodyStream(NSInputStream? value) {
-    _lib._objc_msgSend_746(
+    _lib._objc_msgSend_792(
         _id, _lib._sel_setHTTPBodyStream_1, value?._id ?? ffi.nullptr);
   }
 
@@ -48728,7 +52006,7 @@ class NSMutableURLRequest extends NSURLRequest {
       NSURL? URL,
       int cachePolicy,
       double timeoutInterval) {
-    final _ret = _lib._objc_msgSend_593(
+    final _ret = _lib._objc_msgSend_649(
         _lib._class_NSMutableURLRequest1,
         _lib._sel_requestWithURL_cachePolicy_timeoutInterval_1,
         URL?._id ?? ffi.nullptr,
@@ -48839,7 +52117,7 @@ class NSXMLParser extends NSObject {
   }
 
   NSXMLParser initWithStream_(NSInputStream? stream) {
-    final _ret = _lib._objc_msgSend_752(
+    final _ret = _lib._objc_msgSend_798(
         _id, _lib._sel_initWithStream_1, stream?._id ?? ffi.nullptr);
     return NSXMLParser._(_ret, _lib, retain: true, release: true);
   }
@@ -48874,12 +52152,12 @@ class NSXMLParser extends NSObject {
   }
 
   int get externalEntityResolvingPolicy {
-    return _lib._objc_msgSend_753(
+    return _lib._objc_msgSend_799(
         _id, _lib._sel_externalEntityResolvingPolicy1);
   }
 
   set externalEntityResolvingPolicy(int value) {
-    _lib._objc_msgSend_754(
+    _lib._objc_msgSend_800(
         _id, _lib._sel_setExternalEntityResolvingPolicy_1, value);
   }
 
@@ -48892,7 +52170,7 @@ class NSXMLParser extends NSObject {
   }
 
   set allowedExternalEntityURLs(NSSet? value) {
-    _lib._objc_msgSend_755(_id, _lib._sel_setAllowedExternalEntityURLs_1,
+    _lib._objc_msgSend_801(_id, _lib._sel_setAllowedExternalEntityURLs_1,
         value?._id ?? ffi.nullptr);
   }
 
@@ -49038,7 +52316,7 @@ class NSURLSession extends NSObject {
   }
 
   static NSURLSession? getSharedSession(PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_756(
+    final _ret = _lib._objc_msgSend_802(
         _lib._class_NSURLSession1, _lib._sel_sharedSession1);
     return _ret.address == 0
         ? null
@@ -49047,7 +52325,7 @@ class NSURLSession extends NSObject {
 
   static NSURLSession sessionWithConfiguration_(
       PedometerBindings _lib, NSURLSessionConfiguration? configuration) {
-    final _ret = _lib._objc_msgSend_768(
+    final _ret = _lib._objc_msgSend_813(
         _lib._class_NSURLSession1,
         _lib._sel_sessionWithConfiguration_1,
         configuration?._id ?? ffi.nullptr);
@@ -49059,7 +52337,7 @@ class NSURLSession extends NSObject {
       NSURLSessionConfiguration? configuration,
       NSObject? delegate,
       NSOperationQueue? queue) {
-    final _ret = _lib._objc_msgSend_769(
+    final _ret = _lib._objc_msgSend_814(
         _lib._class_NSURLSession1,
         _lib._sel_sessionWithConfiguration_delegate_delegateQueue_1,
         configuration?._id ?? ffi.nullptr,
@@ -49069,7 +52347,7 @@ class NSURLSession extends NSObject {
   }
 
   NSOperationQueue? get delegateQueue {
-    final _ret = _lib._objc_msgSend_635(_id, _lib._sel_delegateQueue1);
+    final _ret = _lib._objc_msgSend_690(_id, _lib._sel_delegateQueue1);
     return _ret.address == 0
         ? null
         : NSOperationQueue._(_ret, _lib, retain: true, release: true);
@@ -49083,7 +52361,7 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionConfiguration? get configuration {
-    final _ret = _lib._objc_msgSend_757(_id, _lib._sel_configuration1);
+    final _ret = _lib._objc_msgSend_803(_id, _lib._sel_configuration1);
     return _ret.address == 0
         ? null
         : NSURLSessionConfiguration._(_ret, _lib, retain: true, release: true);
@@ -49119,31 +52397,31 @@ class NSURLSession extends NSObject {
         _id, _lib._sel_flushWithCompletionHandler_1, completionHandler._id);
   }
 
-  void getTasksWithCompletionHandler_(ObjCBlock42 completionHandler) {
-    return _lib._objc_msgSend_770(
+  void getTasksWithCompletionHandler_(ObjCBlock43 completionHandler) {
+    return _lib._objc_msgSend_815(
         _id, _lib._sel_getTasksWithCompletionHandler_1, completionHandler._id);
   }
 
-  void getAllTasksWithCompletionHandler_(ObjCBlock35 completionHandler) {
-    return _lib._objc_msgSend_771(_id,
+  void getAllTasksWithCompletionHandler_(ObjCBlock36 completionHandler) {
+    return _lib._objc_msgSend_816(_id,
         _lib._sel_getAllTasksWithCompletionHandler_1, completionHandler._id);
   }
 
   NSURLSessionDataTask dataTaskWithRequest_(NSURLRequest? request) {
-    final _ret = _lib._objc_msgSend_772(
+    final _ret = _lib._objc_msgSend_817(
         _id, _lib._sel_dataTaskWithRequest_1, request?._id ?? ffi.nullptr);
     return NSURLSessionDataTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionDataTask dataTaskWithURL_(NSURL? url) {
-    final _ret = _lib._objc_msgSend_773(
+    final _ret = _lib._objc_msgSend_818(
         _id, _lib._sel_dataTaskWithURL_1, url?._id ?? ffi.nullptr);
     return NSURLSessionDataTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionUploadTask uploadTaskWithRequest_fromFile_(
       NSURLRequest? request, NSURL? fileURL) {
-    final _ret = _lib._objc_msgSend_774(
+    final _ret = _lib._objc_msgSend_819(
         _id,
         _lib._sel_uploadTaskWithRequest_fromFile_1,
         request?._id ?? ffi.nullptr,
@@ -49153,7 +52431,7 @@ class NSURLSession extends NSObject {
 
   NSURLSessionUploadTask uploadTaskWithRequest_fromData_(
       NSURLRequest? request, NSData? bodyData) {
-    final _ret = _lib._objc_msgSend_775(
+    final _ret = _lib._objc_msgSend_820(
         _id,
         _lib._sel_uploadTaskWithRequest_fromData_1,
         request?._id ?? ffi.nullptr,
@@ -49162,32 +52440,32 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionUploadTask uploadTaskWithStreamedRequest_(NSURLRequest? request) {
-    final _ret = _lib._objc_msgSend_776(_id,
+    final _ret = _lib._objc_msgSend_821(_id,
         _lib._sel_uploadTaskWithStreamedRequest_1, request?._id ?? ffi.nullptr);
     return NSURLSessionUploadTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionDownloadTask downloadTaskWithRequest_(NSURLRequest? request) {
-    final _ret = _lib._objc_msgSend_778(
+    final _ret = _lib._objc_msgSend_823(
         _id, _lib._sel_downloadTaskWithRequest_1, request?._id ?? ffi.nullptr);
     return NSURLSessionDownloadTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionDownloadTask downloadTaskWithURL_(NSURL? url) {
-    final _ret = _lib._objc_msgSend_779(
+    final _ret = _lib._objc_msgSend_824(
         _id, _lib._sel_downloadTaskWithURL_1, url?._id ?? ffi.nullptr);
     return NSURLSessionDownloadTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionDownloadTask downloadTaskWithResumeData_(NSData? resumeData) {
-    final _ret = _lib._objc_msgSend_780(_id,
+    final _ret = _lib._objc_msgSend_825(_id,
         _lib._sel_downloadTaskWithResumeData_1, resumeData?._id ?? ffi.nullptr);
     return NSURLSessionDownloadTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionStreamTask streamTaskWithHostName_port_(
       NSString? hostname, int port) {
-    final _ret = _lib._objc_msgSend_783(
+    final _ret = _lib._objc_msgSend_828(
         _id,
         _lib._sel_streamTaskWithHostName_port_1,
         hostname?._id ?? ffi.nullptr,
@@ -49196,20 +52474,20 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionStreamTask streamTaskWithNetService_(NSNetService? service) {
-    final _ret = _lib._objc_msgSend_789(
+    final _ret = _lib._objc_msgSend_834(
         _id, _lib._sel_streamTaskWithNetService_1, service?._id ?? ffi.nullptr);
     return NSURLSessionStreamTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionWebSocketTask webSocketTaskWithURL_(NSURL? url) {
-    final _ret = _lib._objc_msgSend_796(
+    final _ret = _lib._objc_msgSend_841(
         _id, _lib._sel_webSocketTaskWithURL_1, url?._id ?? ffi.nullptr);
     return NSURLSessionWebSocketTask._(_ret, _lib, retain: true, release: true);
   }
 
   NSURLSessionWebSocketTask webSocketTaskWithURL_protocols_(
       NSURL? url, NSArray? protocols) {
-    final _ret = _lib._objc_msgSend_797(
+    final _ret = _lib._objc_msgSend_842(
         _id,
         _lib._sel_webSocketTaskWithURL_protocols_1,
         url?._id ?? ffi.nullptr,
@@ -49218,7 +52496,7 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionWebSocketTask webSocketTaskWithRequest_(NSURLRequest? request) {
-    final _ret = _lib._objc_msgSend_798(
+    final _ret = _lib._objc_msgSend_843(
         _id, _lib._sel_webSocketTaskWithRequest_1, request?._id ?? ffi.nullptr);
     return NSURLSessionWebSocketTask._(_ret, _lib, retain: true, release: true);
   }
@@ -49236,8 +52514,8 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionDataTask dataTaskWithRequest_completionHandler_(
-      NSURLRequest? request, ObjCBlock46 completionHandler) {
-    final _ret = _lib._objc_msgSend_799(
+      NSURLRequest? request, ObjCBlock47 completionHandler) {
+    final _ret = _lib._objc_msgSend_844(
         _id,
         _lib._sel_dataTaskWithRequest_completionHandler_1,
         request?._id ?? ffi.nullptr,
@@ -49246,8 +52524,8 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionDataTask dataTaskWithURL_completionHandler_(
-      NSURL? url, ObjCBlock46 completionHandler) {
-    final _ret = _lib._objc_msgSend_800(
+      NSURL? url, ObjCBlock47 completionHandler) {
+    final _ret = _lib._objc_msgSend_845(
         _id,
         _lib._sel_dataTaskWithURL_completionHandler_1,
         url?._id ?? ffi.nullptr,
@@ -49256,8 +52534,8 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionUploadTask uploadTaskWithRequest_fromFile_completionHandler_(
-      NSURLRequest? request, NSURL? fileURL, ObjCBlock46 completionHandler) {
-    final _ret = _lib._objc_msgSend_801(
+      NSURLRequest? request, NSURL? fileURL, ObjCBlock47 completionHandler) {
+    final _ret = _lib._objc_msgSend_846(
         _id,
         _lib._sel_uploadTaskWithRequest_fromFile_completionHandler_1,
         request?._id ?? ffi.nullptr,
@@ -49267,8 +52545,8 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionUploadTask uploadTaskWithRequest_fromData_completionHandler_(
-      NSURLRequest? request, NSData? bodyData, ObjCBlock46 completionHandler) {
-    final _ret = _lib._objc_msgSend_802(
+      NSURLRequest? request, NSData? bodyData, ObjCBlock47 completionHandler) {
+    final _ret = _lib._objc_msgSend_847(
         _id,
         _lib._sel_uploadTaskWithRequest_fromData_completionHandler_1,
         request?._id ?? ffi.nullptr,
@@ -49278,8 +52556,8 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionDownloadTask downloadTaskWithRequest_completionHandler_(
-      NSURLRequest? request, ObjCBlock47 completionHandler) {
-    final _ret = _lib._objc_msgSend_803(
+      NSURLRequest? request, ObjCBlock48 completionHandler) {
+    final _ret = _lib._objc_msgSend_848(
         _id,
         _lib._sel_downloadTaskWithRequest_completionHandler_1,
         request?._id ?? ffi.nullptr,
@@ -49288,8 +52566,8 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionDownloadTask downloadTaskWithURL_completionHandler_(
-      NSURL? url, ObjCBlock47 completionHandler) {
-    final _ret = _lib._objc_msgSend_804(
+      NSURL? url, ObjCBlock48 completionHandler) {
+    final _ret = _lib._objc_msgSend_849(
         _id,
         _lib._sel_downloadTaskWithURL_completionHandler_1,
         url?._id ?? ffi.nullptr,
@@ -49298,8 +52576,8 @@ class NSURLSession extends NSObject {
   }
 
   NSURLSessionDownloadTask downloadTaskWithResumeData_completionHandler_(
-      NSData? resumeData, ObjCBlock47 completionHandler) {
-    final _ret = _lib._objc_msgSend_805(
+      NSData? resumeData, ObjCBlock48 completionHandler) {
+    final _ret = _lib._objc_msgSend_850(
         _id,
         _lib._sel_downloadTaskWithResumeData_completionHandler_1,
         resumeData?._id ?? ffi.nullptr,
@@ -49394,7 +52672,7 @@ class NSURLSessionConfiguration extends NSObject {
 
   static NSURLSessionConfiguration? getDefaultSessionConfiguration(
       PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_757(_lib._class_NSURLSessionConfiguration1,
+    final _ret = _lib._objc_msgSend_803(_lib._class_NSURLSessionConfiguration1,
         _lib._sel_defaultSessionConfiguration1);
     return _ret.address == 0
         ? null
@@ -49403,7 +52681,7 @@ class NSURLSessionConfiguration extends NSObject {
 
   static NSURLSessionConfiguration? getEphemeralSessionConfiguration(
       PedometerBindings _lib) {
-    final _ret = _lib._objc_msgSend_757(_lib._class_NSURLSessionConfiguration1,
+    final _ret = _lib._objc_msgSend_803(_lib._class_NSURLSessionConfiguration1,
         _lib._sel_ephemeralSessionConfiguration1);
     return _ret.address == 0
         ? null
@@ -49413,7 +52691,7 @@ class NSURLSessionConfiguration extends NSObject {
   static NSURLSessionConfiguration
       backgroundSessionConfigurationWithIdentifier_(
           PedometerBindings _lib, NSString? identifier) {
-    final _ret = _lib._objc_msgSend_758(
+    final _ret = _lib._objc_msgSend_804(
         _lib._class_NSURLSessionConfiguration1,
         _lib._sel_backgroundSessionConfigurationWithIdentifier_1,
         identifier?._id ?? ffi.nullptr);
@@ -49428,11 +52706,11 @@ class NSURLSessionConfiguration extends NSObject {
   }
 
   int get requestCachePolicy {
-    return _lib._objc_msgSend_594(_id, _lib._sel_requestCachePolicy1);
+    return _lib._objc_msgSend_650(_id, _lib._sel_requestCachePolicy1);
   }
 
   set requestCachePolicy(int value) {
-    _lib._objc_msgSend_742(_id, _lib._sel_setRequestCachePolicy_1, value);
+    _lib._objc_msgSend_788(_id, _lib._sel_setRequestCachePolicy_1, value);
   }
 
   double get timeoutIntervalForRequest {
@@ -49454,11 +52732,11 @@ class NSURLSessionConfiguration extends NSObject {
   }
 
   int get networkServiceType {
-    return _lib._objc_msgSend_595(_id, _lib._sel_networkServiceType1);
+    return _lib._objc_msgSend_651(_id, _lib._sel_networkServiceType1);
   }
 
   set networkServiceType(int value) {
-    _lib._objc_msgSend_743(_id, _lib._sel_setNetworkServiceType_1, value);
+    _lib._objc_msgSend_789(_id, _lib._sel_setNetworkServiceType_1, value);
   }
 
   bool get allowsCellularAccess {
@@ -49534,45 +52812,45 @@ class NSURLSessionConfiguration extends NSObject {
   }
 
   set connectionProxyDictionary(NSDictionary? value) {
-    _lib._objc_msgSend_670(_id, _lib._sel_setConnectionProxyDictionary_1,
+    _lib._objc_msgSend_558(_id, _lib._sel_setConnectionProxyDictionary_1,
         value?._id ?? ffi.nullptr);
   }
 
   int get TLSMinimumSupportedProtocol {
-    return _lib._objc_msgSend_759(_id, _lib._sel_TLSMinimumSupportedProtocol1);
+    return _lib._objc_msgSend_805(_id, _lib._sel_TLSMinimumSupportedProtocol1);
   }
 
   set TLSMinimumSupportedProtocol(int value) {
-    _lib._objc_msgSend_760(
+    _lib._objc_msgSend_806(
         _id, _lib._sel_setTLSMinimumSupportedProtocol_1, value);
   }
 
   int get TLSMaximumSupportedProtocol {
-    return _lib._objc_msgSend_759(_id, _lib._sel_TLSMaximumSupportedProtocol1);
+    return _lib._objc_msgSend_805(_id, _lib._sel_TLSMaximumSupportedProtocol1);
   }
 
   set TLSMaximumSupportedProtocol(int value) {
-    _lib._objc_msgSend_760(
+    _lib._objc_msgSend_806(
         _id, _lib._sel_setTLSMaximumSupportedProtocol_1, value);
   }
 
   int get TLSMinimumSupportedProtocolVersion {
-    return _lib._objc_msgSend_761(
+    return _lib._objc_msgSend_807(
         _id, _lib._sel_TLSMinimumSupportedProtocolVersion1);
   }
 
   set TLSMinimumSupportedProtocolVersion(int value) {
-    _lib._objc_msgSend_762(
+    _lib._objc_msgSend_808(
         _id, _lib._sel_setTLSMinimumSupportedProtocolVersion_1, value);
   }
 
   int get TLSMaximumSupportedProtocolVersion {
-    return _lib._objc_msgSend_761(
+    return _lib._objc_msgSend_807(
         _id, _lib._sel_TLSMaximumSupportedProtocolVersion1);
   }
 
   set TLSMaximumSupportedProtocolVersion(int value) {
-    _lib._objc_msgSend_762(
+    _lib._objc_msgSend_808(
         _id, _lib._sel_setTLSMaximumSupportedProtocolVersion_1, value);
   }
 
@@ -49593,11 +52871,11 @@ class NSURLSessionConfiguration extends NSObject {
   }
 
   int get HTTPCookieAcceptPolicy {
-    return _lib._objc_msgSend_591(_id, _lib._sel_HTTPCookieAcceptPolicy1);
+    return _lib._objc_msgSend_647(_id, _lib._sel_HTTPCookieAcceptPolicy1);
   }
 
   set HTTPCookieAcceptPolicy(int value) {
-    _lib._objc_msgSend_592(_id, _lib._sel_setHTTPCookieAcceptPolicy_1, value);
+    _lib._objc_msgSend_648(_id, _lib._sel_setHTTPCookieAcceptPolicy_1, value);
   }
 
   NSDictionary? get HTTPAdditionalHeaders {
@@ -49608,7 +52886,7 @@ class NSURLSessionConfiguration extends NSObject {
   }
 
   set HTTPAdditionalHeaders(NSDictionary? value) {
-    _lib._objc_msgSend_670(
+    _lib._objc_msgSend_558(
         _id, _lib._sel_setHTTPAdditionalHeaders_1, value?._id ?? ffi.nullptr);
   }
 
@@ -49617,43 +52895,43 @@ class NSURLSessionConfiguration extends NSObject {
   }
 
   set HTTPMaximumConnectionsPerHost(int value) {
-    _lib._objc_msgSend_632(
+    _lib._objc_msgSend_570(
         _id, _lib._sel_setHTTPMaximumConnectionsPerHost_1, value);
   }
 
   NSHTTPCookieStorage? get HTTPCookieStorage {
-    final _ret = _lib._objc_msgSend_585(_id, _lib._sel_HTTPCookieStorage1);
+    final _ret = _lib._objc_msgSend_641(_id, _lib._sel_HTTPCookieStorage1);
     return _ret.address == 0
         ? null
         : NSHTTPCookieStorage._(_ret, _lib, retain: true, release: true);
   }
 
   set HTTPCookieStorage(NSHTTPCookieStorage? value) {
-    _lib._objc_msgSend_763(
+    _lib._objc_msgSend_809(
         _id, _lib._sel_setHTTPCookieStorage_1, value?._id ?? ffi.nullptr);
   }
 
   NSURLCredentialStorage? get URLCredentialStorage {
-    final _ret = _lib._objc_msgSend_728(_id, _lib._sel_URLCredentialStorage1);
+    final _ret = _lib._objc_msgSend_774(_id, _lib._sel_URLCredentialStorage1);
     return _ret.address == 0
         ? null
         : NSURLCredentialStorage._(_ret, _lib, retain: true, release: true);
   }
 
   set URLCredentialStorage(NSURLCredentialStorage? value) {
-    _lib._objc_msgSend_764(
+    _lib._objc_msgSend_810(
         _id, _lib._sel_setURLCredentialStorage_1, value?._id ?? ffi.nullptr);
   }
 
   NSURLCache? get URLCache {
-    final _ret = _lib._objc_msgSend_698(_id, _lib._sel_URLCache1);
+    final _ret = _lib._objc_msgSend_744(_id, _lib._sel_URLCache1);
     return _ret.address == 0
         ? null
         : NSURLCache._(_ret, _lib, retain: true, release: true);
   }
 
   set URLCache(NSURLCache? value) {
-    _lib._objc_msgSend_699(
+    _lib._objc_msgSend_745(
         _id, _lib._sel_setURLCache_1, value?._id ?? ffi.nullptr);
   }
 
@@ -49675,16 +52953,16 @@ class NSURLSessionConfiguration extends NSObject {
   }
 
   set protocolClasses(NSArray? value) {
-    _lib._objc_msgSend_765(
+    _lib._objc_msgSend_596(
         _id, _lib._sel_setProtocolClasses_1, value?._id ?? ffi.nullptr);
   }
 
   int get multipathServiceType {
-    return _lib._objc_msgSend_766(_id, _lib._sel_multipathServiceType1);
+    return _lib._objc_msgSend_811(_id, _lib._sel_multipathServiceType1);
   }
 
   set multipathServiceType(int value) {
-    _lib._objc_msgSend_767(_id, _lib._sel_setMultipathServiceType_1, value);
+    _lib._objc_msgSend_812(_id, _lib._sel_setMultipathServiceType_1, value);
   }
 
   @override
@@ -49702,7 +52980,7 @@ class NSURLSessionConfiguration extends NSObject {
 
   static NSURLSessionConfiguration backgroundSessionConfiguration_(
       PedometerBindings _lib, NSString? identifier) {
-    final _ret = _lib._objc_msgSend_758(
+    final _ret = _lib._objc_msgSend_804(
         _lib._class_NSURLSessionConfiguration1,
         _lib._sel_backgroundSessionConfiguration_1,
         identifier?._id ?? ffi.nullptr);
@@ -49839,7 +53117,7 @@ abstract class NSURLSessionMultipathServiceType {
   static const int NSURLSessionMultipathServiceTypeAggregate = 3;
 }
 
-void _ObjCBlock42_fnPtrTrampoline(
+void _ObjCBlock43_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0,
     ffi.Pointer<ObjCObject> arg1,
@@ -49858,29 +53136,29 @@ void _ObjCBlock42_fnPtrTrampoline(
               ffi.Pointer<ObjCObject> arg2)>()(arg0, arg1, arg2);
 }
 
-final _ObjCBlock42_closureRegistry = <int, Function>{};
-int _ObjCBlock42_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock42_registerClosure(Function fn) {
-  final id = ++_ObjCBlock42_closureRegistryIndex;
-  _ObjCBlock42_closureRegistry[id] = fn;
+final _ObjCBlock43_closureRegistry = <int, Function>{};
+int _ObjCBlock43_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock43_registerClosure(Function fn) {
+  final id = ++_ObjCBlock43_closureRegistryIndex;
+  _ObjCBlock43_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock42_closureTrampoline(
+void _ObjCBlock43_closureTrampoline(
     ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0,
     ffi.Pointer<ObjCObject> arg1,
     ffi.Pointer<ObjCObject> arg2) {
-  return _ObjCBlock42_closureRegistry[block.ref.target.address]!(
+  return _ObjCBlock43_closureRegistry[block.ref.target.address]!(
       arg0, arg1, arg2);
 }
 
-class ObjCBlock42 extends _ObjCBlockBase {
-  ObjCBlock42._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock43 extends _ObjCBlockBase {
+  ObjCBlock43._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock42.fromFunctionPointer(
+  ObjCBlock43.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -49897,14 +53175,14 @@ class ObjCBlock42 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1,
                                 ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock42_fnPtrTrampoline)
+                        _ObjCBlock43_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock42.fromFunction(
+  ObjCBlock43.fromFunction(
       PedometerBindings lib,
       void Function(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
               ffi.Pointer<ObjCObject> arg2)
@@ -49917,9 +53195,9 @@ class ObjCBlock42 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1,
                                 ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock42_closureTrampoline)
+                        _ObjCBlock43_closureTrampoline)
                     .cast(),
-                _ObjCBlock42_registerClosure(fn)),
+                _ObjCBlock43_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
@@ -50065,8 +53343,8 @@ class NSURLSessionDownloadTask extends NSURLSessionTask {
         obj._lib._class_NSURLSessionDownloadTask1);
   }
 
-  void cancelByProducingResumeData_(ObjCBlock43 completionHandler) {
-    return _lib._objc_msgSend_777(
+  void cancelByProducingResumeData_(ObjCBlock44 completionHandler) {
+    return _lib._objc_msgSend_822(
         _id, _lib._sel_cancelByProducingResumeData_1, completionHandler._id);
   }
 
@@ -50142,7 +53420,7 @@ class NSURLSessionDownloadTask extends NSURLSessionTask {
   }
 }
 
-void _ObjCBlock43_fnPtrTrampoline(
+void _ObjCBlock44_fnPtrTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
   return block.ref.target
       .cast<
@@ -50150,25 +53428,25 @@ void _ObjCBlock43_fnPtrTrampoline(
       .asFunction<void Function(ffi.Pointer<ObjCObject> arg0)>()(arg0);
 }
 
-final _ObjCBlock43_closureRegistry = <int, Function>{};
-int _ObjCBlock43_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock43_registerClosure(Function fn) {
-  final id = ++_ObjCBlock43_closureRegistryIndex;
-  _ObjCBlock43_closureRegistry[id] = fn;
+final _ObjCBlock44_closureRegistry = <int, Function>{};
+int _ObjCBlock44_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock44_registerClosure(Function fn) {
+  final id = ++_ObjCBlock44_closureRegistryIndex;
+  _ObjCBlock44_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock43_closureTrampoline(
+void _ObjCBlock44_closureTrampoline(
     ffi.Pointer<_ObjCBlock> block, ffi.Pointer<ObjCObject> arg0) {
-  return _ObjCBlock43_closureRegistry[block.ref.target.address]!(arg0);
+  return _ObjCBlock44_closureRegistry[block.ref.target.address]!(arg0);
 }
 
-class ObjCBlock43 extends _ObjCBlockBase {
-  ObjCBlock43._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock44 extends _ObjCBlockBase {
+  ObjCBlock44._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock43.fromFunctionPointer(
+  ObjCBlock44.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -50179,23 +53457,23 @@ class ObjCBlock43 extends _ObjCBlockBase {
                 _cFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock43_fnPtrTrampoline)
+                        _ObjCBlock44_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock43.fromFunction(
+  ObjCBlock44.fromFunction(
       PedometerBindings lib, void Function(ffi.Pointer<ObjCObject> arg0) fn)
       : this._(
             lib._newBlock1(
                 _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
                             ffi.Void Function(ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0)>(
-                        _ObjCBlock43_closureTrampoline)
+                        _ObjCBlock44_closureTrampoline)
                     .cast(),
-                _ObjCBlock43_registerClosure(fn)),
+                _ObjCBlock44_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0) {
@@ -50238,8 +53516,8 @@ class NSURLSessionStreamTask extends NSURLSessionTask {
   }
 
   void readDataOfMinLength_maxLength_timeout_completionHandler_(int minBytes,
-      int maxBytes, double timeout, ObjCBlock44 completionHandler) {
-    return _lib._objc_msgSend_781(
+      int maxBytes, double timeout, ObjCBlock45 completionHandler) {
+    return _lib._objc_msgSend_826(
         _id,
         _lib._sel_readDataOfMinLength_maxLength_timeout_completionHandler_1,
         minBytes,
@@ -50250,7 +53528,7 @@ class NSURLSessionStreamTask extends NSURLSessionTask {
 
   void writeData_timeout_completionHandler_(
       NSData? data, double timeout, ObjCBlock18 completionHandler) {
-    return _lib._objc_msgSend_782(
+    return _lib._objc_msgSend_827(
         _id,
         _lib._sel_writeData_timeout_completionHandler_1,
         data?._id ?? ffi.nullptr,
@@ -50350,7 +53628,7 @@ class NSURLSessionStreamTask extends NSURLSessionTask {
   }
 }
 
-void _ObjCBlock44_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock45_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, bool arg1, ffi.Pointer<ObjCObject> arg2) {
   return block.ref.target
       .cast<
@@ -50362,26 +53640,26 @@ void _ObjCBlock44_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
               ffi.Pointer<ObjCObject> arg2)>()(arg0, arg1, arg2);
 }
 
-final _ObjCBlock44_closureRegistry = <int, Function>{};
-int _ObjCBlock44_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock44_registerClosure(Function fn) {
-  final id = ++_ObjCBlock44_closureRegistryIndex;
-  _ObjCBlock44_closureRegistry[id] = fn;
+final _ObjCBlock45_closureRegistry = <int, Function>{};
+int _ObjCBlock45_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock45_registerClosure(Function fn) {
+  final id = ++_ObjCBlock45_closureRegistryIndex;
+  _ObjCBlock45_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock44_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock45_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, bool arg1, ffi.Pointer<ObjCObject> arg2) {
-  return _ObjCBlock44_closureRegistry[block.ref.target.address]!(
+  return _ObjCBlock45_closureRegistry[block.ref.target.address]!(
       arg0, arg1, arg2);
 }
 
-class ObjCBlock44 extends _ObjCBlockBase {
-  ObjCBlock44._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock45 extends _ObjCBlockBase {
+  ObjCBlock45._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock44.fromFunctionPointer(
+  ObjCBlock45.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -50396,14 +53674,14 @@ class ObjCBlock44 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Bool arg1,
                                 ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock44_fnPtrTrampoline)
+                        _ObjCBlock45_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock44.fromFunction(
+  ObjCBlock45.fromFunction(
       PedometerBindings lib,
       void Function(ffi.Pointer<ObjCObject> arg0, bool arg1,
               ffi.Pointer<ObjCObject> arg2)
@@ -50416,9 +53694,9 @@ class ObjCBlock44 extends _ObjCBlockBase {
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Bool arg1,
                                 ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock44_closureTrampoline)
+                        _ObjCBlock45_closureTrampoline)
                     .cast(),
-                _ObjCBlock44_registerClosure(fn)),
+                _ObjCBlock45_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(
@@ -50467,7 +53745,7 @@ class NSNetService extends NSObject {
 
   NSNetService initWithDomain_type_name_port_(
       NSString? domain, NSString? type, NSString? name, int port) {
-    final _ret = _lib._objc_msgSend_784(
+    final _ret = _lib._objc_msgSend_829(
         _id,
         _lib._sel_initWithDomain_type_name_port_1,
         domain?._id ?? ffi.nullptr,
@@ -50489,12 +53767,12 @@ class NSNetService extends NSObject {
   }
 
   void scheduleInRunLoop_forMode_(NSRunLoop? aRunLoop, NSString mode) {
-    return _lib._objc_msgSend_564(_id, _lib._sel_scheduleInRunLoop_forMode_1,
+    return _lib._objc_msgSend_621(_id, _lib._sel_scheduleInRunLoop_forMode_1,
         aRunLoop?._id ?? ffi.nullptr, mode._id);
   }
 
   void removeFromRunLoop_forMode_(NSRunLoop? aRunLoop, NSString mode) {
-    return _lib._objc_msgSend_564(_id, _lib._sel_removeFromRunLoop_forMode_1,
+    return _lib._objc_msgSend_621(_id, _lib._sel_removeFromRunLoop_forMode_1,
         aRunLoop?._id ?? ffi.nullptr, mode._id);
   }
 
@@ -50562,7 +53840,7 @@ class NSNetService extends NSObject {
   }
 
   void publishWithOptions_(int options) {
-    return _lib._objc_msgSend_785(_id, _lib._sel_publishWithOptions_1, options);
+    return _lib._objc_msgSend_830(_id, _lib._sel_publishWithOptions_1, options);
   }
 
   void resolve() {
@@ -50575,14 +53853,14 @@ class NSNetService extends NSObject {
 
   static NSDictionary dictionaryFromTXTRecordData_(
       PedometerBindings _lib, NSData? txtData) {
-    final _ret = _lib._objc_msgSend_786(_lib._class_NSNetService1,
+    final _ret = _lib._objc_msgSend_831(_lib._class_NSNetService1,
         _lib._sel_dictionaryFromTXTRecordData_1, txtData?._id ?? ffi.nullptr);
     return NSDictionary._(_ret, _lib, retain: true, release: true);
   }
 
   static NSData dataFromTXTRecordDictionary_(
       PedometerBindings _lib, NSDictionary? txtDictionary) {
-    final _ret = _lib._objc_msgSend_787(
+    final _ret = _lib._objc_msgSend_832(
         _lib._class_NSNetService1,
         _lib._sel_dataFromTXTRecordDictionary_1,
         txtDictionary?._id ?? ffi.nullptr);
@@ -50596,7 +53874,7 @@ class NSNetService extends NSObject {
   bool getInputStream_outputStream_(
       ffi.Pointer<ffi.Pointer<ObjCObject>> inputStream,
       ffi.Pointer<ffi.Pointer<ObjCObject>> outputStream) {
-    return _lib._objc_msgSend_788(_id, _lib._sel_getInputStream_outputStream_1,
+    return _lib._objc_msgSend_833(_id, _lib._sel_getInputStream_outputStream_1,
         inputStream, outputStream);
   }
 
@@ -50716,25 +53994,25 @@ class NSURLSessionWebSocketTask extends NSURLSessionTask {
 
   void sendMessage_completionHandler_(
       NSURLSessionWebSocketMessage? message, ObjCBlock18 completionHandler) {
-    return _lib._objc_msgSend_791(
+    return _lib._objc_msgSend_836(
         _id,
         _lib._sel_sendMessage_completionHandler_1,
         message?._id ?? ffi.nullptr,
         completionHandler._id);
   }
 
-  void receiveMessageWithCompletionHandler_(ObjCBlock45 completionHandler) {
-    return _lib._objc_msgSend_792(_id,
+  void receiveMessageWithCompletionHandler_(ObjCBlock46 completionHandler) {
+    return _lib._objc_msgSend_837(_id,
         _lib._sel_receiveMessageWithCompletionHandler_1, completionHandler._id);
   }
 
   void sendPingWithPongReceiveHandler_(ObjCBlock18 pongReceiveHandler) {
-    return _lib._objc_msgSend_793(_id,
+    return _lib._objc_msgSend_838(_id,
         _lib._sel_sendPingWithPongReceiveHandler_1, pongReceiveHandler._id);
   }
 
   void cancelWithCloseCode_reason_(int closeCode, NSData? reason) {
-    return _lib._objc_msgSend_794(_id, _lib._sel_cancelWithCloseCode_reason_1,
+    return _lib._objc_msgSend_839(_id, _lib._sel_cancelWithCloseCode_reason_1,
         closeCode, reason?._id ?? ffi.nullptr);
   }
 
@@ -50743,11 +54021,11 @@ class NSURLSessionWebSocketTask extends NSURLSessionTask {
   }
 
   set maximumMessageSize(int value) {
-    _lib._objc_msgSend_632(_id, _lib._sel_setMaximumMessageSize_1, value);
+    _lib._objc_msgSend_570(_id, _lib._sel_setMaximumMessageSize_1, value);
   }
 
   int get closeCode {
-    return _lib._objc_msgSend_795(_id, _lib._sel_closeCode1);
+    return _lib._objc_msgSend_840(_id, _lib._sel_closeCode1);
   }
 
   NSData? get closeReason {
@@ -50873,7 +54151,7 @@ class NSURLSessionWebSocketMessage extends NSObject {
   }
 
   int get type {
-    return _lib._objc_msgSend_790(_id, _lib._sel_type1);
+    return _lib._objc_msgSend_835(_id, _lib._sel_type1);
   }
 
   NSData? get data {
@@ -50971,7 +54249,7 @@ abstract class NSURLSessionWebSocketMessageType {
   static const int NSURLSessionWebSocketMessageTypeString = 1;
 }
 
-void _ObjCBlock45_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock46_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
   return block.ref.target
       .cast<
@@ -50983,25 +54261,25 @@ void _ObjCBlock45_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
               ffi.Pointer<ObjCObject> arg1)>()(arg0, arg1);
 }
 
-final _ObjCBlock45_closureRegistry = <int, Function>{};
-int _ObjCBlock45_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock45_registerClosure(Function fn) {
-  final id = ++_ObjCBlock45_closureRegistryIndex;
-  _ObjCBlock45_closureRegistry[id] = fn;
+final _ObjCBlock46_closureRegistry = <int, Function>{};
+int _ObjCBlock46_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock46_registerClosure(Function fn) {
+  final id = ++_ObjCBlock46_closureRegistryIndex;
+  _ObjCBlock46_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock45_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock46_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
-  return _ObjCBlock45_closureRegistry[block.ref.target.address]!(arg0, arg1);
+  return _ObjCBlock46_closureRegistry[block.ref.target.address]!(arg0, arg1);
 }
 
-class ObjCBlock45 extends _ObjCBlockBase {
-  ObjCBlock45._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock46 extends _ObjCBlockBase {
+  ObjCBlock46._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock45.fromFunctionPointer(
+  ObjCBlock46.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -51015,14 +54293,14 @@ class ObjCBlock45 extends _ObjCBlockBase {
                                 ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1)>(
-                        _ObjCBlock45_fnPtrTrampoline)
+                        _ObjCBlock46_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock45.fromFunction(
+  ObjCBlock46.fromFunction(
       PedometerBindings lib,
       void Function(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1)
           fn)
@@ -51033,9 +54311,9 @@ class ObjCBlock45 extends _ObjCBlockBase {
                                 ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1)>(
-                        _ObjCBlock45_closureTrampoline)
+                        _ObjCBlock46_closureTrampoline)
                     .cast(),
-                _ObjCBlock45_registerClosure(fn)),
+                _ObjCBlock46_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
@@ -51071,110 +54349,6 @@ abstract class NSURLSessionWebSocketCloseCode {
       1010;
   static const int NSURLSessionWebSocketCloseCodeInternalServerError = 1011;
   static const int NSURLSessionWebSocketCloseCodeTLSHandshakeFailure = 1015;
-}
-
-void _ObjCBlock46_fnPtrTrampoline(
-    ffi.Pointer<_ObjCBlock> block,
-    ffi.Pointer<ObjCObject> arg0,
-    ffi.Pointer<ObjCObject> arg1,
-    ffi.Pointer<ObjCObject> arg2) {
-  return block.ref.target
-      .cast<
-          ffi.NativeFunction<
-              ffi.Void Function(
-                  ffi.Pointer<ObjCObject> arg0,
-                  ffi.Pointer<ObjCObject> arg1,
-                  ffi.Pointer<ObjCObject> arg2)>>()
-      .asFunction<
-          void Function(
-              ffi.Pointer<ObjCObject> arg0,
-              ffi.Pointer<ObjCObject> arg1,
-              ffi.Pointer<ObjCObject> arg2)>()(arg0, arg1, arg2);
-}
-
-final _ObjCBlock46_closureRegistry = <int, Function>{};
-int _ObjCBlock46_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock46_registerClosure(Function fn) {
-  final id = ++_ObjCBlock46_closureRegistryIndex;
-  _ObjCBlock46_closureRegistry[id] = fn;
-  return ffi.Pointer<ffi.Void>.fromAddress(id);
-}
-
-void _ObjCBlock46_closureTrampoline(
-    ffi.Pointer<_ObjCBlock> block,
-    ffi.Pointer<ObjCObject> arg0,
-    ffi.Pointer<ObjCObject> arg1,
-    ffi.Pointer<ObjCObject> arg2) {
-  return _ObjCBlock46_closureRegistry[block.ref.target.address]!(
-      arg0, arg1, arg2);
-}
-
-class ObjCBlock46 extends _ObjCBlockBase {
-  ObjCBlock46._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
-      : super._(id, lib, retain: false, release: true);
-
-  /// Creates a block from a C function pointer.
-  ObjCBlock46.fromFunctionPointer(
-      PedometerBindings lib,
-      ffi.Pointer<
-              ffi.NativeFunction<
-                  ffi.Void Function(
-                      ffi.Pointer<ObjCObject> arg0,
-                      ffi.Pointer<ObjCObject> arg1,
-                      ffi.Pointer<ObjCObject> arg2)>>
-          ptr)
-      : this._(
-            lib._newBlock1(
-                _cFuncTrampoline ??= ffi.Pointer.fromFunction<
-                            ffi.Void Function(
-                                ffi.Pointer<_ObjCBlock> block,
-                                ffi.Pointer<ObjCObject> arg0,
-                                ffi.Pointer<ObjCObject> arg1,
-                                ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock46_fnPtrTrampoline)
-                    .cast(),
-                ptr.cast()),
-            lib);
-  static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
-
-  /// Creates a block from a Dart function.
-  ObjCBlock46.fromFunction(
-      PedometerBindings lib,
-      void Function(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
-              ffi.Pointer<ObjCObject> arg2)
-          fn)
-      : this._(
-            lib._newBlock1(
-                _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
-                            ffi.Void Function(
-                                ffi.Pointer<_ObjCBlock> block,
-                                ffi.Pointer<ObjCObject> arg0,
-                                ffi.Pointer<ObjCObject> arg1,
-                                ffi.Pointer<ObjCObject> arg2)>(
-                        _ObjCBlock46_closureTrampoline)
-                    .cast(),
-                _ObjCBlock46_registerClosure(fn)),
-            lib);
-  static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
-  void call(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
-      ffi.Pointer<ObjCObject> arg2) {
-    return _id.ref.invoke
-        .cast<
-            ffi.NativeFunction<
-                ffi.Void Function(
-                    ffi.Pointer<_ObjCBlock> block,
-                    ffi.Pointer<ObjCObject> arg0,
-                    ffi.Pointer<ObjCObject> arg1,
-                    ffi.Pointer<ObjCObject> arg2)>>()
-        .asFunction<
-            void Function(
-                ffi.Pointer<_ObjCBlock> block,
-                ffi.Pointer<ObjCObject> arg0,
-                ffi.Pointer<ObjCObject> arg1,
-                ffi.Pointer<ObjCObject> arg2)>()(_id, arg0, arg1, arg2);
-  }
-
-  ffi.Pointer<_ObjCBlock> get pointer => _id;
 }
 
 void _ObjCBlock47_fnPtrTrampoline(
@@ -51281,6 +54455,110 @@ class ObjCBlock47 extends _ObjCBlockBase {
   ffi.Pointer<_ObjCBlock> get pointer => _id;
 }
 
+void _ObjCBlock48_fnPtrTrampoline(
+    ffi.Pointer<_ObjCBlock> block,
+    ffi.Pointer<ObjCObject> arg0,
+    ffi.Pointer<ObjCObject> arg1,
+    ffi.Pointer<ObjCObject> arg2) {
+  return block.ref.target
+      .cast<
+          ffi.NativeFunction<
+              ffi.Void Function(
+                  ffi.Pointer<ObjCObject> arg0,
+                  ffi.Pointer<ObjCObject> arg1,
+                  ffi.Pointer<ObjCObject> arg2)>>()
+      .asFunction<
+          void Function(
+              ffi.Pointer<ObjCObject> arg0,
+              ffi.Pointer<ObjCObject> arg1,
+              ffi.Pointer<ObjCObject> arg2)>()(arg0, arg1, arg2);
+}
+
+final _ObjCBlock48_closureRegistry = <int, Function>{};
+int _ObjCBlock48_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock48_registerClosure(Function fn) {
+  final id = ++_ObjCBlock48_closureRegistryIndex;
+  _ObjCBlock48_closureRegistry[id] = fn;
+  return ffi.Pointer<ffi.Void>.fromAddress(id);
+}
+
+void _ObjCBlock48_closureTrampoline(
+    ffi.Pointer<_ObjCBlock> block,
+    ffi.Pointer<ObjCObject> arg0,
+    ffi.Pointer<ObjCObject> arg1,
+    ffi.Pointer<ObjCObject> arg2) {
+  return _ObjCBlock48_closureRegistry[block.ref.target.address]!(
+      arg0, arg1, arg2);
+}
+
+class ObjCBlock48 extends _ObjCBlockBase {
+  ObjCBlock48._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+      : super._(id, lib, retain: false, release: true);
+
+  /// Creates a block from a C function pointer.
+  ObjCBlock48.fromFunctionPointer(
+      PedometerBindings lib,
+      ffi.Pointer<
+              ffi.NativeFunction<
+                  ffi.Void Function(
+                      ffi.Pointer<ObjCObject> arg0,
+                      ffi.Pointer<ObjCObject> arg1,
+                      ffi.Pointer<ObjCObject> arg2)>>
+          ptr)
+      : this._(
+            lib._newBlock1(
+                _cFuncTrampoline ??= ffi.Pointer.fromFunction<
+                            ffi.Void Function(
+                                ffi.Pointer<_ObjCBlock> block,
+                                ffi.Pointer<ObjCObject> arg0,
+                                ffi.Pointer<ObjCObject> arg1,
+                                ffi.Pointer<ObjCObject> arg2)>(
+                        _ObjCBlock48_fnPtrTrampoline)
+                    .cast(),
+                ptr.cast()),
+            lib);
+  static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
+
+  /// Creates a block from a Dart function.
+  ObjCBlock48.fromFunction(
+      PedometerBindings lib,
+      void Function(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
+              ffi.Pointer<ObjCObject> arg2)
+          fn)
+      : this._(
+            lib._newBlock1(
+                _dartFuncTrampoline ??= ffi.Pointer.fromFunction<
+                            ffi.Void Function(
+                                ffi.Pointer<_ObjCBlock> block,
+                                ffi.Pointer<ObjCObject> arg0,
+                                ffi.Pointer<ObjCObject> arg1,
+                                ffi.Pointer<ObjCObject> arg2)>(
+                        _ObjCBlock48_closureTrampoline)
+                    .cast(),
+                _ObjCBlock48_registerClosure(fn)),
+            lib);
+  static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
+  void call(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1,
+      ffi.Pointer<ObjCObject> arg2) {
+    return _id.ref.invoke
+        .cast<
+            ffi.NativeFunction<
+                ffi.Void Function(
+                    ffi.Pointer<_ObjCBlock> block,
+                    ffi.Pointer<ObjCObject> arg0,
+                    ffi.Pointer<ObjCObject> arg1,
+                    ffi.Pointer<ObjCObject> arg2)>>()
+        .asFunction<
+            void Function(
+                ffi.Pointer<_ObjCBlock> block,
+                ffi.Pointer<ObjCObject> arg0,
+                ffi.Pointer<ObjCObject> arg1,
+                ffi.Pointer<ObjCObject> arg2)>()(_id, arg0, arg1, arg2);
+  }
+
+  ffi.Pointer<_ObjCBlock> get pointer => _id;
+}
+
 class CMPedometer extends NSObject {
   CMPedometer._(ffi.Pointer<ObjCObject> id, PedometerBindings lib,
       {bool retain = false, bool release = false})
@@ -51335,13 +54613,13 @@ class CMPedometer extends NSObject {
   }
 
   static int authorizationStatus(PedometerBindings _lib) {
-    return _lib._objc_msgSend_806(
+    return _lib._objc_msgSend_851(
         _lib._class_CMPedometer1, _lib._sel_authorizationStatus1);
   }
 
   void queryPedometerDataFromDate_toDate_withHandler_(
-      NSDate? start, NSDate? end, ObjCBlock48 handler) {
-    return _lib._objc_msgSend_807(
+      NSDate? start, NSDate? end, ObjCBlock49 handler) {
+    return _lib._objc_msgSend_852(
         _id,
         _lib._sel_queryPedometerDataFromDate_toDate_withHandler_1,
         start?._id ?? ffi.nullptr,
@@ -51350,8 +54628,8 @@ class CMPedometer extends NSObject {
   }
 
   void startPedometerUpdatesFromDate_withHandler_(
-      NSDate? start, ObjCBlock48 handler) {
-    return _lib._objc_msgSend_808(
+      NSDate? start, ObjCBlock49 handler) {
+    return _lib._objc_msgSend_853(
         _id,
         _lib._sel_startPedometerUpdatesFromDate_withHandler_1,
         start?._id ?? ffi.nullptr,
@@ -51362,8 +54640,8 @@ class CMPedometer extends NSObject {
     return _lib._objc_msgSend_1(_id, _lib._sel_stopPedometerUpdates1);
   }
 
-  void startPedometerEventUpdatesWithHandler_(ObjCBlock49 handler) {
-    return _lib._objc_msgSend_810(
+  void startPedometerEventUpdatesWithHandler_(ObjCBlock50 handler) {
+    return _lib._objc_msgSend_855(
         _id, _lib._sel_startPedometerEventUpdatesWithHandler_1, handler._id);
   }
 
@@ -51443,7 +54721,7 @@ abstract class CMAuthorizationStatus {
   static const int CMAuthorizationStatusAuthorized = 3;
 }
 
-void _ObjCBlock48_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock49_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
   return block.ref.target
       .cast<
@@ -51455,25 +54733,25 @@ void _ObjCBlock48_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
               ffi.Pointer<ObjCObject> arg1)>()(arg0, arg1);
 }
 
-final _ObjCBlock48_closureRegistry = <int, Function>{};
-int _ObjCBlock48_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock48_registerClosure(Function fn) {
-  final id = ++_ObjCBlock48_closureRegistryIndex;
-  _ObjCBlock48_closureRegistry[id] = fn;
+final _ObjCBlock49_closureRegistry = <int, Function>{};
+int _ObjCBlock49_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock49_registerClosure(Function fn) {
+  final id = ++_ObjCBlock49_closureRegistryIndex;
+  _ObjCBlock49_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock48_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock49_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
-  return _ObjCBlock48_closureRegistry[block.ref.target.address]!(arg0, arg1);
+  return _ObjCBlock49_closureRegistry[block.ref.target.address]!(arg0, arg1);
 }
 
-class ObjCBlock48 extends _ObjCBlockBase {
-  ObjCBlock48._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock49 extends _ObjCBlockBase {
+  ObjCBlock49._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock48.fromFunctionPointer(
+  ObjCBlock49.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -51487,14 +54765,14 @@ class ObjCBlock48 extends _ObjCBlockBase {
                                 ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1)>(
-                        _ObjCBlock48_fnPtrTrampoline)
+                        _ObjCBlock49_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock48.fromFunction(
+  ObjCBlock49.fromFunction(
       PedometerBindings lib,
       void Function(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1)
           fn)
@@ -51505,9 +54783,9 @@ class ObjCBlock48 extends _ObjCBlockBase {
                                 ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1)>(
-                        _ObjCBlock48_closureTrampoline)
+                        _ObjCBlock49_closureTrampoline)
                     .cast(),
-                _ObjCBlock48_registerClosure(fn)),
+                _ObjCBlock49_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
@@ -51681,7 +54959,7 @@ class CMPedometerData extends NSObject {
   }
 }
 
-void _ObjCBlock49_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock50_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
   return block.ref.target
       .cast<
@@ -51693,25 +54971,25 @@ void _ObjCBlock49_fnPtrTrampoline(ffi.Pointer<_ObjCBlock> block,
               ffi.Pointer<ObjCObject> arg1)>()(arg0, arg1);
 }
 
-final _ObjCBlock49_closureRegistry = <int, Function>{};
-int _ObjCBlock49_closureRegistryIndex = 0;
-ffi.Pointer<ffi.Void> _ObjCBlock49_registerClosure(Function fn) {
-  final id = ++_ObjCBlock49_closureRegistryIndex;
-  _ObjCBlock49_closureRegistry[id] = fn;
+final _ObjCBlock50_closureRegistry = <int, Function>{};
+int _ObjCBlock50_closureRegistryIndex = 0;
+ffi.Pointer<ffi.Void> _ObjCBlock50_registerClosure(Function fn) {
+  final id = ++_ObjCBlock50_closureRegistryIndex;
+  _ObjCBlock50_closureRegistry[id] = fn;
   return ffi.Pointer<ffi.Void>.fromAddress(id);
 }
 
-void _ObjCBlock49_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
+void _ObjCBlock50_closureTrampoline(ffi.Pointer<_ObjCBlock> block,
     ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
-  return _ObjCBlock49_closureRegistry[block.ref.target.address]!(arg0, arg1);
+  return _ObjCBlock50_closureRegistry[block.ref.target.address]!(arg0, arg1);
 }
 
-class ObjCBlock49 extends _ObjCBlockBase {
-  ObjCBlock49._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
+class ObjCBlock50 extends _ObjCBlockBase {
+  ObjCBlock50._(ffi.Pointer<_ObjCBlock> id, PedometerBindings lib)
       : super._(id, lib, retain: false, release: true);
 
   /// Creates a block from a C function pointer.
-  ObjCBlock49.fromFunctionPointer(
+  ObjCBlock50.fromFunctionPointer(
       PedometerBindings lib,
       ffi.Pointer<
               ffi.NativeFunction<
@@ -51725,14 +55003,14 @@ class ObjCBlock49 extends _ObjCBlockBase {
                                 ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1)>(
-                        _ObjCBlock49_fnPtrTrampoline)
+                        _ObjCBlock50_fnPtrTrampoline)
                     .cast(),
                 ptr.cast()),
             lib);
   static ffi.Pointer<ffi.Void>? _cFuncTrampoline;
 
   /// Creates a block from a Dart function.
-  ObjCBlock49.fromFunction(
+  ObjCBlock50.fromFunction(
       PedometerBindings lib,
       void Function(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1)
           fn)
@@ -51743,9 +55021,9 @@ class ObjCBlock49 extends _ObjCBlockBase {
                                 ffi.Pointer<_ObjCBlock> block,
                                 ffi.Pointer<ObjCObject> arg0,
                                 ffi.Pointer<ObjCObject> arg1)>(
-                        _ObjCBlock49_closureTrampoline)
+                        _ObjCBlock50_closureTrampoline)
                     .cast(),
-                _ObjCBlock49_registerClosure(fn)),
+                _ObjCBlock50_registerClosure(fn)),
             lib);
   static ffi.Pointer<ffi.Void>? _dartFuncTrampoline;
   void call(ffi.Pointer<ObjCObject> arg0, ffi.Pointer<ObjCObject> arg1) {
@@ -51798,7 +55076,7 @@ class CMPedometerEvent extends NSObject {
   }
 
   int get type {
-    return _lib._objc_msgSend_809(_id, _lib._sel_type1);
+    return _lib._objc_msgSend_854(_id, _lib._sel_type1);
   }
 
   static CMPedometerEvent new1(PedometerBindings _lib) {

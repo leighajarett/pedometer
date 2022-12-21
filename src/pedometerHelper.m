@@ -1,6 +1,10 @@
 #import "pedometerHelper.h"
-
 #import <CoreMotion/CoreMotion.h>
+#import <CoreMotion/CMPedometer.h>
+#import <Foundation/Foundation.h>
+#import <Foundation/NSDate.h>
+
+#include "dart-sdk/include/dart_api_dl.h"
 
 // Need to import the dart headers to get the definitions Dart_CObject
 #include "dart-sdk/include/dart_api_dl.h"
@@ -16,13 +20,7 @@ static Dart_CObject NSObjectToCObject(CMPedometerData* n) {
 
 // Function that accepts a start date string, dart port, and starts the pedometer and forwards the resulting data.
 void startPedometer(Dart_Port sendPort, CMPedometer* pedometer, NSDate* start, NSDate* end){
-  // Create a pedometer
-//  static CMPedometer *pedometer;
-//  pedometer = [[CMPedometer alloc] init];
   NSLog(@"Created pedometer");
-
-//  NSDate* today = [NSDate date];
-//  NSDate *yesterday = [NSDate dateWithTimeIntervalSinceNow:-86400];
 
   // Start the pedometer
   [pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData *pedometerData, NSError *error) {
@@ -30,32 +28,14 @@ void startPedometer(Dart_Port sendPort, CMPedometer* pedometer, NSDate* start, N
       NSLog(@"data:%@", pedometerData.numberOfSteps);
       NSLog(@"start:%@", pedometerData.startDate);
       NSLog(@"end:%@", pedometerData.endDate);
+      pedometerData = [pedometerData retain];
       Dart_CObject data = NSObjectToCObject(pedometerData);
       const bool success = Dart_PostCObject_DL(sendPort, &data);
-
-//      disable ARC
-//      increment to do manual reference count
-//      then add dart line
-
-// make sure that Liam's proposal
-
       NSLog(@"Finished sending");
-//      NSLog(@"Value:%@",  steps.value.as_int64);
-//      const bool success = Dart_PostCObject_DL(sendPort, &steps);
-//      NSAssert(success, @"Dart_PostCObject_DL failed.");
     }
     else{
       NSLog(@"Error:%@", error);
     }
-
-//    NSTimeInterval delayInSeconds = 120.0;
-//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-//    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-//      NSLog(@"Stop the pedometer");
-//      [pedometer stopPedometerUpdates];
-//    });
-
-
   }];
 }
 
