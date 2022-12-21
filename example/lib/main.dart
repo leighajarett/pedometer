@@ -85,6 +85,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   late pd.CMPedometer client;
+  late pd.NSDateFormatter formatter;
   var totalSteps = 0;
 
   // late DateTime lastUpdated;
