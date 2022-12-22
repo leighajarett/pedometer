@@ -5,6 +5,7 @@ import 'dart:io';
 import 'dart:isolate';
 import 'package:pedometer/pedometer_bindings_generated.dart' as pd;
 import 'package:intl/intl.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 const _dylibPath = '/System/Library/Frameworks/CoreMotion.framework/CoreMotion';
 
@@ -78,7 +79,7 @@ class _HomeState extends State<Home> {
   late pd.CMPedometer client;
   late pd.NSDateFormatter formatter;
   late pd.NSDateFormatter hourFormatter;
-  late DateTime lastUpdated;
+  DateTime? lastUpdated;
   late int nativePort;
   var hourlySteps = <PedometerResults>[];
   final formatString = "yyyy-MM-dd HH:mm:ss";
@@ -92,21 +93,22 @@ class _HomeState extends State<Home> {
 
     // Handle the data received from native side.
     receivePort.listen((data) {
-      final result = ffi.Pointer<pd.ObjCObject>.fromAddress(data as int);
-      final pedometerData =
-          pd.CMPedometerData.castFromPointer(lib, result, release: true);
-      final stepCount = pedometerData.numberOfSteps?.intValue ?? 0;
-      final startHour =
-          hourFormatter.stringFromDate_(pedometerData.startDate!).toString();
+      if (data != null) {
+        final result = ffi.Pointer<pd.ObjCObject>.fromAddress(data as int);
+        final pedometerData =
+            pd.CMPedometerData.castFromPointer(lib, result, release: true);
+        final stepCount = pedometerData.numberOfSteps?.intValue ?? 0;
+        final startHour =
+            hourFormatter.stringFromDate_(pedometerData.startDate!).toString();
 
-      // Append the new data to the list.
-      setState(() {
-        hourlySteps.add(PedometerResults(startHour, stepCount));
-      });
+        print("$startHour: $stepCount");
+        // Append the new data to the list.
+        setState(() {
+          hourlySteps.add(PedometerResults(startHour, stepCount));
+        });
+      }
     });
   }
-
-  // var totalSteps = [].reduce((a.steps, b.steps) => a + b);
 
   @override
   void initState() {
@@ -117,14 +119,12 @@ class _HomeState extends State<Home> {
     formatter =
         pd.NSDateFormatter.castFrom(pd.NSDateFormatter.alloc(lib).init());
     formatter.dateFormat = pd.NSString(lib, "$formatString zzz");
-    // formatter.locale = pd.NSLocale.alloc(lib)
-    //     .initWithLocaleIdentifier_(pd.NSString(lib, "en_US"));
-
     hourFormatter =
         pd.NSDateFormatter.castFrom(pd.NSDateFormatter.alloc(lib).init());
     hourFormatter.dateFormat = pd.NSString(lib, "HH");
 
     recieveSteps();
+    runPedometer();
     super.initState();
   }
 
@@ -139,28 +139,22 @@ class _HomeState extends State<Home> {
     return formatter.dateFromString_(nString);
   }
 
-  // Next try feeding in the pedometer too
+  // Run the pedometer.
   void runPedometer() async {
-    // Convert start and end date.
-    final start = dateConverter(DateTime.now().subtract(Duration(hours: 24)));
-    final end = dateConverter(DateTime.now());
-
+    final now = DateTime.now();
     if (nativePort != null) {
       setState(() {
-        lastUpdated = DateTime.now();
+        lastUpdated = now;
         hourlySteps = [];
       });
-      // For loop for every hour in the past 24 hours.
-      for (var i = 0; i < 24; i++) {
-        final _start = dateConverter(DateTime.now()
-            .subtract(Duration(hours: 24 - i))
-            .subtract(Duration(
-                hours: 1))); // Subtract 1 hour to get the start of the hour
-        final _end = dateConverter(DateTime.now()
-            .subtract(Duration(hours: 24 - i))); // End of the hour
-        // Start the pedometer with the start and end date.
+
+      // Loop through every hour since midnight.
+      for (var h = 0; h <= now.hour; h++) {
+        final start = dateConverter(DateTime(now.year, now.month, now.day, h));
+        final end =
+            dateConverter(DateTime(now.year, now.month, now.day, h + 1));
         pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
-            lib2, nativePort, client, _start, _end);
+            lib2, nativePort, client, start, end);
       }
     }
   }
@@ -168,66 +162,138 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+
+    var barGroups = hourlySteps
+        .map((e) => BarChartGroupData(x: int.parse(e.startHour), barRods: [
+              BarChartRodData(
+                  color: Colors.blue[900], toY: e.steps.toDouble() / 100)
+            ]))
+        .toList();
+
     return Scaffold(
-      body: Stack(
-        children: [
-          ClipPath(
+        body: Stack(
+      children: [
+        ClipPath(
             clipper: RoundClipper(),
             child: FractionallySizedBox(
-              heightFactor: 0.5,
-              widthFactor: 1,
+                heightFactor: 0.55,
+                widthFactor: 1,
+                child: Container(color: Colors.blue[300]))),
+        Align(
+          alignment: Alignment.topCenter,
+          child: Padding(
+            padding: const EdgeInsets.all(80.0),
+            child: Column(children: [
+              lastUpdated != null
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 50.0),
+                      child: Text(
+                          DateFormat.yMMMMd('en_US').format(lastUpdated!),
+                          style: textTheme.titleLarge!
+                              .copyWith(color: Colors.blue[900])),
+                    )
+                  : const SizedBox(height: 0),
+              Text(
+                hourlySteps.fold(0, (t, e) => t + e.steps).toString(),
+                style: textTheme.displayMedium!.copyWith(color: Colors.white),
+              ),
+              Text(
+                'steps',
+                style: textTheme.titleLarge!.copyWith(color: Colors.white),
+              )
+            ]),
+          ),
+        ),
+        Align(
+          alignment: Alignment.centerRight,
+          child: GestureDetector(
+            onTap: runPedometer,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
               child: Container(
-                color: Colors.blue[300],
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        hourlySteps.fold(0, (t, e) => t + e.steps).toString(),
-                        style: textTheme.displayMedium!
-                            .copyWith(color: Colors.white),
-                      ),
-                      Text(
-                        'steps',
-                        style:
-                            textTheme.titleSmall!.copyWith(color: Colors.white),
-                      ),
-                      // If there are less than 24 hours then show a spinner.
-                      if (hourlySteps.length < 24)
-                        const CircularProgressIndicator()
-                      else
-                        // Else show the hourly steps.
-                        ListView(
-                          shrinkWrap: true,
-                          children: hourlySteps
-                              .map((e) => Text(
-                                    e.startHour.toString() +
-                                        ": " +
-                                        e.steps.toString(),
-                                    style: textTheme.titleSmall!
-                                        .copyWith(color: Colors.white),
-                                  ))
-                              .toList(),
-                        ),
-                    ],
+                decoration: BoxDecoration(
+                  color: Colors.blue[900],
+                  shape: BoxShape.circle,
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.refresh,
+                    color: Colors.white,
+                    size: 50,
                   ),
                 ),
               ),
             ),
           ),
-          Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                ElevatedButton(
-                  onPressed: () => runPedometer(),
-                  child: const Text('Refresh using Native Ports!'),
-                ),
-              ],
-            ),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 30.0, vertical: 50.0),
+            child: AspectRatio(
+                aspectRatio: 1.2,
+                child: Container(
+                  child: BarChart(
+                    BarChartData(
+                      titlesData: FlTitlesData(
+                          show: true,
+                          // Top titles are null
+                          topTitles: AxisTitles(
+                              sideTitles: SideTitles(showTitles: false)),
+                          rightTitles: AxisTitles(
+                              sideTitles: SideTitles(showTitles: false)),
+                          leftTitles: AxisTitles(
+                              sideTitles: SideTitles(
+                            showTitles: false,
+                          )),
+                          bottomTitles: AxisTitles(
+                            sideTitles: SideTitles(
+                              showTitles: true,
+                              reservedSize: 30,
+                              getTitlesWidget: getBottomTitles,
+                            ),
+                          )),
+                      borderData: FlBorderData(
+                        show: false,
+                      ),
+                      barGroups: barGroups,
+                      gridData: FlGridData(show: false),
+                      alignment: BarChartAlignment.spaceAround,
+                      maxY: 10,
+                    ),
+                  ),
+                )),
           ),
-        ],
-      ),
-    );
+        ),
+      ],
+    ));
   }
+}
+
+// Axis labels for bottom of chart
+Widget getBottomTitles(double value, TitleMeta meta) {
+  String text;
+  switch (value.toInt()) {
+    case 0:
+      text = '12AM';
+      break;
+    case 6:
+      text = '6AM';
+      break;
+    case 12:
+      text = '12PM';
+      break;
+    case 18:
+      text = '6PM';
+      break;
+    default:
+      text = '';
+  }
+  return SideTitleWidget(
+    axisSide: meta.axisSide,
+    space: 4,
+    child: Text(text, style: TextStyle(fontSize: 14, color: Colors.blue[900])),
+  );
 }
