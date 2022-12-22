@@ -4,9 +4,10 @@ import 'dart:ffi' as ffi;
 import 'dart:io';
 import 'dart:isolate';
 import 'package:pedometer/pedometer_bindings_generated.dart' as pd;
-import 'dart:typed_data';
+import 'package:intl/intl.dart';
 
 const _dylibPath = '/System/Library/Frameworks/CoreMotion.framework/CoreMotion';
+
 // Bindings for the CMPedometer class
 final lib = pd.PedometerBindings(ffi.DynamicLibrary.open(_dylibPath));
 // Bindings for the helper function
@@ -21,6 +22,7 @@ void main() {
       ffi.IntPtr Function(ffi.Pointer<ffi.Void>),
       int Function(ffi.Pointer<ffi.Void>)>('Dart_InitializeApiDL');
   assert(initializeApi(ffi.NativeApi.initializeApiDLData) == 0);
+
   runApp(const MyApp());
 }
 
@@ -55,21 +57,10 @@ class RoundClipper extends CustomClipper<Path> {
   }
 }
 
-// Class to hold the information needed to make an API call to the pedometer
-class PedometerCall {
-  // String name;
-  pd.NSString start;
-  pd.NSString end;
-
-  PedometerCall(this.start, this.end);
-}
-
 // Class to hold the information needed for the chart
 class PedometerResults {
-  int startHour;
+  String startHour;
   int steps;
-
-  // Add total method
 
   PedometerResults(this.startHour, this.steps);
 }
@@ -86,73 +77,93 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   late pd.CMPedometer client;
   late pd.NSDateFormatter formatter;
-  var totalSteps = 0;
+  late pd.NSDateFormatter hourFormatter;
+  late DateTime lastUpdated;
+  late int nativePort;
+  var hourlySteps = <PedometerResults>[];
+  final formatString = "yyyy-MM-dd HH:mm:ss";
 
-  // late DateTime lastUpdated;
+  // Open up a port to receive data from native side.
+  void recieveSteps() {
+    final receivePort = ReceivePort();
+    setState(() {
+      nativePort = receivePort.sendPort.nativePort;
+    });
 
-  // Handles the data received from native side
-  // Open up a port to receive data from native side
-  static final receivePort = ReceivePort()..listen(handler);
-  static final nativePort = receivePort.sendPort.nativePort;
-  static void handler(data) {
-    print("receiving data $data");
-    final result = ffi.Pointer<pd.ObjCObject>.fromAddress(data as int);
-    final pedometerData = pd.CMPedometerData.castFromPointer(lib, result);
-    // setState(() {
-    //   totalSteps = pedometerData.numberOfSteps;
-    // });
-    final stepCount = pedometerData.numberOfSteps;
-    // print("This is the pointer $stepCount.");
-    receivePort.close();
+    // Handle the data received from native side.
+    receivePort.listen((data) {
+      final result = ffi.Pointer<pd.ObjCObject>.fromAddress(data as int);
+      final pedometerData =
+          pd.CMPedometerData.castFromPointer(lib, result, release: true);
+      final stepCount = pedometerData.numberOfSteps?.intValue ?? 0;
+      final startHour =
+          hourFormatter.stringFromDate_(pedometerData.startDate!).toString();
+
+      // Append the new data to the list.
+      setState(() {
+        hourlySteps.add(PedometerResults(startHour, stepCount));
+      });
+    });
   }
+
+  // var totalSteps = [].reduce((a.steps, b.steps) => a + b);
 
   @override
   void initState() {
+    // Create a new CMPedometer instance.
     client = pd.CMPedometer.new1(lib);
-    // Create a list of all the start and end calls
-    // update();
 
-    // Setting the formatter
-    final formatter =
+    // Setting the formatter for date strings.
+    formatter =
         pd.NSDateFormatter.castFrom(pd.NSDateFormatter.alloc(lib).init());
-    formatter.dateFormat = pd.NSString(lib, "yyyy-MM-dd HH:mm:ss zzz");
-    formatter.locale = pd.NSLocale.alloc(lib)
-        .initWithLocaleIdentifier_(pd.NSString(lib, "en_US"));
+    formatter.dateFormat = pd.NSString(lib, "$formatString zzz");
+    // formatter.locale = pd.NSLocale.alloc(lib)
+    //     .initWithLocaleIdentifier_(pd.NSString(lib, "en_US"));
+
+    hourFormatter =
+        pd.NSDateFormatter.castFrom(pd.NSDateFormatter.alloc(lib).init());
+    hourFormatter.dateFormat = pd.NSString(lib, "HH");
+
+    recieveSteps();
     super.initState();
   }
 
   pd.NSDate dateConverter(DateTime dartDate) {
-    final nString = pd.NSString(lib, dartDate.toString());
+    // Format dart date to string.
+    final formattedDate = DateFormat(formatString).format(dartDate);
+    // Get current timezone.
+    final tz = dartDate.timeZoneName;
+    // Create a new NSString with the formatted date and timezone.
+    final nString = pd.NSString(lib, "$formattedDate $tz");
+    // Convert the NSString to NSDate.
     return formatter.dateFromString_(nString);
   }
 
   // Next try feeding in the pedometer too
   void runPedometer() async {
-    print("Running pedometer");
+    // Convert start and end date.
     final start = dateConverter(DateTime.now().subtract(Duration(hours: 24)));
     final end = dateConverter(DateTime.now());
 
-//    final start = DateTime.now().subtract(Duration(hours: 24));
-//    final end = DateTime.now();
-    pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
-        lib2, nativePort, client, start, end);
+    if (nativePort != null) {
+      setState(() {
+        lastUpdated = DateTime.now();
+        hourlySteps = [];
+      });
+      // For loop for every hour in the past 24 hours.
+      for (var i = 0; i < 24; i++) {
+        final _start = dateConverter(DateTime.now()
+            .subtract(Duration(hours: 24 - i))
+            .subtract(Duration(
+                hours: 1))); // Subtract 1 hour to get the start of the hour
+        final _end = dateConverter(DateTime.now()
+            .subtract(Duration(hours: 24 - i))); // End of the hour
+        // Start the pedometer with the start and end date.
+        pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
+            lib2, nativePort, client, _start, _end);
+      }
+    }
   }
-
-// Update the timestamps and refresh the pedometer
-  // void update() {
-  //   var local_calls = [];
-  //   final start = new DateTime.now().subtract(new Duration(hours: 24));
-  //   final end = new DateTime.now();
-  // Generate 24 calls, each with a start date 1 hour apart
-  // for (var i = 0; i < 24; i++) {
-  //   final _start = start.subtract(new Duration(hours: 24 - i));
-  //   final _end = start.subtract(new Duration(hours: 23 - i));
-  //   local_calls.add(PedometerCall(
-  //       _start.hour.toString(),
-  //       pd.NSString(lib, _start.toString()),
-  //       pd.NSString(lib, _end.toString())));
-  // }}
-  //  }
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +183,7 @@ class _HomeState extends State<Home> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        totalSteps.toString(),
+                        hourlySteps.fold(0, (t, e) => t + e.steps).toString(),
                         style: textTheme.displayMedium!
                             .copyWith(color: Colors.white),
                       ),
@@ -181,6 +192,23 @@ class _HomeState extends State<Home> {
                         style:
                             textTheme.titleSmall!.copyWith(color: Colors.white),
                       ),
+                      // If there are less than 24 hours then show a spinner.
+                      if (hourlySteps.length < 24)
+                        const CircularProgressIndicator()
+                      else
+                        // Else show the hourly steps.
+                        ListView(
+                          shrinkWrap: true,
+                          children: hourlySteps
+                              .map((e) => Text(
+                                    e.startHour.toString() +
+                                        ": " +
+                                        e.steps.toString(),
+                                    style: textTheme.titleSmall!
+                                        .copyWith(color: Colors.white),
+                                  ))
+                              .toList(),
+                        ),
                     ],
                   ),
                 ),
