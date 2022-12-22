@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    client = pd.CMPedometer.castFrom(pd.CMPedometer.alloc(lib).init());
+    client = pd.CMPedometer.new1(lib);
     // Create a list of all the start and end calls
     // update();
 
@@ -132,7 +132,10 @@ class _HomeState extends State<Home> {
     final start = dateConverter(DateTime.now().subtract(Duration(hours: 24)));
     final end = dateConverter(DateTime.now());
 
-    lib2.startPedometer(nativePort, client, start, end);
+//    final start = DateTime.now().subtract(Duration(hours: 24));
+//    final end = DateTime.now();
+    pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
+        lib2, nativePort, client, start, end);
   }
 
 // Update the timestamps and refresh the pedometer
