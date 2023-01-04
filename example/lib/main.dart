@@ -12,7 +12,7 @@ const _dylibPath = '/System/Library/Frameworks/CoreMotion.framework/CoreMotion';
 // Bindings for the CMPedometer class
 final lib = pd.PedometerBindings(ffi.DynamicLibrary.open(_dylibPath));
 // Bindings for the helper function
-final lib2 = pd.PedometerBindings(ffi.DynamicLibrary.process());
+final helpLib = pd.PedometerBindings(ffi.DynamicLibrary.process());
 
 void main() {
   // Contains the Dart API helper functions
@@ -42,6 +42,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Class to hold the information needed for the chart
+class PedometerResults {
+  String startHour;
+  int steps;
+  PedometerResults(this.startHour, this.steps);
+}
+
 class RoundClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
@@ -56,14 +63,6 @@ class RoundClipper extends CustomClipper<Path> {
   bool shouldReclip(CustomClipper<Path> oldClipper) {
     return true;
   }
-}
-
-// Class to hold the information needed for the chart
-class PedometerResults {
-  String startHour;
-  int steps;
-
-  PedometerResults(this.startHour, this.steps);
 }
 
 class Home extends StatefulWidget {
@@ -102,6 +101,7 @@ class _HomeState extends State<Home> {
             hourFormatter.stringFromDate_(pedometerData.startDate!).toString();
 
         print("$startHour: $stepCount");
+
         // Append the new data to the list.
         setState(() {
           hourlySteps.add(PedometerResults(startHour, stepCount));
@@ -154,7 +154,7 @@ class _HomeState extends State<Home> {
         final end =
             dateConverter(DateTime(now.year, now.month, now.day, h + 1));
         pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
-            lib2, nativePort, client, start, end);
+            helpLib, nativePort, client, start, end);
       }
     }
   }
