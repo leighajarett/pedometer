@@ -86,9 +86,7 @@ class _HomeState extends State<Home> {
   // Open up a port to receive data from native side.
   void recieveSteps() {
     final receivePort = ReceivePort();
-    setState(() {
-      nativePort = receivePort.sendPort.nativePort;
-    });
+    nativePort = receivePort.sendPort.nativePort;
 
     // Handle the data received from native side.
     receivePort.listen((data) {
@@ -141,6 +139,10 @@ class _HomeState extends State<Home> {
 
   // Run the pedometer.
   void runPedometer() async {
+    if (pd.CMPedometer.isStepCountingAvailable(lib) == false) {
+      print("Step counting is not available.");
+      return;
+    }
     final now = DateTime.now();
     if (nativePort != null) {
       setState(() {
