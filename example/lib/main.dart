@@ -1,29 +1,10 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:ffi' as ffi;
-import 'dart:io';
-import 'dart:isolate';
-import 'package:pedometer/pedometer_bindings_generated.dart' as pd;
 import 'package:intl/intl.dart';
 import 'package:fl_chart/fl_chart.dart';
 
-const _dylibPath = '/System/Library/Frameworks/CoreMotion.framework/CoreMotion';
-
-// Bindings for the CMPedometer class
-final lib = pd.PedometerBindings(ffi.DynamicLibrary.open(_dylibPath));
-// Bindings for the helper function
-final helpLib = pd.PedometerBindings(ffi.DynamicLibrary.process());
+import 'steps_repo.dart';
 
 void main() {
-  // Contains the Dart API helper functions
-  final dylib = ffi.DynamicLibrary.open("pedometer.framework/pedometer");
-
-  // Initialize the Dart API
-  final initializeApi = dylib.lookupFunction<
-      ffi.IntPtr Function(ffi.Pointer<ffi.Void>),
-      int Function(ffi.Pointer<ffi.Void>)>('Dart_InitializeApiDL');
-  assert(initializeApi(ffi.NativeApi.initializeApiDLData) == 0);
-
   runApp(const MyApp());
 }
 
@@ -42,13 +23,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Class to hold the information needed for the chart
-class PedometerResults {
-  String startHour;
-  int steps;
-  PedometerResults(this.startHour, this.steps);
-}
-
 class RoundClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
@@ -61,7 +35,7 @@ class RoundClipper extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) {
-    return true;
+    return false;
   }
 }
 
@@ -75,135 +49,77 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  late pd.CMPedometer client;
-  late pd.NSDateFormatter formatter;
-  late pd.NSDateFormatter hourFormatter;
+  var hourlySteps = <Steps>[];
   DateTime? lastUpdated;
-  late int nativePort;
-  var hourlySteps = <PedometerResults>[];
-  final formatString = "yyyy-MM-dd HH:mm:ss";
-
-  // Open up a port to receive data from native side.
-  void recieveSteps() {
-    final receivePort = ReceivePort();
-    nativePort = receivePort.sendPort.nativePort;
-
-    // Handle the data received from native side.
-    receivePort.listen((data) {
-      if (data != null) {
-        final result = ffi.Pointer<pd.ObjCObject>.fromAddress(data as int);
-        final pedometerData =
-            pd.CMPedometerData.castFromPointer(lib, result, release: true);
-        final stepCount = pedometerData.numberOfSteps?.intValue ?? 0;
-        final startHour =
-            hourFormatter.stringFromDate_(pedometerData.startDate!).toString();
-
-        print("$startHour: $stepCount");
-
-        // Append the new data to the list.
-        setState(() {
-          hourlySteps.add(PedometerResults(startHour, stepCount));
-        });
-      }
-    });
-  }
 
   @override
   void initState() {
-    // Create a new CMPedometer instance.
-    client = pd.CMPedometer.new1(lib);
-
-    // Setting the formatter for date strings.
-    formatter =
-        pd.NSDateFormatter.castFrom(pd.NSDateFormatter.alloc(lib).init());
-    formatter.dateFormat = pd.NSString(lib, "$formatString zzz");
-    hourFormatter =
-        pd.NSDateFormatter.castFrom(pd.NSDateFormatter.alloc(lib).init());
-    hourFormatter.dateFormat = pd.NSString(lib, "HH");
-
-    recieveSteps();
     runPedometer();
     super.initState();
   }
 
-  pd.NSDate dateConverter(DateTime dartDate) {
-    // Format dart date to string.
-    final formattedDate = DateFormat(formatString).format(dartDate);
-    // Get current timezone.
-    final tz = dartDate.timeZoneName;
-    // Create a new NSString with the formatted date and timezone.
-    final nString = pd.NSString(lib, "$formattedDate $tz");
-    // Convert the NSString to NSDate.
-    return formatter.dateFromString_(nString);
-  }
-
-  // Run the pedometer.
   void runPedometer() async {
-    if (pd.CMPedometer.isStepCountingAvailable(lib) == false) {
-      print("Step counting is not available.");
-      return;
-    }
     final now = DateTime.now();
-    if (nativePort != null) {
-      setState(() {
-        lastUpdated = now;
-        hourlySteps = [];
-      });
-
-      // Loop through every hour since midnight.
-      for (var h = 0; h <= now.hour; h++) {
-        final start = dateConverter(DateTime(now.year, now.month, now.day, h));
-        final end =
-            dateConverter(DateTime(now.year, now.month, now.day, h + 1));
-        pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
-            helpLib, nativePort, client, start, end);
-      }
-    }
+    hourlySteps = await StepsRepo.instance.getSteps();
+    lastUpdated = now;
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    var barGroups = hourlySteps
-        .map((e) => BarChartGroupData(x: int.parse(e.startHour), barRods: [
+    final barGroups = hourlySteps
+        .map(
+          (e) => BarChartGroupData(
+            x: int.parse(e.startHour),
+            barRods: [
               BarChartRodData(
-                  color: Colors.blue[900], toY: e.steps.toDouble() / 100)
-            ]))
+                color: Colors.blue[900],
+                toY: e.steps.toDouble() / 100,
+              )
+            ],
+          ),
+        )
         .toList();
 
     return Scaffold(
         body: Stack(
       children: [
         ClipPath(
-            clipper: RoundClipper(),
-            child: FractionallySizedBox(
-                heightFactor: 0.55,
-                widthFactor: 1,
-                child: Container(color: Colors.blue[300]))),
+          clipper: RoundClipper(),
+          child: FractionallySizedBox(
+            heightFactor: 0.55,
+            widthFactor: 1,
+            child: Container(color: Colors.blue[300]),
+          ),
+        ),
         Align(
           alignment: Alignment.topCenter,
           child: Padding(
             padding: const EdgeInsets.all(80.0),
-            child: Column(children: [
-              lastUpdated != null
-                  ? Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 50.0),
-                      child: Text(
+            child: Column(
+              children: [
+                lastUpdated != null
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 50.0),
+                        child: Text(
                           DateFormat.yMMMMd('en_US').format(lastUpdated!),
                           style: textTheme.titleLarge!
-                              .copyWith(color: Colors.blue[900])),
-                    )
-                  : const SizedBox(height: 0),
-              Text(
-                hourlySteps.fold(0, (t, e) => t + e.steps).toString(),
-                style: textTheme.displayMedium!.copyWith(color: Colors.white),
-              ),
-              Text(
-                'steps',
-                style: textTheme.titleLarge!.copyWith(color: Colors.white),
-              )
-            ]),
+                              .copyWith(color: Colors.blue[900]),
+                        ),
+                      )
+                    : const SizedBox(height: 0),
+                Text(
+                  hourlySteps.fold(0, (t, e) => t + e.steps).toString(),
+                  style: textTheme.displayMedium!.copyWith(color: Colors.white),
+                ),
+                Text(
+                  'steps',
+                  style: textTheme.titleLarge!.copyWith(color: Colors.white),
+                )
+              ],
+            ),
           ),
         ),
         Align(
@@ -235,38 +151,39 @@ class _HomeState extends State<Home> {
             padding:
                 const EdgeInsets.symmetric(horizontal: 30.0, vertical: 50.0),
             child: AspectRatio(
-                aspectRatio: 1.2,
-                child: Container(
-                  child: BarChart(
-                    BarChartData(
-                      titlesData: FlTitlesData(
-                          show: true,
-                          // Top titles are null
-                          topTitles: AxisTitles(
-                              sideTitles: SideTitles(showTitles: false)),
-                          rightTitles: AxisTitles(
-                              sideTitles: SideTitles(showTitles: false)),
-                          leftTitles: AxisTitles(
-                              sideTitles: SideTitles(
-                            showTitles: false,
-                          )),
-                          bottomTitles: AxisTitles(
-                            sideTitles: SideTitles(
-                              showTitles: true,
-                              reservedSize: 30,
-                              getTitlesWidget: getBottomTitles,
-                            ),
-                          )),
-                      borderData: FlBorderData(
-                        show: false,
+              aspectRatio: 1.2,
+              child: BarChart(
+                BarChartData(
+                  titlesData: FlTitlesData(
+                    show: true,
+                    // Top titles are null
+                    topTitles:
+                        AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                    rightTitles:
+                        AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                    leftTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: false,
                       ),
-                      barGroups: barGroups,
-                      gridData: FlGridData(show: false),
-                      alignment: BarChartAlignment.spaceAround,
-                      maxY: 10,
+                    ),
+                    bottomTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        reservedSize: 30,
+                        getTitlesWidget: getBottomTitles,
+                      ),
                     ),
                   ),
-                )),
+                  borderData: FlBorderData(
+                    show: false,
+                  ),
+                  barGroups: barGroups,
+                  gridData: FlGridData(show: false),
+                  alignment: BarChartAlignment.spaceAround,
+                  maxY: 10,
+                ),
+              ),
+            ),
           ),
         ),
       ],

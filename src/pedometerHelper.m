@@ -10,7 +10,7 @@
 #include "dart-sdk/include/dart_api_dl.h"
 
 
-// Helper function that takes a pointer to CMPedometer data and cinverts it to a Dart C Object
+// Helper function that takes a pointer to CMPedometer data and converts it to a Dart C Object
 static Dart_CObject NSObjectToCObject(CMPedometerData* n) {
   Dart_CObject cobj;
   cobj.type = Dart_CObject_kInt64;
