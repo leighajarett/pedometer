@@ -1,0 +1,3 @@
+ninja: Entering directory `/Users/yousefi/Developer/jni_demo/android/app/.cxx/Debug/491s1z13/armeabi-v7a'
+[1/2] Building C object CMakeFiles/health_connect.dir/health_connect.c.o
+[2/2] Linking C shared library /Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/Debug/491s1z13/obj/armeabi-v7a/libhealth_connect.so

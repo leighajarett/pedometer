@@ -1,0 +1,9 @@
+# ninja log v5
+0	4417	1669890776	CMakeFiles/health_connect.dir/health_connect.c.o	bf9a6f0baf854446
+4418	4514	1669890776	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1s3y1is8/obj/x86_64/libhealth_connect.so	96c900d1ff6435f2
+1	3686	1669893712	CMakeFiles/health_connect.dir/health_connect.c.o	bf9a6f0baf854446
+3686	3773	1669893712	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1s3y1is8/obj/x86_64/libhealth_connect.so	96c900d1ff6435f2
+2	642	1673607021	CMakeFiles/health_connect.dir/include/dart_api_dl.c.o	8e628d8bcf55df5d
+2	693	1673607021	CMakeFiles/health_connect.dir/dartjni.c.o	6ab1f5151dc8bb22
+1	4753	1673607025	CMakeFiles/health_connect.dir/health_connect.c.o	bf9a6f0baf854446
+4753	4868	1673607025	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1s3y1is8/obj/x86_64/libhealth_connect.so	4b472fdceaa9a954

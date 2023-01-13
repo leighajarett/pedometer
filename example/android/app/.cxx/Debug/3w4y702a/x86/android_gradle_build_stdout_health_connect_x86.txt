@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/yousefi/Developer/pedometer/example/android/app/.cxx/Debug/3w4y702a/x86'
+ninja: no work to do.

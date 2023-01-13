@@ -3,7 +3,9 @@ import 'dart:io';
 import 'dart:isolate';
 
 import 'package:intl/intl.dart';
+import 'package:jni/jni.dart' as jni;
 import 'package:pedometer/pedometer_bindings_generated.dart' as pd;
+import 'package:pedometer/health_connect.dart' as hc;
 
 /// Class to hold the information needed for the chart
 class Steps {
@@ -109,9 +111,47 @@ class _IOSStepsRepo implements StepsRepo {
 }
 
 class _AndroidStepsRepo implements StepsRepo {
+  late final hc.Activity activity;
+  late final hc.Context applicationContext;
+  late final hc.HealthConnectClient client;
+
+  _AndroidStepsRepo() {
+    jni.Jni.initDLApi();
+    activity = hc.Activity.fromRef(jni.Jni.getCurrentActivity());
+    applicationContext =
+        hc.Context.fromRef(jni.Jni.getCachedApplicationContext());
+    client = hc.HealthConnectClient.getOrCreate1(applicationContext);
+  }
+
   @override
-  Future<List<Steps>> getSteps() {
-    // TODO: implement getSteps
-    throw UnimplementedError();
+  Future<List<Steps>> getSteps() async {
+    final futures = <Future<hc.AggregationResult>>[];
+    final now = DateTime.now();
+
+    for (var h = 0; h <= now.hour; h++) {
+      final start =
+          DateTime(now.year, now.month, now.day, h).millisecondsSinceEpoch;
+      final end =
+          DateTime(now.year, now.month, now.day, h + 1).millisecondsSinceEpoch;
+      final request = hc.AggregateRequest(
+        hc.Set.of1(
+          hc.AggregateMetric.type(hc.Long.type),
+          hc.StepsRecord.COUNT_TOTAL,
+        ),
+        hc.TimeRangeFilter.between(
+          hc.Instant.ofEpochMilli(start),
+          hc.Instant.ofEpochMilli(end),
+        ),
+        hc.Set.of(jni.JObject.type),
+      );
+      futures.add(client.aggregate(request));
+    }
+    final data = await Future.wait(futures);
+    return data.asMap().entries.map((entry) {
+      final stepsLong =
+          entry.value.get0(hc.Long.type, hc.StepsRecord.COUNT_TOTAL);
+      final steps = stepsLong.isNull ? 0 : stepsLong.intValue();
+      return Steps(entry.key.toString().padLeft(2, '0'), steps);
+    }).toList();
   }
 }
