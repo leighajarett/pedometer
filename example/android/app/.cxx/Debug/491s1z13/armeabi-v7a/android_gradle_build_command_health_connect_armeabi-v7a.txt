@@ -1,7 +1,0 @@
-Executable : /Users/yousefi/Library/Android/sdk/cmake/3.18.1/bin/ninja
-arguments : 
--C
-/Users/yousefi/Developer/jni_demo/android/app/.cxx/Debug/491s1z13/armeabi-v7a
-health_connect
-jvmArgs : 
-

@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/yousefi/Developer/jni_demo/android/app/.cxx/Debug/5k4fx3a3/arm64-v8a",
-  "command": "/Users/yousefi/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android29 --gcc-toolchain=/Users/yousefi/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yousefi/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DDART_SHARED_LIB -Dhealth_connect_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC -o CMakeFiles/health_connect.dir/health_connect.c.o -c /Users/yousefi/Developer/jni_demo/src/health_connect/health_connect.c",
-  "file": "/Users/yousefi/Developer/jni_demo/src/health_connect/health_connect.c"
-}
-]

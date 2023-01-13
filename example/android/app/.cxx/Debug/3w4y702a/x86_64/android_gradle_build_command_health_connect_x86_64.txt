@@ -1,7 +1,0 @@
-Executable : /Users/yousefi/Library/Android/sdk/cmake/3.18.1/bin/ninja
-arguments : 
--C
-/Users/yousefi/Developer/pedometer/example/android/app/.cxx/Debug/3w4y702a/x86_64
-health_connect
-jvmArgs : 
-

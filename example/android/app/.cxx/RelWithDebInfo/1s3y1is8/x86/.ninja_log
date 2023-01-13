@@ -1,9 +1,0 @@
-# ninja log v5
-0	4130	1669890771	CMakeFiles/health_connect.dir/health_connect.c.o	fa6579e838844632
-4131	4227	1669890771	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1s3y1is8/obj/x86/libhealth_connect.so	bd80ec81800223e
-1	4649	1669893708	CMakeFiles/health_connect.dir/health_connect.c.o	fa6579e838844632
-4650	4746	1669893708	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1s3y1is8/obj/x86/libhealth_connect.so	bd80ec81800223e
-2	127	1673607015	CMakeFiles/health_connect.dir/include/dart_api_dl.c.o	d9fae8822c74e036
-2	178	1673607015	CMakeFiles/health_connect.dir/dartjni.c.o	23977ddffd33d58f
-1	5025	1673607020	CMakeFiles/health_connect.dir/health_connect.c.o	fa6579e838844632
-5025	5132	1673607020	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1s3y1is8/obj/x86/libhealth_connect.so	d7392301272de05b

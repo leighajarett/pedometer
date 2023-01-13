@@ -1,7 +1,0 @@
-Executable : /Users/yousefi/Library/Android/sdk/cmake/3.18.1/bin/ninja
-arguments : 
--C
-/Users/yousefi/Developer/jni_demo/android/app/.cxx/RelWithDebInfo/1m4m3lcq/x86
-health_connect
-jvmArgs : 
-

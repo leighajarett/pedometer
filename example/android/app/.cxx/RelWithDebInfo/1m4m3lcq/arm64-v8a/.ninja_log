@@ -1,7 +1,0 @@
-# ninja log v5
-0	4787	1669637030	CMakeFiles/health_connect.dir/health_connect.c.o	a7ea135893ec8e3a
-4787	4888	1669637030	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1m4m3lcq/obj/arm64-v8a/libhealth_connect.so	84f81efe9c4c38fb
-0	1112	1669637285	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1m4m3lcq/obj/arm64-v8a/libhealth_connect.so	84f81efe9c4c38fb
-2	734	1669646330	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1m4m3lcq/obj/arm64-v8a/libhealth_connect.so	84f81efe9c4c38fb
-4	4572	1669743451	CMakeFiles/health_connect.dir/health_connect.c.o	a7ea135893ec8e3a
-4572	4691	1669743451	/Users/yousefi/Developer/jni_demo/build/app/intermediates/cxx/RelWithDebInfo/1m4m3lcq/obj/arm64-v8a/libhealth_connect.so	84f81efe9c4c38fb
