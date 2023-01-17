@@ -74,11 +74,15 @@ class HealthConnectClient extends jni.JObject {
   /// from: public abstract java.lang.Object insertRecords(java.util.List list, kotlin.coroutines.Continuation continuation)
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> insertRecords(jni.JObject list) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _insertRecords(reference, list.reference, $c).object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _updateRecords = jniLookup<
@@ -94,11 +98,15 @@ class HealthConnectClient extends jni.JObject {
   /// from: public abstract java.lang.Object updateRecords(java.util.List list, kotlin.coroutines.Continuation continuation)
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> updateRecords(jni.JObject list) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _updateRecords(reference, list.reference, $c).object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _deleteRecords = jniLookup<
@@ -121,13 +129,17 @@ class HealthConnectClient extends jni.JObject {
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> deleteRecords(
       jni.JObject kClass, jni.JObject list, jni.JObject list1) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _deleteRecords(
             reference, kClass.reference, list.reference, list1.reference, $c)
         .object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _deleteRecords1 = jniLookup<
@@ -146,12 +158,16 @@ class HealthConnectClient extends jni.JObject {
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> deleteRecords1(
       jni.JObject kClass, TimeRangeFilter timeRangeFilter) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _deleteRecords1(reference, kClass.reference, timeRangeFilter.reference, $c)
         .object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _readRecord = jniLookup<
@@ -169,11 +185,15 @@ class HealthConnectClient extends jni.JObject {
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> readRecord<T extends jni.JObject>(
       jni.JObjType<T> $T, jni.JObject kClass, jni.JString string) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _readRecord(reference, kClass.reference, string.reference, $c).object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _readRecords = jniLookup<
@@ -190,11 +210,15 @@ class HealthConnectClient extends jni.JObject {
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> readRecords<T extends jni.JObject>(
       jni.JObjType<T> $T, ReadRecordsRequest<T> readRecordsRequest) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _readRecords(reference, readRecordsRequest.reference, $c).object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _aggregate = jniLookup<
@@ -210,11 +234,15 @@ class HealthConnectClient extends jni.JObject {
   /// from: public abstract java.lang.Object aggregate(androidx.health.connect.client.request.AggregateRequest aggregateRequest, kotlin.coroutines.Continuation continuation)
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<AggregationResult> aggregate(AggregateRequest aggregateRequest) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _aggregate(reference, aggregateRequest.reference, $c).object;
-    return const $AggregationResultType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const $AggregationResultType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const $AggregationResultType().fromRef($o);
   }
 
   static final _aggregateGroupByDuration = jniLookup<
@@ -230,13 +258,17 @@ class HealthConnectClient extends jni.JObject {
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> aggregateGroupByDuration(
       AggregateGroupByDurationRequest aggregateGroupByDurationRequest) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _aggregateGroupByDuration(
             reference, aggregateGroupByDurationRequest.reference, $c)
         .object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _aggregateGroupByPeriod = jniLookup<
@@ -252,13 +284,17 @@ class HealthConnectClient extends jni.JObject {
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> aggregateGroupByPeriod(
       AggregateGroupByPeriodRequest aggregateGroupByPeriodRequest) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _aggregateGroupByPeriod(
             reference, aggregateGroupByPeriodRequest.reference, $c)
         .object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _getChangesToken = jniLookup<
@@ -274,11 +310,15 @@ class HealthConnectClient extends jni.JObject {
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JString> getChangesToken(
       ChangesTokenRequest changesTokenRequest) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _getChangesToken(reference, changesTokenRequest.reference, $c).object;
-    return const jni.JStringType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JStringType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JStringType().fromRef($o);
   }
 
   static final _getChanges = jniLookup<
@@ -294,11 +334,15 @@ class HealthConnectClient extends jni.JObject {
   /// from: public abstract java.lang.Object getChanges(java.lang.String string, kotlin.coroutines.Continuation continuation)
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> getChanges(jni.JString string) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _getChanges(reference, string.reference, $c).object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 
   static final _isAvailable = jniLookup<
@@ -410,11 +454,15 @@ class PermissionController extends jni.JObject {
   /// from: public abstract java.lang.Object getGrantedPermissions(java.util.Set set, kotlin.coroutines.Continuation continuation)
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<Set<jni.JObject>> getGrantedPermissions(Set<jni.JObject> set0) async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _getGrantedPermissions(reference, set0.reference, $c).object;
-    return const $SetType(jni.JObjectType())
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const $SetType(jni.JObjectType()).getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const $SetType(jni.JObjectType()).fromRef($o);
   }
 
   static final _revokeAllPermissions = jniLookup<
@@ -429,11 +477,15 @@ class PermissionController extends jni.JObject {
   /// from: public abstract java.lang.Object revokeAllPermissions(kotlin.coroutines.Continuation continuation)
   /// The returned object must be deleted after use, by calling the `delete` method.
   Future<jni.JObject> revokeAllPermissions() async {
-    final port = ReceivePort();
-    final $c = jni.Jni.newPortContinuation(port);
+    final $p = ReceivePort();
+    final $c = jni.Jni.newPortContinuation($p);
     _revokeAllPermissions(reference, $c).object;
-    return const jni.JObjectType()
-        .fromRef(ffi.Pointer<ffi.Void>.fromAddress(await port.first));
+    final $o = ffi.Pointer<ffi.Void>.fromAddress(await $p.first);
+    final $k = const jni.JObjectType().getClass().reference;
+    if (jni.Jni.env.IsInstanceOf($o, $k) == 0) {
+      throw "Failed";
+    }
+    return const jni.JObjectType().fromRef($o);
   }
 }
 
