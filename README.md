@@ -1,16 +1,44 @@
-# pedometer
+# FFIgen + JNIgen pedometer
 
-A new Flutter FFI plugin project.
+This is a demo for some of our tooling around calling platform APIs directly from dart code. This repository represents a demo of a plugin that leverages FFIgen & JNIgen. There is also an example pedometer app that uses the bindings generated from these tools. 
 
-## Getting Started
+- [FFIgen](https://pub.dev/packages/ffigen) is used to generate bindings for C, Objective-C and Swift APIs
+- [JNIgen](https://pub.dev/packages/jnigen) is used to generate bindings for Jave and Kotlin APIs
 
-This project is a starting point for a Flutter
-[FFI plugin](https://docs.flutter.dev/development/platform-integration/c-interop),
-a specialized package that includes native code directly invoked with Dart FFI.
+**These tools are both experimental and are currently a work in progress.** If you find any issues or have feedback, please file it on the corresponding Github repositories. 
+
+
+## Re-generating bindings
+The bindings that allow the dart code to call the platform code 
+
+### FFIgen 
+Configuration for FFIgen is [here](/ffigen.yaml) for the [CoreMotion](https://developer.apple.com/documentation/coremotion) framework. FFIgen currently does not support autogenerating the code to handle callbacks. So, there were a few steps needed to appropriately handle callbacks in Objective-C. You can [read more here]().
+
+`dart run ffigen --config ffigen.yaml`
+
+### JNIgen
+Configuration for JNIgen is [here](/jnigen.yaml) for the [HealthConnect API](https://developer.android.com/guide/health-and-fitness/health-connect). Right now, JNIgen requires an Android folder to generate the bindings so there are a few steps to regenerate:
+
+1. `flutter create .`  
+2. `flutter build apk`
+3. `dart run jnigen --config jnigen.yaml`
+4. delete the android folder
+
+
+## Running the example app
+Note that step counting is only available on physical devices. 
+
+### iOS
+- `flutter run`
+- Allow *pedometer* app access to step counting
+
+### Android
+- Make sure that Google Fit is installed (to ensure that steps are being counted)
+- `flutter run`
+- Install Health Connect and grant access to Google Fit and the *jni_demo* app
+
 
 ## Project stucture
-
-This template uses the following structure:
 
 * `src`: Contains the native source code, and a CmakeFile.txt file for building
   that source code into a dynamic library.
@@ -18,75 +46,11 @@ This template uses the following structure:
 * `lib`: Contains the Dart code that defines the API of the plugin, and which
   calls into the native code using `dart:ffi`.
 
-* platform folders (`android`, `ios`, `windows`, etc.): Contains the build files
+* platform folders (`ios` etc.): Contains the build files
   for building and bundling the native code library with the platform application.
 
-## Buidling and bundling native code
+* `example`: Contains the native source code, and a CmakeFile.txt file for building
+  that source code into a dynamic library.
 
-The `pubspec.yaml` specifies FFI plugins as follows:
 
-```yaml
-  plugin:
-    platforms:
-      some_platform:
-        ffiPlugin: true
-```
-
-This configuration invokes the native build for the various target platforms
-and bundles the binaries in Flutter applications using these FFI plugins.
-
-This can be combined with dartPluginClass, such as when FFI is used for the
-implementation of one platform in a federated plugin:
-
-```yaml
-  plugin:
-    implements: some_other_plugin
-    platforms:
-      some_platform:
-        dartPluginClass: SomeClass
-        ffiPlugin: true
-```
-
-A plugin can have both FFI and method channels:
-
-```yaml
-  plugin:
-    platforms:
-      some_platform:
-        pluginClass: SomeName
-        ffiPlugin: true
-```
-
-The native build systems that are invoked by FFI (and method channel) plugins are:
-
-* For Android: Gradle, which invokes the Android NDK for native builds.
-  * See the documentation in android/build.gradle.
-* For iOS and MacOS: Xcode, via CocoaPods.
-  * See the documentation in ios/pedometer.podspec.
-  * See the documentation in macos/pedometer.podspec.
-* For Linux and Windows: CMake.
-  * See the documentation in linux/CMakeLists.txt.
-  * See the documentation in windows/CMakeLists.txt.
-
-## Binding to native code
-
-To use the native code, bindings in Dart are needed.
-To avoid writing these by hand, they are generated from the header file
-(`src/pedometer.h`) by `package:ffigen`.
-Regenerate the bindings by running `flutter pub run ffigen --config ffigen.yaml`.
-
-## Invoking native code
-
-Very short-running native functions can be directly invoked from any isolate.
-For example, see `sum` in `lib/pedometer.dart`.
-
-Longer-running functions should be invoked on a helper isolate to avoid
-dropping frames in Flutter applications.
-For example, see `sumAsync` in `lib/pedometer.dart`.
-
-## Flutter help
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
