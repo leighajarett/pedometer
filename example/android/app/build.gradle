@@ -88,5 +88,4 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "androidx.health.connect:connect-client:1.0.0-alpha06"
-    implementation 'com.github.sarveswaran-m:util.concurrent.blockingMap:0.91'
 }
