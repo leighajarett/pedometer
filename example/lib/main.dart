@@ -180,7 +180,6 @@ class _HomeState extends State<Home> {
                   barGroups: barGroups,
                   gridData: FlGridData(show: false),
                   alignment: BarChartAlignment.spaceAround,
-                  maxY: 10,
                 ),
               ),
             ),
