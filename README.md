@@ -9,10 +9,10 @@ This is a demo for some of our tooling around calling platform APIs directly fro
 
 
 ## Re-generating bindings
-The bindings that allow the dart code to call the platform code 
+The bindings that allow the dart code to call the platform code have already been generated [here](/lib). You can regenerate them by following the steps below. 
 
 ### FFIgen 
-Configuration for FFIgen is [here](/ffigen.yaml) for the [CoreMotion](https://developer.apple.com/documentation/coremotion) framework. FFIgen currently does not support autogenerating the code to handle callbacks. So, there were a few steps needed to appropriately handle callbacks in Objective-C. You can [read more here]().
+Configuration for FFIgen is [here](/ffigen.yaml) for the [CoreMotion](https://developer.apple.com/documentation/coremotion) framework. FFIgen currently does not support autogenerating the code to handle callbacks. So, there were a few steps needed to appropriately handle callbacks in Objective-C. You can [read more here](https://dart.dev/guides/libraries/objective-c-interop#callbacks-and-multithreading-limitations).
 
 `dart run ffigen --config ffigen.yaml`
 
