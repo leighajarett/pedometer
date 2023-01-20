@@ -21,6 +21,7 @@ static Dart_CObject NSObjectToCObject(CMPedometerData* n) {
 
 @implementation PedometerHelper
 +(void)startPedometerWithPort: (Dart_Port) sendPort pedometer: (CMPedometer*) pedometer start: (NSDate*) start end: (NSDate*) end {
+    
   // Start the pedometer
   [pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData *pedometerData, NSError *error) {
     if(error == nil){

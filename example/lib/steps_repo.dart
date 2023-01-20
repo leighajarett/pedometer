@@ -45,7 +45,11 @@ class _IOSStepsRepo implements StepsRepo {
     final initializeApi = dylib.lookupFunction<
         ffi.IntPtr Function(ffi.Pointer<ffi.Void>),
         int Function(ffi.Pointer<ffi.Void>)>('Dart_InitializeApiDL');
-    assert(initializeApi(ffi.NativeApi.initializeApiDLData) == 0);
+
+    final initializeResult = initializeApi(ffi.NativeApi.initializeApiDLData);
+    if (initializeResult != 0) {
+      throw StateError('failed to init API.');
+    }
 
     // Create a new CMPedometer instance.
     client = pd.CMPedometer.new1(lib);
