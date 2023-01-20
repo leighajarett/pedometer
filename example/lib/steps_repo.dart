@@ -62,8 +62,9 @@ class _IOSStepsRepo implements StepsRepo {
   pd.NSDate dateConverter(DateTime dartDate) {
     // Format dart date to string.
     final formattedDate = DateFormat(StepsRepo._formatString).format(dartDate);
-    // Get current timezone.
-    final tz = dartDate.timeZoneName;
+    // Get current timezone. If eastern african change to AST to follow with NSDate.
+    final tz = dartDate.timeZoneName == "EAT" ? "AST" : dartDate.timeZoneName;
+
     // Create a new NSString with the formatted date and timezone.
     final nString = pd.NSString(lib, "$formattedDate $tz");
     // Convert the NSString to NSDate.
@@ -86,6 +87,7 @@ class _IOSStepsRepo implements StepsRepo {
       final nativePort = receivePort.sendPort.nativePort;
       final start = dateConverter(DateTime(now.year, now.month, now.day, h));
       final end = dateConverter(DateTime(now.year, now.month, now.day, h + 1));
+
       pd.PedometerHelper.startPedometerWithPort_pedometer_start_end_(
         helpLib,
         nativePort,
