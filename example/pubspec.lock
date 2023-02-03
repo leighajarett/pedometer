@@ -120,10 +120,10 @@ packages:
     description:
       path: jni
       ref: suspend-fun
-      resolved-ref: "8a9e9b6a1d56d2ff111bd6f75e4f3e1abbb6e543"
+      resolved-ref: "9365c3245be287815024f389c7a722dc424f61aa"
       url: "https://github.com/dart-lang/jnigen"
     source: git
-    version: "0.1.1"
+    version: "0.2.1"
   js:
     dependency: transitive
     description:

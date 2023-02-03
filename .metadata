@@ -4,8 +4,8 @@
 # This file should be version controlled.
 
 version:
-  revision: 098aac7ffeef2a1846eb3a7f14788520c8400a14
-  channel: master
+  revision: 9b4416aaa79bf984d06aa40ab515a274a50a75a7
+  channel: beta
 
 project_type: plugin_ffi
 
@@ -13,11 +13,14 @@ project_type: plugin_ffi
 migration:
   platforms:
     - platform: root
-      create_revision: 098aac7ffeef2a1846eb3a7f14788520c8400a14
-      base_revision: 098aac7ffeef2a1846eb3a7f14788520c8400a14
+      create_revision: 9b4416aaa79bf984d06aa40ab515a274a50a75a7
+      base_revision: 9b4416aaa79bf984d06aa40ab515a274a50a75a7
+    - platform: android
+      create_revision: 9b4416aaa79bf984d06aa40ab515a274a50a75a7
+      base_revision: 9b4416aaa79bf984d06aa40ab515a274a50a75a7
     - platform: ios
-      create_revision: 098aac7ffeef2a1846eb3a7f14788520c8400a14
-      base_revision: 098aac7ffeef2a1846eb3a7f14788520c8400a14
+      create_revision: 9b4416aaa79bf984d06aa40ab515a274a50a75a7
+      base_revision: 9b4416aaa79bf984d06aa40ab515a274a50a75a7
 
   # User provided section
 
