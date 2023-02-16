@@ -116,7 +116,7 @@ packages:
     source: hosted
     version: "0.18.0"
   jni:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: jni
       sha256: d13615809094831d7db722cd5eca384eede118ac38e551c04346ca177c7feb3d

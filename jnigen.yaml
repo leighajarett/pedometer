@@ -5,8 +5,6 @@ android_sdk_config:
 summarizer:
   backend: asm
 
-# Experimental flag to convert suspend functions in Kotlin to Dart async
-# functions. Only available in suspend-fun branch of jnigen for now.
 suspend_fun_to_async: true
 
 output:
