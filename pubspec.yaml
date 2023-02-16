@@ -11,20 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
-  jni:
-    git:
-      url: https://github.com/dart-lang/jnigen
-      ref: suspend-fun
-      path: ./jni
+  jni: ^0.3.0
 
 dev_dependencies:
   ffi: ^2.0.1
   ffigen: ^7.2.1
-  jnigen:
-    git:
-      url: https://github.com/dart-lang/jnigen
-      ref: suspend-fun
-      path: ./jnigen
+  jnigen: ^0.3.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
