@@ -1,5 +1,7 @@
 # FFIgen + JNIgen pedometer
 
+> **_NOTE:_**  This example has moved over to the Flutter samples repo: https://github.com/flutter/samples/commits/main/experimental/pedometer
+
 This is a demo for some of our tooling around calling platform APIs directly from dart code. This repository represents a demo of a plugin that leverages FFIgen & JNIgen. There is also an example pedometer app that uses the bindings generated from these tools. 
 
 - [FFIgen](https://pub.dev/packages/ffigen) is used to generate bindings for C, Objective-C and Swift APIs
